@@ -5,10 +5,10 @@ export const MovieWrapper = styled.div`
     padding: 30px;
     background-image: linear-gradient(
             90deg,
-            rgba(64, 64, 64, 1) 3%,
-            rgba(64, 64, 64, 0.87) 23%,
-            rgba(64, 64, 64, 0.87) 77%,
-            rgba(64, 64, 64, 1) 100%
+            #404040 3%,
+            #404040de 23%,
+            #404040de 77%,
+            #404040 100%
         ),
         url(${props => IMAGES_BASE_URL + props.bgr});
     background-repeat: no-repeat;

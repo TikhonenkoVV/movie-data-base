@@ -1,32 +1,31 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.758e0a8b.js",
-    "static/js/415.ca49cc2f.chunk.js": "/MovieDB/static/js/415.ca49cc2f.chunk.js",
-    "static/js/886.b1f58273.chunk.js": "/MovieDB/static/js/886.b1f58273.chunk.js",
-    "static/js/680.e12ec54b.chunk.js": "/MovieDB/static/js/680.e12ec54b.chunk.js",
-    "static/js/736.23157157.chunk.js": "/MovieDB/static/js/736.23157157.chunk.js",
-    "static/js/289.155ac2f5.chunk.js": "/MovieDB/static/js/289.155ac2f5.chunk.js",
-    "static/js/631.a32ad6fd.chunk.js": "/MovieDB/static/js/631.a32ad6fd.chunk.js",
-    "static/js/174.e5ecfdb7.chunk.js": "/MovieDB/static/js/174.e5ecfdb7.chunk.js",
+    "main.js": "/MovieDB/static/js/main.9e2c93b9.js",
+    "static/js/415.bdeb8421.chunk.js": "/MovieDB/static/js/415.bdeb8421.chunk.js",
+    "static/js/886.b612c164.chunk.js": "/MovieDB/static/js/886.b612c164.chunk.js",
+    "static/js/736.b342db99.chunk.js": "/MovieDB/static/js/736.b342db99.chunk.js",
+    "static/js/183.8be85c6f.chunk.js": "/MovieDB/static/js/183.8be85c6f.chunk.js",
+    "static/js/289.d9ab27c6.chunk.js": "/MovieDB/static/js/289.d9ab27c6.chunk.js",
+    "static/js/240.73a811eb.chunk.js": "/MovieDB/static/js/240.73a811eb.chunk.js",
     "static/css/544.7c3dd9d6.chunk.css": "/MovieDB/static/css/544.7c3dd9d6.chunk.css",
     "static/media/no-poster.jpg": "/MovieDB/static/media/no-poster.33ea28eed030003a405e.jpg",
     "static/media/no-found.png": "/MovieDB/static/media/no-found.322bf7b5d3e43751b8d0.png",
     "static/media/logo.svg": "/MovieDB/static/media/logo.de1a664e8d0777ca4ddb2a5a298bcfb6.svg",
+    "static/media/logo-m.svg": "/MovieDB/static/media/logo-m.bb8aa703cb92c9aa31fc1e0b17850ed9.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.758e0a8b.js.map": "/MovieDB/static/js/main.758e0a8b.js.map",
-    "415.ca49cc2f.chunk.js.map": "/MovieDB/static/js/415.ca49cc2f.chunk.js.map",
-    "886.b1f58273.chunk.js.map": "/MovieDB/static/js/886.b1f58273.chunk.js.map",
-    "680.e12ec54b.chunk.js.map": "/MovieDB/static/js/680.e12ec54b.chunk.js.map",
-    "736.23157157.chunk.js.map": "/MovieDB/static/js/736.23157157.chunk.js.map",
-    "289.155ac2f5.chunk.js.map": "/MovieDB/static/js/289.155ac2f5.chunk.js.map",
-    "631.a32ad6fd.chunk.js.map": "/MovieDB/static/js/631.a32ad6fd.chunk.js.map",
-    "174.e5ecfdb7.chunk.js.map": "/MovieDB/static/js/174.e5ecfdb7.chunk.js.map",
+    "main.9e2c93b9.js.map": "/MovieDB/static/js/main.9e2c93b9.js.map",
+    "415.bdeb8421.chunk.js.map": "/MovieDB/static/js/415.bdeb8421.chunk.js.map",
+    "886.b612c164.chunk.js.map": "/MovieDB/static/js/886.b612c164.chunk.js.map",
+    "736.b342db99.chunk.js.map": "/MovieDB/static/js/736.b342db99.chunk.js.map",
+    "183.8be85c6f.chunk.js.map": "/MovieDB/static/js/183.8be85c6f.chunk.js.map",
+    "289.d9ab27c6.chunk.js.map": "/MovieDB/static/js/289.d9ab27c6.chunk.js.map",
+    "240.73a811eb.chunk.js.map": "/MovieDB/static/js/240.73a811eb.chunk.js.map",
     "544.7c3dd9d6.chunk.css.map": "/MovieDB/static/css/544.7c3dd9d6.chunk.css.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.758e0a8b.js"
+    "static/js/main.9e2c93b9.js"
   ]
 }

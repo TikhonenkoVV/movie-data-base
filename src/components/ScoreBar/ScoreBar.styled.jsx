@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { setColor } from 'services/set-color';
 
 export const Score = styled.span`
     display: flex;
@@ -14,7 +13,6 @@ export const Score = styled.span`
         justify-content: center;
         align-items: center;
         position: relative;
-        /* border: 10px solid ${props => props.theme.colors.accent}; */
         border-radius: 50%;
         width: 54px;
         height: 54px;

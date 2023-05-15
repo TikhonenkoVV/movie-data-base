@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w1280/';
 
 export const MovieWrapper = styled.div`
-    padding: 30px;
+    padding: 30px 0;
     background-image: linear-gradient(
             90deg,
             #404040 3%,
@@ -18,6 +18,21 @@ export const MovieWrapper = styled.div`
     }
 `;
 
+export const MovieInfoWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0 0 0;
+    color: white;
+    @media (min-width: ${props => props.theme.breakpoints.xs}) {
+        padding: 0 0 0 20px;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.s}) {
+        gap: 20px;
+    }
+`;
+
 export const Poster = styled.img`
     flex-shrink: 0;
     width: 200px;
@@ -29,14 +44,8 @@ export const Poster = styled.img`
     }
 `;
 
-export const MovieInfoWrapper = styled.div`
+export const ScoreBox = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 0 0 0;
-    color: white;
+    align-items: center;
     gap: 20px;
-    @media (min-width: ${props => props.theme.breakpoints.xs}) {
-        padding: 0 0 0 20px;
-    }
 `;

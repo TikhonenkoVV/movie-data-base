@@ -28,13 +28,19 @@ export const HomeTitle = styled.h1`
     margin-bottom: 20px;
     text-align: center;
     color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.fontSizes.xl};
+    font-size: ${props => props.theme.fontSizes.large};
+    @media (min-width: ${props => props.theme.breakpoints.xs}) {
+        font-size: ${props => props.theme.fontSizes.xl};
+    }
 `;
 
 export const Grid = styled.ul`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     grid-gap: ${props => props.theme.spacing.step * 5}px;
+    @media (min-width: ${props => props.theme.breakpoints.s}) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 `;
 
 export const GridItem = styled.li`

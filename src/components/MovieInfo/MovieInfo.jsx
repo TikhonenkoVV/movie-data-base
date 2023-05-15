@@ -1,5 +1,13 @@
 import noPoster from '../../images/no-poster.jpg';
-import { MovieInfoWrapper, MovieWrapper, Poster } from './MovieInfo.styled';
+import {
+    MovieInfoWrapper,
+    MovieWrapper,
+    Poster,
+    ScoreBox,
+} from './MovieInfo.styled';
+import { ScoreBar } from 'components/ScoreBar/ScoreBar';
+import { Modal } from 'components/Modal/Modal';
+import { useModal } from 'pages/MovieDetails';
 
 export const MovieInfo = ({
     vote_average,
@@ -9,10 +17,14 @@ export const MovieInfo = ({
     poster_path,
     release_date,
     backdrop_path,
+    onClose,
 }) => {
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
     const releaseDate = new Date(release_date).getFullYear().toString();
     const rating = Math.round(vote_average * 10);
+
+    const { isTrailer } = useModal();
+
     return (
         <>
             <MovieWrapper bgr={backdrop_path}>
@@ -24,12 +36,16 @@ export const MovieInfo = ({
                     <h1>
                         {title} ({releaseDate})
                     </h1>
-                    <p>User score: {rating}%</p>
+                    <ScoreBox>
+                        <ScoreBar rating={rating} />
+                        <h3>User Score</h3>
+                    </ScoreBox>
                     <h2>Owerview</h2>
                     <p>{overview}</p>
                     <h2>Genres</h2>
                     <p>{genres?.map(({ name }) => name).join(', ')}</p>
                 </MovieInfoWrapper>
+                {isTrailer && <Modal onClose={onClose} />}
             </MovieWrapper>
         </>
     );

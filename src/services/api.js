@@ -21,3 +21,10 @@ export const gethMovieDetails = async (movieId, details) => {
     );
     return data;
 };
+
+export const gethMovieTrailer = async movieId => {
+    const { data } = await axios.get(
+        `movie/${movieId}/videos?api_key=${API_KEY}`
+    );
+    return data;
+};

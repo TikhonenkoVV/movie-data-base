@@ -3,6 +3,7 @@ import {
     MovieInfoWrapper,
     MovieWrapper,
     Poster,
+    PosterWrapper,
     ScoreBox,
 } from './MovieInfo.styled';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
@@ -28,12 +29,18 @@ export const MovieInfo = ({
     return (
         <>
             <MovieWrapper bgr={backdrop_path}>
-                <Poster
-                    src={poster_path ? IMAGES_BASE_URL + poster_path : noPoster}
-                    alt={title}
-                />
+                <PosterWrapper bgr={backdrop_path}>
+                    <Poster
+                        src={
+                            poster_path
+                                ? IMAGES_BASE_URL + poster_path
+                                : noPoster
+                        }
+                        alt={title}
+                    />
+                </PosterWrapper>
                 <MovieInfoWrapper>
-                    <h1>
+                    <h1 style={{ textAlign: 'center' }}>
                         {title} ({releaseDate})
                     </h1>
                     <ScoreBox>

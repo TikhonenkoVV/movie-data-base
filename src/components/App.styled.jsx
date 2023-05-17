@@ -24,13 +24,48 @@ export const MainStyled = styled.main`
     padding: 20px 0;
 `;
 
-export const HomeTitle = styled.h1`
+export const TrendsTogler = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
     margin-bottom: 20px;
+`;
+
+export const HomeTitle = styled.h1`
     text-align: center;
     color: ${props => props.theme.colors.white};
     font-size: ${props => props.theme.fontSizes.large};
     @media (min-width: ${props => props.theme.breakpoints.xs}) {
         font-size: ${props => props.theme.fontSizes.xl};
+    }
+`;
+
+export const TrendsBtnWrapper = styled.div`
+    position: relative;
+    display: flex;
+    border: 1px solid ${props => props.theme.colors.hover};
+    border-radius: 17px;
+    overflow: hidden;
+`;
+
+export const TrendsBtn = styled.button`
+    flex-basis: 50%;
+    width: 100px;
+    height: 100%;
+    color: ${props => props.theme.colors.light};
+    font-size: ${props => props.theme.fontSizes.small};
+    transition: color 250ms;
+    @media (min-width: ${props => props.theme.breakpoints.xs}) {
+        font-size: ${props => props.theme.fontSizes.medium};
+    }
+    &:hover,
+    &:focus {
+        color: ${props => props.theme.colors.white};
+    }
+    &.active {
+        color: ${props => props.theme.colors.white};
+        background-color: ${props => props.theme.colors.hover};
     }
 `;
 
@@ -46,6 +81,7 @@ export const Grid = styled.ul`
 export const GridItem = styled.li`
     display: flex;
     flex-direction: column;
+    aspect-ratio: 2 / 3;
     background-color: ${props => props.theme.colors.accent};
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),

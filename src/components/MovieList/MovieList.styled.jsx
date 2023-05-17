@@ -6,6 +6,7 @@ export const ImgWrapper = styled.div`
     display: flex;
     align-items: center;
     overflow: hidden;
+    aspect-ratio: 2/3;
     width: 100%;
     height: 100%;
     & img {
@@ -44,8 +45,12 @@ export const CardOverlay = styled.div`
 `;
 
 export const MovieTitle = styled.h2`
-    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    max-height: 81px;
     text-align: center;
+    overflow: hidden;
+    line-height: 1.5;
     color: ${props => props.theme.colors.white};
     font-size: ${props => props.theme.fontSizes.medium};
 `;

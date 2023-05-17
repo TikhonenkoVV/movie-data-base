@@ -1,10 +1,13 @@
 import { Loader } from 'components/Loader/Loader';
 import {
-    RevieAutor,
+    Expander,
+    ReviewAutor,
     RevieText,
     RevievItem,
+    ReviewGradient,
     ReviewList,
     ReviewTitle,
+    ReviewWrapper,
 } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -42,8 +45,12 @@ export const Review = () => {
                     <ReviewList>
                         {reviews?.map(({ id, author, content }) => (
                             <RevievItem key={id}>
-                                <RevieAutor>Author: {author}</RevieAutor>
-                                <RevieText>{content}</RevieText>
+                                <ReviewAutor>Author: {author}</ReviewAutor>
+                                <ReviewWrapper>
+                                    <RevieText>{content}</RevieText>
+                                    <ReviewGradient />
+                                </ReviewWrapper>
+                                <Expander type="button">Full review</Expander>
                             </RevievItem>
                         ))}
                     </ReviewList>

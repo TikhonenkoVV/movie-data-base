@@ -1,5 +1,4 @@
 export const setColor = percent => {
-    console.log(percent);
     if (percent < 11) return 'red';
     if (percent > 10 && percent < 21) return '#ff3000';
     if (percent > 20 && percent < 31) return '#ff6000';

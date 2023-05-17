@@ -2,7 +2,25 @@ import styled from '@emotion/styled';
 const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w1280/';
 
 export const MovieWrapper = styled.div`
-    padding: 30px 0;
+    @media (min-width: 533px) {
+        padding: 30px 0;
+        display: flex;
+        gap: 20px;
+        background-image: linear-gradient(
+                90deg,
+                #404040 3%,
+                #404040de 23%,
+                #404040de 77%,
+                #404040 100%
+            ),
+            url(${props => IMAGES_BASE_URL + props.bgr});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+`;
+
+export const PosterWrapper = styled.div`
     background-image: linear-gradient(
             90deg,
             #404040 3%,
@@ -11,10 +29,32 @@ export const MovieWrapper = styled.div`
             #404040 100%
         ),
         url(${props => IMAGES_BASE_URL + props.bgr});
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @media (min-width: ${props => props.theme.breakpoints.xs}) {
-        display: flex;
+    height: 250px;
+    margin: 0 -20px 20px;
+    padding: 20px;
+    @media (min-width: 533px) {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        background: none;
+        height: auto;
+    }
+`;
+
+export const Poster = styled.img`
+    object-fit: cover;
+    aspect-ratio: 2 / 3;
+    height: 210px;
+    @media (min-width: 533px) {
+        width: 230px;
+        height: auto;
+        margin-right: auto;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.m}) {
+        width: 300px;
     }
 `;
 
@@ -23,27 +63,11 @@ export const MovieInfoWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding: 20px 0 0 0;
     color: white;
-    @media (min-width: ${props => props.theme.breakpoints.xs}) {
-        padding: 0 0 0 20px;
-    }
     @media (min-width: ${props => props.theme.breakpoints.s}) {
         gap: 20px;
     }
 `;
-
-export const Poster = styled.img`
-    flex-shrink: 0;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    @media (min-width: ${props => props.theme.breakpoints.xs}) {
-        min-width: 30%;
-        margin: 0;
-    }
-`;
-
 export const ScoreBox = styled.div`
     display: flex;
     align-items: center;

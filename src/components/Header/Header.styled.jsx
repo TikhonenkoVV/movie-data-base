@@ -56,7 +56,7 @@ export const NavLinkStyled = styled(NavLink)`
     &.active {
         color: ${props => props.theme.colors.white};
         background-color: ${props => props.theme.colors.hover};
-        pointer-events: none;
+        /* pointer-events: none; */
     }
     @media (min-width: ${props => props.theme.breakpoints.xs}) {
         width: 100px;

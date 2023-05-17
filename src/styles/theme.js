@@ -25,4 +25,7 @@ export const theme = Object.freeze({
     spacing: {
         step: 4,
     },
+    lg: {
+        whiteSpace: '#19171d78, #19171dbc, #19171d',
+    },
 });

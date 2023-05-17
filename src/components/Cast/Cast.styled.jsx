@@ -7,8 +7,11 @@ export const CastTitle = styled.h2`
 
 export const CastGrid = styled.ul`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-gap: ${({ theme }) => theme.spacing.step * 5}px;
+    @media (min-width: 533px) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 `;
 
 export const CastElement = styled.li`

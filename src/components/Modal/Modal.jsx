@@ -52,8 +52,6 @@ export const Modal = ({ onClose }) => {
                 {isLoading && <Loader />}
                 {trailer && (
                     <IFrame
-                        width="100%"
-                        height="100%"
                         src={trailer}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen

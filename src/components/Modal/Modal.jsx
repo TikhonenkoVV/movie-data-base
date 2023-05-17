@@ -1,34 +1,11 @@
-import { Loader } from 'components/Loader/Loader';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import { gethMovieTrailer } from 'services/api';
-import { IFrame, IframeWrapper, ModalBackdrop } from './Modal.styled';
+import { useEffect } from 'react';
+import { CloseBtn, IFrame, IframeWrapper, ModalBackdrop } from './Modal.styled';
 import { createPortal } from 'react-dom';
-import { findTrailer } from 'services/findTrailer';
-import { Page404 } from 'components/Page404/Page404';
+import { useModal } from 'pages/MovieDetails';
+import { Svg } from 'components/Icon/Icon';
 
 export const Modal = ({ onClose }) => {
-    const { movieId } = useParams();
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState([]);
-    const [trailer, setTrailer] = useState([]);
-
-    useEffect(() => {
-        if (!movieId) return;
-        setIsLoading(true);
-        gethMovieTrailer(movieId)
-            .then(data => {
-                setTrailer(findTrailer(data.results));
-            })
-            .catch(err => {
-                setError(err.message);
-                toast(err.message);
-            })
-            .finally(() => {
-                setIsLoading(false);
-            });
-    }, [movieId]);
+    const { isTrailer } = useModal();
 
     useEffect(() => {
         const onEscPress = e => {
@@ -49,17 +26,15 @@ export const Modal = ({ onClose }) => {
     return createPortal(
         <ModalBackdrop onClick={onBackdropClick}>
             <IframeWrapper>
-                {isLoading && <Loader />}
-                {trailer && (
-                    <IFrame
-                        src={trailer}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    />
-                )}
-                {!trailer && <Page404 />}
+                <CloseBtn>
+                    <Svg />
+                </CloseBtn>
+                <IFrame
+                    src={`${isTrailer}?autoplay=1&iv_load_policy=3&modestbranding=1`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                />
             </IframeWrapper>
-            {error && <ToastContainer />}
         </ModalBackdrop>,
         document.getElementById('modal-root')
     );

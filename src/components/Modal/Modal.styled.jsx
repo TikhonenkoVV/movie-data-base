@@ -16,10 +16,22 @@ export const ModalBackdrop = styled.div`
 `;
 
 export const IframeWrapper = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
     width: 80%;
     height: 90%;
+`;
+
+export const CloseBtn = styled.button`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 250ms;
 `;
 
 export const IFrame = styled.iframe`

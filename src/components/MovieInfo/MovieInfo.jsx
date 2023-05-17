@@ -24,7 +24,7 @@ export const MovieInfo = ({
     const releaseDate = new Date(release_date).getFullYear().toString();
     const rating = Math.round(vote_average * 10);
 
-    const { isTrailer } = useModal();
+    const { isModalOpen } = useModal();
 
     return (
         <>
@@ -52,7 +52,7 @@ export const MovieInfo = ({
                     <h2>Genres</h2>
                     <p>{genres?.map(({ name }) => name).join(', ')}</p>
                 </MovieInfoWrapper>
-                {isTrailer && <Modal onClose={onClose} />}
+                {isModalOpen && <Modal onClose={onClose} />}
             </MovieWrapper>
         </>
     );

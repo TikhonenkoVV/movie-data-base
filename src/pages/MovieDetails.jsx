@@ -14,7 +14,9 @@ import {
     useState,
 } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
-import { gethMovieDetails } from 'services/api';
+import { toast } from 'react-toastify';
+import { gethMovieDetails, gethMovieTrailer } from 'services/api';
+import { findTrailer } from 'services/findTrailer';
 
 const ModalContext = createContext(false);
 
@@ -22,6 +24,7 @@ export const useModal = () => useContext(ModalContext);
 
 const MovieDetails = () => {
     const [isTrailer, setTrailer] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [movie, setMovie] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -40,18 +43,28 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                setIsLoading(false);
+                gethMovieTrailer(movieId)
+                    .then(data => {
+                        setTrailer(findTrailer(data.results));
+                    })
+                    .catch(err => {
+                        setError(err.message);
+                        toast(err.message);
+                    })
+                    .finally(() => {
+                        setIsLoading(false);
+                    });
             });
     }, [movieId]);
 
     const toggleModal = () => {
-        setTrailer(!isTrailer);
-        if (!isTrailer) disableBodyScroll(document.body);
+        setIsModalOpen(!isModalOpen);
+        if (!isModalOpen) disableBodyScroll(document.body);
         else enableBodyScroll(document.body);
     };
 
     return (
-        <ModalContext.Provider value={{ isTrailer }}>
+        <ModalContext.Provider value={{ isModalOpen, isTrailer }}>
             <section>
                 {isLoading && <Loader />}
                 <Container>
@@ -62,6 +75,7 @@ const MovieDetails = () => {
                             <DetailList
                                 state={{ from: location }}
                                 onTogle={toggleModal}
+                                trailer={isTrailer}
                             />
                             <Suspense>
                                 <Outlet />

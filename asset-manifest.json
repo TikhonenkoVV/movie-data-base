@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.c118455b.js",
+    "main.js": "/MovieDB/static/js/main.05767568.js",
     "static/js/415.ecfe1a64.chunk.js": "/MovieDB/static/js/415.ecfe1a64.chunk.js",
-    "static/js/859.d385974e.chunk.js": "/MovieDB/static/js/859.d385974e.chunk.js",
-    "static/js/736.4357e848.chunk.js": "/MovieDB/static/js/736.4357e848.chunk.js",
+    "static/js/421.1639ba64.chunk.js": "/MovieDB/static/js/421.1639ba64.chunk.js",
+    "static/js/736.284ae8c6.chunk.js": "/MovieDB/static/js/736.284ae8c6.chunk.js",
     "static/js/183.aa9e2031.chunk.js": "/MovieDB/static/js/183.aa9e2031.chunk.js",
     "static/js/289.9cbe0dd5.chunk.js": "/MovieDB/static/js/289.9cbe0dd5.chunk.js",
     "static/js/240.73a811eb.chunk.js": "/MovieDB/static/js/240.73a811eb.chunk.js",
@@ -17,10 +17,10 @@
     "static/media/sprite.svg": "/MovieDB/static/media/sprite.27b392ebfaf8568dc28be100f3ee004d.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.c118455b.js.map": "/MovieDB/static/js/main.c118455b.js.map",
+    "main.05767568.js.map": "/MovieDB/static/js/main.05767568.js.map",
     "415.ecfe1a64.chunk.js.map": "/MovieDB/static/js/415.ecfe1a64.chunk.js.map",
-    "859.d385974e.chunk.js.map": "/MovieDB/static/js/859.d385974e.chunk.js.map",
-    "736.4357e848.chunk.js.map": "/MovieDB/static/js/736.4357e848.chunk.js.map",
+    "421.1639ba64.chunk.js.map": "/MovieDB/static/js/421.1639ba64.chunk.js.map",
+    "736.284ae8c6.chunk.js.map": "/MovieDB/static/js/736.284ae8c6.chunk.js.map",
     "183.aa9e2031.chunk.js.map": "/MovieDB/static/js/183.aa9e2031.chunk.js.map",
     "289.9cbe0dd5.chunk.js.map": "/MovieDB/static/js/289.9cbe0dd5.chunk.js.map",
     "240.73a811eb.chunk.js.map": "/MovieDB/static/js/240.73a811eb.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.c118455b.js"
+    "static/js/main.05767568.js"
   ]
 }

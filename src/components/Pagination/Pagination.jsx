@@ -37,7 +37,7 @@ export const Pagination = ({ totalPages }) => {
                 </DotStart>
             )}
             {totalPages > 3 && (
-                <DotPrev>
+                <DotPrev datatype={Number(page) - 1} onClick={hendleClick}>
                     <Svg use={`${sprite}#arrow-prev`} />
                 </DotPrev>
             )}
@@ -57,7 +57,7 @@ export const Pagination = ({ totalPages }) => {
                 </Dot>
             )}
             {totalPages > 3 && (
-                <DotNext>
+                <DotNext datatype={Number(page) + 1} onClick={hendleClick}>
                     <Svg use={`${sprite}#arrow-next`} />
                 </DotNext>
             )}

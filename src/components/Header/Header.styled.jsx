@@ -12,12 +12,14 @@ export const HeaderStyled = styled.header`
 export const Wrapper = styled.div`
     display: flex;
     gap: 20px;
+    align-items: center;
+    height: 70px;
 `;
 
 export const Logotype = styled(Link)`
     display: flex;
     width: 60px;
-    /* height: 70px; */
+    height: 70px;
     aspect-ratio: 2 / 1;
     background-image: url(${logoM});
     background-position: center;
@@ -27,13 +29,14 @@ export const Logotype = styled(Link)`
         background-image: url(${logo});
         width: 90px;
         aspect-ratio: 1.2857 / 1;
-        /* width: ${props => props.theme.breakpoints.m}; */
     }
 `;
 
 export const Nav = styled.nav`
     display: flex;
     align-items: center;
+    height: 100%;
+    margin-right: auto;
 `;
 
 export const NavLinkStyled = styled(NavLink)`
@@ -62,4 +65,14 @@ export const NavLinkStyled = styled(NavLink)`
         width: 100px;
         font-size: ${props => props.theme.fontSizes.medium};
     }
+`;
+
+export const ThemeBtn = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: ${props => props.theme.colors.hover};
 `;

@@ -1,18 +1,10 @@
 import { Loader } from 'components/Loader/Loader';
-import {
-    Expander,
-    ReviewAutor,
-    RevieText,
-    RevievItem,
-    ReviewGradient,
-    ReviewList,
-    ReviewTitle,
-    ReviewWrapper,
-} from './Review.styled';
+import { ReviewTitle } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { gethMovieDetails } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
+import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 
 export const Review = () => {
     const { movieId } = useParams();
@@ -42,18 +34,15 @@ export const Review = () => {
             {reviews.length > 0 && (
                 <>
                     <ReviewTitle>Reviews</ReviewTitle>
-                    <ReviewList>
-                        {reviews?.map(({ id, author, content }) => (
-                            <RevievItem key={id}>
-                                <ReviewAutor>Author: {author}</ReviewAutor>
-                                <ReviewWrapper>
-                                    <RevieText>{content}</RevieText>
-                                    <ReviewGradient />
-                                </ReviewWrapper>
-                                <Expander type="button">Full review</Expander>
-                            </RevievItem>
+                    <ul>
+                        {reviews?.map(review => (
+                            <ReviewItem
+                                key={review.id}
+                                author={review.author}
+                                content={review.content}
+                            />
                         ))}
-                    </ReviewList>
+                    </ul>
                 </>
             )}
             {reviews.length < 1 && (

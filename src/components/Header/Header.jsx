@@ -15,12 +15,12 @@ export const Header = () => {
         <HeaderStyled>
             <Container>
                 <Wrapper>
-                    <Logotype to={'/'} />
+                    <Logotype aria-label="Home" to={'/'} />
                     <Nav>
                         <NavLinkStyled to={'/'}>Home</NavLinkStyled>
                         <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
                     </Nav>
-                    <ThemeBtn>
+                    <ThemeBtn type="button" aria-label="Theme">
                         <Svg use={`${sprite}#icon-sun`} />
                     </ThemeBtn>
                 </Wrapper>

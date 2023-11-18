@@ -9,7 +9,7 @@ export const RevievItemStyled = styled.li`
     }
 `;
 
-export const ReviewAutor = styled.h2`
+export const ReviewAutor = styled.h3`
     margin-bottom: 20px;
 `;
 

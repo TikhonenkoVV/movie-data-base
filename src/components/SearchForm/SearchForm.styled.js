@@ -15,11 +15,12 @@ export const Input = styled.input`
     padding-right: 50px;
     background-color: transparent;
     outline: none;
-    color: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.themeText};
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
-    border-bottom: 1px solid ${props => props.theme.colors.light};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.light};
+    transition: color ${({ theme }) => theme.baseTransition};
 `;
 
 export const BtnSearch = styled.button`

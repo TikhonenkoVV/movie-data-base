@@ -16,10 +16,10 @@ export const ReviewAutor = styled.h3`
 export const ReviewWrapper = styled.div`
     position: relative;
     overflow-y: hidden;
-    height: ${props => props.expandedH}px;
+    height: ${({ expandedH }) => expandedH}px;
     transition: height 0.5s;
     &.expanded {
-        height: ${props => props.clientH}px;
+        height: ${({ clientH }) => clientH}px;
     }
 `;
 
@@ -30,7 +30,7 @@ export const ReviewGradient = styled.div`
     width: 100%;
     height: 20px;
     transition: opacity 0.5s;
-    background-image: linear-gradient(${props => props.theme.lg.whiteSpace});
+    background-image: linear-gradient(${({ theme }) => theme.lg.whiteSpace});
     &.expanded {
         opacity: 0;
     }
@@ -40,11 +40,10 @@ export const RevieText = styled.p``;
 
 export const Expander = styled.button`
     height: 40px;
-    color: ${props => props.theme.colors.light};
+    color: ${({ theme }) => theme.colors.light};
     transition: color 250ms;
-    ${console.log(props => props.theme.colors.white)}
     &:hover,
     &:focus {
-        color: ${props => props.theme.colors.white};
+        color: ${({ theme }) => theme.colors.white};
     }
 `;

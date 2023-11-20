@@ -1,16 +1,31 @@
-import { Svg } from 'components/Icon/Icon';
-import sprite from '../../images/sprite.svg';
 import {
     HeaderStyled,
     Logotype,
     Nav,
     NavLinkStyled,
-    ThemeBtn,
+    Toggler,
     Wrapper,
 } from './Header.styled';
 import { Container } from 'components/App.styled';
+import { useRef } from 'react';
+import { storageLoad } from 'services/storage';
 
-export const Header = () => {
+export const Header = ({ onChangeTheme }) => {
+    const themeBtn = useRef();
+
+    const toggleTheme = () => {
+        if (themeBtn.current.classList.contains('dark')) {
+            themeBtn.current.classList.replace('dark', 'light');
+            onChangeTheme('light');
+            return;
+        }
+        if (themeBtn.current.classList.contains('light')) {
+            themeBtn.current.classList.replace('light', 'dark');
+            onChangeTheme('dark');
+            return;
+        }
+    };
+
     return (
         <HeaderStyled>
             <Container>
@@ -20,9 +35,17 @@ export const Header = () => {
                         <NavLinkStyled to={'/'}>Home</NavLinkStyled>
                         <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
                     </Nav>
-                    <ThemeBtn type="button" aria-label="Theme">
-                        <Svg use={`${sprite}#icon-sun`} />
-                    </ThemeBtn>
+                    <Toggler
+                        ref={themeBtn}
+                        className={
+                            storageLoad('movieDBTheme')
+                                ? storageLoad('movieDBTheme')
+                                : 'dark'
+                        }
+                        onClick={toggleTheme}
+                        aria-label="Theme"
+                        type="button"
+                    ></Toggler>
                 </Wrapper>
             </Container>
         </HeaderStyled>

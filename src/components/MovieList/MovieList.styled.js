@@ -51,15 +51,15 @@ export const MovieTitle = styled.h2`
     text-align: center;
     overflow: hidden;
     line-height: 1.5;
-    color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.fontSizes.medium};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
 `;
 
 export const Description = styled.p`
     padding: 4px 10px;
-    background-color: ${props => props.theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 12px;
-    color: ${props => props.theme.colors.accent};
-    font-size: ${props => props.theme.fontSizes.small};
+    color: ${({ theme }) => theme.colors.accent};
+    font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 700;
 `;

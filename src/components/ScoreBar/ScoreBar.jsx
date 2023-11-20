@@ -4,6 +4,7 @@ import {
     ScoreCircle,
     ScoreProgressBar,
     ScoreSpan,
+    SpanStyled,
 } from './ScoreBar.styled';
 import { setColor } from 'services/set-color';
 
@@ -23,7 +24,7 @@ export const ScoreBar = ({ rating }) => {
 
     return (
         <Score>
-            <span>
+            <SpanStyled>
                 <ScoreProgressBar width={50} height={50}>
                     <ScoreCircle
                         color={currenColor}
@@ -36,7 +37,7 @@ export const ScoreBar = ({ rating }) => {
                 </ScoreProgressBar>
                 {/* {rating}% User score:{' '} */}
                 <ScoreSpan ref={Percentage}>{rating}</ScoreSpan> %
-            </span>
+            </SpanStyled>
         </Score>
     );
 };

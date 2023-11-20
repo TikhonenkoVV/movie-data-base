@@ -1,11 +1,4 @@
 export const theme = Object.freeze({
-    colors: {
-        accent: '#19171d',
-        hover: '#1c2124',
-        white: '#ffffff',
-        light: 'rgba(255,255,255,.5)',
-        mainBackground: '#404040',
-    },
     fontSizes: {
         small: '14px',
         medium: '18px',
@@ -25,7 +18,5 @@ export const theme = Object.freeze({
     spacing: {
         step: 4,
     },
-    lg: {
-        whiteSpace: '#19171d78, #19171dbc, #19171d',
-    },
+    baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
 });

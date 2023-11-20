@@ -16,8 +16,12 @@ export const Score = styled.span`
         border-radius: 50%;
         width: 54px;
         height: 54px;
-        background-color: ${props => props.theme.colors.accent};
+        background-color: ${({ theme }) => theme.colors.accent};
     }
+`;
+
+export const SpanStyled = styled.span`
+    color: ${({ theme }) => theme.colors.white};
 `;
 
 export const ScoreProgressBar = styled.svg`
@@ -29,11 +33,11 @@ export const ScoreProgressBar = styled.svg`
 
 export const ScoreCircle = styled.circle`
     fill: none;
-    stroke: ${props => props.color};
+    stroke: ${({ color }) => color};
     stroke-width: 6;
     transform: translate(3px, 3px);
     stroke-dasharray: 138;
-    stroke-dashoffset: ${props => props.length};
+    stroke-dashoffset: ${({ length }) => length};
 `;
 
 export const ScoreSpan = styled.span``;

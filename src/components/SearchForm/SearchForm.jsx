@@ -29,7 +29,7 @@ export const SearchForm = ({ onSubmit }) => {
                 onInput={hendleChange}
             />
             <BtnSearch>
-                <FiSearch size="25px" stroke="rgba(255,255,255,.5)" />
+                <FiSearch size="25px" stroke="#B5B5B5" />
             </BtnSearch>
             <ToastContainer />
         </SearchFormStyled>

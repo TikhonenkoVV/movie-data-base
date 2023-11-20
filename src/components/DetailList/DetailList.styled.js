@@ -9,7 +9,7 @@ export const DetailListStyled = styled.ul`
 
 export const DetailsItem = styled.li`
     flex-basis: calc((100% - 40px) / 3);
-    @media (min-width: ${props => props.theme.breakpoints.m}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
         flex-basis: auto;
         width: 120px;
     }

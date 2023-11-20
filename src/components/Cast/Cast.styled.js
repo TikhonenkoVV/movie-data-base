@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 
 export const CastTitle = styled.h2`
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.themeText};
     margin-bottom: 20px;
+    transition: color ${({ theme }) => theme.baseTransition};
 `;
 
 export const CastGrid = styled.ul`

@@ -6,14 +6,8 @@ export const MovieWrapper = styled.div`
         padding: 30px 0;
         display: flex;
         gap: 20px;
-        background-image: linear-gradient(
-                90deg,
-                #404040 3%,
-                #404040de 23%,
-                #404040de 77%,
-                #404040 100%
-            ),
-            url(${props => IMAGES_BASE_URL + props.bgr});
+        background-image: ${({ theme }) => theme.lg.movieInfo},
+            url(${({ bgr }) => IMAGES_BASE_URL + bgr});
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -28,7 +22,7 @@ export const PosterWrapper = styled.div`
             #404040de 77%,
             #404040 100%
         ),
-        url(${props => IMAGES_BASE_URL + props.bgr});
+        url(${({ bgr }) => IMAGES_BASE_URL + bgr});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +47,7 @@ export const Poster = styled.img`
         height: auto;
         margin-right: auto;
     }
-    @media (min-width: ${props => props.theme.breakpoints.m}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
         width: 300px;
     }
 `;
@@ -63,8 +57,8 @@ export const MovieInfoWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    color: white;
-    @media (min-width: ${props => props.theme.breakpoints.s}) {
+    color: ${({ theme }) => theme.colors.themeText};
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
         gap: 20px;
     }
 `;

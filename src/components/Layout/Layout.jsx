@@ -3,10 +3,10 @@ import { Header } from 'components/Header/Header';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-export const Layout = () => {
+export const Layout = ({ onChangeTheme }) => {
     return (
         <>
-            <Header />
+            <Header onChangeTheme={onChangeTheme} />
             <MainStyled>
                 <Suspense>
                     <Outlet />

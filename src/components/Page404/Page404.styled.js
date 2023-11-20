@@ -15,3 +15,13 @@ export const Page404Styled = styled.div`
         margin: 0 auto;
     }
 `;
+
+export const TitleStyled = styled.h1`
+    color: ${({ theme }) => theme.colors.themeText};
+    transition: color ${({ theme }) => theme.baseTransition};
+`;
+
+export const InfoTextStyled = styled.p`
+    color: ${({ theme }) => theme.colors.themeText};
+    transition: color ${({ theme }) => theme.baseTransition};
+`;

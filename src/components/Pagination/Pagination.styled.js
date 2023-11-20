@@ -14,10 +14,10 @@ export const DotButton = styled.button`
     width: 40px;
     height: 40px;
     transition: background-color 250ms;
-    background-color: ${props => props.theme.colors.hover};
+    background-color: ${({ theme }) => theme.colors.hover};
     &:hover,
     &:focus {
-        background-color: ${props => props.theme.colors.accent};
+        background-color: ${({ theme }) => theme.colors.accent};
     }
 `;
 export const DotStart = styled(DotButton)``;
@@ -25,5 +25,5 @@ export const DotEnd = styled(DotButton)``;
 export const DotPrev = styled(DotButton)``;
 export const DotNext = styled(DotButton)``;
 export const Dot = styled(DotButton)`
-    color: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 `;

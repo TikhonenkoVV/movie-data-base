@@ -7,7 +7,7 @@ export const MovieWrapper = styled.div`
         display: flex;
         gap: 20px;
         background-image: ${({ theme }) => theme.lg.movieInfo},
-            url(${({ bgr }) => IMAGES_BASE_URL + bgr});
+            url(${({ bgr }) => bgr});
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -62,6 +62,11 @@ export const MovieInfoWrapper = styled.div`
         gap: 20px;
     }
 `;
+
+export const MovieInfoTitle = styled.h1`
+    font-size: ${({ theme }) => theme.fontSizes.xxl};
+`;
+
 export const ScoreBox = styled.div`
     display: flex;
     align-items: center;

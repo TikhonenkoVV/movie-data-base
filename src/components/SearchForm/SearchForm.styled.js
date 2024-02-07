@@ -2,10 +2,7 @@ import styled from '@emotion/styled';
 
 export const SearchFormStyled = styled.form`
     max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
-    margin-bottom: 20px;
 `;
 
 export const Input = styled.input`

@@ -84,6 +84,7 @@ export const Grid = styled.ul`
 `;
 
 export const GridItem = styled.li`
+    position: relative;
     display: flex;
     flex-direction: column;
     aspect-ratio: 2 / 3;

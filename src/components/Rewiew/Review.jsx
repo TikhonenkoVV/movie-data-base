@@ -2,22 +2,22 @@ import { Loader } from 'components/Loader/Loader';
 import { ReviewTitle } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { gethMovieDetails } from 'services/api';
+import { getDetails } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 
 export const Review = () => {
-    const { movieId } = useParams();
+    const { mediaTypes, movieId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
-    const [reviews, setReviews] = useState([]);
+    const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
         if (!movieId) return;
         setIsLoading(true);
-        gethMovieDetails(movieId, '/reviews')
+        getDetails(mediaTypes, movieId, '/reviews')
             .then(data => {
-                setReviews(data.results);
+                setReviews([...data.results]);
             })
             .catch(err => {
                 setError(err.message);
@@ -26,12 +26,12 @@ export const Review = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [movieId]);
+    }, [mediaTypes, movieId]);
 
     return (
         <>
             {isLoading && <Loader />}
-            {reviews.length > 0 && (
+            {reviews?.length > 0 && (
                 <>
                     <ReviewTitle>Reviews</ReviewTitle>
                     <ul>
@@ -45,7 +45,7 @@ export const Review = () => {
                     </ul>
                 </>
             )}
-            {reviews.length < 1 && (
+            {reviews?.length < 1 && (
                 <ReviewTitle>Sorry, this movie has no reviews.</ReviewTitle>
             )}
             {error && <ToastContainer />}

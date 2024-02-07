@@ -18,6 +18,7 @@ export const Score = styled.span`
         height: 54px;
         background-color: ${({ theme }) => theme.colors.accent};
     }
+    pointer-events: none;
 `;
 
 export const SpanStyled = styled.span`

@@ -6,6 +6,7 @@ export const darkTheme = Object.freeze({
         themeText: '#fff',
         light: '#B5B5B5',
         mainBackground: '#404040',
+        personBackground: '#303030',
         shadow: '#fff',
     },
     lg: {

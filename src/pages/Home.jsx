@@ -8,18 +8,20 @@ import {
 import { Loader } from 'components/Loader/Loader';
 import { MovieList } from 'components/MovieList/MovieList';
 import { useEffect, useState } from 'react';
-import { gethMovies } from 'services/api';
+import { getMovies } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
+import { Select } from 'components/Select/Select';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [trands, setTrends] = useState('day');
+    const [mediaTypes, setMediaTypes] = useState('all');
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         setIsLoading(true);
-        gethMovies('day')
+        getMovies(mediaTypes, trands)
             .then(data => {
                 setMovies(data.results);
             })
@@ -31,23 +33,7 @@ const Home = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, []);
-
-    useEffect(() => {
-        setIsLoading(true);
-        gethMovies(trands)
-            .then(data => {
-                setMovies(data.results);
-            })
-            .catch(err => {
-                setError(err.message);
-                toast(err.message);
-            })
-
-            .finally(() => {
-                setIsLoading(false);
-            });
-    }, [trands]);
+    }, [mediaTypes, trands]);
 
     const onBtnWeekClick = () => {
         setTrends('week');
@@ -55,6 +41,10 @@ const Home = () => {
 
     const onBtnDayClick = () => {
         setTrends('day');
+    };
+
+    const hendleSelectChange = mediaType => {
+        setMediaTypes(mediaType);
     };
 
     return (
@@ -79,6 +69,7 @@ const Home = () => {
                         this week
                     </TrendsBtn>
                 </TrendsBtnWrapper>
+                <Select onChange={hendleSelectChange} />
             </TrendsTogler>
             <MovieList movies={movies} />
             {error && <ToastContainer />}

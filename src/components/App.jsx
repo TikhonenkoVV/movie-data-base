@@ -4,6 +4,7 @@ import { lazy, useEffect, useState } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
 import { GlobalStyles, darkTheme, lightTheme, theme } from 'styles';
 import { storageLoad, storageSave } from '../services/storage';
+import PersonDetails from 'pages/PersonDetails';
 
 const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));
@@ -24,6 +25,7 @@ const Review = lazy(() =>
         };
     })
 );
+const Person = lazy(() => import('../pages/Person'));
 
 const dark = {
     ...theme,
@@ -67,10 +69,18 @@ export const App = () => {
                 >
                     <Route index element={<Home />} />
                     <Route path="movies" element={<Movies />} />
-                    <Route path="movies/:movieId" element={<MovieDetails />}>
+                    <Route
+                        path="movies/:mediaTypes/:movieId"
+                        element={<MovieDetails />}
+                    >
                         <Route path="cast" element={<Cast />} />
                         <Route path="review" element={<Review />} />
                     </Route>
+                    <Route path="person" element={<Person />} />
+                    <Route
+                        path="person/:personId"
+                        element={<PersonDetails />}
+                    />
                 </Route>
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>

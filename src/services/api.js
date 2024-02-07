@@ -2,31 +2,50 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 const API_KEY = '49f12b338a85dcd14c7e661f8eadc77e';
+// const lang = '&language=uk-UA';
+const lang = '&language=en-US';
+// const lang = '&language=ru-RU';
 
-export const gethMovies = async trands => {
+export const getMovies = async (mediaType, trands) => {
     const { data } = await axios.get(
-        `trending/movie/${trands}?api_key=${API_KEY}`
+        `trending/${mediaType}/${trands}?api_key=${API_KEY + lang}`
     );
     return data;
 };
 
-export const gethMoviesByName = async (q, page) => {
+export const getMoviesByName = async (mediaTypes, q, page) => {
     const { data } = await axios.get(
-        `search/movie?api_key=${API_KEY}&page=${page}&query=${q}`
+        `search/${mediaTypes}?api_key=${API_KEY + lang}&page=${page}&query=${q}`
     );
     return data;
 };
 
-export const gethMovieDetails = async (movieId, details) => {
+export const getDetails = async (mediaType, movieId, details) => {
     const { data } = await axios.get(
-        `movie/${movieId}${details}?api_key=${API_KEY}`
+        `${mediaType}/${movieId}${details}?api_key=${API_KEY + lang}`
     );
     return data;
 };
 
-export const gethMovieTrailer = async movieId => {
+export const getTrailer = async (mediaType, movieId) => {
     const { data } = await axios.get(
-        `movie/${movieId}/videos?api_key=${API_KEY}`
+        `${mediaType}/${movieId}/videos?api_key=${API_KEY + lang}`
+    );
+    return data;
+};
+
+export const getPersonsByName = async (q, page) => {
+    const { data } = await axios.get(
+        `search/person?include_adult=false&api_key=${
+            API_KEY + lang
+        }&page=${page}&query=${q}`
+    );
+    return data;
+};
+
+export const getPersonById = async personId => {
+    const { data } = await axios.get(
+        `person/${personId}?api_key=${API_KEY + lang}`
     );
     return data;
 };

@@ -15,8 +15,9 @@ import {
 } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { gethMovieDetails, gethMovieTrailer } from 'services/api';
+import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
+import { normalizeMovieData } from 'services/normalize';
 
 const ModalContext = createContext(false);
 
@@ -28,14 +29,14 @@ const MovieDetails = () => {
     const [movie, setMovie] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const { movieId } = useParams();
+    const { mediaTypes, movieId } = useParams();
 
     const location = useLocation();
     const goBackLink = useRef(location?.state?.from ?? '/');
 
     useEffect(() => {
         setIsLoading(true);
-        gethMovieDetails(movieId, '')
+        getDetails(mediaTypes, movieId, '')
             .then(data => {
                 setMovie(data);
             })
@@ -43,7 +44,7 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                gethMovieTrailer(movieId)
+                getTrailer(mediaTypes, movieId)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -55,7 +56,7 @@ const MovieDetails = () => {
                         setIsLoading(false);
                     });
             });
-    }, [movieId]);
+    }, [mediaTypes, movieId]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -71,7 +72,10 @@ const MovieDetails = () => {
                     <GoBackBtn path={goBackLink}>Go back</GoBackBtn>
                     {movie && (
                         <>
-                            <MovieInfo {...movie} onClose={toggleModal} />
+                            <MovieInfo
+                                {...normalizeMovieData(movie)}
+                                onClose={toggleModal}
+                            />
                             <DetailList
                                 state={{ from: location }}
                                 onTogle={toggleModal}

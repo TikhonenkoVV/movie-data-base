@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const SearchForm = ({ onSubmit }) => {
+export const SearchForm = ({ onSubmit, style }) => {
     const [query, setQuery] = useState('');
 
     const hendleChange = e => {
@@ -23,7 +23,7 @@ export const SearchForm = ({ onSubmit }) => {
     };
 
     return (
-        <SearchFormStyled onSubmit={hendleSubmit}>
+        <SearchFormStyled style={style} onSubmit={hendleSubmit}>
             <Input
                 placeholder="Please enter your query"
                 onInput={hendleChange}

@@ -8,22 +8,22 @@ import {
 } from './ScoreBar.styled';
 import { setColor } from 'services/set-color';
 
-export const ScoreBar = ({ rating }) => {
+export const ScoreBar = ({ rating, style }) => {
     const AnimCircle = useRef();
-    const Percentage = useRef();
     const [currentLength, setCurrentLength] = useState(0);
     const [currenColor, setCurrentColor] = useState(0);
 
     useEffect(() => {
         const totalLength = AnimCircle.current.getTotalLength();
-        const circleLength =
-            totalLength - (totalLength / 100) * Percentage.current.textContent;
+        const circleLength = !isNaN(rating)
+            ? totalLength - (totalLength / 100) * rating
+            : 0;
         setCurrentLength(circleLength);
-        setCurrentColor(setColor(Percentage.current.textContent));
-    }, [currentLength]);
+        setCurrentColor(!isNaN(rating) ? setColor(rating) : '#333');
+    }, [rating, currentLength]);
 
     return (
-        <Score>
+        <Score style={{ ...style }}>
             <SpanStyled>
                 <ScoreProgressBar width={50} height={50}>
                     <ScoreCircle
@@ -35,8 +35,8 @@ export const ScoreBar = ({ rating }) => {
                         r={22}
                     ></ScoreCircle>
                 </ScoreProgressBar>
-                {/* {rating}% User score:{' '} */}
-                <ScoreSpan ref={Percentage}>{rating}</ScoreSpan> %
+                <ScoreSpan>{rating}</ScoreSpan>
+                {!isNaN(rating) && ' %'}
             </SpanStyled>
         </Score>
     );

@@ -1,26 +1,25 @@
 import { Container } from 'components/App.styled';
 import { Loader } from 'components/Loader/Loader';
-import { MovieList } from 'components/MovieList/MovieList';
 import { Page404 } from 'components/Page404/Page404';
 import { Pagination } from 'components/Pagination/Pagination';
+import { PersonsList } from 'components/PersonsList/PersonsList';
 import { SearchForm } from 'components/SearchForm/SearchForm';
-import { Select } from 'components/Select/Select';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { getMoviesByName } from 'services/api';
+import { getPersonsByName } from 'services/api';
 
-const Movies = () => {
+const Person = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [first, setFirst] = useState(true);
-    const [total, setTotal] = useState(0);
-    const [movies, setMovies] = useState([]);
-    const [mediaTypes, setMediaTypes] = useState('movie');
-    const [error, setError] = useState(null);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [total, setTotal] = useState(0);
+    const [persons, setPersons] = useState([]);
+    const [error, setError] = useState(null);
     let page = 1;
-    const selectInitial = {
-        options: [{ movie: 'Movie' }, { tv: 'Tv' }],
+
+    const onSubmit = query => {
+        setSearchParams({ query, page });
     };
 
     useEffect(() => {
@@ -28,9 +27,9 @@ const Movies = () => {
         const page = searchParams.get('page');
         if (!query) return;
         setIsLoading(true);
-        getMoviesByName(mediaTypes, query, page)
+        getPersonsByName(query, page)
             .then(data => {
-                setMovies(data.results);
+                setPersons(data.results);
                 setTotal(data.total_pages);
             })
             .catch(err => {
@@ -41,47 +40,27 @@ const Movies = () => {
                 setIsLoading(false);
                 setFirst(false);
             });
-    }, [mediaTypes, searchParams]);
-
-    const onSubmit = query => {
-        setSearchParams({ query, page });
-    };
-
-    const hendleSelectChange = e => {
-        setMediaTypes(e);
-    };
+    }, [searchParams]);
 
     return (
         <section>
             <Container>
                 {isLoading && <Loader />}
-                <div
+                <SearchForm
                     style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: '24px',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
                         marginBottom: '24px',
                     }}
-                >
-                    <SearchForm
-                        onSubmit={onSubmit}
-                        onChange={hendleSelectChange}
-                    />
-                    <Select
-                        initial={selectInitial}
-                        onChange={hendleSelectChange}
-                    />
-                </div>
+                    onSubmit={onSubmit}
+                />
                 {total > 0 && <Pagination totalPages={total} />}
-                {movies && (
-                    <MovieList movies={movies} mediaTypes={mediaTypes} />
-                )}
-                {!first && movies.length < 1 && <Page404 />}
-                {total > 0 && <Pagination totalPages={total} />}
+                {persons && <PersonsList persons={persons} />}
+                {!first && persons.length < 1 && <Page404 />}
                 {error && <ToastContainer />}
             </Container>
         </section>
     );
 };
 
-export default Movies;
+export default Person;

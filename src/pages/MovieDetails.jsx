@@ -1,7 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Container } from 'components/App.styled';
 import { DetailList } from 'components/DetailList/DetailList';
-import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
@@ -10,7 +9,6 @@ import {
     createContext,
     useContext,
     useEffect,
-    useRef,
     useState,
 } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
@@ -32,7 +30,6 @@ const MovieDetails = () => {
     const { mediaTypes, movieId } = useParams();
 
     const location = useLocation();
-    const goBackLink = useRef(location?.state?.from ?? '/');
 
     useEffect(() => {
         setIsLoading(true);
@@ -69,7 +66,6 @@ const MovieDetails = () => {
             <section>
                 {isLoading && <Loader />}
                 <Container>
-                    <GoBackBtn path={goBackLink}>Go back</GoBackBtn>
                     {movie && (
                         <>
                             <MovieInfo

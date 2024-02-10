@@ -1,10 +1,9 @@
 import { Container } from 'components/App.styled';
-import { useEffect, useRef, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getDetails, getPersonById } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import { Loader } from 'components/Loader/Loader';
-import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { PersonInfo } from 'components/PersonInfo/PersonInfo';
 import { normalizePersonData } from 'services/normalize';
 
@@ -16,9 +15,6 @@ const PersonDetails = () => {
     const [personCredits, setPersonCredits] = useState([]);
     const [crew, setCrew] = useState([]);
     const [totalCredits, setTotalCredits] = useState(0);
-
-    const location = useLocation();
-    const goBackLink = useRef(location?.state?.from ?? '/');
 
     useEffect(() => {
         setIsLoading(true);
@@ -50,7 +46,6 @@ const PersonDetails = () => {
         <section>
             {isLoading && <Loader />}
             <Container>
-                <GoBackBtn path={goBackLink}>Go back</GoBackBtn>
                 {error && <ToastContainer />}
                 {!isLoading && (
                     <PersonInfo

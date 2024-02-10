@@ -3,8 +3,8 @@ import { CastElement, CastGrid, CastPhoto, CastTitle } from './Cast.styled';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
 import { Loader } from 'components/Loader/Loader';
-import noPoster from '../../images/no-poster.jpg';
 import { ToastContainer, toast } from 'react-toastify';
+import { normalizeCast } from 'services/normalize';
 
 export const Cast = () => {
     const { mediaTypes, movieId } = useParams();
@@ -13,7 +13,6 @@ export const Cast = () => {
     const [cast, setCast] = useState(null);
     // const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
     // const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w66_and_h66_face/';
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
     const location = useLocation();
 
     useEffect(() => {
@@ -25,7 +24,8 @@ export const Cast = () => {
             mediaTypes === 'movie' ? '/credits' : '/aggregate_credits'
         )
             .then(data => {
-                setCast([...data.cast]);
+                setCast(normalizeCast(data.cast));
+                console.log(data.cast);
             })
             .catch(err => {
                 setError(err.message);
@@ -44,36 +44,20 @@ export const Cast = () => {
                     <CastTitle>Cast</CastTitle>
                     <CastGrid>
                         {cast?.map(
-                            ({
-                                credit_id,
-                                id,
-                                profile_path,
-                                name,
-                                character,
-                                roles,
-                            }) => (
-                                <CastElement key={credit_id}>
+                            ({ id, castId, poster, personName, role }) => (
+                                <CastElement key={castId}>
                                     <Link
                                         to={`/person/${id}`}
                                         state={{ from: location }}
                                     >
                                         <CastPhoto
-                                            src={
-                                                profile_path
-                                                    ? IMAGES_BASE_URL +
-                                                      profile_path
-                                                    : noPoster
-                                            }
-                                            alt="_"
+                                            src={poster}
+                                            alt={personName}
                                         />
                                         <p>
-                                            <b>{name}</b>
+                                            <b>{personName}</b>
                                         </p>
-                                        <p>
-                                            {roles
-                                                ? roles[0].character
-                                                : character}
-                                        </p>
+                                        <p>{role}</p>
                                     </Link>
                                 </CastElement>
                             )

@@ -83,6 +83,36 @@ export const normalizeMovieData = (data, mediaTypes) => {
     };
 };
 
+export const normalizeCast = data => {
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
+    const res = data.map(
+        ({
+            id,
+            cast_id,
+            roles,
+            character,
+            name,
+            original_name,
+            profile_path,
+        }) => {
+            const castId = cast_id ? cast_id : roles[0]?.credit_id;
+            const role = character ? character : roles[0]?.character;
+            const personName = name ? name : original_name;
+            const poster = profile_path
+                ? IMAGES_BASE_URL + profile_path
+                : noPoster;
+            return {
+                id,
+                castId,
+                poster,
+                personName,
+                role,
+            };
+        }
+    );
+    return res;
+};
+
 export const normalizePersonsData = data => {
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300/';
     return data.map(({ id, name, profile_path }) => {

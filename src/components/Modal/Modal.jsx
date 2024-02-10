@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import { CloseBtn, IFrame, IframeWrapper, ModalBackdrop } from './Modal.styled';
+import { IFrame, IframeWrapper, ModalBackdrop } from './Modal.styled';
 import { createPortal } from 'react-dom';
 import { useModal } from 'pages/MovieDetails';
-import { Svg } from 'components/Icon/Icon';
 
 export const Modal = ({ onClose }) => {
     const { isTrailer } = useModal();
@@ -26,9 +25,6 @@ export const Modal = ({ onClose }) => {
     return createPortal(
         <ModalBackdrop onClick={onBackdropClick}>
             <IframeWrapper>
-                <CloseBtn>
-                    <Svg />
-                </CloseBtn>
                 <IFrame
                     src={`${isTrailer}?autoplay=1&iv_load_policy=3&modestbranding=1`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

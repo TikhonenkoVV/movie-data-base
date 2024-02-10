@@ -25,7 +25,6 @@ export const Cast = () => {
         )
             .then(data => {
                 setCast(normalizeCast(data.cast));
-                console.log(data.cast);
             })
             .catch(err => {
                 setError(err.message);

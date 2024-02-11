@@ -7,7 +7,7 @@ import { storageLoad, storageSave } from '../services/storage';
 import PersonDetails from 'pages/PersonDetails';
 
 const Home = lazy(() => import('../pages/Home'));
-const Movies = lazy(() => import('../pages/Movies'));
+const Media = lazy(() => import('../pages/Media'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 const Cast = lazy(() =>
     import('../components/Cast/Cast').then(module => {
@@ -68,9 +68,17 @@ export const App = () => {
                     element={<Layout onChangeTheme={onChangeTheme} />}
                 >
                     <Route index element={<Home />} />
-                    <Route path="movies" element={<Movies />} />
+                    <Route path="movies" element={<Media />} />
+                    <Route path="tv-shows" element={<Media />} />
                     <Route
-                        path="movies/:mediaTypes/:movieId"
+                        path="movies/:mediaTypes/:mediaId"
+                        element={<MovieDetails />}
+                    >
+                        <Route path="cast" element={<Cast />} />
+                        <Route path="review" element={<Review />} />
+                    </Route>
+                    <Route
+                        path="tv-shows/:mediaTypes/:mediaId"
                         element={<MovieDetails />}
                     >
                         <Route path="cast" element={<Cast />} />

@@ -27,13 +27,13 @@ const MovieDetails = () => {
     const [movie, setMovie] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const { mediaTypes, movieId } = useParams();
+    const { mediaTypes, mediaId } = useParams();
 
     const location = useLocation();
 
     useEffect(() => {
         setIsLoading(true);
-        getDetails(mediaTypes, movieId, '')
+        getDetails(mediaTypes, mediaId, '')
             .then(data => {
                 setMovie(data);
             })
@@ -41,7 +41,7 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                getTrailer(mediaTypes, movieId)
+                getTrailer(mediaTypes, mediaId)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -53,7 +53,7 @@ const MovieDetails = () => {
                         setIsLoading(false);
                     });
             });
-    }, [mediaTypes, movieId]);
+    }, [mediaTypes, mediaId]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);

@@ -6,11 +6,11 @@ import {
     ImgWrapper,
     MovieLink,
     MovieTitle,
-} from './MovieList.styled';
+} from './MediaList.styled';
 import { normalizeMoviesData } from 'services/normalize';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 
-export const MovieList = ({ movies, mediaTypes }) => {
+export const MediaList = ({ movies, mediaTypes }) => {
     const location = useLocation();
     const data = normalizeMoviesData(movies, mediaTypes);
     return (
@@ -28,7 +28,11 @@ export const MovieList = ({ movies, mediaTypes }) => {
                             }}
                         />
                         <MovieLink
-                            to={`/movies/${media_type}/${id}`}
+                            to={
+                                media_type === 'movie'
+                                    ? `/movies/${media_type}/${id}`
+                                    : `/tv-shows/${media_type}/${id}`
+                            }
                             state={{ from: location }}
                         >
                             <ImgWrapper>

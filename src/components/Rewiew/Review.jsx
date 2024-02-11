@@ -7,15 +7,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 
 export const Review = () => {
-    const { mediaTypes, movieId } = useParams();
+    const { mediaTypes, mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
     const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
-        if (!movieId) return;
+        if (!mediaId) return;
         setIsLoading(true);
-        getDetails(mediaTypes, movieId, '/reviews')
+        getDetails(mediaTypes, mediaId, '/reviews')
             .then(data => {
                 setReviews([...data.results]);
             })
@@ -26,7 +26,7 @@ export const Review = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [mediaTypes, movieId]);
+    }, [mediaTypes, mediaId]);
 
     return (
         <>

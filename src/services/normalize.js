@@ -88,16 +88,17 @@ export const normalizeCast = data => {
     const res = data.map(
         ({
             id,
-            cast_id,
             roles,
+            credit_id,
             character,
             name,
             original_name,
             profile_path,
         }) => {
-            const castId = cast_id ? cast_id : roles[0]?.credit_id;
-            const role = character ? character : roles[0]?.character;
-            const personName = name ? name : original_name;
+            const castId = credit_id ?? roles[0]?.credit_id;
+            let role = `(${character})` ?? `(${roles[0]?.character})`;
+            if (role === '()') role = `(${nA})`;
+            const personName = name ?? original_name;
             const poster = profile_path
                 ? IMAGES_BASE_URL + profile_path
                 : noPoster;
@@ -110,6 +111,7 @@ export const normalizeCast = data => {
             };
         }
     );
+    console.log(res);
     return res;
 };
 
@@ -148,7 +150,6 @@ export const normalizePersonData = data => {
         calculateAge = calcAge(birthday, deathday);
     }
 
-    // console.log(calculateAge());
     return {
         id,
         biography: biographyArr,

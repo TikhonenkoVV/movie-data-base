@@ -34,6 +34,7 @@ export const Header = ({ onChangeTheme }) => {
                     <Nav>
                         <NavLinkStyled to={'/'}>Home</NavLinkStyled>
                         <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
+                        <NavLinkStyled to={'tv-shows'}>Tv</NavLinkStyled>
                         <NavLinkStyled to={'person'}>People</NavLinkStyled>
                     </Nav>
                     <Toggler

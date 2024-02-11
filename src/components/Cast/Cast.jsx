@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { normalizeCast } from 'services/normalize';
 
 export const Cast = () => {
-    const { mediaTypes, movieId } = useParams();
+    const { mediaTypes, mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
     const [cast, setCast] = useState(null);
@@ -16,11 +16,11 @@ export const Cast = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (!movieId) return;
+        if (!mediaId) return;
         setIsLoading(true);
         getDetails(
             mediaTypes,
-            movieId,
+            mediaId,
             mediaTypes === 'movie' ? '/credits' : '/aggregate_credits'
         )
             .then(data => {
@@ -33,7 +33,7 @@ export const Cast = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [mediaTypes, movieId]);
+    }, [mediaTypes, mediaId]);
 
     return (
         <>
@@ -46,6 +46,7 @@ export const Cast = () => {
                             ({ id, castId, poster, personName, role }) => (
                                 <CastElement key={castId}>
                                     <Link
+                                        style={{ width: '100%' }}
                                         to={`/person/${id}`}
                                         state={{ from: location }}
                                     >

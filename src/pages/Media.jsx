@@ -1,6 +1,6 @@
 import { Container } from 'components/App.styled';
 import { Loader } from 'components/Loader/Loader';
-import { MovieList } from 'components/MovieList/MovieList';
+import { MediaList } from 'components/MediaList/MediaList';
 import { Page404 } from 'components/Page404/Page404';
 import { Pagination } from 'components/Pagination/Pagination';
 import { SearchForm } from 'components/SearchForm/SearchForm';
@@ -10,7 +10,7 @@ import { useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { getMoviesByName } from 'services/api';
 
-const Movies = () => {
+const Media = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [first, setFirst] = useState(true);
     const [total, setTotal] = useState(0);
@@ -74,7 +74,7 @@ const Movies = () => {
                 </div>
                 {total > 0 && <Pagination totalPages={total} />}
                 {movies && (
-                    <MovieList movies={movies} mediaTypes={mediaTypes} />
+                    <MediaList movies={movies} mediaTypes={mediaTypes} />
                 )}
                 {!first && movies.length < 1 && <Page404 />}
                 {total > 0 && <Pagination totalPages={total} />}
@@ -84,4 +84,4 @@ const Movies = () => {
     );
 };
 
-export default Movies;
+export default Media;

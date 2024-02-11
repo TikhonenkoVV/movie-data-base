@@ -6,7 +6,7 @@ import {
     TrendsTogler,
 } from 'components/App.styled';
 import { Loader } from 'components/Loader/Loader';
-import { MovieList } from 'components/MovieList/MovieList';
+import { MediaList } from 'components/MediaList/MediaList';
 import { useEffect, useState } from 'react';
 import { getMovies } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
@@ -71,7 +71,7 @@ const Home = () => {
                 </TrendsBtnWrapper>
                 <Select onChange={hendleSelectChange} />
             </TrendsTogler>
-            <MovieList movies={movies} />
+            <MediaList movies={movies} />
             {error && <ToastContainer />}
         </Container>
     );

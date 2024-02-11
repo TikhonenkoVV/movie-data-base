@@ -18,18 +18,12 @@ export const CastGrid = styled.ul`
 export const CastElement = styled.li`
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-bottom: 10px;
-    align-items: center;
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.accent};
     & p {
         padding: 0 5px;
         line-height: 1.3;
         text-align: center;
-    }
-    & p:last-child {
-        margin-top: auto;
     }
 `;
 
@@ -38,4 +32,5 @@ export const CastPhoto = styled.img`
     object-fit: cover;
     object-position: top;
     aspect-ratio: 3 / 4;
+    margin-bottom: 10px;
 `;

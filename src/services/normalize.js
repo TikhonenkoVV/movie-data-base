@@ -95,9 +95,12 @@ export const normalizeCast = data => {
             original_name,
             profile_path,
         }) => {
-            const castId = credit_id ?? roles[0]?.credit_id;
-            let role = `(${character})` ?? `(${roles[0]?.character})`;
-            if (role === '()') role = `(${nA})`;
+            const castId = credit_id ? credit_id : roles[0]?.credit_id;
+            const role = character
+                ? `(${character})`
+                : character === ''
+                ? `(${nA})`
+                : `(${roles[0]?.character})`;
             const personName = name ?? original_name;
             const poster = profile_path
                 ? IMAGES_BASE_URL + profile_path
@@ -111,7 +114,6 @@ export const normalizeCast = data => {
             };
         }
     );
-    console.log(res);
     return res;
 };
 

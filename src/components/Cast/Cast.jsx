@@ -46,7 +46,12 @@ export const Cast = () => {
                             ({ id, castId, poster, personName, role }) => (
                                 <CastElement key={castId}>
                                     <Link
-                                        style={{ width: '100%' }}
+                                        style={{
+                                            width: '100%',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            paddingBottom: '10px',
+                                        }}
                                         to={`/person/${id}`}
                                         state={{ from: location }}
                                     >
@@ -54,10 +59,12 @@ export const Cast = () => {
                                             src={poster}
                                             alt={personName}
                                         />
-                                        <p>
-                                            <b>{personName}</b>
-                                        </p>
-                                        <p>{role}</p>
+                                        <div>
+                                            <p>
+                                                <b>{personName}</b>
+                                            </p>
+                                            <p>{role}</p>
+                                        </div>
                                     </Link>
                                 </CastElement>
                             )

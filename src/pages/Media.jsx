@@ -19,6 +19,7 @@ const Media = () => {
     const [error, setError] = useState(null);
     const [searchParams, setSearchParams] = useSearchParams();
     let page = 1;
+
     const selectInitial = {
         options: [{ movie: 'Movie' }, { tv: 'Tv' }],
     };

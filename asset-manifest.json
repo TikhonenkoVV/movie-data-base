@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.52876ea6.js",
+    "main.js": "/MovieDB/static/js/main.b228f479.js",
     "static/js/415.1f7fd59f.chunk.js": "/MovieDB/static/js/415.1f7fd59f.chunk.js",
     "static/js/585.459a39b1.chunk.js": "/MovieDB/static/js/585.459a39b1.chunk.js",
     "static/js/911.a8f31947.chunk.js": "/MovieDB/static/js/911.a8f31947.chunk.js",
-    "static/js/387.323a3059.chunk.js": "/MovieDB/static/js/387.323a3059.chunk.js",
+    "static/js/387.0d658ea2.chunk.js": "/MovieDB/static/js/387.0d658ea2.chunk.js",
     "static/js/422.bca00e02.chunk.js": "/MovieDB/static/js/422.bca00e02.chunk.js",
     "static/js/850.f6b96f14.chunk.js": "/MovieDB/static/js/850.f6b96f14.chunk.js",
     "static/css/605.ab2e57a6.chunk.css": "/MovieDB/static/css/605.ab2e57a6.chunk.css",
@@ -19,11 +19,11 @@
     "static/media/sprite.svg": "/MovieDB/static/media/sprite.27b392ebfaf8568dc28be100f3ee004d.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.52876ea6.js.map": "/MovieDB/static/js/main.52876ea6.js.map",
+    "main.b228f479.js.map": "/MovieDB/static/js/main.b228f479.js.map",
     "415.1f7fd59f.chunk.js.map": "/MovieDB/static/js/415.1f7fd59f.chunk.js.map",
     "585.459a39b1.chunk.js.map": "/MovieDB/static/js/585.459a39b1.chunk.js.map",
     "911.a8f31947.chunk.js.map": "/MovieDB/static/js/911.a8f31947.chunk.js.map",
-    "387.323a3059.chunk.js.map": "/MovieDB/static/js/387.323a3059.chunk.js.map",
+    "387.0d658ea2.chunk.js.map": "/MovieDB/static/js/387.0d658ea2.chunk.js.map",
     "422.bca00e02.chunk.js.map": "/MovieDB/static/js/422.bca00e02.chunk.js.map",
     "850.f6b96f14.chunk.js.map": "/MovieDB/static/js/850.f6b96f14.chunk.js.map",
     "605.ab2e57a6.chunk.css.map": "/MovieDB/static/css/605.ab2e57a6.chunk.css.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.52876ea6.js"
+    "static/js/main.b228f479.js"
   ]
 }

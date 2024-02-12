@@ -1,9 +1,6 @@
-import { useLocation } from 'react-router-dom';
 import { ImageWrapper, Item, StyledLink, Title } from './CreditsItem.styled';
 
 export const CreditsItem = ({ credits }) => {
-    const location = useLocation();
-
     return credits?.map(
         ({
             id,
@@ -16,8 +13,12 @@ export const CreditsItem = ({ credits }) => {
         }) => (
             <Item key={credit_id}>
                 <StyledLink
-                    to={`/movies/${media_type}/${id}`}
-                    state={{ from: location }}
+                    to={
+                        media_type === 'movie'
+                            ? `/movies/${id}`
+                            : `/tv-shows/${id}`
+                    }
+                    state={{ mediaTypes: media_type }}
                 >
                     <ImageWrapper>
                         <img

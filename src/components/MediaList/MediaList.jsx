@@ -1,5 +1,4 @@
 import { Grid, GridItem } from 'components/App.styled';
-import { useLocation } from 'react-router-dom';
 import {
     CardOverlay,
     Description,
@@ -10,9 +9,8 @@ import {
 import { normalizeMoviesData } from 'services/normalize';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 
-export const MediaList = ({ movies, mediaTypes }) => {
-    const location = useLocation();
-    const data = normalizeMoviesData(movies, mediaTypes);
+export const MediaList = ({ media, mediaTypes }) => {
+    const data = normalizeMoviesData(media, mediaTypes);
     return (
         <Grid>
             {data.map(
@@ -30,10 +28,10 @@ export const MediaList = ({ movies, mediaTypes }) => {
                         <MovieLink
                             to={
                                 media_type === 'movie'
-                                    ? `/movies/${media_type}/${id}`
-                                    : `/tv-shows/${media_type}/${id}`
+                                    ? `/movies/${id}`
+                                    : `/tv-shows/${id}`
                             }
-                            state={{ from: location }}
+                            state={{ mediaTypes: media_type }}
                         >
                             <ImgWrapper>
                                 <img src={poster} alt={movie_title} />

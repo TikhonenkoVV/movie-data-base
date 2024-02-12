@@ -71,7 +71,7 @@ const Home = () => {
                 </TrendsBtnWrapper>
                 <Select onChange={hendleSelectChange} />
             </TrendsTogler>
-            <MediaList movies={movies} />
+            <MediaList media={movies} />
             {error && <ToastContainer />}
         </Container>
     );

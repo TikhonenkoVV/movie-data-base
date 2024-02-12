@@ -25,15 +25,17 @@ const MovieDetails = () => {
     const [isTrailer, setTrailer] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [movie, setMovie] = useState(null);
+    const [first, setFirst] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const { mediaTypes, mediaId } = useParams();
-
-    const location = useLocation();
+    const { mediaId } = useParams();
+    const { state } = useLocation();
 
     useEffect(() => {
+        if (!first) return;
+        setFirst(false);
         setIsLoading(true);
-        getDetails(mediaTypes, mediaId, '')
+        getDetails(state.mediaTypes, mediaId, '')
             .then(data => {
                 setMovie(data);
             })
@@ -41,7 +43,7 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                getTrailer(mediaTypes, mediaId)
+                getTrailer(state.mediaTypes, mediaId)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -53,7 +55,7 @@ const MovieDetails = () => {
                         setIsLoading(false);
                     });
             });
-    }, [mediaTypes, mediaId]);
+    }, [first, state, mediaId]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -73,9 +75,9 @@ const MovieDetails = () => {
                                 onClose={toggleModal}
                             />
                             <DetailList
-                                state={{ from: location }}
                                 onTogle={toggleModal}
                                 trailer={isTrailer}
+                                mediaTypes={state.mediaTypes}
                             />
                             <Suspense>
                                 <Outlet />

@@ -1,23 +1,24 @@
 import { Loader } from 'components/Loader/Loader';
 import { ReviewTitle } from './Review.styled';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 
 export const Review = () => {
-    const { mediaTypes, mediaId } = useParams();
+    const { mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
     const [reviews, setReviews] = useState(null);
+    const { state } = useLocation();
 
     useEffect(() => {
         if (!mediaId) return;
         setIsLoading(true);
-        getDetails(mediaTypes, mediaId, '/reviews')
+        getDetails(state.mediaTypes, mediaId, '/reviews')
             .then(data => {
-                setReviews([...data.results]);
+                setReviews(data.results);
             })
             .catch(err => {
                 setError(err.message);
@@ -26,7 +27,7 @@ export const Review = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [mediaTypes, mediaId]);
+    }, [state, mediaId]);
 
     return (
         <>

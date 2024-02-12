@@ -7,21 +7,19 @@ import { ToastContainer, toast } from 'react-toastify';
 import { normalizeCast } from 'services/normalize';
 
 export const Cast = () => {
-    const { mediaTypes, mediaId } = useParams();
+    const { mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
     const [cast, setCast] = useState(null);
-    // const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
-    // const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w66_and_h66_face/';
-    const location = useLocation();
+    const { state } = useLocation();
 
     useEffect(() => {
-        if (!mediaId) return;
+        if (!mediaId || !state.mediaTypes) return;
         setIsLoading(true);
         getDetails(
-            mediaTypes,
+            state.mediaTypes,
             mediaId,
-            mediaTypes === 'movie' ? '/credits' : '/aggregate_credits'
+            state.mediaTypes === 'movie' ? '/credits' : '/aggregate_credits'
         )
             .then(data => {
                 setCast(normalizeCast(data.cast));
@@ -33,7 +31,7 @@ export const Cast = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [mediaTypes, mediaId]);
+    }, [state, mediaId]);
 
     return (
         <>
@@ -53,7 +51,6 @@ export const Cast = () => {
                                             paddingBottom: '10px',
                                         }}
                                         to={`/person/${id}`}
-                                        state={{ from: location }}
                                     >
                                         <CastPhoto
                                             src={poster}

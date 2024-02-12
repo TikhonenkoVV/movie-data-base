@@ -13,6 +13,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const ImageWrapper = styled.div`
+    flex-shrink: 0;
     width: 70px;
     height: 105px;
     overflow: hidden;

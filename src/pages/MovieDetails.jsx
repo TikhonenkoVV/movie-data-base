@@ -1,6 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Container } from 'components/App.styled';
 import { DetailList } from 'components/DetailList/DetailList';
+import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
@@ -9,6 +10,7 @@ import {
     createContext,
     useContext,
     useEffect,
+    useRef,
     useState,
 } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
@@ -29,13 +31,17 @@ const MovieDetails = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const { mediaId } = useParams();
-    const { state } = useLocation();
+
+    const location = useLocation();
+    const goBackLink = useRef(location?.state?.from ?? '/');
+    const mediaTypes = useRef(location?.state?.mediaTypes).current;
 
     useEffect(() => {
         if (!first) return;
+        // console.log(location);
         setFirst(false);
         setIsLoading(true);
-        getDetails(state.mediaTypes, mediaId, '')
+        getDetails(mediaTypes, mediaId, '')
             .then(data => {
                 setMovie(data);
             })
@@ -43,7 +49,7 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                getTrailer(state.mediaTypes, mediaId)
+                getTrailer(mediaTypes, mediaId)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -55,7 +61,7 @@ const MovieDetails = () => {
                         setIsLoading(false);
                     });
             });
-    }, [first, state, mediaId]);
+    }, [mediaTypes, first, mediaId]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -68,6 +74,7 @@ const MovieDetails = () => {
             <section>
                 {isLoading && <Loader />}
                 <Container>
+                    <GoBackBtn path={goBackLink}>Go back</GoBackBtn>
                     {movie && (
                         <>
                             <MovieInfo
@@ -77,7 +84,7 @@ const MovieDetails = () => {
                             <DetailList
                                 onTogle={toggleModal}
                                 trailer={isTrailer}
-                                mediaTypes={state.mediaTypes}
+                                mediaTypes={mediaTypes}
                             />
                             <Suspense>
                                 <Outlet />

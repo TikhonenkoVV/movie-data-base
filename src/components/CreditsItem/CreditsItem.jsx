@@ -10,6 +10,7 @@ export const CreditsItem = ({ credits }) => {
             personCharacter,
             releaseDate,
             media_type,
+            vote_average,
         }) => (
             <Item key={credit_id}>
                 <StyledLink
@@ -37,6 +38,7 @@ export const CreditsItem = ({ credits }) => {
                         <Title>{movieTitle}</Title>
                         {personCharacter && <p>Character: {personCharacter}</p>}
                         <p>Year: {releaseDate}</p>
+                        <p>User score: {vote_average}</p>
                     </div>
                 </StyledLink>
             </Item>

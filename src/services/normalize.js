@@ -15,7 +15,15 @@ export const normalizeMoviesData = (data, mediaTypes) => {
             original_title,
             original_name,
             poster_path,
+            release_date,
+            first_air_date,
         }) => {
+            let release;
+            if (release_date) {
+                release = formatDate(release_date);
+            } else if (first_air_date) {
+                release = formatDate(first_air_date);
+            } else release = nA;
             const movie_title = name
                 ? name
                 : title
@@ -31,6 +39,7 @@ export const normalizeMoviesData = (data, mediaTypes) => {
                 movie_title,
                 media_type: media_type ? media_type : mediaTypes,
                 poster,
+                release,
                 vote_average:
                     vote_average > 0 ? Math.round(vote_average * 10) : 'NR',
             };
@@ -181,6 +190,7 @@ export const normalizeActing = data => {
             original_name,
             character,
             release_date,
+            vote_average,
             first_air_date,
             media_type,
         }) => {
@@ -219,6 +229,8 @@ export const normalizeActing = data => {
                 releaseDate,
                 sortDate: sortDate(),
                 media_type,
+                vote_average:
+                    vote_average > 0 ? Math.round(vote_average * 10) : 'NR',
             };
         }
     );

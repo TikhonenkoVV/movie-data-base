@@ -84,10 +84,9 @@ export const Grid = styled.ul`
 `;
 
 export const GridItem = styled.li`
-    position: relative;
     display: flex;
     flex-direction: column;
-    aspect-ratio: 2 / 3;
+    border-radius: 20px;
     background-color: ${({ theme }) => theme.colors.accent};
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -104,11 +103,11 @@ export const GridItem = styled.li`
     &:focus img {
         transform: scale(1.05);
     }
-    &:hover .js-overlay,
+    /* &:hover .js-overlay,
     &:focus .js-overlay {
         opacity: 1;
         transform: translateY(0);
-    }
+    } */
 `;
 
 export const BtnBack = styled;

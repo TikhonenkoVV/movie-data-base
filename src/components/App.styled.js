@@ -86,6 +86,7 @@ export const Grid = styled.ul`
 export const GridItem = styled.li`
     display: flex;
     flex-direction: column;
+    border: 2px solid ${({ theme }) => theme.colors.accent};
     border-radius: 20px;
     background-color: ${({ theme }) => theme.colors.accent};
 
@@ -103,11 +104,6 @@ export const GridItem = styled.li`
     &:focus img {
         transform: scale(1.05);
     }
-    /* &:hover .js-overlay,
-    &:focus .js-overlay {
-        opacity: 1;
-        transform: translateY(0);
-    } */
 `;
 
 export const BtnBack = styled;

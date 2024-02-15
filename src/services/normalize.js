@@ -230,7 +230,9 @@ export const normalizeActing = data => {
                 sortDate: sortDate(),
                 media_type,
                 vote_average:
-                    vote_average > 0 ? Math.round(vote_average * 10) : 'NR',
+                    vote_average > 0
+                        ? `${Math.round(vote_average * 10)}%`
+                        : 'NR',
             };
         }
     );
@@ -253,6 +255,7 @@ export const normalizeCrew = crew => {
             job,
             release_date,
             first_air_date,
+            vote_average,
             media_type,
         }) => {
             let futureDate = new Date();
@@ -298,6 +301,10 @@ export const normalizeCrew = crew => {
                 releaseDate,
                 sortDate: sortDate(),
                 media_type,
+                vote_average:
+                    vote_average > 0
+                        ? `${Math.round(vote_average * 10)}%`
+                        : 'NR',
             };
         }
     );

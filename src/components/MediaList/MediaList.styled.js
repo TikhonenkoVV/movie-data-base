@@ -19,7 +19,7 @@ export const ImgWrapper = styled.div`
     }
 `;
 
-export const CardOverlay = styled.div`
+export const CardInfo = styled.div`
     position: relative;
     flex-grow: 1;
     width: 100%;

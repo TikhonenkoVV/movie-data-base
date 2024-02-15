@@ -1,6 +1,6 @@
 import { Grid, GridItem } from 'components/App.styled';
 import {
-    CardOverlay,
+    CardInfo,
     ImgWrapper,
     MovieLink,
     MovieTitle,
@@ -33,7 +33,7 @@ export const MediaList = ({ media, mediaTypes }) => {
                             <ImgWrapper>
                                 <img src={poster} alt={movie_title} />
                             </ImgWrapper>
-                            <CardOverlay className="js-overlay">
+                            <CardInfo>
                                 <ScoreBar
                                     rating={vote_average}
                                     style={{
@@ -45,7 +45,7 @@ export const MediaList = ({ media, mediaTypes }) => {
                                 />
                                 <MovieTitle>{movie_title}</MovieTitle>
                                 <p>{release}</p>
-                            </CardOverlay>
+                            </CardInfo>
                         </MovieLink>
                     </GridItem>
                 )

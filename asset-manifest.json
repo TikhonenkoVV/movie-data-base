@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.87a7ca15.js",
+    "main.js": "/MovieDB/static/js/main.3a999e24.js",
     "static/js/781.281fddda.chunk.js": "/MovieDB/static/js/781.281fddda.chunk.js",
     "static/js/486.eb720bf3.chunk.js": "/MovieDB/static/js/486.eb720bf3.chunk.js",
     "static/js/994.caf2bbe1.chunk.js": "/MovieDB/static/js/994.caf2bbe1.chunk.js",
-    "static/js/911.19a19d16.chunk.js": "/MovieDB/static/js/911.19a19d16.chunk.js",
+    "static/js/911.c916005a.chunk.js": "/MovieDB/static/js/911.c916005a.chunk.js",
     "static/js/387.fafa8ba1.chunk.js": "/MovieDB/static/js/387.fafa8ba1.chunk.js",
     "static/js/422.c11c2160.chunk.js": "/MovieDB/static/js/422.c11c2160.chunk.js",
     "static/js/811.dbb17d3c.chunk.js": "/MovieDB/static/js/811.dbb17d3c.chunk.js",
@@ -20,11 +20,11 @@
     "static/media/sprite.svg": "/MovieDB/static/media/sprite.27b392ebfaf8568dc28be100f3ee004d.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.87a7ca15.js.map": "/MovieDB/static/js/main.87a7ca15.js.map",
+    "main.3a999e24.js.map": "/MovieDB/static/js/main.3a999e24.js.map",
     "781.281fddda.chunk.js.map": "/MovieDB/static/js/781.281fddda.chunk.js.map",
     "486.eb720bf3.chunk.js.map": "/MovieDB/static/js/486.eb720bf3.chunk.js.map",
     "994.caf2bbe1.chunk.js.map": "/MovieDB/static/js/994.caf2bbe1.chunk.js.map",
-    "911.19a19d16.chunk.js.map": "/MovieDB/static/js/911.19a19d16.chunk.js.map",
+    "911.c916005a.chunk.js.map": "/MovieDB/static/js/911.c916005a.chunk.js.map",
     "387.fafa8ba1.chunk.js.map": "/MovieDB/static/js/387.fafa8ba1.chunk.js.map",
     "422.c11c2160.chunk.js.map": "/MovieDB/static/js/422.c11c2160.chunk.js.map",
     "811.dbb17d3c.chunk.js.map": "/MovieDB/static/js/811.dbb17d3c.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.87a7ca15.js"
+    "static/js/main.3a999e24.js"
   ]
 }

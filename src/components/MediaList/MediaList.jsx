@@ -7,11 +7,9 @@ import {
 } from './MediaList.styled';
 import { normalizeMoviesData } from 'services/normalize';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
-import { useLocation } from 'react-router-dom';
 
 export const MediaList = ({ media, mediaTypes }) => {
     const data = normalizeMoviesData(media, mediaTypes);
-    const location = useLocation();
 
     return (
         <Grid>
@@ -28,10 +26,9 @@ export const MediaList = ({ media, mediaTypes }) => {
                         <MovieLink
                             to={
                                 media_type === 'movie'
-                                    ? `/movies/${id}`
-                                    : `/tv-shows/${id}`
+                                    ? `/movies/movie-${id}`
+                                    : `/tv-shows/tv-${id}`
                             }
-                            state={{ mediaTypes: media_type, from: location }}
                         >
                             <ImgWrapper>
                                 <img src={poster} alt={movie_title} />

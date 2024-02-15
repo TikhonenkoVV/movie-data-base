@@ -16,7 +16,7 @@ export const Score = styled.span`
         border-radius: 50%;
         width: 54px;
         height: 54px;
-        background-color: ${({ theme }) => theme.colors.accent};
+        background-color: #19171d;
     }
     pointer-events: none;
 `;

@@ -62,6 +62,7 @@ export const NavLinkStyled = styled(NavLink)`
     &.active {
         color: ${({ theme }) => theme.colors.white};
         background-color: ${({ theme }) => theme.colors.hover};
+        pointer-events: none;
     }
     @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
         width: 100px;

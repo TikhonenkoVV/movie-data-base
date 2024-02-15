@@ -1,7 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Container } from 'components/App.styled';
 import { DetailList } from 'components/DetailList/DetailList';
-import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
@@ -10,10 +9,9 @@ import {
     createContext,
     useContext,
     useEffect,
-    useRef,
     useState,
 } from 'react';
-import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
@@ -32,16 +30,13 @@ const MovieDetails = () => {
     const [error, setError] = useState(null);
     const { mediaId } = useParams();
 
-    const location = useLocation();
-    const goBackLink = useRef(location?.state?.from ?? '/');
-    const mediaTypes = useRef(location?.state?.mediaTypes).current;
-
     useEffect(() => {
         if (!first) return;
-        // console.log(location);
+        const type = mediaId.split('-')[0];
+        const id = mediaId.split('-')[1];
         setFirst(false);
         setIsLoading(true);
-        getDetails(mediaTypes, mediaId, '')
+        getDetails(type, id, '')
             .then(data => {
                 setMovie(data);
             })
@@ -49,7 +44,7 @@ const MovieDetails = () => {
                 setError(err.message);
             })
             .finally(() => {
-                getTrailer(mediaTypes, mediaId)
+                getTrailer(type, id)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -61,7 +56,7 @@ const MovieDetails = () => {
                         setIsLoading(false);
                     });
             });
-    }, [mediaTypes, first, mediaId]);
+    }, [first, mediaId]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -74,7 +69,6 @@ const MovieDetails = () => {
             <section>
                 {isLoading && <Loader />}
                 <Container>
-                    <GoBackBtn path={goBackLink}>Go back</GoBackBtn>
                     {movie && (
                         <>
                             <MovieInfo
@@ -84,7 +78,7 @@ const MovieDetails = () => {
                             <DetailList
                                 onTogle={toggleModal}
                                 trailer={isTrailer}
-                                mediaTypes={mediaTypes}
+                                mediaTypes={mediaId.split('-')[0]}
                             />
                             <Suspense>
                                 <Outlet />

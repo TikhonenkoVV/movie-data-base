@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { CastElement, CastGrid, CastPhoto, CastTitle } from './Cast.styled';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
@@ -11,15 +11,16 @@ export const Cast = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState([]);
     const [cast, setCast] = useState(null);
-    const { state } = useLocation();
 
     useEffect(() => {
-        if (!mediaId || !state.mediaTypes) return;
+        if (!mediaId) return;
+        const type = mediaId.split('-')[0];
+        const id = mediaId.split('-')[1];
         setIsLoading(true);
         getDetails(
-            state.mediaTypes,
-            mediaId,
-            state.mediaTypes === 'movie' ? '/credits' : '/aggregate_credits'
+            type,
+            id,
+            type === 'movie' ? '/credits' : '/aggregate_credits'
         )
             .then(data => {
                 setCast(normalizeCast(data.cast));
@@ -31,7 +32,7 @@ export const Cast = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [state, mediaId]);
+    }, [mediaId]);
 
     return (
         <>

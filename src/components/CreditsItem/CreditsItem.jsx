@@ -16,8 +16,8 @@ export const CreditsItem = ({ credits }) => {
                 <StyledLink
                     to={
                         media_type === 'movie'
-                            ? `/movies/${id}`
-                            : `/tv-shows/${id}`
+                            ? `/movies/movie-${id}`
+                            : `/tv-shows/tv-${id}`
                     }
                     state={{ mediaTypes: media_type }}
                 >

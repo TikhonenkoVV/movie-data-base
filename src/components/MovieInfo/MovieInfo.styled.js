@@ -58,6 +58,7 @@ export const MovieInfoWrapper = styled.div`
     justify-content: center;
     gap: 10px;
     color: ${({ theme }) => theme.colors.themeText};
+    transition: color ${({ theme }) => theme.baseTransition};
     @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
         gap: 20px;
     }

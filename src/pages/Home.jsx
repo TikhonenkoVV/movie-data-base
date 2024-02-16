@@ -1,16 +1,10 @@
-import {
-    Container,
-    HomeTitle,
-    TrendsBtn,
-    TrendsBtnWrapper,
-    TrendsTogler,
-} from 'components/App.styled';
 import { Loader } from 'components/Loader/Loader';
 import { MediaList } from 'components/MediaList/MediaList';
 import { useEffect, useState } from 'react';
 import { getMovies } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
-import { Select } from 'components/Select/Select';
+import { Container } from 'components/Container/Container';
+import { TrendsToggler } from 'components/TrendsTogler/TrendsTogler';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -50,27 +44,12 @@ const Home = () => {
     return (
         <Container>
             {isLoading && <Loader />}
-            <TrendsTogler>
-                <HomeTitle>Trending</HomeTitle>
-                <TrendsBtnWrapper>
-                    <TrendsBtn
-                        datatype="day"
-                        className={trands === 'day' ? 'active' : ''}
-                        type="button"
-                        onClick={onBtnDayClick}
-                    >
-                        today
-                    </TrendsBtn>
-                    <TrendsBtn
-                        className={trands === 'week' ? 'active' : ''}
-                        type="button"
-                        onClick={onBtnWeekClick}
-                    >
-                        this week
-                    </TrendsBtn>
-                </TrendsBtnWrapper>
-                <Select onChange={hendleSelectChange} />
-            </TrendsTogler>
+            <TrendsToggler
+                trands={trands}
+                onBtnDayClick={onBtnDayClick}
+                onBtnWeekClick={onBtnWeekClick}
+                hendleSelectChange={hendleSelectChange}
+            />
             <MediaList media={movies} />
             {error && <ToastContainer />}
         </Container>

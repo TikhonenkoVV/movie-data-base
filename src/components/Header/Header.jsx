@@ -1,3 +1,4 @@
+import { Container } from 'components/Container/Container';
 import {
     HeaderStyled,
     Logotype,
@@ -6,7 +7,6 @@ import {
     Toggler,
     Wrapper,
 } from './Header.styled';
-import { Container } from 'components/App.styled';
 import { useRef } from 'react';
 import { storageLoad } from 'services/storage';
 

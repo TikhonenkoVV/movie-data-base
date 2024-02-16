@@ -1,10 +1,10 @@
 import { CreditsItem } from 'components/CreditsItem/CreditsItem';
-import { normalizeActing, normalizeCrew } from 'services/normalize';
+import { normalizeActing, normalizePersonInCrew } from 'services/normalize';
 import { ActingList, Title } from './Acting.styled';
 
 export const Acting = ({ acting, crew }) => {
     const personActing = normalizeActing(acting);
-    const personInCrew = normalizeCrew(crew);
+    const personInCrew = normalizePersonInCrew(crew);
 
     return (
         <>

@@ -1,14 +1,19 @@
-import { Grid, GridItem } from 'components/App.styled';
 import { Link } from 'react-router-dom';
 import { normalizePersonsData } from 'services/normalize';
-import { CardInfo, ImgWrapper, PersonTitle } from './PersonsList.styled';
+import {
+    CardInfo,
+    ImgWrapper,
+    PersonTitle,
+    StyledPersonCard,
+    StyledPersonList,
+} from './PersonsList.styled';
 
 export const PersonsList = ({ persons }) => {
     const data = normalizePersonsData(persons);
     return (
-        <Grid>
+        <StyledPersonList>
             {data.map(({ id, person_name, poster }) => (
-                <GridItem key={id}>
+                <StyledPersonCard key={id}>
                     <Link to={`/person/${id}`}>
                         <ImgWrapper>
                             <img src={poster} alt={person_name} />
@@ -17,8 +22,8 @@ export const PersonsList = ({ persons }) => {
                             <PersonTitle>{person_name}</PersonTitle>
                         </CardInfo>
                     </Link>
-                </GridItem>
+                </StyledPersonCard>
             ))}
-        </Grid>
+        </StyledPersonList>
     );
 };

@@ -1,4 +1,4 @@
-import { Container } from 'components/App.styled';
+import { Container } from 'components/Container/Container';
 import { Loader } from 'components/Loader/Loader';
 import { Page404 } from 'components/Page404/Page404';
 import { Pagination } from 'components/Pagination/Pagination';

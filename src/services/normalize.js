@@ -241,7 +241,7 @@ export const normalizeActing = data => {
     return result;
 };
 
-export const normalizeCrew = crew => {
+export const normalizePersonInCrew = crew => {
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
     const res = crew?.map(
         ({
@@ -329,4 +329,69 @@ export const normalizeCrew = crew => {
     });
 
     return result;
+};
+
+export const normalizeCrew = crew => {
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
+    const director = [];
+    const normalList = crew.map(
+        ({
+            id,
+            credit_id,
+            department,
+            job,
+            jobs,
+            name,
+            original_name,
+            profile_path,
+        }) => {
+            const personId = credit_id ? credit_id : jobs[0].credit_id;
+            const personName = name ? name : original_name;
+            const poster = profile_path
+                ? IMAGES_BASE_URL + profile_path
+                : noPoster;
+            const person_job = job ? job : jobs[0].job;
+            if (
+                department.toLowerCase() === 'directing' &&
+                person_job.toLowerCase() === 'director'
+            )
+                director.push({
+                    id,
+                    credit_id: personId,
+                    personName,
+                    poster,
+                    job: person_job,
+                });
+            return {
+                id,
+                credit_id: personId,
+                department,
+                job: person_job,
+                personName,
+                poster,
+            };
+        }
+    );
+    const controlList = [];
+    normalList.map(el => {
+        if (!controlList.includes(el.department.toLowerCase())) {
+            return controlList.push(el.department.toLowerCase());
+        } else return null;
+    });
+
+    const list = [];
+    controlList.map(department => {
+        const arr = [];
+        normalList.map(el => {
+            if (el.department.toLowerCase() === department) {
+                const person = arr.find(element => element.id === el.id);
+                if (person) {
+                    return (person.job = `${person.job}, ${el.job}`);
+                } else return arr.push(el);
+            } else return null;
+        });
+        return list.push({ [department]: [...arr] });
+    });
+
+    return { crew: list, director: director };
 };

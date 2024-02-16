@@ -1,4 +1,4 @@
-import { Container } from 'components/App.styled';
+import { Container } from 'components/Container/Container';
 import { Loader } from 'components/Loader/Loader';
 import { MediaList } from 'components/MediaList/MediaList';
 import { Page404 } from 'components/Page404/Page404';

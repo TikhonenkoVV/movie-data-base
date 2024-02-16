@@ -1,4 +1,3 @@
-import { Container } from 'components/App.styled';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDetails, getPersonById } from 'services/api';
@@ -6,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Loader } from 'components/Loader/Loader';
 import { PersonInfo } from 'components/PersonInfo/PersonInfo';
 import { normalizePersonData } from 'services/normalize';
+import { Container } from 'components/Container/Container';
 
 const PersonDetails = () => {
     const { personId } = useParams();

@@ -1,21 +1,20 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-import { Container } from 'components/App.styled';
-import { DetailList } from 'components/DetailList/DetailList';
+import { CastList } from 'components/CastList/CastList';
+import { Container } from 'components/Container/Container';
+import { CrewList } from 'components/CrewList/CrewList';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
-import {
-    Suspense,
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-} from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
-import { normalizeMovieData } from 'services/normalize';
+import {
+    normalizeCast,
+    normalizeCrew,
+    normalizeMovieData,
+} from 'services/normalize';
 
 const ModalContext = createContext(false);
 
@@ -30,6 +29,11 @@ const MovieDetails = () => {
     const [error, setError] = useState(null);
     const { mediaId } = useParams();
 
+    const [cast, setCast] = useState();
+    const [crew, setCrew] = useState();
+
+    if (error) console.log(error);
+
     useEffect(() => {
         if (!first) return;
         const type = mediaId.split('-')[0];
@@ -42,6 +46,7 @@ const MovieDetails = () => {
             })
             .catch(err => {
                 setError(err.message);
+                toast(err.message);
             })
             .finally(() => {
                 getTrailer(type, id)
@@ -53,7 +58,20 @@ const MovieDetails = () => {
                         toast(err.message);
                     })
                     .finally(() => {
-                        setIsLoading(false);
+                        getDetails(
+                            type,
+                            id,
+                            type === 'movie' ? '/credits' : '/aggregate_credits'
+                        )
+                            .then(data => {
+                                setCast(normalizeCast(data.cast));
+                                setCrew(normalizeCrew(data.crew));
+                            })
+                            .catch(err => {
+                                setError(err.message);
+                                toast(err.message);
+                            })
+                            .finally(() => setIsLoading(false));
                     });
             });
     }, [first, mediaId]);
@@ -75,14 +93,11 @@ const MovieDetails = () => {
                                 {...normalizeMovieData(movie)}
                                 onClose={toggleModal}
                             />
-                            <DetailList
-                                onTogle={toggleModal}
-                                trailer={isTrailer}
-                                mediaTypes={mediaId.split('-')[0]}
-                            />
-                            <Suspense>
-                                <Outlet />
-                            </Suspense>
+                            <h2>Directing</h2>
+                            <CrewList crew={crew} />
+                            <h2>Top Billed Cast</h2>
+                            <CastList cast={cast} />
+                            <button type="button">Full Cast & Crew</button>
                         </>
                     )}
                     {error && <Page404 />}

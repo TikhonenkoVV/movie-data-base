@@ -1,1022 +1,2169 @@
 [
     {
         "adult": false,
-        "backdrop_path": "/mgY8An5qVCgLh97KOWeJVJarskL.jpg",
-        "genre_ids": [18, 10749, 53],
-        "id": 216015,
-        "original_language": "en",
-        "original_title": "Fifty Shades of Grey",
-        "overview": "When college senior Anastasia Steele steps in for her sick roommate to interview prominent businessman Christian Grey for their campus paper, little does she realize the path her life will take. Christian, as enigmatic as he is rich and powerful, finds himself strangely drawn to Ana, and she to him. Though sexually inexperienced, Ana plunges headlong into an affair -- and learns that Christian's true sexual proclivities push the boundaries of pain and pleasure.",
-        "popularity": 110.901,
-        "poster_path": "/63kGofUkt1Mx0SIL4XI4Z5AoSgt.jpg",
-        "release_date": "2015-02-11",
-        "title": "Fifty Shades of Grey",
-        "video": false,
-        "vote_average": 5.881,
-        "vote_count": 11313,
-        "character": "Anastasia Steele",
-        "credit_id": "52fe4e10c3a368484e20c3bd",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/65DZqY3Aj1iBIptSnyHiaQ1RRon.jpg",
-        "genre_ids": [35, 18],
-        "id": 300686,
-        "original_language": "en",
-        "original_title": "Chloe and Theo",
-        "overview": "A young woman, Chloe, living by her wits on the streets of New York City, has a chance meeting with a wise Inuit Eskimo, Theo, who was sent to New York by his elders to provide a message to the people of the world – We either change our destructive was or be destroyed by them. Chloe, who has been searching for something to believe in, becomes inspired by Theo and , with the help of a kind lawyer, Monica, the three of them present Theo’s story to the United Nations in hopes of creating a better future for all of us.",
-        "popularity": 6.495,
-        "poster_path": "/fmjyKrH64UPndnUEkTWOOHcT5xU.jpg",
-        "release_date": "2015-04-15",
-        "title": "Chloe and Theo",
-        "video": false,
-        "vote_average": 5.896,
-        "vote_count": 54,
-        "character": "Chloe",
-        "credit_id": "548937c4c3a3686f58000d9a",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [18, 35],
-        "id": 320467,
-        "original_language": "en",
-        "original_title": "In a Relationship",
-        "overview": "In a Relationship is a spirited yet achingly tender look at modern love. Shot mockumentary style, this short film follows two young couples in opposite stages of romance: Matt and Willa, who have been hooking up for six days, and Owen and Abby, who are trying in vain to breathe new life into a five year relationship that is growing stale. It's an exploration of the grey areas of contemporary dating and how much we keep from the people we're closest to.",
-        "popularity": 2.164,
-        "poster_path": "/emeZGgODkO9jVQuDx4Oar5XbOQV.jpg",
-        "release_date": "2015-01-21",
-        "title": "In a Relationship",
-        "video": false,
-        "vote_average": 8.2,
-        "vote_count": 5,
-        "character": "Willa",
-        "credit_id": "54c4043692514124c8005f5b",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [35, 10749],
-        "id": 359510,
-        "original_language": "en",
-        "original_title": "Vale",
-        "overview": "A group of Spanish friends meet a girl who speaks English called Rachel. Victor is one of them but his English is not good enough to talk with Rachel.",
-        "popularity": 2.798,
-        "poster_path": "/wyc9vXXmMAGI5E3nGuF1S4xchfJ.jpg",
-        "release_date": "2015-06-01",
-        "title": "Vale",
-        "video": false,
-        "vote_average": 6.596,
-        "vote_count": 26,
-        "character": "Rachel",
-        "credit_id": "55f46a1ec3a3686d07003a5f",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/9yXPubeQuNzyIdbaUoXAurK40xv.jpg",
-        "genre_ids": [35, 10749],
-        "id": 259694,
-        "original_language": "en",
-        "original_title": "How to Be Single",
-        "overview": "New York City is full of lonely hearts seeking the right match, and what Alice, Robin, Lucy, Meg, Tom and David all have in common is the need to learn how to be single in a world filled with ever-evolving definitions of love.",
-        "popularity": 29.022,
-        "poster_path": "/a4Ce3qHqIyHM3QfGsiVTAu3YADJ.jpg",
-        "release_date": "2016-02-08",
-        "title": "How to Be Single",
-        "video": false,
-        "vote_average": 6.249,
-        "vote_count": 3092,
-        "character": "Alice Kepley",
-        "credit_id": "55188637c3a36862f6004a8c",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/9ywA15OAiwjSTvg3cBs9B7kOCBF.jpg",
-        "genre_ids": [18, 10749],
-        "id": 337167,
-        "original_language": "en",
-        "original_title": "Fifty Shades Freed",
-        "overview": "Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins.",
-        "popularity": 103.625,
-        "poster_path": "/9ZedQHPQVveaIYmDSTazhT3y273.jpg",
-        "release_date": "2018-01-17",
-        "title": "Fifty Shades Freed",
-        "video": false,
-        "vote_average": 6.708,
-        "vote_count": 7691,
-        "character": "Anastasia Steele",
-        "credit_id": "56bfa69192514170aa003840",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/9dWH18IZf0KdGx0kJaONzWcmD69.jpg",
-        "genre_ids": [18, 10749],
-        "id": 341174,
-        "original_language": "en",
-        "original_title": "Fifty Shades Darker",
-        "overview": "When a wounded Christian Grey tries to entice a cautious Ana Steele back into his life, she demands a new arrangement before she will give him another chance. As the two begin to build trust and find stability, shadowy figures from Christian’s past start to circle the couple, determined to destroy their hopes for a future together.",
-        "popularity": 56.104,
-        "poster_path": "/7CBO9GhsUeMSsWQb47WTPZnKjdj.jpg",
-        "release_date": "2017-02-08",
-        "title": "Fifty Shades Darker",
-        "video": false,
-        "vote_average": 6.488,
-        "vote_count": 7375,
-        "character": "Anastasia Steele",
-        "credit_id": "56ddd5c392514134fe0000a1",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [28],
-        "id": 410567,
-        "original_language": "en",
-        "original_title": "Closed Set",
-        "overview": "A group of paparazzis chases Dakota while she is trying to get rid of them driving in his red ferrari.",
+        "gender": 0,
+        "id": 2247509,
+        "known_for_department": "Art",
+        "name": "Matthew Hywel-Davies",
+        "original_name": "Matthew Hywel-Davies",
         "popularity": 0.6,
-        "poster_path": "/rc3fSdFgD9m3t9j5z8DbFuJPFeE.jpg",
-        "release_date": "2014-04-06",
-        "title": "Closed Set",
-        "video": false,
-        "vote_average": 8,
-        "vote_count": 3,
-        "character": "Leading Lady",
-        "credit_id": "57a93a3fc3a368738f000f56",
-        "order": 0,
-        "media_type": "movie"
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917fe4bfa545d010a7783",
+                "job": "Supervising Art Director",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/AmO8I38bkHwKhgxPNrd6djBQyPU.jpg",
-        "genre_ids": [27, 9648, 18],
-        "id": 361292,
-        "original_language": "en",
-        "original_title": "Suspiria",
-        "overview": "Young American dancer Susie Bannion arrives in 1970s Berlin to audition for the world-renowned Helena Markos Dance Company. When she vaults to the role of lead dancer, the woman she replaces breaks down and accuses the company's female directors of witchcraft. Meanwhile, an inquisitive psychotherapist and a member of the troupe uncover dark and sinister secrets as they probe the depths of the studio's hidden underground chambers.",
-        "popularity": 19.953,
-        "poster_path": "/dzWTnkert9EoiPWldWJ15dnfAFl.jpg",
-        "release_date": "2018-10-26",
-        "title": "Suspiria",
-        "video": false,
-        "vote_average": 6.9,
-        "vote_count": 2355,
-        "character": "Susie Bannion / Naomi Bannion",
-        "credit_id": "574cc5c0c3a36812f00000f4",
-        "order": 0,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 4427193,
+        "known_for_department": "Art",
+        "name": "Jiri Karasek",
+        "original_name": "Jiri Karasek",
+        "popularity": 1.96,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579184abbe1dd011b90ecce",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [18],
-        "id": 410570,
-        "original_language": "en",
-        "original_title": "Transit",
-        "overview": "A young girl abandoned by her father at boarding school, travels to an off-beat youth hostel and is forced to confront her personal demons.",
-        "popularity": 1.369,
-        "poster_path": "/chaaniADCjVJaEiwq1LF7HscNVg.jpg",
-        "release_date": "2012-08-08",
-        "title": "Transit",
-        "video": false,
-        "vote_average": 6,
-        "vote_count": 4,
-        "character": "Elizabeth Becks",
-        "credit_id": "57a93bdec3a3687263001114",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/p6zdMi9fIjvSC7bt4fK2htArGmO.jpg",
-        "genre_ids": [35],
-        "id": 500355,
-        "original_language": "en",
-        "original_title": "Just a Minute",
-        "overview": "When you say, \"Just a minute,\" what do you really mean? In this Vogue.com original short, directed by Gustav Johansson, the actress is called to set from her dressing room, but isn't remotely ready. Watch to see just how long she can stretch out 60 seconds.",
-        "popularity": 1.33,
-        "poster_path": "/5f8JQaymXylnhpbpeKVRrfKpw0d.jpg",
-        "release_date": "2015-01-20",
-        "title": "Just a Minute",
-        "video": true,
-        "vote_average": 5.2,
-        "vote_count": 6,
-        "character": "Self",
-        "credit_id": "5a66ad6ec3a3680cea003649",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/Aw07IupDF1ubyVNrcWwDPbnCQRP.jpg",
-        "genre_ids": [18, 10749],
-        "id": 583903,
-        "original_language": "en",
-        "original_title": "Our Friend",
-        "overview": "After learning that his terminally ill wife has six months to live, a man welcomes the support of his best friend who moves into their home to help out.",
-        "popularity": 15.389,
-        "poster_path": "/vg9C5LttsKBqoLuqeQvOXaeBGiD.jpg",
-        "release_date": "2019-09-04",
-        "title": "Our Friend",
-        "video": false,
-        "vote_average": 7.2,
-        "vote_count": 276,
-        "character": "Nicole Teague",
-        "credit_id": "5c6efa28925141133efc46df",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/aVX9a54YFmrcEHATubpuFQQKn5L.jpg",
-        "genre_ids": [10749, 35, 10402, 18],
-        "id": 606679,
-        "original_language": "en",
-        "original_title": "The High Note",
-        "overview": "Set in the dazzling world of the LA music scene comes the story of Grace Davis, a superstar whose talent, and ego, have reached unbelievable heights. Maggie is Grace’s overworked personal assistant who’s stuck running errands, but still aspires to her childhood dream of becoming a music producer. When Grace’s manager presents her with a choice that could alter the course of her career, Maggie and Grace come up with a plan that could change their lives forever.",
-        "popularity": 15.753,
-        "poster_path": "/yHsu8swJSgqDrsPiu7adBjOPLlp.jpg",
-        "release_date": "2020-06-10",
-        "title": "The High Note",
-        "video": false,
-        "vote_average": 7.025,
-        "vote_count": 418,
-        "character": "Maggie Sherwoode",
-        "credit_id": "5cf5b8cf0e0a2619d3cf97fb",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [18],
-        "id": 644753,
-        "original_language": "en",
-        "original_title": "Crackpot",
-        "overview": "A 2020 English language drama film directed by Elaine May, starring Dakota Johnson.",
+        "gender": 0,
+        "id": 1579093,
+        "known_for_department": "Crew",
+        "name": "Eva Hartmann",
+        "original_name": "Eva Hartmann",
         "popularity": 1.4,
-        "poster_path": null,
-        "release_date": "",
-        "title": "Crackpot",
-        "video": false,
-        "vote_average": 0,
-        "vote_count": 0,
-        "character": "",
-        "credit_id": "5dbe43529d893900132d2ba6",
-        "order": 0,
-        "media_type": "movie"
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579193b89d97f01009f07cc",
+                "job": "Graphic Designer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/rzu9BVI9HqY5rG0Xq05ZhewdkYP.jpg",
-        "genre_ids": [18, 35, 10749],
-        "id": 641934,
-        "original_language": "en",
-        "original_title": "Am I Ok?",
-        "overview": "Lucy and Jane have been best friends for most of their lives and think they know everything there is to know about each other. But when Jane announces she's moving to London, Lucy reveals a long-held secret. As Jane tries to help Lucy, their friendship is thrown into chaos.",
-        "popularity": 7.945,
-        "poster_path": "/5pd6K8UJTiiqfYVwZnIY1ux3TQP.jpg",
-        "release_date": "2022-01-24",
-        "title": "Am I Ok?",
-        "video": false,
-        "vote_average": 7.65,
-        "vote_count": 10,
-        "character": "Lucy",
-        "credit_id": "600b522a4d0e8d003c71f563",
-        "order": 0,
-        "media_type": "movie"
+        "gender": 2,
+        "id": 1337453,
+        "known_for_department": "Art",
+        "name": "Andrew Orlando",
+        "original_name": "Andrew Orlando",
+        "popularity": 1.026,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791c414bfa545d010a79c5",
+                "job": "Property Master",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/oE0J0zaLjJZkecx2seNH90YeSmk.jpg",
-        "genre_ids": [10749, 18, 35],
-        "id": 820912,
-        "original_language": "en",
-        "original_title": "Persuasion",
-        "overview": "Living with her snobby family on the brink of bankruptcy, Anne Elliot is an unconforming woman with modern sensibilities. When Frederick Wentworth - the dashing one she once sent away - crashes back into her life, Anne must choose between putting the past behind her or listening to her heart when it comes to second chances.",
-        "popularity": 17.538,
-        "poster_path": "/s99WrKSEVR4RVvwm5Zn2cqrHTMM.jpg",
-        "release_date": "2022-07-01",
-        "title": "Persuasion",
-        "video": false,
-        "vote_average": 5.977,
-        "vote_count": 532,
-        "character": "Anne Elliot",
-        "credit_id": "607f235d01b1ca002a5eba22",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/i07XITwFIOU9pGeCz9NGyl0a2E8.jpg",
-        "genre_ids": [18],
-        "id": 843416,
-        "original_language": "en",
-        "original_title": "Daddio",
-        "overview": "A woman taking a cab ride from JFK engages in a conversation with the taxi driver about the important relationships in their lives.",
-        "popularity": 2.75,
-        "poster_path": "/2yezIccnX77xN3m4dIxmehEohEK.jpg",
-        "release_date": "2023-09-01",
-        "title": "Daddio",
-        "video": false,
-        "vote_average": 0,
-        "vote_count": 0,
-        "character": "Girlie",
-        "credit_id": "60d08fe50f1e58002c92dac5",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/rx6FXL5Pu2FQC3HrowNQrdqojnM.jpg",
-        "genre_ids": [878, 28, 12],
-        "id": 634492,
-        "original_language": "en",
-        "original_title": "Madame Web",
-        "overview": "Forced to confront revelations about her past, paramedic Cassandra Webb forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present.",
-        "popularity": 405.604,
-        "poster_path": "/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg",
-        "release_date": "2024-02-14",
-        "title": "Madame Web",
-        "video": false,
-        "vote_average": 5.441,
-        "vote_count": 17,
-        "character": "Cassandra 'Cassie' Webb / Madame Web",
-        "credit_id": "61fbf8b459e8a9009257a0d7",
-        "order": 0,
-        "media_type": "movie"
-    },
-    {
-        "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [10749, 35],
-        "id": 1136867,
-        "original_language": "en",
-        "original_title": "Materialists",
-        "overview": "Set against the vibrant backdrop of New York City, a high-end matchmaker gets involved with a wealthy man but still harbors feelings for the broke actor-waiter she left behind.",
+        "gender": 2,
+        "id": 967459,
+        "known_for_department": "Art",
+        "name": "Guy Potgieter",
+        "original_name": "Guy Potgieter",
         "popularity": 1.162,
-        "poster_path": "/8zApovVmJ6vPfl7CZ5HdswTEEyQ.jpg",
-        "release_date": "",
-        "title": "Materialists",
-        "video": false,
-        "vote_average": 0,
-        "vote_count": 0,
-        "character": "",
-        "credit_id": "65c3a9598c0a48014a8524b8",
-        "order": 0,
-        "media_type": "movie"
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791c34e93e9521900d43fb",
+                "job": "Set Decoration",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/y9nmEriiwz1AXJsXn0QWbMwnrdu.jpg",
-        "genre_ids": [18],
-        "id": 240745,
-        "original_language": "en",
-        "original_title": "Cymbeline",
-        "overview": "War erupts between dirty cops and outlaw bikers as a drug kingpin tries to protect his empire.",
-        "popularity": 9.395,
-        "poster_path": "/uNajzrrYttWofGj3zu672J3NUbA.jpg",
-        "release_date": "2014-09-03",
-        "title": "Cymbeline",
-        "video": false,
-        "vote_average": 3.916,
-        "vote_count": 101,
-        "character": "Imogen",
-        "credit_id": "52fe4eabc3a36847f82a047f",
-        "order": 1,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2053116,
+        "known_for_department": "Art",
+        "name": "Brett Hirson",
+        "original_name": "Brett Hirson",
+        "popularity": 0.776,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657918717a3c5200ca7a5c24",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/mTD9KWZiIRaSgRq4g9re9yDndTN.jpg",
-        "genre_ids": [27, 9648, 53],
-        "id": 505423,
-        "original_language": "en",
-        "original_title": "Wounds",
-        "overview": "Disturbing and mysterious things begin to happen to a bartender in New Orleans after he picks up a phone left behind at his bar.",
-        "popularity": 9.589,
-        "poster_path": "/j1omoZD5ExFvjm1JM7n35UccXf9.jpg",
-        "release_date": "2019-01-26",
-        "title": "Wounds",
-        "video": false,
-        "vote_average": 4.005,
-        "vote_count": 750,
-        "character": "Carrie",
-        "credit_id": "5ab2a78a9251413a2200c7d6",
-        "order": 1,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1715105,
+        "known_for_department": "Art",
+        "name": "Kiera Tudway",
+        "original_name": "Kiera Tudway",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579192d89d97f013ac9fd9a",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/1LMGpNSUekWg3XCPweN33knQPW9.jpg",
-        "genre_ids": [35, 18, 10749],
-        "id": 814340,
-        "original_language": "en",
-        "original_title": "Cha Cha Real Smooth",
-        "overview": "Fresh out of college and stuck at his New Jersey home without a clear path forward, 22-year-old Andrew begins working as a party starter for bar/bat mitzvahs—where he strikes up a unique friendship with a young mom and her teenage daughter.",
-        "popularity": 20.472,
-        "poster_path": "/iUvoVhvwTlP8DofoqeIu7QAGLAe.jpg",
-        "release_date": "2022-06-17",
-        "title": "Cha Cha Real Smooth",
-        "video": false,
-        "vote_average": 7.141,
-        "vote_count": 277,
-        "character": "Domino",
-        "credit_id": "606b57eaad59b50058b89339",
-        "order": 1,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1548941,
+        "known_for_department": "Art",
+        "name": "Gergely Rieger",
+        "original_name": "Gergely Rieger",
+        "popularity": 1.537,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791889a1d3320138eb809f",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/6xuKwmRLinKvXWXUvRlA7YLtjnU.jpg",
-        "genre_ids": [99],
-        "id": 1058648,
-        "original_language": "en",
-        "original_title": "The Disappearance of Shere Hite",
-        "overview": "Shere Hite’s 1976 bestselling book, The Hite Report, liberated the female orgasm by revealing the most private experiences of thousands of anonymous survey respondents. Her findings rocked the American establishment and presaged current conversations about gender, sexuality, and bodily autonomy. So how did Shere Hite disappear?",
-        "popularity": 5.162,
-        "poster_path": "/sDYWhuKhWdt0GuGxbJnFiWODnik.jpg",
-        "release_date": "2023-11-17",
-        "title": "The Disappearance of Shere Hite",
-        "video": false,
-        "vote_average": 5,
-        "vote_count": 1,
-        "character": "Shere Hite (voice)",
-        "credit_id": "654a11776beaea012c901455",
-        "order": 1,
-        "media_type": "movie"
+        "gender": 1,
+        "id": 59859,
+        "known_for_department": "Art",
+        "name": "Sophie Becher",
+        "original_name": "Sophie Becher",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579144535a61e011dec84fd",
+                "job": "Production Design",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/fgqVn06PbICsnfhXXurHxtqaP86.jpg",
-        "genre_ids": [35],
-        "id": 99367,
-        "original_language": "en",
-        "original_title": "Date and Switch",
-        "overview": "Two guys who make a pact to lose their virginity before prom find their friendship tested when one of them comes out of the closet.",
-        "popularity": 12.962,
-        "poster_path": "/ieLOyHzoJKyflqGdfj82S1MMm5A.jpg",
-        "release_date": "2014-02-14",
-        "title": "Date and Switch",
-        "video": false,
-        "vote_average": 5.803,
-        "vote_count": 236,
-        "character": "Em",
-        "credit_id": "52fe4a329251416c750e0cab",
-        "order": 2,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1551453,
+        "known_for_department": "Art",
+        "name": "Renátó Cseh",
+        "original_name": "Renátó Cseh",
+        "popularity": 1.715,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657918f335a61e013ac24f7a",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [],
-        "id": 371702,
-        "original_language": "en",
-        "original_title": "Behind the scenes of All That Glitters",
-        "overview": "A sneak peek behind the scenes of the new CW show, All That Glitters, from acclaimed writer of \"American Psycho\", Bret Easton Ellis. All That Glitters takes us into the lives of the hot, young, sexy and rich crowd that struggles with everyday life.",
-        "popularity": 2.513,
-        "poster_path": null,
-        "release_date": "2010-09-25",
-        "title": "Behind the scenes of All That Glitters",
-        "video": true,
-        "vote_average": 6.8,
-        "vote_count": 3,
-        "character": "Dianica French",
-        "credit_id": "566722f4c3a36808fe001ac9",
-        "order": 2,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2062089,
+        "known_for_department": "Art",
+        "name": "Adam Polgar",
+        "original_name": "Adam Polgar",
+        "popularity": 1.158,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791c2a7a3c5200ad19d25f",
+                "job": "Set Decoration",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/lewYqqt8epnjFhEOIIIINX9Z8EE.jpg",
-        "genre_ids": [12, 35, 18],
-        "id": 463257,
-        "original_language": "en",
-        "original_title": "The Peanut Butter Falcon",
-        "overview": "A down-on-his-luck crab fisherman embarks on a journey to get a young man with Down syndrome to a professional wrestling school in rural North Carolina and away from the retirement home where he’s lived for the past two and a half years.",
-        "popularity": 19.276,
-        "poster_path": "/qyQcRGvdW3VtxHR4fSDgPOePEip.jpg",
-        "release_date": "2019-08-09",
-        "title": "The Peanut Butter Falcon",
-        "video": false,
-        "vote_average": 7.398,
-        "vote_count": 1259,
-        "character": "Eleanor",
-        "credit_id": "594ece5f925141310803d690",
-        "order": 2,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2062088,
+        "known_for_department": "Art",
+        "name": "Krisztina Szilágyi",
+        "original_name": "Krisztina Szilágyi",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657918c5ec8a4300c33aa4d9",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/6jRHaYJyje5RNS3L353udrPU3ME.jpg",
-        "genre_ids": [18],
-        "id": 554230,
-        "original_language": "en",
-        "original_title": "The Lost Daughter",
-        "overview": "A woman's seaside vacation takes a dark turn when her obsession with a young mother forces her to confront secrets from her past.",
-        "popularity": 17.297,
-        "poster_path": "/t1oLNRFixpFOVsyz1HCqCUW3wiW.jpg",
-        "release_date": "2021-12-16",
-        "title": "The Lost Daughter",
-        "video": false,
-        "vote_average": 6.562,
-        "vote_count": 863,
-        "character": "Nina",
-        "credit_id": "5e441c380c2710001883829d",
-        "order": 2,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2116315,
+        "known_for_department": "Art",
+        "name": "Jim McCallum",
+        "original_name": "Jim McCallum",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579190c4bfa545cfd78c18d",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/zRre3nWco6dHS9vh5dYfjGvf7U.jpg",
-        "genre_ids": [18, 53, 10749],
-        "id": 324807,
-        "original_language": "en",
-        "original_title": "A Bigger Splash",
-        "overview": "An American couple, Paul and Marianne, spend their vacation in Italy and experience trouble when Marianne invites a former lover and his teenage daughter to visit, which leads to jealousy and dangerous sexual scenarios.",
-        "popularity": 14.15,
-        "poster_path": "/1w2yROhq2Jgaot4hrUHlLcRlK6F.jpg",
-        "release_date": "2015-11-26",
-        "title": "A Bigger Splash",
-        "video": false,
-        "vote_average": 6.2,
-        "vote_count": 708,
-        "character": "Penelope Lanier",
-        "credit_id": "54daebe2c3a3682f24000992",
-        "order": 3,
-        "media_type": "movie"
+        "gender": 2,
+        "id": 10710,
+        "known_for_department": "Art",
+        "name": "Andrew Ackland-Snow",
+        "original_name": "Andrew Ackland-Snow",
+        "popularity": 0.829,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579191a20ecaf00c69a0be2",
+                "job": "Art Direction",
+                "episode_count": 9
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/hrUYRjmMniDyxAsuXhhNC4vrfck.jpg",
-        "genre_ids": [18, 80, 36],
-        "id": 261023,
-        "original_language": "en",
-        "original_title": "Black Mass",
-        "overview": "The true story of Whitey Bulger, the brother of a state senator and the most infamous violent criminal in the history of South Boston, who became an FBI informant to take down a Mafia family invading his turf.",
-        "popularity": 21.913,
-        "poster_path": "/zfwciv4LIJkNQsfuhYGv0Nkiweg.jpg",
-        "release_date": "2015-09-17",
-        "title": "Black Mass",
-        "video": false,
-        "vote_average": 6.506,
-        "vote_count": 3183,
-        "character": "Lindsey Cyr",
-        "credit_id": "533057ecc3a3685fd3006c98",
-        "order": 3,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 194881,
+        "known_for_department": "Art",
+        "name": "James Foster",
+        "original_name": "James Foster",
+        "popularity": 1.02,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a5020c2710017e77d7be",
+                "job": "Production Design",
+                "episode_count": 8
+            }
+        ],
+        "department": "Art",
+        "total_episode_count": 8
     },
     {
         "adult": false,
-        "backdrop_path": "/gb3TVVZNNxVGNfS1NxGaiWZfwnW.jpg",
-        "genre_ids": [53, 18, 9648, 80],
-        "id": 446021,
-        "original_language": "en",
-        "original_title": "Bad Times at the El Royale",
-        "overview": "Lake Tahoe, 1969. Seven strangers, each one with a secret to bury, meet at El Royale, a decadent motel with a dark past. In the course of a fateful night, everyone will have one last shot at redemption.",
-        "popularity": 19.901,
-        "poster_path": "/iNtFgXqXPRMkm1QO8CHn5sHfUgE.jpg",
-        "release_date": "2018-10-04",
-        "title": "Bad Times at the El Royale",
-        "video": false,
-        "vote_average": 6.8,
-        "vote_count": 3364,
-        "character": "Emily Summerspring",
-        "credit_id": "5a6c25cc0e0a265f040062b3",
-        "order": 3,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1834280,
+        "known_for_department": "Camera",
+        "name": "Michael Soos",
+        "original_name": "Michael Soos",
+        "popularity": 0.833,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791eeda1d33200c4c839e5",
+                "job": "Steadicam Operator",
+                "episode_count": 5
+            },
+            {
+                "credit_id": "65791d7b20ecaf0100d2c93c",
+                "job": "\"A\" Camera Operator",
+                "episode_count": 9
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 14
     },
     {
         "adult": false,
-        "backdrop_path": "/6yqc2PE8T8P1H5dVhdvNySTycAu.jpg",
-        "genre_ids": [10402, 35, 53],
-        "id": 653572,
-        "original_language": "en",
-        "original_title": "The Nowhere Inn",
-        "overview": "When St. Vincent sets out to make a documentary about her music, the goal is to both reveal and revel in the unadorned truth behind her on-stage persona. But when she hires a close friend to direct, notions of reality, identity, and authenticity grow increasingly distorted and bizarre.",
-        "popularity": 5.649,
-        "poster_path": "/saXbsVa6eylbaOCXpwGZVjn1fOd.jpg",
-        "release_date": "2021-09-16",
-        "title": "The Nowhere Inn",
-        "video": false,
-        "vote_average": 6.087,
-        "vote_count": 23,
-        "character": "Self",
-        "credit_id": "5e2dce8fd6819b00147cd9a2",
-        "order": 4,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2062153,
+        "known_for_department": "Camera",
+        "name": "Tamás Oláh",
+        "original_name": "Tamás Oláh",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791f3c35a61e01000c121b",
+                "job": "First Assistant Camera",
+                "episode_count": 9
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/hU4OdICqRXj3JFnSJsrR0SJejZy.jpg",
-        "genre_ids": [18, 14, 10749],
-        "id": 38117,
-        "original_language": "en",
-        "original_title": "Beastly",
-        "overview": "A modern-day take on the \"Beauty and the Beast\" tale where a New York teen is transformed into a hideous monster in order to find true love.",
-        "popularity": 14.472,
-        "poster_path": "/uSAXWZsSD0pE4HYVUiDgusnEyyl.jpg",
-        "release_date": "2011-01-21",
-        "title": "Beastly",
-        "video": false,
-        "vote_average": 6.321,
-        "vote_count": 2668,
-        "character": "Sloan Hagen",
-        "credit_id": "52fe46969251416c910591a7",
-        "order": 5,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1421652,
+        "known_for_department": "Camera",
+        "name": "György Réder",
+        "original_name": "György Réder",
+        "popularity": 2.892,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791e83af58cb0106fdb864",
+                "job": "\"B\" Camera Operator",
+                "episode_count": 9
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/wCnBxGgvFSXgRBBkx0uO18DcxA1.jpg",
-        "genre_ids": [18],
-        "id": 84201,
-        "original_language": "en",
-        "original_title": "For Ellen",
-        "overview": "After an overnight long-distance drive, Joby has a special meeting—with lawyers and his ex-wife. A struggling musician with the prerequisite tattoos, slimy hair, goatee, and his head firmly floating in the clouds, Joby hasn’t been around to be a dad. Now is his last chance to fight for shared custody of his daughter, Ellen.",
-        "popularity": 3.035,
-        "poster_path": "/w3qMjOVOzwheOh9PbLEnZfNKNmh.jpg",
-        "release_date": "2012-02-12",
-        "title": "For Ellen",
-        "video": false,
-        "vote_average": 5.512,
-        "vote_count": 41,
-        "character": "Cindy Taylor",
-        "credit_id": "57a9362192514137db000dc7",
-        "order": 5,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 2143781,
+        "known_for_department": "Camera",
+        "name": "Tamás Jánossa",
+        "original_name": "Tamás Jánossa",
+        "popularity": 2.976,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791f0e35a61e011dec8aab",
+                "job": "First Assistant Camera",
+                "episode_count": 9
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/gWfv4i7xqgLoAE7eefyn6WDnml9.jpg",
-        "genre_ids": [35],
-        "id": 84203,
-        "original_language": "en",
-        "original_title": "Goats",
-        "overview": "Having a self-absorbed New Age mother and an estranged father has meant 15-year-old Ellis Whitman has grown up relying on an unconventional guardian: a goat-trekking, marijuana-growing sage called 'Goat Man'. When Ellis decides to leave the alternative ways of his desert homestead for a stuffy East Coast prep school, major changes are in store.",
-        "popularity": 7.444,
-        "poster_path": "/sguv1tnaQjFWsbcpN0b08cWmsFJ.jpg",
-        "release_date": "2012-08-10",
-        "title": "Goats",
-        "video": false,
-        "vote_average": 5.462,
-        "vote_count": 92,
-        "character": "Minnie",
-        "credit_id": "57a935aa92514177dc00b7b5",
-        "order": 6,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1586311,
+        "known_for_department": "Camera",
+        "name": "Ádám Kliegl",
+        "original_name": "Ádám Kliegl",
+        "popularity": 1.393,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791f2535a61e011dec8aba",
+                "job": "First Assistant Camera",
+                "episode_count": 9
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/lQppSn8sl6ivnxGNq8ADtC13NCE.jpg",
-        "genre_ids": [28, 80, 18, 53],
-        "id": 136797,
-        "original_language": "en",
-        "original_title": "Need for Speed",
-        "overview": "The film revolves around a local street-racer who partners with a rich and arrogant business associate, only to find himself framed by his colleague and sent to prison. After he gets out, he joins a New York-to-Los Angeles race to get revenge. But when the ex-partner learns of the scheme, he puts a massive bounty on the racer's head, forcing him to run a cross-country gauntlet of illegal racers in all manner of supercharged vehicles.",
-        "popularity": 36.821,
-        "poster_path": "/z42kyMizgDKetejusZgucSQsQ4l.jpg",
-        "release_date": "2014-03-12",
-        "title": "Need for Speed",
-        "video": false,
-        "vote_average": 6.4,
-        "vote_count": 4145,
-        "character": "Anita Coleman",
-        "credit_id": "52fe883292514167a802167e",
-        "order": 7,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1298839,
+        "known_for_department": "Camera",
+        "name": "Ádám Fillenz",
+        "original_name": "Ádám Fillenz",
+        "popularity": 0.695,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791da535a61e011dec89ea",
+                "job": "\"B\" Camera Operator",
+                "episode_count": 7
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 7
     },
     {
         "adult": false,
-        "backdrop_path": "/n5kP33efxqphJhhBbxuGhGFb0Vc.jpg",
-        "genre_ids": [35, 18],
-        "id": 31306,
-        "original_language": "en",
-        "original_title": "Crazy in Alabama",
-        "overview": "An abused wife heads to California to become a movie star while her nephew back in Alabama has to deal with a racially-motivated murder involving a corrupt sheriff.",
-        "popularity": 9.049,
-        "poster_path": "/bAlevqRg9KG9y725tt4YkNajLrk.jpg",
-        "release_date": "1999-10-22",
-        "title": "Crazy in Alabama",
-        "video": false,
-        "vote_average": 5.9,
-        "vote_count": 91,
-        "character": "Sondra",
-        "credit_id": "52fe44729251416c91011103",
-        "order": 11,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 555771,
+        "known_for_department": "Camera",
+        "name": "Carl Sundberg",
+        "original_name": "Carl Sundberg",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a4e40c2710017e77d795",
+                "job": "Director of Photography",
+                "episode_count": 2
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 2
     },
     {
         "adult": false,
-        "backdrop_path": "/hpCVGnsOzdciHsPSgdDdj4FKwuw.jpg",
-        "genre_ids": [35, 10749],
-        "id": 72207,
-        "original_language": "en",
-        "original_title": "The Five-Year Engagement",
-        "overview": "Exactly one year after Tom meets Violet, he surprises her with a wedding ring. By all accounts, Tom and Violet are destined for their happily ever after. However, this engaged couple just keep getting tripped up on the long walk down the aisle.",
-        "popularity": 17.187,
-        "poster_path": "/drsY910CSoSkROYypNVwUxI875T.jpg",
-        "release_date": "2012-04-27",
-        "title": "The Five-Year Engagement",
-        "video": false,
-        "vote_average": 5.846,
-        "vote_count": 1274,
-        "character": "Audrey",
-        "credit_id": "52fe485ec3a368484e0f53dd",
-        "order": 16,
-        "media_type": "movie"
+        "gender": 2,
+        "id": 8677,
+        "known_for_department": "Camera",
+        "name": "Karl Walter Lindenlaub",
+        "original_name": "Karl Walter Lindenlaub",
+        "popularity": 0.638,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791439a1d332011b50255a",
+                "job": "Director of Photography",
+                "episode_count": 1
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 1
     },
     {
         "adult": false,
-        "backdrop_path": "/rXrpYOveFl76ivMmyb2612T7Q8w.jpg",
-        "genre_ids": [28, 35, 80],
-        "id": 64688,
-        "original_language": "en",
-        "original_title": "21 Jump Street",
-        "overview": "When cops Schmidt and Jenko join the secret Jump Street unit, they use their youthful appearances to go under cover as high-school students. They trade in their guns and badges for backpacks, and set out to shut down a dangerous drug ring. But, as time goes on, Schmidt and Jenko discover that high school is nothing like it was just a few years earlier -- and, what's more, they must again confront the teenage terror and anxiety they thought they had left behind.",
-        "popularity": 34.561,
-        "poster_path": "/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg",
-        "release_date": "2012-03-14",
-        "title": "21 Jump Street",
-        "video": false,
-        "vote_average": 6.9,
-        "vote_count": 9856,
-        "character": "Fugazy",
-        "credit_id": "53a286a4c3a3683205000cf8",
-        "order": 21,
-        "media_type": "movie"
+        "gender": 2,
+        "id": 1150764,
+        "known_for_department": "Camera",
+        "name": "Andrew Commis",
+        "original_name": "Andrew Commis",
+        "popularity": 1.153,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65cdd97651e6ab01861fde2a",
+                "job": "Director of Photography",
+                "episode_count": 1
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 1
     },
     {
         "adult": false,
-        "backdrop_path": null,
-        "genre_ids": [35, 10770],
-        "id": 1157462,
-        "original_language": "en",
-        "original_title": "Saturday Night Live: 40th Anniversary Special",
-        "overview": "Former members of Saturday Night Live come together to remember the past 40 years of Saturday Night Live.",
-        "popularity": 4.452,
-        "poster_path": "/cda1A0SQ0C9511GSCVnEQ0821bh.jpg",
-        "release_date": "2015-02-15",
-        "title": "Saturday Night Live: 40th Anniversary Special",
-        "video": false,
-        "vote_average": 8,
-        "vote_count": 2,
-        "character": "Self",
-        "credit_id": "64f37f405f2b8d00abca501e",
-        "order": 33,
-        "media_type": "movie"
+        "gender": 2,
+        "id": 41847,
+        "known_for_department": "Camera",
+        "name": "Ed Wild",
+        "original_name": "Ed Wild",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791ea7e93e952192ccd7e1",
+                "job": "Additional Photography",
+                "episode_count": 1
+            }
+        ],
+        "department": "Camera",
+        "total_episode_count": 1
     },
     {
         "adult": false,
-        "backdrop_path": "/65D7t8wgZFpjOTvIp1HQvHFY0fC.jpg",
-        "genre_ids": [18],
-        "id": 37799,
-        "original_language": "en",
-        "original_title": "The Social Network",
-        "overview": "In 2003, Harvard undergrad and computer genius Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, he is one of the youngest billionaires ever, but Zuckerberg finds that his unprecedented success leads to both personal and legal complications when he ends up on the receiving end of two lawsuits, one involving his former friend.",
-        "popularity": 32.46,
-        "poster_path": "/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
-        "release_date": "2010-10-01",
-        "title": "The Social Network",
-        "video": false,
-        "vote_average": 7.364,
-        "vote_count": 11493,
-        "character": "Amelia Ritter",
-        "credit_id": "52fe466f9251416c910546e3",
-        "order": 53,
-        "media_type": "movie"
+        "gender": 0,
+        "id": 1574119,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Giovanni Lipari",
+        "original_name": "Giovanni Lipari",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791950bbe1dd0138d0bd4d",
+                "job": "Costume Design",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/iafquqqaZLl79yaOOKlbeD5sd3c.jpg",
-        "genre_ids": [35],
-        "id": 43275,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "Ben and Kate",
-        "overview": "Ben and Kate are a pair of odd-couple siblings - one, a responsible single mom; the other, an exuberant dreamer - who reunite to help raise Kate's daughter.",
-        "popularity": 23.792,
-        "poster_path": "/uhzXOjujMk1c0Olp3Cha9lpNB4v.jpg",
-        "first_air_date": "2012-09-25",
-        "name": "Ben and Kate",
-        "vote_average": 6.694,
-        "vote_count": 49,
-        "character": "Kate Fox",
-        "credit_id": "52596490760ee3466199e422",
-        "episode_count": 13,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 2143767,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Balázs Labancz",
+        "original_name": "Balázs Labancz",
+        "popularity": 0.793,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579196489d97f011dcde05f",
+                "job": "Costume Supervisor",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/bfg3COqQzmaZqqaqmCruKoyjk72.jpg",
-        "genre_ids": [35, 10763],
-        "id": 1667,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "Saturday Night Live",
-        "overview": "A late-night live television sketch comedy and variety show created by Lorne Michaels. The show's comedy sketches, which parody contemporary culture and politics, are performed by a large and varying cast of repertory and newer cast members. Each episode is hosted by a celebrity guest, who usually delivers an opening monologue and performs in sketches with the cast, and features performances by a musical guest.",
-        "popularity": 1352.231,
-        "poster_path": "/iecMwr0L6kt64qeyyeYUxBjuQ4G.jpg",
-        "first_air_date": "1975-10-11",
-        "name": "Saturday Night Live",
-        "vote_average": 6.9,
-        "vote_count": 389,
-        "character": "Self - Host",
-        "credit_id": "54f47cadc3a36850f3001c78",
-        "episode_count": 2,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 1515573,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Gábor Homonnay",
+        "original_name": "Gábor Homonnay",
+        "popularity": 1.417,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579195bbbe1dd00ac7db585",
+                "job": "Costume Supervisor",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/3hOxwqn1P2AY0d20VVtxN2f3Lfh.jpg",
-        "genre_ids": [35, 10767],
-        "id": 6809,
-        "origin_country": ["ES"],
-        "original_language": "es",
-        "original_name": "El hormiguero",
-        "overview": "El Hormiguero is a Spanish television program with a live audience focusing on comedy, science, and politics running since September 2006. It is hosted and produced by screenwriter Pablo Motos. The show aired on Spain's Cuatro channel from launch until June 2011 and is now broadcast on Antena 3. Recurring guests on the show include Luis Piedrahita, Raquel Martos, Marron & \"The Man in Black\", and puppet ants Trancas and Barrancas. It has proved a ratings success, and has expanded from a weekly 120-minute show to a daily 40-minute show in its third season, which began on September 17, 2007. The show won the Entertainment prize at the 2009 Rose d'Or ceremony.",
-        "popularity": 1175.933,
-        "poster_path": "/K6tzvTqHFULV5cr5dsWTSmh4Zj.jpg",
-        "first_air_date": "2006-09-24",
-        "name": "El hormiguero",
-        "vote_average": 5.13,
-        "vote_count": 27,
-        "character": "Self",
-        "credit_id": "55df5d0d9251417982000125",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 1,
+        "id": 1319843,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Felicity Bowring",
+        "original_name": "Felicity Bowring",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791986a1d332011b502922",
+                "job": "Makeup Designer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/2pJYis3LUEgFC3UErTQVgmUV1hN.jpg",
-        "genre_ids": [35, 10767],
-        "id": 1220,
-        "origin_country": ["GB"],
-        "original_language": "en",
-        "original_name": "The Graham Norton Show",
-        "overview": "Each week celebrity guests join Irish comedian Graham Norton to discuss what's being going on around the world that week. The guests poke fun and share their opinions on the main news stories. Graham is often joined by a band or artist to play the show out.",
-        "popularity": 324.808,
-        "poster_path": "/vrbqaBXB8AALynQzpWz6JdCPEJS.jpg",
-        "first_air_date": "2007-02-22",
-        "name": "The Graham Norton Show",
-        "vote_average": 7.1,
-        "vote_count": 231,
-        "character": "Self",
-        "credit_id": "5efe0c395437f500378fe11d",
-        "episode_count": 2,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 1433706,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Mauro Tamagnini",
+        "original_name": "Mauro Tamagnini",
+        "popularity": 5.419,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579197aaf58cb00cc849d10",
+                "job": "Hair Designer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/bfg3COqQzmaZqqaqmCruKoyjk72.jpg",
-        "genre_ids": [35, 10763],
-        "id": 1667,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "Saturday Night Live",
-        "overview": "A late-night live television sketch comedy and variety show created by Lorne Michaels. The show's comedy sketches, which parody contemporary culture and politics, are performed by a large and varying cast of repertory and newer cast members. Each episode is hosted by a celebrity guest, who usually delivers an opening monologue and performs in sketches with the cast, and features performances by a musical guest.",
-        "popularity": 1352.231,
-        "poster_path": "/iecMwr0L6kt64qeyyeYUxBjuQ4G.jpg",
-        "first_air_date": "1975-10-11",
-        "name": "Saturday Night Live",
-        "vote_average": 6.9,
-        "vote_count": 389,
-        "character": "Self",
-        "credit_id": "5f28c8d42d8ef30036dc524d",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 1,
+        "id": 2544838,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Judit Farkas-Arful",
+        "original_name": "Judit Farkas-Arful",
+        "popularity": 0.786,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "61e9cb1a41eee100d1dab3ce",
+                "job": "Makeup Artist",
+                "episode_count": 9
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/eDxBkRZRmbzwCxVqY1oSyTKNIid.jpg",
-        "genre_ids": [35],
-        "id": 2316,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "The Office",
-        "overview": "The everyday lives of office employees in the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.",
-        "popularity": 621.658,
-        "poster_path": "/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg",
-        "first_air_date": "2005-03-24",
-        "name": "The Office",
-        "vote_average": 8.584,
-        "vote_count": 3706,
-        "character": "Dakota",
-        "credit_id": "5f524b8bd705940033c81aa2",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 1,
+        "id": 28162,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Jill M. Ohanneson",
+        "original_name": "Jill M. Ohanneson",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a5350c2710017e77d7f5",
+                "job": "Costume Design",
+                "episode_count": 8
+            }
+        ],
+        "department": "Costume & Make-Up",
+        "total_episode_count": 8
     },
     {
         "adult": false,
-        "backdrop_path": "/xl1wGwaPZInJo1JAnpKqnFozWBE.jpg",
-        "genre_ids": [35, 10767],
-        "id": 59941,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "The Tonight Show Starring Jimmy Fallon",
-        "overview": "After Jay Leno's second retirement from the program, Jimmy Fallon stepped in as his permanent replacement. After 42 years in Los Angeles the program was brought back to New York.",
-        "popularity": 6322.093,
-        "poster_path": "/xFOVcKxo7SSexJiLsTw2PrbNGcZ.jpg",
-        "first_air_date": "2014-02-17",
-        "name": "The Tonight Show Starring Jimmy Fallon",
-        "vote_average": 5.809,
-        "vote_count": 277,
-        "character": "Self",
-        "credit_id": "5fed20d512970c003e9fe57b",
-        "episode_count": 5,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 4427226,
+        "known_for_department": "Crew",
+        "name": "Kristof Varnagy",
+        "original_name": "Kristof Varnagy",
+        "popularity": 1.018,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791b8f35a61e01000c1006",
+                "job": "Choreographer",
+                "episode_count": 9
+            },
+            {
+                "credit_id": "65791bae7a3c5200ebfe898f",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 18
     },
     {
         "adult": false,
-        "backdrop_path": "/zv0KJTB36V59qBfVPd4c5FADQOk.jpg",
-        "genre_ids": [10767],
-        "id": 108178,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "The Drew Barrymore Show",
-        "overview": "Drew Barrymore presents human-interest stories, celebrity guests, lifestyle segments and field pieces, all driven by her infectious brand of humor and optimism.",
-        "popularity": 282.044,
-        "poster_path": "/7X3BkHmyPUp2pbYeN1qITgKfrOz.jpg",
-        "first_air_date": "2020-09-14",
-        "name": "The Drew Barrymore Show",
-        "vote_average": 5.1,
-        "vote_count": 7,
-        "character": "Self",
-        "credit_id": "624866f5cb71b8004e900d30",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 1556418,
+        "known_for_department": "Crew",
+        "name": "Liam Byrne",
+        "original_name": "Liam Byrne",
+        "popularity": 1.807,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791bd3564ec700c47486d6",
+                "job": "Armory Coordinator",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/xl1wGwaPZInJo1JAnpKqnFozWBE.jpg",
-        "genre_ids": [35, 10767],
-        "id": 59941,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "The Tonight Show Starring Jimmy Fallon",
-        "overview": "After Jay Leno's second retirement from the program, Jimmy Fallon stepped in as his permanent replacement. After 42 years in Los Angeles the program was brought back to New York.",
-        "popularity": 6322.093,
-        "poster_path": "/xFOVcKxo7SSexJiLsTw2PrbNGcZ.jpg",
-        "first_air_date": "2014-02-17",
-        "name": "The Tonight Show Starring Jimmy Fallon",
-        "vote_average": 5.809,
-        "vote_count": 277,
-        "character": "Self - Guest",
-        "credit_id": "648f46ea559d220139be5dcb",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 3090927,
+        "known_for_department": "Writing",
+        "name": "Kenneth Peters",
+        "original_name": "Kenneth Peters",
+        "popularity": 1.283,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917cb35a61e011dec8717",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/zYyIEC39ui14XWQ8zpNQicl17vb.jpg",
-        "genre_ids": [10767],
-        "id": 105197,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "Variety Studio: Actors on Actors",
-        "overview": "PBS SoCal and Variety take you inside the biggest movies and T.V. shows of the past year through candid conversations with today's hottest actors. Hosted by Variety Film Awards Editor Clayton Davis and Variety Chief Correspondent Elizabeth Wagmeister, each episode brings together pairs of actors engaging in intimate one-on-one discussions about their craft and work.",
-        "popularity": 225.417,
-        "poster_path": "/tnlEfHXo5L7jOdeHiAFOAWW4WoO.jpg",
-        "first_air_date": "2014-12-21",
-        "name": "Variety Studio: Actors on Actors",
-        "vote_average": 5,
-        "vote_count": 5,
-        "character": "Self",
-        "credit_id": "657eb0e48f26bc344975172c",
-        "episode_count": 1,
-        "media_type": "tv"
+        "gender": 2,
+        "id": 548491,
+        "known_for_department": "Acting",
+        "name": "Dan Hirst",
+        "original_name": "Dan Hirst",
+        "popularity": 4.321,
+        "profile_path": "/9dtwqy1sh8EuAX7A1gNKkzXJuGu.jpg",
+        "jobs": [
+            {
+                "credit_id": "65791c10bbe1dd011b90eef2",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 9
     },
     {
         "adult": false,
-        "backdrop_path": "/8DAT17tM7edPicdMSs3FKYQvE5Y.jpg",
-        "genre_ids": [10767, 35],
-        "id": 61818,
-        "origin_country": ["US"],
-        "original_language": "en",
-        "original_name": "Late Night with Seth Meyers",
-        "overview": "Seth Meyers, who is \"Saturday Night Live’s\" longest serving anchor on the show’s wildly popular \"Weekend Update,\" takes over as host of NBC’s \"Late Night\" — home to A-list celebrity guests, memorable comedy and the best in musical talent. As the Emmy Award-winning head writer for \"SNL,\" Meyers has established a reputation for sharp wit and perfectly timed comedy, and has gained fame for his spot-on jokes and satire. Meyers takes his departure from \"SNL\" to his new post at \"Late Night,\" as Jimmy Fallon moves to \"The Tonight Show\".",
-        "popularity": 2996.213,
-        "poster_path": "/x5asOuPOjW21e0Ykkvkuzu1TGEl.jpg",
-        "first_air_date": "2014-02-25",
-        "name": "Late Night with Seth Meyers",
-        "vote_average": 5.5,
-        "vote_count": 75,
-        "character": "Self",
-        "credit_id": "65a5de6103f0b600c6d5dadb",
-        "episode_count": 2,
-        "media_type": "tv"
+        "gender": 0,
+        "id": 3768549,
+        "known_for_department": "Crew",
+        "name": "Paula Byrden",
+        "original_name": "Paula Byrden",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791c597a3c5200ad19d279",
+                "job": "Clearances Coordinator",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1549548,
+        "known_for_department": "Production",
+        "name": "Corrinne Robinson",
+        "original_name": "Corrinne Robinson",
+        "popularity": 0.865,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917d8e93e95219109b25f",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1749268,
+        "known_for_department": "Crew",
+        "name": "Brett Chan",
+        "original_name": "Brett Chan",
+        "popularity": 6.373,
+        "profile_path": "/bad1gt9EJ8lqYT4Sr06kFZqCpxr.jpg",
+        "jobs": [
+            {
+                "credit_id": "65791cb2af58cb0106fdb74a",
+                "job": "Stunt Coordinator",
+                "episode_count": 8
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1392635,
+        "known_for_department": "Crew",
+        "name": "Domonkos Párdányi",
+        "original_name": "Domonkos Párdányi",
+        "popularity": 3.579,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791ceb4bfa545cff917039",
+                "job": "Stunt Coordinator",
+                "episode_count": 7
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 7
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3845478,
+        "known_for_department": "Crew",
+        "name": "Ádám Szücs",
+        "original_name": "Ádám Szücs",
+        "popularity": 1.656,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791b2daf58cb01236c9d55",
+                "job": "Special Effects Coordinator",
+                "episode_count": 7
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 7
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 4427209,
+        "known_for_department": "Crew",
+        "name": "Balazs Boross",
+        "original_name": "Balazs Boross",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657919ee20ecaf011db64dd3",
+                "job": "Special Effects Coordinator",
+                "episode_count": 6
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 6
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1350653,
+        "known_for_department": "Crew",
+        "name": "Johnny Yang",
+        "original_name": "Johnny Yang",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791d6d7a3c5200ad19d32d",
+                "job": "Fight Choreographer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Crew",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 66739,
+        "known_for_department": "Directing",
+        "name": "Jonathan Liebesman",
+        "original_name": "Jonathan Liebesman",
+        "popularity": 2.017,
+        "profile_path": "/bF6RT5FvdzCRxRc6Ud6FC9JgcIh.jpg",
+        "jobs": [
+            {
+                "credit_id": "6260fc7daf43240050d64914",
+                "job": "Director",
+                "episode_count": 4
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 4
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 128276,
+        "known_for_department": "Directing",
+        "name": "Otto Bathurst",
+        "original_name": "Otto Bathurst",
+        "popularity": 6.097,
+        "profile_path": "/vojDKrTe52mnPrYSKUTOLWotEIN.jpg",
+        "jobs": [
+            {
+                "credit_id": "623dd0ae35c30a005ee8e3be",
+                "job": "Director",
+                "episode_count": 2
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 97555,
+        "known_for_department": "Directing",
+        "name": "Roel Reiné",
+        "original_name": "Roel Reiné",
+        "popularity": 6.394,
+        "profile_path": "/nOc53uSl8bBNfkuLGlXnOZwbYdu.jpg",
+        "jobs": [
+            {
+                "credit_id": "624f2a2d65e0a20066d70015",
+                "job": "Director",
+                "episode_count": 2
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 226051,
+        "known_for_department": "Directing",
+        "name": "Debs Paterson",
+        "original_name": "Debs Paterson",
+        "popularity": 2.445,
+        "profile_path": "/oRIgPBR6fBYdWxGocivXuAHNBqz.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4a20b021cee0168c2e20c",
+                "job": "Director",
+                "episode_count": 2
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3283226,
+        "known_for_department": "Directing",
+        "name": "Dale Butler",
+        "original_name": "Dale Butler",
+        "popularity": 0.766,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a616e2ff32018425e00b",
+                "job": "First Assistant Director",
+                "episode_count": 2
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 2039934,
+        "known_for_department": "Directing",
+        "name": "Nadia Brand",
+        "original_name": "Nadia Brand",
+        "popularity": 0.98,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a626021cee019cc35f2c",
+                "job": "Second Assistant Director",
+                "episode_count": 2
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2764676,
+        "known_for_department": "Production",
+        "name": "Angela Mages",
+        "original_name": "Angela Mages",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579179a7a3c5200ebfe874a",
+                "job": "Second Assistant Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1764214,
+        "known_for_department": "Directing",
+        "name": "Peter Freeman",
+        "original_name": "Peter Freeman",
+        "popularity": 0.965,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579178389d97f01009f06f6",
+                "job": "First Assistant Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2229251,
+        "known_for_department": "Directing",
+        "name": "Jessica Lowrey",
+        "original_name": "Jessica Lowrey",
+        "popularity": 0.842,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6273ed1dc0442918de989c04",
+                "job": "Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1857475,
+        "known_for_department": "Directing",
+        "name": "Robert Grayson",
+        "original_name": "Robert Grayson",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579177b89d97f00aefc93d4",
+                "job": "First Assistant Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 154521,
+        "known_for_department": "Directing",
+        "name": "Craig Zisk",
+        "original_name": "Craig Zisk",
+        "popularity": 2.097,
+        "profile_path": "/1WTt2jjxDwT0ngzrpO02VZYZDYV.jpg",
+        "jobs": [
+            {
+                "credit_id": "65cdd8d613a38801649e6a9a",
+                "job": "Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2100995,
+        "known_for_department": "Directing",
+        "name": "Robyn Glaser",
+        "original_name": "Robyn Glaser",
+        "popularity": 1.078,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917a235a61e00ad87c60a",
+                "job": "Second Assistant Director",
+                "episode_count": 1
+            }
+        ],
+        "department": "Directing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 85964,
+        "known_for_department": "Editing",
+        "name": "Roderick Deogrades",
+        "original_name": "Roderick Deogrades",
+        "popularity": 1.38,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65cdd9833123450162ba57a9",
+                "job": "Editor",
+                "episode_count": 1
+            }
+        ],
+        "department": "Editing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1380857,
+        "known_for_department": "Editing",
+        "name": "Carmela Iandoli",
+        "original_name": "Carmela Iandoli",
+        "popularity": 2.048,
+        "profile_path": "/x6yE7uzHiSDYuttpuYSXKGSWoWc.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4ab7907faa20163c272a9",
+                "job": "Editor",
+                "episode_count": 1
+            }
+        ],
+        "department": "Editing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1845906,
+        "known_for_department": "Editing",
+        "name": "Dan Crinnion",
+        "original_name": "Dan Crinnion",
+        "popularity": 1.042,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a515f495ee017e0c1467",
+                "job": "Editor",
+                "episode_count": 1
+            }
+        ],
+        "department": "Editing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 995558,
+        "known_for_department": "Editing",
+        "name": "Aaron Marshall",
+        "original_name": "Aaron Marshall",
+        "popularity": 1.052,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579144eec8a4300c33aa187",
+                "job": "Editor",
+                "episode_count": 1
+            }
+        ],
+        "department": "Editing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2942738,
+        "known_for_department": "Production",
+        "name": "Gabriella Csoma",
+        "original_name": "Gabriella Csoma",
+        "popularity": 1.128,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579171ea1d3320138eb7fa4",
+                "job": "Unit Production Manager",
+                "episode_count": 17
+            },
+            {
+                "credit_id": "65c4a4c8fd6fa101877949ea",
+                "job": "Co-Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 25
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 2248101,
+        "known_for_department": "Production",
+        "name": "Toby Leslie",
+        "original_name": "Toby Leslie",
+        "popularity": 0.883,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "5c70ba6d0e0a262c1c79aa41",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 128276,
+        "known_for_department": "Directing",
+        "name": "Otto Bathurst",
+        "original_name": "Otto Bathurst",
+        "popularity": 6.097,
+        "profile_path": "/vojDKrTe52mnPrYSKUTOLWotEIN.jpg",
+        "jobs": [
+            {
+                "credit_id": "5c70ba310e0a262c1c79aa07",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1549549,
+        "known_for_department": "Production",
+        "name": "Kiki Wolfkill",
+        "original_name": "Kiki Wolfkill",
+        "popularity": 1.632,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "61f8d3b4cb802800ec066d0a",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1231425,
+        "known_for_department": "Production",
+        "name": "Darryl Frank",
+        "original_name": "Darryl Frank",
+        "popularity": 0.691,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "5b3b012bc3a3684617019286",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1942748,
+        "known_for_department": "Directing",
+        "name": "Charlotte Keating",
+        "original_name": "Charlotte Keating",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657913d320ecaf0100d2c2fa",
+                "job": "Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1225545,
+        "known_for_department": "Production",
+        "name": "Justin Falvey",
+        "original_name": "Justin Falvey",
+        "popularity": 2.123,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "5b3b0136c3a368486801297c",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 474,
+        "known_for_department": "Production",
+        "name": "Jina Jay",
+        "original_name": "Jina Jay",
+        "popularity": 4.55,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579147c20ecaf00e3928607",
+                "job": "Casting",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 488,
+        "known_for_department": "Directing",
+        "name": "Steven Spielberg",
+        "original_name": "Steven Spielberg",
+        "popularity": 42.369,
+        "profile_path": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
+        "jobs": [
+            {
+                "credit_id": "61f8d393ccb15f004623290c",
+                "job": "Executive Producer",
+                "episode_count": 17
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 62213,
+        "known_for_department": "Production",
+        "name": "Gian Paolo Varani",
+        "original_name": "Gian Paolo Varani",
+        "popularity": 0.923,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657843124bfa545cfe6356e4",
+                "job": "Co-Executive Producer",
+                "episode_count": 9
+            },
+            {
+                "credit_id": "657842a17a3c52014e6a877e",
+                "job": "Executive Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 17
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1797888,
+        "known_for_department": "Production",
+        "name": "Olivia Brittain",
+        "original_name": "Olivia Brittain",
+        "popularity": 1.053,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65791484af58cb0141ff3d3a",
+                "job": "Casting",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2190090,
+        "known_for_department": "Writing",
+        "name": "Katie Swain",
+        "original_name": "Katie Swain",
+        "popularity": 2.741,
+        "profile_path": "/pwGViVzVF6FpjbV5R9Ve3mjAYon.jpg",
+        "jobs": [
+            {
+                "credit_id": "657913bd4bfa545d020abb32",
+                "job": "Consulting Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 3959,
+        "known_for_department": "Production",
+        "name": "Robert Bernacchi",
+        "original_name": "Robert Bernacchi",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917354bfa545cff916d3b",
+                "job": "Unit Production Manager",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 85547,
+        "known_for_department": "Writing",
+        "name": "Mark Malone",
+        "original_name": "Mark Malone",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579138c20ecaf00c69a0803",
+                "job": "Consulting Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1238297,
+        "known_for_department": "Production",
+        "name": "Frank O'Connor",
+        "original_name": "Frank O'Connor",
+        "popularity": 2.256,
+        "profile_path": "/pXljCutQdynHzcQijgskMxB3WE9.jpg",
+        "jobs": [
+            {
+                "credit_id": "61f8d3c0b6abc4009209bd5d",
+                "job": "Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 931796,
+        "known_for_department": "Writing",
+        "name": "Michael Armbruster",
+        "original_name": "Michael Armbruster",
+        "popularity": 1.743,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579142dbbe1dd00c40d922e",
+                "job": "Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 2720614,
+        "known_for_department": "Writing",
+        "name": "Silka Luisa",
+        "original_name": "Silka Luisa",
+        "popularity": 2.103,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657912f24bfa545cfe63961d",
+                "job": "Supervising Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 4427189,
+        "known_for_department": "Production",
+        "name": "Cheryl Nebelsieck",
+        "original_name": "Cheryl Nebelsieck",
+        "popularity": 0.69,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917b9bbe1dd00ac7db47a",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 4427190,
+        "known_for_department": "Production",
+        "name": "Carlos Naranjo",
+        "original_name": "Carlos Naranjo",
+        "popularity": 0.98,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657917e8a1d33200e1b8bb82",
+                "job": "Other",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1803546,
+        "known_for_department": "Writing",
+        "name": "Justine Juel Gillmer",
+        "original_name": "Justine Juel Gillmer",
+        "popularity": 1.195,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657912e3bbe1dd00ac7db1b3",
+                "job": "Co-Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 566273,
+        "known_for_department": "Writing",
+        "name": "Kyle Killen",
+        "original_name": "Kyle Killen",
+        "popularity": 6.943,
+        "profile_path": "/aOMs0YHDM4vWM23sQQ5vR08fVQ2.jpg",
+        "jobs": [
+            {
+                "credit_id": "5b3b00bbc3a368456101c92e",
+                "job": "Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 3085530,
+        "known_for_department": "Production",
+        "name": "Bonnie Ross",
+        "original_name": "Bonnie Ross",
+        "popularity": 1.432,
+        "profile_path": "/hz2SuFldDPaJ02mZRlinmQSW1Md.jpg",
+        "jobs": [
+            {
+                "credit_id": "61f8d3cdcb8028001c53f236",
+                "job": "Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1228427,
+        "known_for_department": "Production",
+        "name": "Sheila Hockin",
+        "original_name": "Sheila Hockin",
+        "popularity": 1.628,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657913ca564ec7011b20c5cd",
+                "job": "Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3882544,
+        "known_for_department": "Writing",
+        "name": "Richard E. Robbins",
+        "original_name": "Richard E. Robbins",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "657912d6a1d33200febe2f35",
+                "job": "Co-Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 2077197,
+        "known_for_department": "Production",
+        "name": "Scott Pennington",
+        "original_name": "Scott Pennington",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "5b3b0115c3a36845fb01af95",
+                "job": "Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1324451,
+        "known_for_department": "Writing",
+        "name": "Steven Kane",
+        "original_name": "Steven Kane",
+        "popularity": 2.8,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "5cb77eb60e0a266b9befa269",
+                "job": "Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 113525,
+        "known_for_department": "Directing",
+        "name": "Richard Robbins",
+        "original_name": "Richard Robbins",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6260fd7dd4cc8e0051a8a663",
+                "job": "Co-Executive Producer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 59254,
+        "known_for_department": "Acting",
+        "name": "Pablo Schreiber",
+        "original_name": "Pablo Schreiber",
+        "popularity": 48.267,
+        "profile_path": "/wOze8R9lgoZxZoTsPSHID4Nt2Ee.jpg",
+        "jobs": [
+            {
+                "credit_id": "65791413bbe1dd011b90ea2f",
+                "job": "Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1761062,
+        "known_for_department": "Crew",
+        "name": "Ahmadu Garba",
+        "original_name": "Ahmadu Garba",
+        "popularity": 5.424,
+        "profile_path": "/iLD83L1UWgNNgf1EvJOSPfurzOe.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4a484f495ee01970c4c54",
+                "job": "Co-Executive Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1107908,
+        "known_for_department": "Writing",
+        "name": "David Wiener",
+        "original_name": "David Wiener",
+        "popularity": 1.54,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6578420f7a3c5200ca7a16bc",
+                "job": "Executive Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1365865,
+        "known_for_department": "Writing",
+        "name": "Marisha Mukerjee",
+        "original_name": "Marisha Mukerjee",
+        "popularity": 1.875,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a47807faa20149c24fbc",
+                "job": "Co-Executive Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3283226,
+        "known_for_department": "Directing",
+        "name": "Dale Butler",
+        "original_name": "Dale Butler",
+        "popularity": 0.766,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a4d7fd6fa10187794a08",
+                "job": "Co-Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 11317,
+        "known_for_department": "Acting",
+        "name": "Natascha McElhone",
+        "original_name": "Natascha McElhone",
+        "popularity": 59.226,
+        "profile_path": "/9pxaoasotR1pdCXYSfN1pkm0geO.jpg",
+        "jobs": [
+            {
+                "credit_id": "657914217a3c52010cdf1002",
+                "job": "Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1403739,
+        "known_for_department": "Editing",
+        "name": "Nick Iannelli",
+        "original_name": "Nick Iannelli",
+        "popularity": 0.609,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a4bd0c4c160185030958",
+                "job": "Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 125793,
+        "known_for_department": "Writing",
+        "name": "Sarah McCarron",
+        "original_name": "Sarah McCarron",
+        "popularity": 0.605,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a49d194186017b75e9d0",
+                "job": "Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1035076,
+        "known_for_department": "Editing",
+        "name": "Tom Hemmings",
+        "original_name": "Tom Hemmings",
+        "popularity": 1.4,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a49107faa2017dc2a653",
+                "job": "Supervising Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Production",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1090864,
+        "known_for_department": "Sound",
+        "name": "Sean Callery",
+        "original_name": "Sean Callery",
+        "popularity": 2.02,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "653895e2e93e95013dbea9ef",
+                "job": "Original Music Composer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Sound",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 59811,
+        "known_for_department": "Sound",
+        "name": "Bear McCreary",
+        "original_name": "Bear McCreary",
+        "popularity": 2.39,
+        "profile_path": "/t4Rr2p9Q5ewMgagChxK2JmrcvKx.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4a5b30c27100148777355",
+                "job": "Main Title Theme Composer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Sound",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1604293,
+        "known_for_department": "Sound",
+        "name": "Martin O'Donnell",
+        "original_name": "Martin O'Donnell",
+        "popularity": 1.073,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a5d1713ed40185176b1c",
+                "job": "Main Title Theme Composer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Sound",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1604294,
+        "known_for_department": "Sound",
+        "name": "Michael Salvatori",
+        "original_name": "Michael Salvatori",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a5db6dc5070184fca98d",
+                "job": "Main Title Theme Composer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Sound",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 1730841,
+        "known_for_department": "Visual Effects",
+        "name": "Paul Stephenson",
+        "original_name": "Paul Stephenson",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6579199635a61e013ac24fde",
+                "job": "Special Effects Supervisor",
+                "episode_count": 9
+            }
+        ],
+        "department": "Visual Effects",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3221296,
+        "known_for_department": "Visual Effects",
+        "name": "Ange Turchet",
+        "original_name": "Ange Turchet",
+        "popularity": 2.344,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "625ef3af25cd850050c73f0c",
+                "job": "Compositing Artist",
+                "episode_count": 9
+            }
+        ],
+        "department": "Visual Effects",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 2141786,
+        "known_for_department": "Visual Effects",
+        "name": "Michael C. May",
+        "original_name": "Michael C. May",
+        "popularity": 0.706,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a852f495ee01540bfaf2",
+                "job": "Visual Effects Producer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Visual Effects",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 591428,
+        "known_for_department": "Acting",
+        "name": "Wojciech Zieliński",
+        "original_name": "Wojciech Zieliński",
+        "popularity": 2.688,
+        "profile_path": "/zh52WgL7x0IwEf3D3HwvoAAR5W2.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4a83a9451e70163bcf7cf",
+                "job": "Senior Visual Effects Supervisor",
+                "episode_count": 8
+            }
+        ],
+        "department": "Visual Effects",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 3942786,
+        "known_for_department": "Visual Effects",
+        "name": "Jon Park",
+        "original_name": "Jon Park",
+        "popularity": 0.782,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "63fe05d4c7176d009d6dc4af",
+                "job": "VFX Supervisor",
+                "episode_count": 2
+            }
+        ],
+        "department": "Visual Effects",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1324451,
+        "known_for_department": "Writing",
+        "name": "Steven Kane",
+        "original_name": "Steven Kane",
+        "popularity": 2.8,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "623dd10cd399e60089ff0533",
+                "job": "Writer",
+                "episode_count": 9
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 9
+    },
+    {
+        "adult": false,
+        "gender": 0,
+        "id": 4499666,
+        "known_for_department": "Writing",
+        "name": "Basil Kreimendahl",
+        "original_name": "Basil Kreimendahl",
+        "popularity": 1.15,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a5f9713ed40185176b57",
+                "job": "Staff Writer",
+                "episode_count": 8
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 8
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 566273,
+        "known_for_department": "Writing",
+        "name": "Kyle Killen",
+        "original_name": "Kyle Killen",
+        "popularity": 6.943,
+        "profile_path": "/aOMs0YHDM4vWM23sQQ5vR08fVQ2.jpg",
+        "jobs": [
+            {
+                "credit_id": "62455a8dc740d90089f55289",
+                "job": "Writer",
+                "episode_count": 3
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 3
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1803546,
+        "known_for_department": "Writing",
+        "name": "Justine Juel Gillmer",
+        "original_name": "Justine Juel Gillmer",
+        "popularity": 1.195,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "625800bfa58902009ce8d37d",
+                "job": "Writer",
+                "episode_count": 2
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 2
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 1365865,
+        "known_for_department": "Writing",
+        "name": "Marisha Mukerjee",
+        "original_name": "Marisha Mukerjee",
+        "popularity": 1.875,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65cdd8e6c26796017ec8f72b",
+                "job": "Writer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 113525,
+        "known_for_department": "Directing",
+        "name": "Richard Robbins",
+        "original_name": "Richard Robbins",
+        "popularity": 0.6,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "6260fccd57530e0066d2cbd6",
+                "job": "Writer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1107908,
+        "known_for_department": "Writing",
+        "name": "David Wiener",
+        "original_name": "David Wiener",
+        "popularity": 1.54,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "65c4a219e2ff32018425dbfa",
+                "job": "Writer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 1,
+        "id": 2720614,
+        "known_for_department": "Writing",
+        "name": "Silka Luisa",
+        "original_name": "Silka Luisa",
+        "popularity": 2.103,
+        "profile_path": null,
+        "jobs": [
+            {
+                "credit_id": "626a3c2e23168c0068e66780",
+                "job": "Writer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 1
+    },
+    {
+        "adult": false,
+        "gender": 2,
+        "id": 1761062,
+        "known_for_department": "Crew",
+        "name": "Ahmadu Garba",
+        "original_name": "Ahmadu Garba",
+        "popularity": 5.424,
+        "profile_path": "/iLD83L1UWgNNgf1EvJOSPfurzOe.jpg",
+        "jobs": [
+            {
+                "credit_id": "65c4a8f39451e70184bd3df1",
+                "job": "Writer",
+                "episode_count": 1
+            }
+        ],
+        "department": "Writing",
+        "total_episode_count": 1
     }
 ]

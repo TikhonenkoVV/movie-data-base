@@ -1,9 +1,10 @@
-import { Grid, GridItem } from 'components/App.styled';
 import {
     CardInfo,
     ImgWrapper,
     MovieLink,
     MovieTitle,
+    StyledMediaCard,
+    StyledMedialist,
 } from './MediaList.styled';
 import { normalizeMoviesData } from 'services/normalize';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
@@ -12,7 +13,7 @@ export const MediaList = ({ media, mediaTypes }) => {
     const data = normalizeMoviesData(media, mediaTypes);
 
     return (
-        <Grid>
+        <StyledMedialist>
             {data.map(
                 ({
                     id,
@@ -22,7 +23,7 @@ export const MediaList = ({ media, mediaTypes }) => {
                     poster,
                     release,
                 }) => (
-                    <GridItem key={id}>
+                    <StyledMediaCard key={id}>
                         <MovieLink
                             to={
                                 media_type === 'movie'
@@ -47,9 +48,9 @@ export const MediaList = ({ media, mediaTypes }) => {
                                 <p>{release}</p>
                             </CardInfo>
                         </MovieLink>
-                    </GridItem>
+                    </StyledMediaCard>
                 )
             )}
-        </Grid>
+        </StyledMedialist>
     );
 };

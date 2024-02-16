@@ -1,6 +1,38 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
+export const StyledMedialist = styled.ul`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-gap: ${({ theme }) => theme.spacing.step * 5}px;
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+`;
+
+export const StyledMediaCard = styled.li`
+    display: flex;
+    flex-direction: column;
+    border: 2px solid ${({ theme }) => theme.colors.accent};
+    border-radius: 20px;
+    background-color: ${({ theme }) => theme.colors.accent};
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow: hidden;
+    cursor: zoom-in;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 2px 10px 2px ${({ theme }) => theme.colors.shadow};
+    }
+    &:hover img,
+    &:focus img {
+        transform: scale(1.05);
+    }
+`;
+
 export const MovieLink = styled(Link)`
     display: flex;
     flex-direction: column;

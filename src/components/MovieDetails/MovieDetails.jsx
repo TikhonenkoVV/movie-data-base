@@ -1,13 +1,12 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { CastList } from 'components/CastList/CastList';
 import { Container } from 'components/Container/Container';
-import { CrewList } from 'components/CrewList/CrewList';
+// import { CrewList } from 'components/CrewList/CrewList';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
 import {
@@ -15,12 +14,13 @@ import {
     normalizeCrew,
     normalizeMovieData,
 } from 'services/normalize';
+import { CastSection, DetailsTitle } from './MovieDetails.styled';
 
 const ModalContext = createContext(false);
 
 export const useModal = () => useContext(ModalContext);
 
-const MovieDetails = () => {
+export const MovieDetails = () => {
     const [isTrailer, setTrailer] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [movie, setMovie] = useState(null);
@@ -46,7 +46,6 @@ const MovieDetails = () => {
             })
             .catch(err => {
                 setError(err.message);
-                toast(err.message);
             })
             .finally(() => {
                 getTrailer(type, id)
@@ -55,7 +54,6 @@ const MovieDetails = () => {
                     })
                     .catch(err => {
                         setError(err.message);
-                        toast(err.message);
                     })
                     .finally(() => {
                         getDetails(
@@ -69,7 +67,6 @@ const MovieDetails = () => {
                             })
                             .catch(err => {
                                 setError(err.message);
-                                toast(err.message);
                             })
                             .finally(() => setIsLoading(false));
                     });
@@ -94,18 +91,20 @@ const MovieDetails = () => {
                                 directing={crew?.director}
                                 onClose={toggleModal}
                             />
-                            <h2>Directing</h2>
-                            <CrewList crew={crew} />
-                            <h2>Top Billed Cast</h2>
-                            <CastList cast={cast} />
-                            <button type="button">Full Cast & Crew</button>
                         </>
                     )}
                     {error && <Page404 />}
                 </Container>
             </section>
+            <CastSection>
+                <Container>
+                    {/* <DetailsTitle>Directing</DetailsTitle>
+                    <CrewList crew={crew} /> */}
+                    <DetailsTitle>Top Billed Cast</DetailsTitle>
+                    <CastList cast={cast} />
+                    <button type="button">Full Cast & Crew</button>
+                </Container>
+            </CastSection>
         </ModalContext.Provider>
     );
 };
-
-export default MovieDetails;

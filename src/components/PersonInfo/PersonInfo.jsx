@@ -2,6 +2,7 @@ import { Acting } from 'components/Acting/Acting';
 import {
     Aside,
     AsideTitle,
+    InfoWrapper,
     MinorTitle,
     PersonTitle,
     PersonWrapper,
@@ -73,7 +74,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                     )}
                 </PersonalInfoList>
             </Aside>
-            <div>
+            <InfoWrapper>
                 <ProfileWrapper>
                     <PersonTitle>{personName}</PersonTitle>
                     <MinorTitle>Biography</MinorTitle>
@@ -87,7 +88,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                     )}
                 </ProfileWrapper>
                 <Acting acting={acting} crew={crew} />
-            </div>
+            </InfoWrapper>
         </PersonWrapper>
     );
 };

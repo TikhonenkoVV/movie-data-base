@@ -7,9 +7,17 @@ import { storageLoad, storageSave } from '../services/storage';
 import PersonDetails from 'pages/PersonDetails';
 
 const Home = lazy(() => import('../pages/Home'));
-const Movies = lazy(() => import('../pages/Movies'));
-const TvShows = lazy(() => import('../pages/TvShows'));
-const MovieDetails = lazy(() => import('../pages/MovieDetails'));
+const Media = lazy(() => import('../pages/Media'));
+const MovieDetails = lazy(() =>
+    import('./MovieDetails/MovieDetails').then(module => {
+        return { ...module, default: module.MovieDetails };
+    })
+);
+const Search = lazy(() =>
+    import('../components/Search/Search').then(module => {
+        return { ...module, default: module.Search };
+    })
+);
 const Cast = lazy(() =>
     import('../components/Cast/Cast').then(module => {
         return {
@@ -69,15 +77,19 @@ export const App = () => {
                     element={<Layout onChangeTheme={onChangeTheme} />}
                 >
                     <Route index element={<Home />} />
-                    <Route path="movies" element={<Movies />} />
-                    <Route path="tv-shows" element={<TvShows />} />
-                    <Route path="movies/:mediaId" element={<MovieDetails />}>
-                        <Route path="cast" element={<Cast />} />
-                        <Route path="review" element={<Review />} />
+                    <Route path="movies" element={<Media />}>
+                        <Route path="search" element={<Search />} />
+                        <Route path=":mediaId" element={<MovieDetails />}>
+                            <Route path="cast" element={<Cast />} />
+                            <Route path="review" element={<Review />} />
+                        </Route>
                     </Route>
-                    <Route path="tv-shows/:mediaId" element={<MovieDetails />}>
-                        <Route path="cast" element={<Cast />} />
-                        <Route path="review" element={<Review />} />
+                    <Route path="tv-shows" element={<Media />}>
+                        <Route path="search" element={<Search />} />
+                        <Route path=":mediaId" element={<MovieDetails />}>
+                            <Route path="cast" element={<Cast />} />
+                            <Route path="review" element={<Review />} />
+                        </Route>
                     </Route>
                     <Route path="person" element={<Person />} />
                     <Route

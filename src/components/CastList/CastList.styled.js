@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const CastWrapper = styled.div`
+    margin-bottom: 24px;
+    padding-bottom: 16px;
     overflow-x: auto;
 `;
 

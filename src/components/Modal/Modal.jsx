@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { IFrame, IframeWrapper, ModalBackdrop } from './Modal.styled';
 import { createPortal } from 'react-dom';
-import { useModal } from 'pages/MovieDetails';
+import { useModal } from 'components/MovieDetails/MovieDetails';
 
 export const Modal = ({ onClose }) => {
     const { isTrailer } = useModal();

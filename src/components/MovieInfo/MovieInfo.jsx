@@ -8,7 +8,7 @@ import {
 } from './MovieInfo.styled';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 import { Modal } from 'components/Modal/Modal';
-import { useModal } from 'pages/MovieDetails';
+import { useModal } from 'components/MovieDetails/MovieDetails';
 
 export const MovieInfo = ({ movie, onClose, directing }) => {
     const {
@@ -61,7 +61,7 @@ export const MovieInfo = ({ movie, onClose, directing }) => {
                         <p>{creators.join(', ')}</p>
                     </>
                 )}
-                {directing && (
+                {directing && !created_by && (
                     <>
                         <h2>Director</h2>
                         <p>{directors.join(', ')}</p>

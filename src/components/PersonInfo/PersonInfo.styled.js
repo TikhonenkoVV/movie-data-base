@@ -28,6 +28,10 @@ export const MinorTitle = styled.h3`
     margin-bottom: 12px;
 `;
 
+export const InfoWrapper = styled.div`
+    flex-grow: 1;
+`;
+
 export const ProfileWrapper = styled.div`
     margin-bottom: 40px;
 `;

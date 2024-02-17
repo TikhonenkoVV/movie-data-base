@@ -1,2169 +1,1876 @@
 [
     {
         "adult": false,
-        "gender": 0,
-        "id": 2247509,
-        "known_for_department": "Art",
-        "name": "Matthew Hywel-Davies",
-        "original_name": "Matthew Hywel-Davies",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917fe4bfa545d010a7783",
-                "job": "Supervising Art Director",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 4427193,
-        "known_for_department": "Art",
-        "name": "Jiri Karasek",
-        "original_name": "Jiri Karasek",
-        "popularity": 1.96,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579184abbe1dd011b90ecce",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1579093,
-        "known_for_department": "Crew",
-        "name": "Eva Hartmann",
-        "original_name": "Eva Hartmann",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579193b89d97f01009f07cc",
-                "job": "Graphic Designer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1337453,
-        "known_for_department": "Art",
-        "name": "Andrew Orlando",
-        "original_name": "Andrew Orlando",
-        "popularity": 1.026,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791c414bfa545d010a79c5",
-                "job": "Property Master",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 967459,
-        "known_for_department": "Art",
-        "name": "Guy Potgieter",
-        "original_name": "Guy Potgieter",
-        "popularity": 1.162,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791c34e93e9521900d43fb",
-                "job": "Set Decoration",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2053116,
-        "known_for_department": "Art",
-        "name": "Brett Hirson",
-        "original_name": "Brett Hirson",
-        "popularity": 0.776,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657918717a3c5200ca7a5c24",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1715105,
-        "known_for_department": "Art",
-        "name": "Kiera Tudway",
-        "original_name": "Kiera Tudway",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579192d89d97f013ac9fd9a",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1548941,
-        "known_for_department": "Art",
-        "name": "Gergely Rieger",
-        "original_name": "Gergely Rieger",
-        "popularity": 1.537,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791889a1d3320138eb809f",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 59859,
-        "known_for_department": "Art",
-        "name": "Sophie Becher",
-        "original_name": "Sophie Becher",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579144535a61e011dec84fd",
-                "job": "Production Design",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1551453,
-        "known_for_department": "Art",
-        "name": "Renátó Cseh",
-        "original_name": "Renátó Cseh",
-        "popularity": 1.715,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657918f335a61e013ac24f7a",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2062089,
-        "known_for_department": "Art",
-        "name": "Adam Polgar",
-        "original_name": "Adam Polgar",
-        "popularity": 1.158,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791c2a7a3c5200ad19d25f",
-                "job": "Set Decoration",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2062088,
-        "known_for_department": "Art",
-        "name": "Krisztina Szilágyi",
-        "original_name": "Krisztina Szilágyi",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657918c5ec8a4300c33aa4d9",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2116315,
-        "known_for_department": "Art",
-        "name": "Jim McCallum",
-        "original_name": "Jim McCallum",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579190c4bfa545cfd78c18d",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 10710,
-        "known_for_department": "Art",
-        "name": "Andrew Ackland-Snow",
-        "original_name": "Andrew Ackland-Snow",
-        "popularity": 0.829,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579191a20ecaf00c69a0be2",
-                "job": "Art Direction",
-                "episode_count": 9
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 194881,
-        "known_for_department": "Art",
-        "name": "James Foster",
-        "original_name": "James Foster",
-        "popularity": 1.02,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a5020c2710017e77d7be",
-                "job": "Production Design",
-                "episode_count": 8
-            }
-        ],
-        "department": "Art",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1834280,
-        "known_for_department": "Camera",
-        "name": "Michael Soos",
-        "original_name": "Michael Soos",
-        "popularity": 0.833,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791eeda1d33200c4c839e5",
-                "job": "Steadicam Operator",
-                "episode_count": 5
-            },
-            {
-                "credit_id": "65791d7b20ecaf0100d2c93c",
-                "job": "\"A\" Camera Operator",
-                "episode_count": 9
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 14
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2062153,
-        "known_for_department": "Camera",
-        "name": "Tamás Oláh",
-        "original_name": "Tamás Oláh",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791f3c35a61e01000c121b",
-                "job": "First Assistant Camera",
-                "episode_count": 9
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1421652,
-        "known_for_department": "Camera",
-        "name": "György Réder",
-        "original_name": "György Réder",
-        "popularity": 2.892,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791e83af58cb0106fdb864",
-                "job": "\"B\" Camera Operator",
-                "episode_count": 9
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2143781,
-        "known_for_department": "Camera",
-        "name": "Tamás Jánossa",
-        "original_name": "Tamás Jánossa",
-        "popularity": 2.976,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791f0e35a61e011dec8aab",
-                "job": "First Assistant Camera",
-                "episode_count": 9
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1586311,
-        "known_for_department": "Camera",
-        "name": "Ádám Kliegl",
-        "original_name": "Ádám Kliegl",
-        "popularity": 1.393,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791f2535a61e011dec8aba",
-                "job": "First Assistant Camera",
-                "episode_count": 9
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1298839,
-        "known_for_department": "Camera",
-        "name": "Ádám Fillenz",
-        "original_name": "Ádám Fillenz",
-        "popularity": 0.695,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791da535a61e011dec89ea",
-                "job": "\"B\" Camera Operator",
-                "episode_count": 7
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 7
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 555771,
-        "known_for_department": "Camera",
-        "name": "Carl Sundberg",
-        "original_name": "Carl Sundberg",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a4e40c2710017e77d795",
-                "job": "Director of Photography",
-                "episode_count": 2
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 8677,
-        "known_for_department": "Camera",
-        "name": "Karl Walter Lindenlaub",
-        "original_name": "Karl Walter Lindenlaub",
-        "popularity": 0.638,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791439a1d332011b50255a",
-                "job": "Director of Photography",
-                "episode_count": 1
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1150764,
-        "known_for_department": "Camera",
-        "name": "Andrew Commis",
-        "original_name": "Andrew Commis",
-        "popularity": 1.153,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65cdd97651e6ab01861fde2a",
-                "job": "Director of Photography",
-                "episode_count": 1
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 41847,
-        "known_for_department": "Camera",
-        "name": "Ed Wild",
-        "original_name": "Ed Wild",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791ea7e93e952192ccd7e1",
-                "job": "Additional Photography",
-                "episode_count": 1
-            }
-        ],
-        "department": "Camera",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1574119,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Giovanni Lipari",
-        "original_name": "Giovanni Lipari",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791950bbe1dd0138d0bd4d",
-                "job": "Costume Design",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2143767,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Balázs Labancz",
-        "original_name": "Balázs Labancz",
-        "popularity": 0.793,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579196489d97f011dcde05f",
-                "job": "Costume Supervisor",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1515573,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Gábor Homonnay",
-        "original_name": "Gábor Homonnay",
-        "popularity": 1.417,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579195bbbe1dd00ac7db585",
-                "job": "Costume Supervisor",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 1319843,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Felicity Bowring",
-        "original_name": "Felicity Bowring",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791986a1d332011b502922",
-                "job": "Makeup Designer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1433706,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Mauro Tamagnini",
-        "original_name": "Mauro Tamagnini",
-        "popularity": 5.419,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579197aaf58cb00cc849d10",
-                "job": "Hair Designer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 2544838,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Judit Farkas-Arful",
-        "original_name": "Judit Farkas-Arful",
-        "popularity": 0.786,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "61e9cb1a41eee100d1dab3ce",
-                "job": "Makeup Artist",
-                "episode_count": 9
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 28162,
-        "known_for_department": "Costume & Make-Up",
-        "name": "Jill M. Ohanneson",
-        "original_name": "Jill M. Ohanneson",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a5350c2710017e77d7f5",
-                "job": "Costume Design",
-                "episode_count": 8
-            }
-        ],
-        "department": "Costume & Make-Up",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 4427226,
-        "known_for_department": "Crew",
-        "name": "Kristof Varnagy",
-        "original_name": "Kristof Varnagy",
-        "popularity": 1.018,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791b8f35a61e01000c1006",
-                "job": "Choreographer",
-                "episode_count": 9
-            },
-            {
-                "credit_id": "65791bae7a3c5200ebfe898f",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 18
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1556418,
-        "known_for_department": "Crew",
-        "name": "Liam Byrne",
-        "original_name": "Liam Byrne",
-        "popularity": 1.807,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791bd3564ec700c47486d6",
-                "job": "Armory Coordinator",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3090927,
-        "known_for_department": "Writing",
-        "name": "Kenneth Peters",
-        "original_name": "Kenneth Peters",
-        "popularity": 1.283,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917cb35a61e011dec8717",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 548491,
-        "known_for_department": "Acting",
-        "name": "Dan Hirst",
-        "original_name": "Dan Hirst",
-        "popularity": 4.321,
-        "profile_path": "/9dtwqy1sh8EuAX7A1gNKkzXJuGu.jpg",
-        "jobs": [
-            {
-                "credit_id": "65791c10bbe1dd011b90eef2",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3768549,
-        "known_for_department": "Crew",
-        "name": "Paula Byrden",
-        "original_name": "Paula Byrden",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791c597a3c5200ad19d279",
-                "job": "Clearances Coordinator",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1549548,
-        "known_for_department": "Production",
-        "name": "Corrinne Robinson",
-        "original_name": "Corrinne Robinson",
-        "popularity": 0.865,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917d8e93e95219109b25f",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1749268,
-        "known_for_department": "Crew",
-        "name": "Brett Chan",
-        "original_name": "Brett Chan",
-        "popularity": 6.373,
-        "profile_path": "/bad1gt9EJ8lqYT4Sr06kFZqCpxr.jpg",
-        "jobs": [
-            {
-                "credit_id": "65791cb2af58cb0106fdb74a",
-                "job": "Stunt Coordinator",
-                "episode_count": 8
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1392635,
-        "known_for_department": "Crew",
-        "name": "Domonkos Párdányi",
-        "original_name": "Domonkos Párdányi",
-        "popularity": 3.579,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791ceb4bfa545cff917039",
-                "job": "Stunt Coordinator",
-                "episode_count": 7
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 7
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3845478,
-        "known_for_department": "Crew",
-        "name": "Ádám Szücs",
-        "original_name": "Ádám Szücs",
-        "popularity": 1.656,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791b2daf58cb01236c9d55",
-                "job": "Special Effects Coordinator",
-                "episode_count": 7
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 7
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 4427209,
-        "known_for_department": "Crew",
-        "name": "Balazs Boross",
-        "original_name": "Balazs Boross",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657919ee20ecaf011db64dd3",
-                "job": "Special Effects Coordinator",
-                "episode_count": 6
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 6
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1350653,
-        "known_for_department": "Crew",
-        "name": "Johnny Yang",
-        "original_name": "Johnny Yang",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791d6d7a3c5200ad19d32d",
-                "job": "Fight Choreographer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Crew",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 66739,
-        "known_for_department": "Directing",
-        "name": "Jonathan Liebesman",
-        "original_name": "Jonathan Liebesman",
-        "popularity": 2.017,
-        "profile_path": "/bF6RT5FvdzCRxRc6Ud6FC9JgcIh.jpg",
-        "jobs": [
-            {
-                "credit_id": "6260fc7daf43240050d64914",
-                "job": "Director",
-                "episode_count": 4
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 4
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 128276,
-        "known_for_department": "Directing",
-        "name": "Otto Bathurst",
-        "original_name": "Otto Bathurst",
-        "popularity": 6.097,
-        "profile_path": "/vojDKrTe52mnPrYSKUTOLWotEIN.jpg",
-        "jobs": [
-            {
-                "credit_id": "623dd0ae35c30a005ee8e3be",
-                "job": "Director",
-                "episode_count": 2
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 97555,
-        "known_for_department": "Directing",
-        "name": "Roel Reiné",
-        "original_name": "Roel Reiné",
-        "popularity": 6.394,
-        "profile_path": "/nOc53uSl8bBNfkuLGlXnOZwbYdu.jpg",
-        "jobs": [
-            {
-                "credit_id": "624f2a2d65e0a20066d70015",
-                "job": "Director",
-                "episode_count": 2
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 226051,
-        "known_for_department": "Directing",
-        "name": "Debs Paterson",
-        "original_name": "Debs Paterson",
-        "popularity": 2.445,
-        "profile_path": "/oRIgPBR6fBYdWxGocivXuAHNBqz.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4a20b021cee0168c2e20c",
-                "job": "Director",
-                "episode_count": 2
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3283226,
-        "known_for_department": "Directing",
-        "name": "Dale Butler",
-        "original_name": "Dale Butler",
-        "popularity": 0.766,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a616e2ff32018425e00b",
-                "job": "First Assistant Director",
-                "episode_count": 2
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 2039934,
-        "known_for_department": "Directing",
-        "name": "Nadia Brand",
-        "original_name": "Nadia Brand",
-        "popularity": 0.98,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a626021cee019cc35f2c",
-                "job": "Second Assistant Director",
-                "episode_count": 2
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 2
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2764676,
-        "known_for_department": "Production",
-        "name": "Angela Mages",
-        "original_name": "Angela Mages",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579179a7a3c5200ebfe874a",
-                "job": "Second Assistant Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1764214,
-        "known_for_department": "Directing",
-        "name": "Peter Freeman",
-        "original_name": "Peter Freeman",
-        "popularity": 0.965,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579178389d97f01009f06f6",
-                "job": "First Assistant Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2229251,
-        "known_for_department": "Directing",
-        "name": "Jessica Lowrey",
-        "original_name": "Jessica Lowrey",
-        "popularity": 0.842,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6273ed1dc0442918de989c04",
-                "job": "Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1857475,
-        "known_for_department": "Directing",
-        "name": "Robert Grayson",
-        "original_name": "Robert Grayson",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579177b89d97f00aefc93d4",
-                "job": "First Assistant Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 154521,
-        "known_for_department": "Directing",
-        "name": "Craig Zisk",
-        "original_name": "Craig Zisk",
-        "popularity": 2.097,
-        "profile_path": "/1WTt2jjxDwT0ngzrpO02VZYZDYV.jpg",
-        "jobs": [
-            {
-                "credit_id": "65cdd8d613a38801649e6a9a",
-                "job": "Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2100995,
-        "known_for_department": "Directing",
-        "name": "Robyn Glaser",
-        "original_name": "Robyn Glaser",
-        "popularity": 1.078,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917a235a61e00ad87c60a",
-                "job": "Second Assistant Director",
-                "episode_count": 1
-            }
-        ],
-        "department": "Directing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 85964,
-        "known_for_department": "Editing",
-        "name": "Roderick Deogrades",
-        "original_name": "Roderick Deogrades",
-        "popularity": 1.38,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65cdd9833123450162ba57a9",
-                "job": "Editor",
-                "episode_count": 1
-            }
-        ],
-        "department": "Editing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 1380857,
-        "known_for_department": "Editing",
-        "name": "Carmela Iandoli",
-        "original_name": "Carmela Iandoli",
-        "popularity": 2.048,
-        "profile_path": "/x6yE7uzHiSDYuttpuYSXKGSWoWc.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4ab7907faa20163c272a9",
-                "job": "Editor",
-                "episode_count": 1
-            }
-        ],
-        "department": "Editing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1845906,
-        "known_for_department": "Editing",
-        "name": "Dan Crinnion",
-        "original_name": "Dan Crinnion",
-        "popularity": 1.042,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a515f495ee017e0c1467",
-                "job": "Editor",
-                "episode_count": 1
-            }
-        ],
-        "department": "Editing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 995558,
-        "known_for_department": "Editing",
-        "name": "Aaron Marshall",
-        "original_name": "Aaron Marshall",
-        "popularity": 1.052,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579144eec8a4300c33aa187",
-                "job": "Editor",
-                "episode_count": 1
-            }
-        ],
-        "department": "Editing",
-        "total_episode_count": 1
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2942738,
-        "known_for_department": "Production",
-        "name": "Gabriella Csoma",
-        "original_name": "Gabriella Csoma",
-        "popularity": 1.128,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579171ea1d3320138eb7fa4",
-                "job": "Unit Production Manager",
-                "episode_count": 17
-            },
-            {
-                "credit_id": "65c4a4c8fd6fa101877949ea",
-                "job": "Co-Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 25
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 2248101,
-        "known_for_department": "Production",
-        "name": "Toby Leslie",
-        "original_name": "Toby Leslie",
-        "popularity": 0.883,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "5c70ba6d0e0a262c1c79aa41",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 128276,
-        "known_for_department": "Directing",
-        "name": "Otto Bathurst",
-        "original_name": "Otto Bathurst",
-        "popularity": 6.097,
-        "profile_path": "/vojDKrTe52mnPrYSKUTOLWotEIN.jpg",
-        "jobs": [
-            {
-                "credit_id": "5c70ba310e0a262c1c79aa07",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1549549,
-        "known_for_department": "Production",
-        "name": "Kiki Wolfkill",
-        "original_name": "Kiki Wolfkill",
-        "popularity": 1.632,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "61f8d3b4cb802800ec066d0a",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1231425,
-        "known_for_department": "Production",
-        "name": "Darryl Frank",
-        "original_name": "Darryl Frank",
-        "popularity": 0.691,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "5b3b012bc3a3684617019286",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1942748,
-        "known_for_department": "Directing",
-        "name": "Charlotte Keating",
-        "original_name": "Charlotte Keating",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657913d320ecaf0100d2c2fa",
-                "job": "Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1225545,
-        "known_for_department": "Production",
-        "name": "Justin Falvey",
-        "original_name": "Justin Falvey",
-        "popularity": 2.123,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "5b3b0136c3a368486801297c",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 474,
-        "known_for_department": "Production",
-        "name": "Jina Jay",
-        "original_name": "Jina Jay",
-        "popularity": 4.55,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579147c20ecaf00e3928607",
-                "job": "Casting",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 488,
-        "known_for_department": "Directing",
-        "name": "Steven Spielberg",
-        "original_name": "Steven Spielberg",
-        "popularity": 42.369,
-        "profile_path": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
-        "jobs": [
-            {
-                "credit_id": "61f8d393ccb15f004623290c",
-                "job": "Executive Producer",
-                "episode_count": 17
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 62213,
-        "known_for_department": "Production",
-        "name": "Gian Paolo Varani",
-        "original_name": "Gian Paolo Varani",
-        "popularity": 0.923,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657843124bfa545cfe6356e4",
-                "job": "Co-Executive Producer",
-                "episode_count": 9
-            },
-            {
-                "credit_id": "657842a17a3c52014e6a877e",
-                "job": "Executive Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 17
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 1797888,
-        "known_for_department": "Production",
-        "name": "Olivia Brittain",
-        "original_name": "Olivia Brittain",
+        "backdrop_path": "/be2iIuvq58JDlaVyzHCRbc3Escq.jpg",
+        "genre_ids": [35, 80, 18],
+        "id": 20871,
+        "original_language": "ru",
+        "original_title": "Джентльмены удачи",
+        "overview": "Kindergarten teacher Evgeniy Ivanovich Troshkin is reluctantly sent undercover to take the place of an imprisoned thief who stole Alexander the Great's helmet. Evgeniy uses his striking resemblance to the thief to infiltrate his gang and learn the location of the stolen artifact. He finds the gangsters are unexpectedly similar to his students- they also need love and care.",
+        "popularity": 7.398,
+        "poster_path": "/owZ2KQ2x99XqMprSvFNeTdmCBk8.jpg",
+        "release_date": "1971-12-13",
+        "title": "Gentlemen of Fortune",
+        "video": false,
+        "vote_average": 7.792,
+        "vote_count": 202,
+        "character": "Евгений Иванович Трошкин / Доцент, Сан Саныч Белый",
+        "credit_id": "52fe43fec3a368484e009a55",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/fqAPvWoQTl9avDrv1VX0jv5LXaa.jpg",
+        "genre_ids": [35],
+        "id": 27863,
+        "original_language": "ru",
+        "original_title": "Тридцать три",
+        "overview": "The dentist of the provincial town of Upper Yamki made an unexpected scientific discovery by finding the thirty-third tooth in the patient’s oral cavity, Ivan Sergeyevich Travkin.  Travkin, exhausted from pain, was taken to Moscow. Ivan Sergeyevich first becomes a patient of a madhouse (thanks to envious persons), and then —  a hero of a scientific international conference and, finally, a patient of a dentist professor Bruk.",
         "popularity": 1.053,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65791484af58cb0141ff3d3a",
-                "job": "Casting",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "poster_path": "/AqmohO66pssBcVbpXiIgciA5Tr0.jpg",
+        "release_date": "1965-04-22",
+        "title": "Thirty-three",
+        "video": false,
+        "vote_average": 6.075,
+        "vote_count": 20,
+        "character": "Ivan Sergeyevich Travkin",
+        "credit_id": "52fe456ac3a368484e0597c9",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 0,
-        "id": 2190090,
-        "known_for_department": "Writing",
-        "name": "Katie Swain",
-        "original_name": "Katie Swain",
-        "popularity": 2.741,
-        "profile_path": "/pwGViVzVF6FpjbV5R9Ve3mjAYon.jpg",
-        "jobs": [
-            {
-                "credit_id": "657913bd4bfa545d020abb32",
-                "job": "Consulting Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/6N1UsrLbNjgHoTNDgrMaHqgurWp.jpg",
+        "genre_ids": [35, 18, 14],
+        "id": 27925,
+        "original_language": "ru",
+        "original_title": "Слёзы капали",
+        "overview": "A beautiful man, husband, father and worker Pavel Ivanovich Vasin got into the eye with a shard of the mirror of an evil wizard. And the world for him appeared in a gloomy light. He began to insult and offend everyone at home and at work. Anger and suspicion overwhelmed Vasin's heart. Enemies, schemers and thieves are seen everywhere. Everywhere he sees intrigues and intrigues. In complete despair from the ineradicability of evil, Vasin cries bitterly... along with tears, the unfortunate splinter disappears...",
+        "popularity": 2.262,
+        "poster_path": "/8cNpl1sNt3jK1xUYZPKO3MmY3ha.jpg",
+        "release_date": "1983-01-15",
+        "title": "Tears Were Falling",
+        "video": false,
+        "vote_average": 6.15,
+        "vote_count": 20,
+        "character": "Pavel Ivanovich Vasin",
+        "credit_id": "52fe456dc3a368484e05a58f",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 3959,
-        "known_for_department": "Production",
-        "name": "Robert Bernacchi",
-        "original_name": "Robert Bernacchi",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917354bfa545cff916d3b",
-                "job": "Unit Production Manager",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/tmneS6Xh1gz7BnLOgNYQl2xzbJ7.jpg",
+        "genre_ids": [18],
+        "id": 65107,
+        "original_language": "ru",
+        "original_title": "Старший сын",
+        "overview": "Two students are late for the last commuter train and have to spend a night in a strange town. They rack their brains about where to find shelter and quite by chance they overhear a talk between father and son. The son is an adolescent who is head over heels in love with a girl several years his senior. He is living through the first drama of his life though his love is just puppy love. Then, being resourceful fellows, they think of a plan to pass one of them for the elder son of this family. The reason they give for his unexpected arrival is that he is a child of the father's long-forsaken love. They presume this cock-and-bull story will come off, and right they are!",
+        "popularity": 2.204,
+        "poster_path": "/zfJAytC7pHX6uhnEy3qOOo1eLII.jpg",
+        "release_date": "1975-06-06",
+        "title": "The Elder Son",
+        "video": false,
+        "vote_average": 6.56,
+        "vote_count": 25,
+        "character": "Andrei Grigorievich Sarafanov",
+        "credit_id": "52fe46fdc3a368484e0af167",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 85547,
-        "known_for_department": "Writing",
-        "name": "Mark Malone",
-        "original_name": "Mark Malone",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579138c20ecaf00c69a0803",
-                "job": "Consulting Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/o4FosiyTwRkIAipGpNebLsJm7AI.jpg",
+        "genre_ids": [35],
+        "id": 46588,
+        "original_language": "ru",
+        "original_title": "Зигзаг удачи",
+        "overview": "Photo studio \"Contemporary\" in a provincial town lives with its everyday problems. The director is concerned over the failure to fulfill the planned targets, receptionist Alevtina wants to get married, and photographer Vladimir Oreshnikov dreams of becoming a professional photographer.  But suddenly luck smiles on Oreshnikov. He takes 20 rubles form the worker's mutual aid fund, buys a government lottery bond and wins 10,000 rubles. Oreshnikov wants to receive the win himself, but his colleagues object to him, because the money that he spent on the bond were public, hence the win should be divided equally among all workers. It creates a controversial situation, which is successfully resolved on the very eve of the New Year, under the chiming clock...",
+        "popularity": 1.937,
+        "poster_path": "/1QD12JLugolx9YLi7IFkxgL2Qd.jpg",
+        "release_date": "1968-12-30",
+        "title": "Zigzag of Success",
+        "video": false,
+        "vote_average": 6.258,
+        "vote_count": 31,
+        "character": "Vladimir Oreshnikov",
+        "credit_id": "52fe4701c3a36847f811e78b",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 1238297,
-        "known_for_department": "Production",
-        "name": "Frank O'Connor",
-        "original_name": "Frank O'Connor",
-        "popularity": 2.256,
-        "profile_path": "/pXljCutQdynHzcQijgskMxB3WE9.jpg",
-        "jobs": [
-            {
-                "credit_id": "61f8d3c0b6abc4009209bd5d",
-                "job": "Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/qCMD3coaDljkBFTjFq5IS2EFqO9.jpg",
+        "genre_ids": [16, 10751],
+        "id": 36161,
+        "original_language": "ru",
+        "original_title": "Винни-Пух",
+        "overview": "With a cheeky, down-to-earth charm that appeals to both children and adults, the series – beginning with 'Vinnie-Pukh (1969)' – has since developed something of a cult following, and are considered by many to decisively surpass their Disney counterparts, however uneasily they may fit into the official canon. The animation itself is somewhat coarse and minimalistic, but this all adds to the charm of it all, with the story and characters coming to life as though they have just stepped out of a picture book.",
+        "popularity": 4.353,
+        "poster_path": "/jSzuXChK281KUVFAZApTDJshHrZ.jpg",
+        "release_date": "1969-07-19",
+        "title": "Winnie-the-Pooh",
+        "video": false,
+        "vote_average": 7.289,
+        "vote_count": 135,
+        "character": "Winnie-the-Pooh (voice)",
+        "credit_id": "52fe45d19251416c9103f64f",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 931796,
-        "known_for_department": "Writing",
-        "name": "Michael Armbruster",
-        "original_name": "Michael Armbruster",
-        "popularity": 1.743,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579142dbbe1dd00c40d922e",
-                "job": "Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/bA0e9daToCYXYMCxPvBzHdEZaCw.jpg",
+        "genre_ids": [10751, 16],
+        "id": 36162,
+        "original_language": "ru",
+        "original_title": "Винни-Пух и день забот",
+        "overview": "Another Russian Winnie-the-Pooh story. This time the donkey, known from the Pooh stories as Eeyore, is sad because he has no tail. Pooh goes in search of one and finds it attached to a bell that hangs from the treehouse of one Owl.",
+        "popularity": 4.534,
+        "poster_path": "/zOnnIpNwDMxGSScB0MjLi2GeMoQ.jpg",
+        "release_date": "1972-07-13",
+        "title": "Winnie-the-Pooh and a Busy Day",
+        "video": false,
+        "vote_average": 7.453,
+        "vote_count": 107,
+        "character": "Winnie-the-Pooh (voice)",
+        "credit_id": "52fe45d19251416c9103f677",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 1,
-        "id": 2720614,
-        "known_for_department": "Writing",
-        "name": "Silka Luisa",
-        "original_name": "Silka Luisa",
-        "popularity": 2.103,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657912f24bfa545cfe63961d",
-                "job": "Supervising Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/rgWSFtZgiHP4VSlMTC9wlKbarrl.jpg",
+        "genre_ids": [35],
+        "id": 211104,
+        "original_language": "ru",
+        "original_title": "Смешные люди!",
+        "overview": "",
+        "popularity": 1.112,
+        "poster_path": "/jBImSDdJmJQxy3lF5UVSkmLAt2w.jpg",
+        "release_date": "1977-11-10",
+        "title": "Funny People!",
+        "video": false,
+        "vote_average": 4,
+        "vote_count": 2,
+        "character": "Алексей Алексеевич",
+        "credit_id": "52fe4d8dc3a368484e1ef929",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 0,
-        "id": 4427189,
-        "known_for_department": "Production",
-        "name": "Cheryl Nebelsieck",
-        "original_name": "Cheryl Nebelsieck",
-        "popularity": 0.69,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917b9bbe1dd00ac7db47a",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/kgkve7AjpjFBiogBOufLq6OOfeV.jpg",
+        "genre_ids": [18],
+        "id": 239412,
+        "original_language": "ru",
+        "original_title": "Гонщики",
+        "overview": "An unpleasant incident on the winter track results in a conflict between two racing drivers: the aging master of sports Kukushkin and his student — the young and ambitious Sergachev. The disagreement leads to the fact that despite the protests of the team coach, on the eve of the next major competitions, former teammates find themselves in different crews.",
+        "popularity": 1.366,
+        "poster_path": "/7dbo1SCg2jliNzvxDL8tZt9AyUY.jpg",
+        "release_date": "1972-03-31",
+        "title": "Racers",
+        "video": false,
+        "vote_average": 5.5,
+        "vote_count": 4,
+        "character": "Ivan Mikhaylovich Kukushkin, «dyadya Vanya», «papa Rimskiy»",
+        "credit_id": "52fe4e92c3a36847f829980b",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 0,
-        "id": 4427190,
-        "known_for_department": "Production",
-        "name": "Carlos Naranjo",
-        "original_name": "Carlos Naranjo",
-        "popularity": 0.98,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657917e8a1d33200e1b8bb82",
-                "job": "Other",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/hFhAIC0cUy1ei9wMBknFdU5qds5.jpg",
+        "genre_ids": [18, 10770],
+        "id": 275054,
+        "original_language": "ru",
+        "original_title": "Премия",
+        "overview": "A small construction team led by Potapov suddenly refuses to receive a bonus payment from their company for exceeding performance targets. The team accuses its construction company HQ with artificially reducing the targets, so they can be easily exceeded. It makes the management looks good, yet leads to frequent downtime reducing earnings for common construction workers even with fake bonuses. On a hastily organized meeting the management tries to subdue the \"unruly\" gang leader charging that he cannot know all details. It turned out that Potapov and his team prepared a detailed business analysis, which proved their point. Managers, who had different interests and positions, have to decide how to deal with the real problem leading to unexpected results.",
+        "popularity": 1.794,
+        "poster_path": "/gND3llrVud4khBNXWklJM6cYIdn.jpg",
+        "release_date": "1974-01-01",
+        "title": "The Bonus",
+        "video": false,
+        "vote_average": 6.167,
+        "vote_count": 12,
+        "character": "Vasily Potapov, gang leader",
+        "credit_id": "539503680e0a266dc2005451",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 1,
-        "id": 1803546,
-        "known_for_department": "Writing",
-        "name": "Justine Juel Gillmer",
-        "original_name": "Justine Juel Gillmer",
-        "popularity": 1.195,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657912e3bbe1dd00ac7db1b3",
-                "job": "Co-Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
+        "backdrop_path": "/6elt9GZKClnB9RybImCAUmRCk2S.jpg",
+        "genre_ids": [35],
+        "id": 306721,
+        "original_language": "ru",
+        "original_title": "Американский дедушка",
+        "overview": "",
+        "popularity": 0.991,
+        "poster_path": "/fCFfAYDTrUpz4Q0sJLabvGNA1C8.jpg",
+        "release_date": "1993-01-01",
+        "title": "American grandpa",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 4,
+        "character": "американский дедушка",
+        "credit_id": "5479058b925141298a00043c",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 566273,
-        "known_for_department": "Writing",
-        "name": "Kyle Killen",
-        "original_name": "Kyle Killen",
-        "popularity": 6.943,
-        "profile_path": "/aOMs0YHDM4vWM23sQQ5vR08fVQ2.jpg",
-        "jobs": [
-            {
-                "credit_id": "5b3b00bbc3a368456101c92e",
-                "job": "Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 3085530,
-        "known_for_department": "Production",
-        "name": "Bonnie Ross",
-        "original_name": "Bonnie Ross",
-        "popularity": 1.432,
-        "profile_path": "/hz2SuFldDPaJ02mZRlinmQSW1Md.jpg",
-        "jobs": [
-            {
-                "credit_id": "61f8d3cdcb8028001c53f236",
-                "job": "Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1228427,
-        "known_for_department": "Production",
-        "name": "Sheila Hockin",
-        "original_name": "Sheila Hockin",
-        "popularity": 1.628,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657913ca564ec7011b20c5cd",
-                "job": "Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3882544,
-        "known_for_department": "Writing",
-        "name": "Richard E. Robbins",
-        "original_name": "Richard E. Robbins",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "657912d6a1d33200febe2f35",
-                "job": "Co-Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 2077197,
-        "known_for_department": "Production",
-        "name": "Scott Pennington",
-        "original_name": "Scott Pennington",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "5b3b0115c3a36845fb01af95",
-                "job": "Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1324451,
-        "known_for_department": "Writing",
-        "name": "Steven Kane",
-        "original_name": "Steven Kane",
-        "popularity": 2.8,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "5cb77eb60e0a266b9befa269",
-                "job": "Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 113525,
-        "known_for_department": "Directing",
-        "name": "Richard Robbins",
-        "original_name": "Richard Robbins",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6260fd7dd4cc8e0051a8a663",
-                "job": "Co-Executive Producer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 59254,
-        "known_for_department": "Acting",
-        "name": "Pablo Schreiber",
-        "original_name": "Pablo Schreiber",
-        "popularity": 48.267,
-        "profile_path": "/wOze8R9lgoZxZoTsPSHID4Nt2Ee.jpg",
-        "jobs": [
-            {
-                "credit_id": "65791413bbe1dd011b90ea2f",
-                "job": "Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1761062,
-        "known_for_department": "Crew",
-        "name": "Ahmadu Garba",
-        "original_name": "Ahmadu Garba",
-        "popularity": 5.424,
-        "profile_path": "/iLD83L1UWgNNgf1EvJOSPfurzOe.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4a484f495ee01970c4c54",
-                "job": "Co-Executive Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1107908,
-        "known_for_department": "Writing",
-        "name": "David Wiener",
-        "original_name": "David Wiener",
-        "popularity": 1.54,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6578420f7a3c5200ca7a16bc",
-                "job": "Executive Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 1365865,
-        "known_for_department": "Writing",
-        "name": "Marisha Mukerjee",
-        "original_name": "Marisha Mukerjee",
-        "popularity": 1.875,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a47807faa20149c24fbc",
-                "job": "Co-Executive Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3283226,
-        "known_for_department": "Directing",
-        "name": "Dale Butler",
-        "original_name": "Dale Butler",
-        "popularity": 0.766,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a4d7fd6fa10187794a08",
-                "job": "Co-Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 11317,
-        "known_for_department": "Acting",
-        "name": "Natascha McElhone",
-        "original_name": "Natascha McElhone",
-        "popularity": 59.226,
-        "profile_path": "/9pxaoasotR1pdCXYSfN1pkm0geO.jpg",
-        "jobs": [
-            {
-                "credit_id": "657914217a3c52010cdf1002",
-                "job": "Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1403739,
-        "known_for_department": "Editing",
-        "name": "Nick Iannelli",
-        "original_name": "Nick Iannelli",
-        "popularity": 0.609,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a4bd0c4c160185030958",
-                "job": "Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 1,
-        "id": 125793,
-        "known_for_department": "Writing",
-        "name": "Sarah McCarron",
-        "original_name": "Sarah McCarron",
-        "popularity": 0.605,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a49d194186017b75e9d0",
-                "job": "Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 1035076,
-        "known_for_department": "Editing",
-        "name": "Tom Hemmings",
-        "original_name": "Tom Hemmings",
-        "popularity": 1.4,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a49107faa2017dc2a653",
-                "job": "Supervising Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Production",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1090864,
-        "known_for_department": "Sound",
-        "name": "Sean Callery",
-        "original_name": "Sean Callery",
-        "popularity": 2.02,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "653895e2e93e95013dbea9ef",
-                "job": "Original Music Composer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Sound",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 59811,
-        "known_for_department": "Sound",
-        "name": "Bear McCreary",
-        "original_name": "Bear McCreary",
-        "popularity": 2.39,
-        "profile_path": "/t4Rr2p9Q5ewMgagChxK2JmrcvKx.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4a5b30c27100148777355",
-                "job": "Main Title Theme Composer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Sound",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1604293,
-        "known_for_department": "Sound",
-        "name": "Martin O'Donnell",
-        "original_name": "Martin O'Donnell",
-        "popularity": 1.073,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a5d1713ed40185176b1c",
-                "job": "Main Title Theme Composer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Sound",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1604294,
-        "known_for_department": "Sound",
-        "name": "Michael Salvatori",
-        "original_name": "Michael Salvatori",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a5db6dc5070184fca98d",
-                "job": "Main Title Theme Composer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Sound",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 1730841,
-        "known_for_department": "Visual Effects",
-        "name": "Paul Stephenson",
-        "original_name": "Paul Stephenson",
-        "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6579199635a61e013ac24fde",
-                "job": "Special Effects Supervisor",
-                "episode_count": 9
-            }
-        ],
-        "department": "Visual Effects",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3221296,
-        "known_for_department": "Visual Effects",
-        "name": "Ange Turchet",
-        "original_name": "Ange Turchet",
-        "popularity": 2.344,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "625ef3af25cd850050c73f0c",
-                "job": "Compositing Artist",
-                "episode_count": 9
-            }
-        ],
-        "department": "Visual Effects",
-        "total_episode_count": 9
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 2141786,
-        "known_for_department": "Visual Effects",
-        "name": "Michael C. May",
-        "original_name": "Michael C. May",
-        "popularity": 0.706,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a852f495ee01540bfaf2",
-                "job": "Visual Effects Producer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Visual Effects",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 2,
-        "id": 591428,
-        "known_for_department": "Acting",
-        "name": "Wojciech Zieliński",
-        "original_name": "Wojciech Zieliński",
-        "popularity": 2.688,
-        "profile_path": "/zh52WgL7x0IwEf3D3HwvoAAR5W2.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4a83a9451e70163bcf7cf",
-                "job": "Senior Visual Effects Supervisor",
-                "episode_count": 8
-            }
-        ],
-        "department": "Visual Effects",
-        "total_episode_count": 8
-    },
-    {
-        "adult": false,
-        "gender": 0,
-        "id": 3942786,
-        "known_for_department": "Visual Effects",
-        "name": "Jon Park",
-        "original_name": "Jon Park",
+        "backdrop_path": "/bLDwWay0xPlPMJAimL9XlBUWBsK.jpg",
+        "genre_ids": [18],
+        "id": 319596,
+        "original_language": "ru",
+        "original_title": "Донская повесть",
+        "overview": "A drama about Cossack life based on the short stories by Mikhail Sholokhov.",
         "popularity": 0.782,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "63fe05d4c7176d009d6dc4af",
-                "job": "VFX Supervisor",
-                "episode_count": 2
-            }
-        ],
-        "department": "Visual Effects",
-        "total_episode_count": 2
+        "poster_path": "/1UbeSp8Po9VCgBi8Gjw6iEfZKkr.jpg",
+        "release_date": "1964-09-13",
+        "title": "A Tale of Don",
+        "video": false,
+        "vote_average": 4.25,
+        "vote_count": 4,
+        "character": "Yakov Chibalok",
+        "credit_id": "54bd7156c3a3684046006675",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 1324451,
-        "known_for_department": "Writing",
-        "name": "Steven Kane",
-        "original_name": "Steven Kane",
-        "popularity": 2.8,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "623dd10cd399e60089ff0533",
-                "job": "Writer",
-                "episode_count": 9
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 9
+        "backdrop_path": "/gxE7hyH6s9VSAthlmW8UiGuPUfC.jpg",
+        "genre_ids": [35],
+        "id": 351191,
+        "original_language": "ru",
+        "original_title": "Меж высоких хлебов",
+        "overview": "A story about a young man who's leading sometimes funny sometimes sad life in the village.",
+        "popularity": 0.742,
+        "poster_path": "/cKNEI3EBLQyzpjXDAiWB2ksPU31.jpg",
+        "release_date": "1970-07-23",
+        "title": "Between the High Crops",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 1,
+        "character": "Struchok",
+        "credit_id": "55b14200c3a368648e00d3ad",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 0,
-        "id": 4499666,
-        "known_for_department": "Writing",
-        "name": "Basil Kreimendahl",
-        "original_name": "Basil Kreimendahl",
-        "popularity": 1.15,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a5f9713ed40185176b57",
-                "job": "Staff Writer",
-                "episode_count": 8
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 8
+        "backdrop_path": null,
+        "genre_ids": [10751, 16],
+        "id": 219796,
+        "original_language": "ru",
+        "original_title": "Тигрёнок на подсолнухе",
+        "overview": "Taiga tale about a tiger cub who warmed the seed of sunflower.",
+        "popularity": 1.32,
+        "poster_path": null,
+        "release_date": "1981-09-07",
+        "title": "Tiger on the Sunflower",
+        "video": false,
+        "vote_average": 7.25,
+        "vote_count": 12,
+        "character": "Narrator (voice)",
+        "credit_id": "56c4ce8d925141245b00068d",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 566273,
-        "known_for_department": "Writing",
-        "name": "Kyle Killen",
-        "original_name": "Kyle Killen",
-        "popularity": 6.943,
-        "profile_path": "/aOMs0YHDM4vWM23sQQ5vR08fVQ2.jpg",
-        "jobs": [
-            {
-                "credit_id": "62455a8dc740d90089f55289",
-                "job": "Writer",
-                "episode_count": 3
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 3
+        "backdrop_path": null,
+        "genre_ids": [16],
+        "id": 198751,
+        "original_language": "ru",
+        "original_title": "Василиса Прекрасная",
+        "overview": "Young prince meets a talking frog who turns out to be a beautiful but cursed princess. To remove the curse, he must go on a quest to find and outsmart the forest witch Baba Yaga.",
+        "popularity": 0.985,
+        "poster_path": "/m1YcEXblQxdfFki1hBkhxfJHdbn.jpg",
+        "release_date": "1977-05-31",
+        "title": "Vasilisa the Beautiful",
+        "video": false,
+        "vote_average": 6.6,
+        "vote_count": 5,
+        "character": "Tsar (voice)",
+        "credit_id": "574a0becc3a3683024001415",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 1,
-        "id": 1803546,
-        "known_for_department": "Writing",
-        "name": "Justine Juel Gillmer",
-        "original_name": "Justine Juel Gillmer",
-        "popularity": 1.195,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "625800bfa58902009ce8d37d",
-                "job": "Writer",
-                "episode_count": 2
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 2
+        "backdrop_path": null,
+        "genre_ids": [16, 18, 35, 14],
+        "id": 245010,
+        "original_language": "ru",
+        "original_title": "Смех и горе у Бела моря",
+        "overview": "Laughter and Grief by the White Sea is a 1987 Soviet traditionally animated feature film directed by Leonid Nosyrev made at the Soyuzmultfilm studio. The film is a celebration of the culture of the Russian Pomors who live around the White Sea.",
+        "popularity": 1.273,
+        "poster_path": "/iDWP30OSYH5UMqFQRAawIhU1u7b.jpg",
+        "release_date": "1987-01-01",
+        "title": "Laughter and Grief by the White Sea",
+        "video": false,
+        "vote_average": 7.5,
+        "vote_count": 17,
+        "character": "Grandad Senya [narrator] (voice)",
+        "credit_id": "52fe4efbc3a36847f82b5151",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 1,
-        "id": 1365865,
-        "known_for_department": "Writing",
-        "name": "Marisha Mukerjee",
-        "original_name": "Marisha Mukerjee",
-        "popularity": 1.875,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65cdd8e6c26796017ec8f72b",
-                "job": "Writer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 1
+        "backdrop_path": "/v4i3bxWasF1xjfxAlMJvYfIuNeS.jpg",
+        "genre_ids": [16, 10751],
+        "id": 36163,
+        "original_language": "ru",
+        "original_title": "Винни-Пух идёт в гости",
+        "overview": "This was the second of the Russian Winnie-the-Pooh series. This one had Pooh and Piglet visiting Rabbit for a meal with honey.",
+        "popularity": 4.286,
+        "poster_path": "/dHXgv9GGgmoaWN6VAfLICvS6c2C.jpg",
+        "release_date": "1971-07-10",
+        "title": "Winnie-the-Pooh Goes Visiting",
+        "video": false,
+        "vote_average": 7.42,
+        "vote_count": 119,
+        "character": "Winnie-the-Pooh (voice)",
+        "credit_id": "52fe45d19251416c9103f691",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 113525,
-        "known_for_department": "Directing",
-        "name": "Richard Robbins",
-        "original_name": "Richard Robbins",
+        "backdrop_path": null,
+        "genre_ids": [16],
+        "id": 243701,
+        "original_language": "ru",
+        "original_title": "Пустомеля",
+        "overview": "",
         "popularity": 0.6,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "6260fccd57530e0066d2cbd6",
-                "job": "Writer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 1
+        "poster_path": null,
+        "release_date": "1980-12-30",
+        "title": "Chatterbox",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Hedgehog (voice) / Ёж (голос)",
+        "credit_id": "52fe4ee1c3a36847f82ae215",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 1107908,
-        "known_for_department": "Writing",
-        "name": "David Wiener",
-        "original_name": "David Wiener",
-        "popularity": 1.54,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "65c4a219e2ff32018425dbfa",
-                "job": "Writer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 1
+        "backdrop_path": "/vb86vaq976kavvyJW7uiNKrOlUp.jpg",
+        "genre_ids": [16],
+        "id": 471561,
+        "original_language": "ru",
+        "original_title": "Mister Пронька",
+        "overview": "",
+        "popularity": 0.871,
+        "poster_path": "/2pqbz3q0uQLzd7CyqzPxMg7BmrA.jpg",
+        "release_date": "1991-01-01",
+        "title": "Mister Пронька",
+        "video": false,
+        "vote_average": 8.667,
+        "vote_count": 9,
+        "character": "",
+        "credit_id": "59981573c3a3680eed0010ec",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 1,
-        "id": 2720614,
-        "known_for_department": "Writing",
-        "name": "Silka Luisa",
-        "original_name": "Silka Luisa",
-        "popularity": 2.103,
-        "profile_path": null,
-        "jobs": [
-            {
-                "credit_id": "626a3c2e23168c0068e66780",
-                "job": "Writer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 1
+        "backdrop_path": null,
+        "genre_ids": [10752, 18],
+        "id": 484450,
+        "original_language": "ru",
+        "original_title": "Под каменным небом",
+        "overview": "In the autumn of 1944, contrary to the order of the Nazi command to evacuate to the south, residents of the Norwegian town of Kirkenes took refuge in an abandoned mine. The command of the Soviet Army became aware of the intentions of the Nazis to blow up the old tunnels of the city, but the Soviet soldiers managed to prevent the tragedy.",
+        "popularity": 2.025,
+        "poster_path": "/dTARfL0cKRwRXrV5yOIYywKukAa.jpg",
+        "release_date": "1974-10-25",
+        "title": "Under a Stone Sky",
+        "video": false,
+        "vote_average": 7,
+        "vote_count": 7,
+        "character": "старший лейтенант Кравцов",
+        "credit_id": "59f88548c3a3685ff80146cc",
+        "order": 0,
+        "media_type": "movie"
     },
     {
         "adult": false,
-        "gender": 2,
-        "id": 1761062,
-        "known_for_department": "Crew",
-        "name": "Ahmadu Garba",
-        "original_name": "Ahmadu Garba",
-        "popularity": 5.424,
-        "profile_path": "/iLD83L1UWgNNgf1EvJOSPfurzOe.jpg",
-        "jobs": [
-            {
-                "credit_id": "65c4a8f39451e70184bd3df1",
-                "job": "Writer",
-                "episode_count": 1
-            }
-        ],
-        "department": "Writing",
-        "total_episode_count": 1
+        "backdrop_path": "/z6otvaa7BlTnZojtYjIAQM8efkm.jpg",
+        "genre_ids": [10751, 35],
+        "id": 341541,
+        "original_language": "cs",
+        "original_title": "Cirkus v cirkuse",
+        "overview": "To Moscow have arrived the participants of the international conference of the zoophilologists and also the international jury which is to elect for the world festival the best performance of the program of Moscow circus. Mrs Whistler (Iva Janzurová), British associate professor, makes her understood with the animals in their language but the Czech professor Ruzicka (Jirí Sovák), though he is capable of using the animals language, prefers teaching the animals the human language. Ruzicka's friend, the poodle Archibald, speaks \"in Human\" very well. The scientific dispute ends with a bet - if Ruzicka teaches the circus elephant to sing, Mrs Whistler will eat up her hat.",
+        "popularity": 1.284,
+        "poster_path": "/aKl6Qf01JiGYzg0vJRaruPq64dp.jpg",
+        "release_date": "1976-02-13",
+        "title": "Circus in the Circus",
+        "video": false,
+        "vote_average": 4.75,
+        "vote_count": 8,
+        "character": "Circus Principal",
+        "credit_id": "5a6d90ad925141076c01452d",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [18],
+        "id": 522433,
+        "original_language": "ru",
+        "original_title": "И это все о нем",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/8FslNnrwbBXoa9Wn17lt2LmSATx.jpg",
+        "release_date": "1978-03-24",
+        "title": "И это все о нем",
+        "video": false,
+        "vote_average": 4,
+        "vote_count": 4,
+        "character": "Прохоров",
+        "credit_id": "5aed5ef3c3a36834580048b2",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [16],
+        "id": 295859,
+        "original_language": "ru",
+        "original_title": "Заветная мечта",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/wRqPb1Qge6Va0OtkWiPaV1Ai0ev.jpg",
+        "release_date": "1972-10-01",
+        "title": "Заветная мечта",
+        "video": false,
+        "vote_average": 7.5,
+        "vote_count": 2,
+        "character": "от автора",
+        "credit_id": "5cbb264a9251412577f4a567",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/sKDwkjh955dkjNZy8F7IGwtdsPG.jpg",
+        "genre_ids": [18],
+        "id": 602121,
+        "original_language": "ru",
+        "original_title": "Поминальная молитва",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/fD0h9IJtPLpKH056h8Ph7Cq4av7.jpg",
+        "release_date": "1993-10-15",
+        "title": "Поминальная молитва",
+        "video": false,
+        "vote_average": 10,
+        "vote_count": 1,
+        "character": "Тевье, молочник",
+        "credit_id": "5cd917400e0a2636e8cfdb8c",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/21h4GsFuTIIeROPP1qf5OmutG65.jpg",
+        "genre_ids": [35, 12, 36],
+        "id": 78132,
+        "original_language": "fi",
+        "original_title": "Tulitikkuja lainaamassa",
+        "overview": "In Eastern Finland, in Liperi to be exact, Anna-Liisa Ihalainen asks her husband Antti to get some matches from the Ihalainen household. Unfortunately that trip takes a little longer than expected...",
+        "popularity": 2.934,
+        "poster_path": "/tlH4ePoG8ER6lSXxXPzavCG5qwQ.jpg",
+        "release_date": "1980-10-12",
+        "title": "For the Matches",
+        "video": false,
+        "vote_average": 6.333,
+        "vote_count": 33,
+        "character": "Antti Ihalainen",
+        "credit_id": "601b9270b97442003c26028a",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [16],
+        "id": 438902,
+        "original_language": "ru",
+        "original_title": "Не любо - не слушай",
+        "overview": "A series of cartoons based on the stories of northern fairy tales by the writer Stepan Pisakhov. Tall tales and funny fantasies about people living near the White Sea.",
+        "popularity": 0.6,
+        "poster_path": "/ferS3JJuHK6rloA9vynuI3dVzaR.jpg",
+        "release_date": "1977-02-03",
+        "title": "Не любо - не слушай",
+        "video": false,
+        "vote_average": 9.5,
+        "vote_count": 2,
+        "character": "Grandad Senya [narrator] (voice)",
+        "credit_id": "605c5c8ae4c9eb003d1ebcbc",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [],
+        "id": 646946,
+        "original_language": "ru",
+        "original_title": "Архангельские новеллы",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/h3UK9QnscQ7aKbDgBab1MK72aqL.jpg",
+        "release_date": "1986-11-10",
+        "title": "Arkhangelsk Stories",
+        "video": false,
+        "vote_average": 10,
+        "vote_count": 2,
+        "character": "Grandad Senya [narrator] (voice)",
+        "credit_id": "605c5d3965c26c0053719780",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/6tNoZgtQhuaKezAffxHwGU8UQSm.jpg",
+        "genre_ids": [16, 18],
+        "id": 646949,
+        "original_language": "ru",
+        "original_title": "Поморская быль",
+        "overview": "Andrian and Ivan are two brother-sailors who worked in Arkhangelsk as a carved artists. And so, at the end of August they decided, like loons, to go to the island. When the men were already far away in the sea, they moored to a small patch of land and began to have a dinner. After the dinner they decided to go to sleep and go home in the morning. But they could not even imagine what disaster awaited them in the night.",
+        "popularity": 0.6,
+        "poster_path": "/kI1wm5PU1ByeyQuUlhnDcoIfDrO.jpg",
+        "release_date": "1987-11-10",
+        "title": "Pomor True Story",
+        "video": false,
+        "vote_average": 4.667,
+        "vote_count": 3,
+        "character": "Grandad Senya [narrator] (voice)",
+        "credit_id": "605c5d7189f749005403a031",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [],
+        "id": 877530,
+        "original_language": "ru",
+        "original_title": "Диктатура совести",
+        "overview": "Performance of the Lenkom Theater based on the play by M. Shatrov.",
+        "popularity": 0.6,
+        "poster_path": "/gR4TtUDAIyAFVowns5eOjbiL1DL.jpg",
+        "release_date": "1988-05-25",
+        "title": "Dictatorship of Conscience",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "партработник, осужденный взяточник",
+        "credit_id": "614d41bd2cefc20065e8b006",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/fS11DD7buq18kD1CwfSsSdBecdE.jpg",
+        "genre_ids": [18],
+        "id": 129818,
+        "original_language": "ru",
+        "original_title": "Длинное, длинное дело...",
+        "overview": "A murder just happened and it seems the answer is simple on who and how did it. But a casual talk between suspect's mother and prosecutor sets a different point of view on a just opened case.",
+        "popularity": 1.098,
+        "poster_path": "/ysDEGU1qtKEfDlYgu8mw73eiVzW.jpg",
+        "release_date": "1977-09-10",
+        "title": "A Long, Long Deal",
+        "video": false,
+        "vote_average": 4,
+        "vote_count": 4,
+        "character": "Михаил Петрович Лужин",
+        "credit_id": "65b3d2b9a0f1a20161be7213",
+        "order": 0,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/gtcPJvYKZaEGjSgbsmBewzYhz6s.jpg",
+        "genre_ids": [10751, 12],
+        "id": 27923,
+        "original_language": "ru",
+        "original_title": "Совсем пропащий",
+        "overview": "Soviet adventure comedy film based on Mark Twain's Adventures of Huckleberry Finn.",
+        "popularity": 2.029,
+        "poster_path": "/sGgBJacXv23HucoY75p4rjq7Dwm.jpg",
+        "release_date": "1973-08-27",
+        "title": "Hopelessly Lost",
+        "video": false,
+        "vote_average": 5.136,
+        "vote_count": 11,
+        "character": "The King",
+        "credit_id": "52fe456dc3a368484e05a4dd",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/2gXrtKYdtsqym18ZFQjG7eov4TI.jpg",
+        "genre_ids": [35],
+        "id": 45210,
+        "original_language": "ru",
+        "original_title": "Полосатый рейс",
+        "overview": "A Soviet cruise ship \"Evgeni Onegin\" is carrying cages with tigers and lions for a Soviet Circus. One loose monkey unlocks all cages, letting the tigers and lions out. Poor passengers and crew have no place to run. The captain abandons his post out of fear, and the monkey takes over the captain's post. The ship gets under total control by the tigers and lions. Only one lady is standing up to the challenge. Her name is Marianna, she loves animals, and she takes the situation under control.",
+        "popularity": 4.847,
+        "poster_path": "/rlCyS3UPjTMBiYjGJsQWoZFmpvL.jpg",
+        "release_date": "1961-06-06",
+        "title": "Striped Trip",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 78,
+        "character": "Shuleykin",
+        "credit_id": "52fe46b5c3a36847f810dceb",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/jykk4FQURwovaOfzzn89fBn5c0.jpg",
+        "genre_ids": [18],
+        "id": 107705,
+        "original_language": "ru",
+        "original_title": "Белорусский вокзал",
+        "overview": "The heroes of the movie last seen each other on the Belarusian railway station in the summer of 1945. A quarter-century, they meet at the funeral of comrade.",
+        "popularity": 2.127,
+        "poster_path": "/rvra2q3oikAWfR4R8Bm0mjyT58E.jpg",
+        "release_date": "1971-04-30",
+        "title": "Byelorussian Station",
+        "video": false,
+        "vote_average": 6.84,
+        "vote_count": 25,
+        "character": "Ivan Prikhodko",
+        "credit_id": "52fe4a85c3a36847f81d2de1",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/vmnzRcuXyLcOGFTOdgV6wZPmLQs.jpg",
+        "genre_ids": [35, 878],
+        "id": 20874,
+        "original_language": "ru",
+        "original_title": "Кин-дза-дза!",
+        "overview": "Two Soviet humans previously unknown to each other are transported to the planet Pluke in the Kin-dza-da galaxy due to a chance encounter with an alien teleportation device. They must come to grips with a language barrier and Plukian social norms (not to mention the laws of space and time) if they ever hope to return to Earth.",
+        "popularity": 9.586,
+        "poster_path": "/xp7rAEgkoPUBWk5XZcAai8gDZT1.jpg",
+        "release_date": "1986-12-01",
+        "title": "Kin-dza-dza!",
+        "video": false,
+        "vote_average": 7.835,
+        "vote_count": 221,
+        "character": "Wef - The Wandering Chatlanian Singer",
+        "credit_id": "52fe43fec3a368484e009b19",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [10751, 16],
+        "id": 361695,
+        "original_language": "ru",
+        "original_title": "Лосёнок",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/ftAjlLmR0PwkUCVNpvpzCmrskI2.jpg",
+        "release_date": "1984-09-27",
+        "title": "Losyonok",
+        "video": false,
+        "vote_average": 5,
+        "vote_count": 1,
+        "character": "(voice)",
+        "credit_id": "5641990ac3a3685bd9001fa7",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/orUkSabwVjgxZV6ZtBm6zPKpLJm.jpg",
+        "genre_ids": [35, 10749],
+        "id": 75262,
+        "original_language": "ru",
+        "original_title": "Большая перемена",
+        "overview": "A young teacher goes to a school for adults. He is younger than many of his students and some of them are starting to miss school.",
+        "popularity": 2.138,
+        "poster_path": "/vzudCK0Du9qAdT0wsd68VoDONhY.jpg",
+        "release_date": "1972-06-06",
+        "title": "The Long Recess",
+        "video": false,
+        "vote_average": 7.529,
+        "vote_count": 34,
+        "character": "Stepan Semenovich Lednev",
+        "credit_id": "52fe48f9c3a368484e1142d1",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/ii3Gtrw9EfW03Q5flW3j4SwguEU.jpg",
+        "genre_ids": [18, 10749, 10402],
+        "id": 142883,
+        "original_language": "ru",
+        "original_title": "Крепостная актриса",
+        "overview": "Batmanova, once a serf, sets Paris aflame with her singing and now returns to the court of the Prince in 19th-century Russia. The Prince wants Batmanova for himself, but she loves a young nobleman who is technically still a serf because his papers have been lost.",
+        "popularity": 1.038,
+        "poster_path": "/z7c6TFIInhTQJWtJwC2Y9NDOQFV.jpg",
+        "release_date": "1963-11-02",
+        "title": "The Serf Actress",
+        "video": false,
+        "vote_average": 4.125,
+        "vote_count": 4,
+        "character": "Ivan Pavlovich Kutaysov",
+        "credit_id": "52fe4af09251416c750f2ffb",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35, 10749],
+        "id": 206425,
+        "original_language": "ru",
+        "original_title": "Зареченские женихи",
+        "overview": "",
+        "popularity": 0.84,
+        "poster_path": "/gRpHPuyOGu2ZMQJ9WT8PrtHk0Ei.jpg",
+        "release_date": "1967-01-31",
+        "title": "Зареченские женихи",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 1,
+        "character": "",
+        "credit_id": "5b55cb319251416dd6017f4c",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35],
+        "id": 691988,
+        "original_language": "ru",
+        "original_title": "Произведение искусства",
+        "overview": "",
+        "popularity": 0.805,
+        "poster_path": "/z1mxkwygZOgAnxKjRyuGNiywEvT.jpg",
+        "release_date": "1960-01-21",
+        "title": "Proizvedenie iskusstva",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Саша Смирнов",
+        "credit_id": "5e919fe815959f0019ef6d2f",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35],
+        "id": 881493,
+        "original_language": "ru",
+        "original_title": "Карандаш на льду",
+        "overview": "",
+        "popularity": 1.027,
+        "poster_path": "/iIIAPOdrRxYFHbxRqHWUlMcQMZj.jpg",
+        "release_date": "1948-01-01",
+        "title": "Pencil on Ice",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "",
+        "credit_id": "615c999fd144430088cbdc66",
+        "order": 1,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/aCfJt2TXTsOtf8vJas3nskeJKQb.jpg",
+        "genre_ids": [10749, 35, 18],
+        "id": 20870,
+        "original_language": "ru",
+        "original_title": "Афоня",
+        "overview": "The 1975 film by Georgi Daneliya \"Afonya\" was an unexpected commercial hit in USSR. The main character \"Afonya\" Borshev is a plumber, who spends his life partying with \"buddies\", many of whom he doesn't even remember after nights of heavy drinking. His wife leaves him, his boss places him on probation, his whole life is falling apart, but he doesn't realize it. Afonya met Katya at a dance club, yet didn't pay her much attention. But she is the one, who can save him... In this movie Daneliya achieves a perfect balance of satire and drama. Quotes from the movie gained a cult status in USSR.",
+        "popularity": 5.369,
+        "poster_path": "/rU76EYqDaMQbtlUWPcKOvJx7o8X.jpg",
+        "release_date": "1976-01-01",
+        "title": "Afonya",
+        "video": false,
+        "vote_average": 7.978,
+        "vote_count": 113,
+        "character": "Коля",
+        "credit_id": "52fe43fec3a368484e0099fb",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/yqbTVcQyNkAh80WJGeT3JXBqupG.jpg",
+        "genre_ids": [18, 14],
+        "id": 27942,
+        "original_language": "ru",
+        "original_title": "Убить дракона",
+        "overview": "Dragon is a bloody dictator, who kills every opponent. People live hopelessly, until Lancelot comes to save the beautiful Elsa. Lancelot can only win, if all people become free from fear, that is feeding the Dragon's power. Dragon's multiple personalities, ranging from a \"dragon\" to a \"samurai\" to a \"Nazi\", scare the hell out of all people, except Lancelot. Finally Dragon drops all his masks, to become the most dangerous of his incarnations - \"himself\". And the battle begins",
+        "popularity": 3.208,
+        "poster_path": "/n1wpJn6D9y9atxZtRMORdxHQO9h.jpg",
+        "release_date": "1988-11-11",
+        "title": "To Kill a Dragon",
+        "video": false,
+        "vote_average": 7.098,
+        "vote_count": 46,
+        "character": "Бургомистр",
+        "credit_id": "52fe456fc3a368484e05aac9",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/v4gEnTEvSNlSMRHzQ2HjHy0WKGh.jpg",
+        "genre_ids": [18, 35],
+        "id": 27861,
+        "original_language": "ru",
+        "original_title": "Мимино",
+        "overview": "Georgian bush pilot Valentin (Valiko) Mizandari  a.k.a. Mimino works at small local airlines, flying helicopters between small villages. But he dreams of piloting large international airlines aircrafts, so he goes to Moscow for refresher courses. There in a hotel he meets truck driver Robik who is given a place in that hotel by mistake, and they have a lot of adventures in Moscow. Always amicable and open to people, Mimino does not feel at home in the big city. Nevertheless, he becomes a pilot of a supersonic jet liner, the Tupolev Tu-144, flying all over the world. But feeling homesick, he finally comes back to his native town of Telavi in Georgia, to his family and friends.",
+        "popularity": 9.175,
+        "poster_path": "/61reasUU2uxRFQhxfKdvVHHMOsl.jpg",
+        "release_date": "1977-06-06",
+        "title": "Mimino",
+        "video": false,
+        "vote_average": 7.567,
+        "vote_count": 89,
+        "character": "Ivan Volokhov",
+        "credit_id": "52fe456ac3a368484e059747",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/Pt0phk6gPZis2IfisjZFQF1Vig.jpg",
+        "genre_ids": [35, 18, 14],
+        "id": 27939,
+        "original_language": "ru",
+        "original_title": "Дом, который построил Свифт",
+        "overview": "An immaculate, vivid and breathtaking implementation of Swift's romanticism.",
+        "popularity": 1.182,
+        "poster_path": "/bUeEFEWp7cOxyTSqs5gwNnqbV0a.jpg",
+        "release_date": "1982-06-06",
+        "title": "The House That Swift Built",
+        "video": false,
+        "vote_average": 5.167,
+        "vote_count": 14,
+        "character": "великан Глюм",
+        "credit_id": "52fe456ec3a368484e05a9b3",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/6ULXOWlYJCP4aju5UINQBWpHUY2.jpg",
+        "genre_ids": [18, 35, 10749, 14],
+        "id": 27935,
+        "original_language": "ru",
+        "original_title": "Обыкновенное чудо",
+        "overview": "A wizard invents characters who all come to life and start to arrive at his house: a King, his servants, a princes, a bear trapped in a man's body - the usual lot. The Plot mainly rotates around the bear, who the wizard had turned into a man. The Bear, who wishes to be a bear once again, can turn into his old self if he were to kiss a princess. It gets complicated when he falls in love with that princess, that arrived at the wizard's house. For how can they be together, if a single kiss will destroy their love?",
+        "popularity": 3.323,
+        "poster_path": "/htvbPwc21Ey2yk4RDv69JM7ivRw.jpg",
+        "release_date": "1978-10-02",
+        "title": "Ordinary Miracle",
+        "video": false,
+        "vote_average": 7.462,
+        "vote_count": 66,
+        "character": "король",
+        "credit_id": "52fe456ec3a368484e05a841",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/mu0G8tE9eCUNyTqDgsd2x2Iw1aB.jpg",
+        "genre_ids": [35, 18, 36],
+        "id": 37175,
+        "original_language": "ru",
+        "original_title": "О бедном гусаре замолвите слово",
+        "overview": "The small town agog Hussars entry. Love between cornet and the young actress suddenly faces intrigue made by a St. Petersburg bureaucrat. The actress father dies after being involved in this game and perspectives look dark... But evil will eventually be defeated by the nobility, loyalty and love.",
+        "popularity": 2.599,
+        "poster_path": "/xmvYMUmZHcqWubgaU23oyKpF4Wm.jpg",
+        "release_date": "1980-01-01",
+        "title": "Say a Word for the Poor Hussar",
+        "video": false,
+        "vote_average": 7,
+        "vote_count": 32,
+        "character": "Афанасий Бубенцов",
+        "credit_id": "52fe462f9251416c9104c08d",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/jLuLQbYjD5aMW185otQCzASh8dN.jpg",
+        "genre_ids": [35, 36],
+        "id": 65100,
+        "original_language": "en",
+        "original_title": "Duenya",
+        "overview": "A funny musical based on the comedy \"The Duenna\" by British dramatist Richard B. Sheridan.",
+        "popularity": 1.366,
+        "poster_path": "/7kFO7q3fyKQ1XbwEaVnk6gx6miD.jpg",
+        "release_date": "1978-06-06",
+        "title": "The Duenna",
+        "video": false,
+        "vote_average": 4.875,
+        "vote_count": 8,
+        "character": "Mendoso",
+        "credit_id": "52fe46fdc3a368484e0af031",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/fy52QGMozZpBXHZvHDGyAfBcIJH.jpg",
+        "genre_ids": [16, 10751],
+        "id": 274841,
+        "original_language": "ru",
+        "original_title": "Кот-рыболов",
+        "overview": "",
+        "popularity": 0.747,
+        "poster_path": "/xHf1Ho8gbgoniiS4BNV1wk1Vp0A.jpg",
+        "release_date": "1964-01-01",
+        "title": "The Fisher Cat",
+        "video": false,
+        "vote_average": 7.25,
+        "vote_count": 4,
+        "character": "Cat (voice)",
+        "credit_id": "5392dc090e0a266db4001b19",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/jtrdN7PRAN7CFWjAcnMVpnLzK2j.jpg",
+        "genre_ids": [35],
+        "id": 409082,
+        "original_language": "ru",
+        "original_title": "Карусель",
+        "overview": "Satirical comedy based on the notebooks and short stories by Anton Pavlovich Chekhov: \"Romance with Double-Bass\",\"On the Harmful Effects of Tobacco\", \"Misery\", \"Grateful\", \"Polinka\", \"The Cynic\", \"The Ninny\".",
+        "popularity": 0.973,
+        "poster_path": "/ntZiiGD6MW7SJAfz8N2lUcAaSlL.jpg",
+        "release_date": "1971-01-01",
+        "title": "The Roundabout",
+        "video": false,
+        "vote_average": 5.5,
+        "vote_count": 6,
+        "character": "Nyukhin",
+        "credit_id": "579e7c16c3a3683ced003c74",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/yLwLIH1de2GLUbOEWp6uOtGqLZ4.jpg",
+        "genre_ids": [10749, 18],
+        "id": 362822,
+        "original_language": "ru",
+        "original_title": "Неповторимая весна",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/8m1Jet4R2kEgropmtcvBItq0k3a.jpg",
+        "release_date": "1957-05-31",
+        "title": "A Unique Spring",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Shusha, Nina's husband",
+        "credit_id": "56140d6392514170510030b7",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/5IjHTkTX8Wfg1LatdOAcjij6PHe.jpg",
+        "genre_ids": [18],
+        "id": 458041,
+        "original_language": "ru",
+        "original_title": "Фокусник",
+        "overview": "",
+        "popularity": 1.111,
+        "poster_path": "/tAku5ofgYAYsN68Meut77cGitqC.jpg",
+        "release_date": "1968-03-18",
+        "title": "The Magician",
+        "video": false,
+        "vote_average": 4.6,
+        "vote_count": 5,
+        "character": "Stepan Nikolaevich Rossomakhin",
+        "credit_id": "591c4aa0c3a368799b009efb",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [16, 10751],
+        "id": 295858,
+        "original_language": "ru",
+        "original_title": "Чуня",
+        "overview": "A young piglet in trouble.",
+        "popularity": 0.84,
+        "poster_path": "/mw81YXAq7LBQdocwbX0jRmfjX8S.jpg",
+        "release_date": "1968-01-25",
+        "title": "Chunya",
+        "video": false,
+        "vote_average": 4,
+        "vote_count": 2,
+        "character": "Cat (voice)",
+        "credit_id": "5afa763992514142a800572d",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/i1PHZUpNqK05XVOaUbpTVxebJFt.jpg",
+        "genre_ids": [18],
+        "id": 409706,
+        "original_language": "ru",
+        "original_title": "Трудное счастье",
+        "overview": "A young Gipsy boy is growing up in a Russian village during the Civil War.",
+        "popularity": 0.949,
+        "poster_path": "/xn0P4ku5uh1a9BtdQDBssY0QUrw.jpg",
+        "release_date": "1958-10-27",
+        "title": "Hard Happiness",
+        "video": false,
+        "vote_average": 5.5,
+        "vote_count": 4,
+        "character": "",
+        "credit_id": "5b291b1f0e0a2659be0060ae",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/uaicrVUgVxHGS8SZppAacdv0Wm9.jpg",
+        "genre_ids": [12, 36, 10770],
+        "id": 11809,
+        "original_language": "ru",
+        "original_title": "Легенда о Тиле",
+        "overview": "Based on the novel by Charles de Coster \"The Legend of Thyl Ulenspiegel and Lamme Goedzak, and their Adventures Heroical, Joyous and Glorious in the Land of Flanders and Elsewhere.\"  First part: \"The Ashes of Claes\".  XVI century. The freedom-loving and cheerful people of the Netherlands under the rule of the Spanish king: persecution, torture, bonfires of the Inquisition, encouraging scammers. The fearless Thyl Uhlenshpiegel and his faithful girlfriend Nele have to go through many trials.  Second part: \"Viva Beggars!\".  The people of the Netherlands, tormented by cruel royal decrees, taxes, heresy, torture and executions, began a war of liberation against Spanish rule. Many feats will be performed by the national hero Tilbert (Thyl) Ulenspiegel and his friend Lamme Gudzak before peace returns to their homeland.",
+        "popularity": 1.391,
+        "poster_path": "/mV3AHyHkU6xL5IIGUcfIKIGZ4Mf.jpg",
+        "release_date": "1977-11-14",
+        "title": "The Legend of Till",
+        "video": false,
+        "vote_average": 4.714,
+        "vote_count": 7,
+        "character": "Lamme",
+        "credit_id": "5e50114ab3e627001426698f",
+        "order": 2,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35, 10749],
+        "id": 27927,
+        "original_language": "ru",
+        "original_title": "Настя",
+        "overview": "A young Russian store clerk has a drab existence in times of shortages and is berated by her ailing mother for not seeing men. So she brings home an unknown young man who she met on the tram. She dreams many things but pines for this man.",
+        "popularity": 1.987,
+        "poster_path": "/wdfG92cb5qfnLnxcur90IFm8nSm.jpg",
+        "release_date": "1994-07-01",
+        "title": "Nastya",
+        "video": false,
+        "vote_average": 5.5,
+        "vote_count": 23,
+        "character": "Яков Алексеевич, директор магазина канцтоваров",
+        "credit_id": "52fe456dc3a368484e05a639",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/wq3KK2qdlCEEscWyX2lFwRHqxCy.jpg",
+        "genre_ids": [10749, 35, 18],
+        "id": 27922,
+        "original_language": "ka",
+        "original_title": "Не горюй!",
+        "overview": "Benjamin, the local doctor is a soul of a local society, the educated, friendly, democratic person who often treats the poor for free. It makes him very popular with the locals but most certainly does not help with his bank account. He is in love with a beautiful Manette who is also crazy about him but is being watched closely by her father who called his daughter \"his small capital\" and is determined to protect her virginity until the moment the marriage contract has been signed...",
+        "popularity": 2.664,
+        "poster_path": "/ibnDSdqaqvMJKvfOjozh9C6iL9w.jpg",
+        "release_date": "1968-12-22",
+        "title": "Don't Grieve!",
+        "video": false,
+        "vote_average": 5.826,
+        "vote_count": 23,
+        "character": "Egor Zaletaev, soldier",
+        "credit_id": "52fe456dc3a368484e05a481",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35, 18, 10749],
+        "id": 67683,
+        "original_language": "ru",
+        "original_title": "Гори, гори, моя звезда",
+        "overview": "This late 60s Russian films is set in 1920, just 3 years after the October revolution. Folks had the choice between red and white, revolution and contra revolution. In that torn-apart-time, one man, the comedian Volodya, tries to mediate, not between different ideologies, but social life and art. While others just want to wash away their gloom, he reflects on the everyday sorrows and the role of art in that time of changes.",
+        "popularity": 1.589,
+        "poster_path": "/b61dSWTDf4YIUeQD87KkBY7lh7t.jpg",
+        "release_date": "1969-06-06",
+        "title": "Shine, Shine, My Star",
+        "video": false,
+        "vote_average": 5.706,
+        "vote_count": 17,
+        "character": "Cinematographer",
+        "credit_id": "52fe4771c3a368484e0c740d",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/AuM1pMDUxzzugAsUdmU40trGuFF.jpg",
+        "genre_ids": [35, 16],
+        "id": 385469,
+        "original_language": "ru",
+        "original_title": "Добро пожаловать!",
+        "overview": "A friendly moose lets an insect hitch a ride on his antlers. But the moose is soon taken advantage of, as more and more forest creatures (including a bear!) take up residence in his antlers. How can the moose get rid of these unwanted guests? Based on a Dr. Seuss story.",
+        "popularity": 1.5,
+        "poster_path": "/1L8ysQSuzGthYkNRHQ6KPpJlgFU.jpg",
+        "release_date": "1986-01-01",
+        "title": "Welcome",
+        "video": false,
+        "vote_average": 5.778,
+        "vote_count": 9,
+        "character": "Bear (voice)",
+        "credit_id": "56d7363e925141719e0051d5",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/lFQ3roO19u2tK00wTEPtdhkFbYk.jpg",
+        "genre_ids": [35, 10770],
+        "id": 449771,
+        "original_language": "ru",
+        "original_title": "Короткие истории",
+        "overview": "Miniatures of writers from Russia and foreign countries.",
+        "popularity": 1.211,
+        "poster_path": "/vkeipztR0aSbcLJl0norVX2ZflN.jpg",
+        "release_date": "1963-03-30",
+        "title": "Short Stories",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "",
+        "credit_id": "58dd41a392514112440005cd",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/tRPaBm5yqyabh9IWBWFMphQoABv.jpg",
+        "genre_ids": [18],
+        "id": 403707,
+        "original_language": "ru",
+        "original_title": "Время и семья Конвей",
+        "overview": "Action takes place in England during the 20 years between the two wars. The film explores the relationship in the once wealthy bourgeois family, whose members, in their own way, are experiencing the collapse of their plans and hopes.",
+        "popularity": 1.176,
+        "poster_path": "/vQAQtfsd68cAteRoQhBhBSuUWmP.jpg",
+        "release_date": "1984-12-27",
+        "title": "Time and the Conways",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Alan Conway in maturity",
+        "credit_id": "5ce550b80e0a265779ccf563",
+        "order": 3,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/qefNMPqhf6xL32liPXcslK0u9up.jpg",
+        "genre_ids": [35],
+        "id": 27926,
+        "original_language": "ru",
+        "original_title": "Паспорт",
+        "overview": "A man, who becomes mistaken for his brother who was immigrating to Israel from USSR, finds himself caught up in the middle of a bureaucratic mess when he realizes that if he tells the truth about who he is, he will go to jail and his brother's family will never be allowed to leave the USSR. He therefore assumes his brother's identity to get to Israel hoping his distant uncle living there will help him out. The plan backfires, however, when he realizes that the uncle is a paranoid lunatic thinking the KGB is out to get him. He becomes stranded in Israel with no friends, no money, and no passport, trying to figure out a way to get back home.",
+        "popularity": 3.063,
+        "poster_path": "/ntzZ5SzkPKidulPkzsg2MNKynwn.jpg",
+        "release_date": "1990-06-06",
+        "title": "The Passport",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 23,
+        "character": "Embassy employee in Austria",
+        "credit_id": "52fe456dc3a368484e05a5ff",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/tt6IN3DPRKjMa6oQ6Pscv0Ubqry.jpg",
+        "genre_ids": [35, 18, 10749],
+        "id": 27924,
+        "original_language": "ru",
+        "original_title": "Осенний марафон",
+        "overview": "Andrey Pavlovich Buzykin, who makes a living by teaching at an institute and translating English literature, is cheating on his wife. Buzykin's main problem is that he's a kind man with a weak character. The lies he is telling his wife all the time are inconvincing, but he never has the courage to tell her the truth. His lover, Alla, is aware of his family life, but gets offended when, for example, he cannot meet her so that he doesn't come home late, or when he doesn't want to go home in a new jacket she gives him to avoid having to explain to his wife. Alla and Nina, Andrei's wife, both leave him, forgive him, and return to him at the same time, and Andrei continues with this kind of life, full of suffering and deceit. Finally, both women are so fed up with his lies that they don't believe him even when he is telling the truth...",
+        "popularity": 4.02,
+        "poster_path": "/c2jWoLKD2DGS2ID5voDBU29jBv3.jpg",
+        "release_date": "1979-06-06",
+        "title": "Autumn Marathon",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 51,
+        "character": "Василий Игнатьич Харитонов, сосед Бузыкина",
+        "credit_id": "52fe456dc3a368484e05a537",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/fD1au4e7eDuT3DXl55ILVUQimcc.jpg",
+        "genre_ids": [18, 10402, 36],
+        "id": 150102,
+        "original_language": "ru",
+        "original_title": "Чайковский",
+        "overview": "The film is dedicated to the great Russian composer Pyotr Tchaikovsky (1840-1893). It tells of the last twenty years of the great master’s life, of his friendship with Baroness von Meck, an outstanding woman of her time, who for many years was Tchaikovsky’s guardian angel. The film also includes retrospections of the composer’s childhood and adolescent years, with Tchaikovsky’s life poetically recounted against the background of fragments from his operas and ballets performed by the best Russian musicians.",
+        "popularity": 1.467,
+        "poster_path": "/gafqVNvP9u3mFgulb8xVXuQvrEh.jpg",
+        "release_date": "1970-08-31",
+        "title": "Tchaikovsky",
+        "video": false,
+        "vote_average": 4.6,
+        "vote_count": 5,
+        "character": "Aliosha",
+        "credit_id": "555203c4c3a36830320048e1",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/7mvSC0xCfquzWSXGRtgIJkgG4Rb.jpg",
+        "genre_ids": [12, 9648],
+        "id": 66081,
+        "original_language": "ru",
+        "original_title": "Дорога",
+        "overview": "A group of semitrailers is moving through a snow storm - and no one doesn't know that there is a spy between the drivers.",
+        "popularity": 0.723,
+        "poster_path": "/dKD6UZPiBUtvs3zfM5pKJQeSHCp.jpg",
+        "release_date": "1955-10-03",
+        "title": "The Road",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 2,
+        "character": "Pavel Eskov",
+        "credit_id": "52fe4728c3a368484e0b7ebf",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [10749, 18],
+        "id": 302709,
+        "original_language": "ru",
+        "original_title": "Повесть о молодоженах",
+        "overview": "A drama about a complications in a newlyweds life.",
+        "popularity": 0.6,
+        "poster_path": "/9v0oOQ3W58tInJwPI3RNEXAa1Kc.jpg",
+        "release_date": "1959-06-06",
+        "title": "The Story about Newlyweds",
+        "video": false,
+        "vote_average": 6.2,
+        "vote_count": 5,
+        "character": "Fedya",
+        "credit_id": "5463dea20e0a267800002fea",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [16],
+        "id": 448639,
+        "original_language": "ru",
+        "original_title": "Хочу бодаться!",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/bVQMQ8kauYty9fNjP1MrLY7iJ0j.jpg",
+        "release_date": "1968-03-24",
+        "title": "Хочу бодаться!",
+        "video": false,
+        "vote_average": 2,
+        "vote_count": 1,
+        "character": "The Beaver (voice) / Бобёр",
+        "credit_id": "5cba87b1c3a3680a6f82c4e8",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [18, 36],
+        "id": 597179,
+        "original_language": "ru",
+        "original_title": "Первый курьер",
+        "overview": "The beginning of the XX century. In Munich, the Leninist \"Iskra\", an illegal newspaper of Russian Social Democrats, began to appear. The Russian conspirator Konkordiya arrives from Munich at the railway station of the Bulgarian port city Varna. She meets the Bulgarian Ivan Zagubanski and gives him two suitcases with false bottoms, which contain a secret consignment of the latest issue of a newspaper.  About the young, courageous revolutionary Ivan Zagubanski, who was one of the first couriers to bring Iskra from abroad. The film showed an ideological, moral clash of people preparing a revolution with the guardians of the royal order.",
+        "popularity": 1.404,
+        "poster_path": "/jnwhPFyoinW3LCFwXSi0WV5tq2X.jpg",
+        "release_date": "1968-03-01",
+        "title": "The First Courier",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Kritski",
+        "credit_id": "5cbf59b2c3a368694c8a0ecf",
+        "order": 4,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/nL9A4bTKIiBD5GZiFhEOteXIWqW.jpg",
+        "genre_ids": [10751, 14, 12, 18],
+        "id": 14493,
+        "original_language": "ru",
+        "original_title": "Снежная королева",
+        "overview": "The film tells a story about the extraordinary journey of the modest little girl Gerda. She is looking for her friend Kai, who was kidnapped and taken to her kingdom by the powerful evil Snow Queen. In search of her beloved friend, Gerda ends up in the castle to the cunning, insidious and at the same time funny king, meets forest robbers. On the way, the girl will have many obstacles before the decisive battle with the Snow Queen. But Gerda’s faithful heart will overcome all adversity...",
+        "popularity": 3.481,
+        "poster_path": "/1lwiqavONE2TkUFvFWa2NOPRFJk.jpg",
+        "release_date": "1967-11-06",
+        "title": "The Snow Queen",
+        "video": false,
+        "vote_average": 6.607,
+        "vote_count": 28,
+        "character": "King",
+        "credit_id": "52fe45f99251416c75068e5f",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/tnMUaoUWe4UdK89ujdigG8ScRKd.jpg",
+        "genre_ids": [18],
+        "id": 72949,
+        "original_language": "ru",
+        "original_title": "Отпуск в сентябре",
+        "overview": "Engineer Zilov, having woken up, finds the funeral wreath at his place – his friends' present. This rather symbolic joke makes him recollect the previous night as well as 2 last months...",
+        "popularity": 1.133,
+        "poster_path": "/80DiDniVpIgApkE86mB72PHWOht.jpg",
+        "release_date": "1979-01-01",
+        "title": "September Vacation",
+        "video": false,
+        "vote_average": 5.458,
+        "vote_count": 12,
+        "character": "Vladimir Andreevich Kushak",
+        "credit_id": "52fe4885c3a368484e0fd087",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/5bahK9kD0wpALidZfxGSuqNB4nt.jpg",
+        "genre_ids": [80, 9648, 18],
+        "id": 129806,
+        "original_language": "ru",
+        "original_title": "Дело Румянцева",
+        "overview": "Sasha Rumyantsev, a long-range driver, becomes an unwitting accomplice in a crime committed by the head of the motor depot where he works. The honest guy is accused of stealing a car of a hard-to-find product. The collective of the motor depot amicably stands up to protect their comrade and helps the investigator, Colonel Afanasyev, to find and expose the true criminals.",
+        "popularity": 0.608,
+        "poster_path": "/1LSMgfC0QygTDu7ULPQMRL0Ryd.jpg",
+        "release_date": "1956-03-08",
+        "title": "The Rumyantsev Case",
+        "video": false,
+        "vote_average": 5.9,
+        "vote_count": 10,
+        "character": "Snegiryov",
+        "credit_id": "52fe4b47c3a368484e181081",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35, 18],
+        "id": 409903,
+        "original_language": "ru",
+        "original_title": "Урок литературы",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/6PaCvjmaG57oTj2WkXu7Bam0qKc.jpg",
+        "release_date": "1968-01-01",
+        "title": "Literature Lesson",
+        "video": false,
+        "vote_average": 5.4,
+        "vote_count": 7,
+        "character": "Павел Петрович Вронский, отец Нины",
+        "credit_id": "58e02a1c9251415e5f00f306",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/wF0rXRINPUPTvxjcD6rddPgU2O1.jpg",
+        "genre_ids": [35],
+        "id": 194634,
+        "original_language": "ru",
+        "original_title": "Женитьба",
+        "overview": "Based on the comedy of the same name by Nikolai Gogol.  Succumbing to the persuasion of his friend Kochkaryov, a middle-aged court adviser Podkolyosin wooed to the overripe girl Agafya Tikhonovna, a merchant's daughter. At the very last moment, having gone through a painful period of matchmaking, and bringing the matter to a wedding, indecisive grief — the groom escapes from under the crown, jumping into the window...",
+        "popularity": 0.856,
+        "poster_path": "/i1s5ADYvhprmuywYSngLqXRyUUC.jpg",
+        "release_date": "1978-05-22",
+        "title": "Marriage",
+        "video": false,
+        "vote_average": 6.571,
+        "vote_count": 7,
+        "character": "Zhevakin",
+        "credit_id": "55f9a9dbc3a3685881000139",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [18],
+        "id": 601903,
+        "original_language": "ru",
+        "original_title": "Верой и правдой",
+        "overview": "",
+        "popularity": 1.27,
+        "poster_path": "/zENfYhk1qDp4Fi9Q8epH5M6jFjL.jpg",
+        "release_date": "1979-01-01",
+        "title": "Верой и правдой",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "",
+        "credit_id": "5cd7e4de0e0a26799ecb6007",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/nylTQjzQmPphvZzuxNpzES07I2Z.jpg",
+        "genre_ids": [9648, 16, 10751, 35],
+        "id": 77767,
+        "original_language": "ru",
+        "original_title": "Приключения Васи Куролесова",
+        "overview": "A comic mystery about Vasia Kurolesov who is trying to become a detective.",
+        "popularity": 1.421,
+        "poster_path": "/jkO3AelQ5cdd19KP81RFWMJfVj7.jpg",
+        "release_date": "1981-06-06",
+        "title": "Adventures of Vasia Kurolesov",
+        "video": false,
+        "vote_average": 7,
+        "vote_count": 9,
+        "character": "\"Loaf\" (Baton) (voice)",
+        "credit_id": "5dda362012aabc0016933a2f",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [10402, 10770],
+        "id": 885883,
+        "original_language": "ru",
+        "original_title": "Сказки русского леса",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/u9YlJKaZQpLTQdPRh19HFuIODIO.jpg",
+        "release_date": "1967-01-01",
+        "title": "Сказки русского леса",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "",
+        "credit_id": "616ba77b6f53e10064954fcc",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/eG1DNnbtPKd0fKxGvgchTHumLzx.jpg",
+        "genre_ids": [14, 10751, 12],
+        "id": 570554,
+        "original_language": "ru",
+        "original_title": "Снежная сказка",
+        "overview": "New Year's Eve. The boy Mitya, who loves to fantasize, jokingly tells his comrades at school that his children's toy watch with painted hands is magical and can stop all the clocks in the world, stop time, or even revive a snowman.",
+        "popularity": 1.045,
+        "poster_path": "/yPDjJLGTjNDyf290tfTV6SmHYRk.jpg",
+        "release_date": "1960-03-20",
+        "title": "A Snow Fairy Tale",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 3,
+        "character": "Old Year",
+        "credit_id": "61cc3c6a03bf84008bc448dc",
+        "order": 5,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/ojbG5ORmL3JNo7AP7y437eEpBvT.jpg",
+        "genre_ids": [35, 10749],
+        "id": 306744,
+        "original_language": "ru",
+        "original_title": "Счастливый рейс",
+        "overview": "",
+        "popularity": 0.638,
+        "poster_path": "/1EolcMCSTonob0sKDXKRKCU797B.jpg",
+        "release_date": "1949-07-15",
+        "title": "Happy Flight",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "пожарный",
+        "credit_id": "54792a529251412986000b9b",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/fryEdoVjZqisH7MgHBtmXDZwc7b.jpg",
+        "genre_ids": [12, 35],
+        "id": 393127,
+        "original_language": "ru",
+        "original_title": "Не имей 100 рублей…",
+        "overview": "Director of Museum of local lore Ivan Bazhanov, being an enthusiast of the business, went treasure hunting, taking with him a few accidentally encountered people. They understand in pursuit of the treasure that sincere friendship is priceless.",
+        "popularity": 0.68,
+        "poster_path": "/rsF3lwt5EEtElAQUXY8IsxAFPk4.jpg",
+        "release_date": "1959-07-05",
+        "title": "A Friend in Court Is Better...",
+        "video": false,
+        "vote_average": 5,
+        "vote_count": 1,
+        "character": "Ivan Sergeyevich Mukhin",
+        "credit_id": "579e7dcac3a3681873000071",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/stVjJg6rtqwVqZP1eEi6Bq04IVA.jpg",
+        "id": 56391,
+        "original_language": "ru",
+        "original_title": "Приключения пингвинёнка Лоло",
+        "overview": "Scamper is a little penguin who loves wandering around the Artic where he lives with his parents. Unfortunately his little adventures tend to get he, and his friend Snowflake into trouble, especially when he disobeys his father and goes exploring with seagulls who want to eat him flying above, and men and dogs on the ground with them. One day the adventure goes too far and they float out to sea, only to be caught by men who want to sell them to the zoo. Scamper, Snowflake and their new friend, a macaroni penguin named Louie, must escape and get back to their families to warn them.",
+        "poster_path": "/aiN7AZyGY37UXcALF0V8JcCbVTy.jpg",
+        "title": "The Adventures of Scamper the Penguin",
+        "character": "Jack (voice)",
+        "credit_id": "58581d33c3a368258c056add",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [18],
+        "id": 280766,
+        "original_language": "ru",
+        "original_title": "Виринея",
+        "overview": "A life of a countryside woman Virineya during the October Revolution in Russia in 1917.",
+        "popularity": 0.813,
+        "poster_path": "/p5rm2iLIViHZeLb0Fpbf33u1IDI.jpg",
+        "release_date": "1968-06-06",
+        "title": "Virinea",
+        "video": false,
+        "vote_average": 7,
+        "vote_count": 2,
+        "character": "Mikhaylo",
+        "credit_id": "53bb2eca0e0a261984000843",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [12, 10752],
+        "id": 322804,
+        "original_language": "uk",
+        "original_title": "Морський мисливець",
+        "overview": "The action takes place during the Second World War in the battle zone over the Black Sea coast. Soviet sailors track down an enemy submarine. Meanwhile, the commander of the Sea Hunter, along with one of the sailors, is not returning from intelligence. Young patriots Katya and Lida report to the boat about the signal of unknown friends who noticed a submarine. Thanks to this, Soviet sailors drown an enemy boat, and the brave reconnaissance Katya, who knows the mountain paths of the coast well, discovers a Sea Hunter commander and a seriously wounded sailor in one of the caves ..",
+        "popularity": 0.714,
+        "poster_path": "/aZK8kfjO9NTIsNGLsZjUUjHu6Td.jpg",
+        "release_date": "1954-12-01",
+        "title": "Marine Hunter",
+        "video": false,
+        "vote_average": 10,
+        "vote_count": 2,
+        "character": "Cook",
+        "credit_id": "5d067b3d0e0a267fa9cd7d58",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/ZYH3H0fpQ6JgpdRT1pYBDARt8o.jpg",
+        "genre_ids": [35, 10770],
+        "id": 73545,
+        "original_language": "ru",
+        "original_title": "Ехали в трамвае Ильф и Петров",
+        "overview": "The film tells about the life of the Soviet country in the 30s of the twentieth century, based on the feuilletons and notebooks of famous writers Ilya Ilf and Eugene Petrov…",
+        "popularity": 1.176,
+        "poster_path": "/g7PBpCiIWz1VS9d8ELiv2qgnv17.jpg",
+        "release_date": "1972-08-19",
+        "title": "Ilf and Petrov Rode in the Tram",
+        "video": false,
+        "vote_average": 4,
+        "vote_count": 3,
+        "character": "Vitaliy Kapitulov",
+        "credit_id": "60e1b05927ff99004708f154",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/lDZHETDHala8WAYLo9iM6wGF2wJ.jpg",
+        "genre_ids": [35, 80],
+        "id": 1105791,
+        "original_language": "ru",
+        "original_title": "Сыскное бюро \"Феликс\"",
+        "overview": "Isn't it a great idea for detective agency - to return missing animals to their owners? Especially if yo steal it first by yourself...",
+        "popularity": 0.676,
+        "poster_path": "/qBOYqgKPXndH2rq7kaKP47vuP43.jpg",
+        "release_date": "1993-01-01",
+        "title": "Detective Bureau \"Felix\"",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "",
+        "credit_id": "6422da8d8d22fc00cc100617",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/a4O9oVMmoacOcUY2ZXSrWJr1wot.jpg",
+        "genre_ids": [10402, 10770],
+        "id": 897716,
+        "original_language": "ru",
+        "original_title": "В этот праздничный вечер",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/5oAIAFKmzerQWQoDLNST7VDuF1d.jpg",
+        "release_date": "1959-05-01",
+        "title": "В этот праздничный вечер",
+        "video": true,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Fedor",
+        "credit_id": "65ac25f1ad59b500ca637796",
+        "order": 6,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/reQ0lePTlXG8q2Uwq2kLRdEaCr9.jpg",
+        "genre_ids": [35, 10749, 18],
+        "id": 160014,
+        "original_language": "ru",
+        "original_title": "Шаг навстречу",
+        "overview": "Five sad and funny romantic stories about love...",
+        "popularity": 1.064,
+        "poster_path": "/deQUTo3sLFaTfrterglhHat4yuu.jpg",
+        "release_date": "1975-12-12",
+        "title": "Step Forward",
+        "video": false,
+        "vote_average": 5.167,
+        "vote_count": 6,
+        "character": "Serafim",
+        "credit_id": "535594840e0a26286100008c",
+        "order": 7,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/1jdwUQUHpXDCWm0n0liEz49r5IV.jpg",
+        "genre_ids": [10749, 35, 80],
+        "id": 63295,
+        "original_language": "ru",
+        "original_title": "Улица полна неожиданностей",
+        "overview": "Chief accountant Porfiry Petrovich Smirnov-Alyansky, who took a good walk on the anniversary of his colleague cashier Ivan Zakharovich Vodnev, climbs into the traffic controller's booth and disrupts traffic on one of the streets of Leningrad. However, the guard Vasiliy Shaneshkin mistakenly delivers to the police station not an escaped offender, but a quite decent cashier. In addition, Vodnev, offended by the police, turns out to be the father of the bride Shaneshkin — Katya. Vasiliy admits his guilt, but, not daring to explain himself, leaves the angry Ivan Zakharovich with bad thoughts about the Soviet police. Fortunately, the young sergeant will soon have an opportunity to prove to others the responsibility and conscientiousness of the police officers.",
+        "popularity": 1.387,
+        "poster_path": "/eVW5l7jjnCar1M6r2tZ55WpLVn5.jpg",
+        "release_date": "1958-01-21",
+        "title": "Street Is Full of Surprises",
+        "video": false,
+        "vote_average": 5.429,
+        "vote_count": 7,
+        "character": "policeman Serdyukov",
+        "credit_id": "52fe46a4c3a368484e09bbe5",
+        "order": 8,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/xSHIvAJGXINSw3qtUetrbczMuPj.jpg",
+        "genre_ids": [10402, 18, 35],
+        "id": 178974,
+        "original_language": "ru",
+        "original_title": "Черёмушки",
+        "overview": "Lida Baburova, a tour guide of an architectural museum, unexpectedly receives a warrant for a two-room apartment in the new district of Zarechye, among the new settlers called \"our Cheryomushki\".  Lida and her father go to inspect the apartment, but it turns out that it doesn't exist. The manager of the house, Barabashkin, conducted fictitious documentation, and the Baburovs' apartment merged with the neighboring one, owned by the head of the construction trust Drebednyov.",
+        "popularity": 1.141,
+        "poster_path": "/p9kh52sNpg6d99ATIfYDG46ZDRW.jpg",
+        "release_date": "1962-10-25",
+        "title": "Cherry Town",
+        "video": false,
+        "vote_average": 4.333,
+        "vote_count": 6,
+        "character": "Barabashkin",
+        "credit_id": "5b5459cf0e0a26231a02f81f",
+        "order": 8,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [35, 878],
+        "id": 344910,
+        "original_language": "ru",
+        "original_title": "Уникум",
+        "overview": "One soviet programmer has problems in his job. He is laughed at by women, they think he is too awkward. His chiefs are giving no rest to him. In addition to that they give him very difficult project to be done very soon. Overcoming himself he does impossible. After closing away in his office and spending there several days and nights without sleep he finds some solution and immediately fells asleep. After waking up after very surrealistic dream he surprises of what has happened while he was asleep. And the miracles have just started for him…",
+        "popularity": 0.818,
+        "poster_path": "/4geK5yY6amOc1gggjkpqqQ8V6te.jpg",
+        "release_date": "1983-09-06",
+        "title": "Phenomenon",
+        "video": false,
+        "vote_average": 2.667,
+        "vote_count": 3,
+        "character": "директор НИИ",
+        "credit_id": "65cdcfe46c0b3601628dc2ef",
+        "order": 8,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [18],
+        "id": 832055,
+        "original_language": "ru",
+        "original_title": "Над нами Южный крест",
+        "overview": "",
+        "popularity": 0.6,
+        "poster_path": "/rkU4qSRPeKLc6Gel9HIUzhqx2P3.jpg",
+        "release_date": "1965-11-01",
+        "title": "Над нами Южный крест",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Provadets - invalid na rynke",
+        "credit_id": "60a801f685702e002917b120",
+        "order": 13,
+        "media_type": "movie"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/hdlpSh7NstYZSVmuoeVENJdNaLR.jpg",
+        "genre_ids": [35, 99, 16, 10751],
+        "id": 16656,
+        "origin_country": ["SU"],
+        "original_language": "ru",
+        "original_name": "Фитиль",
+        "overview": "Fitil is a popular Soviet/Russian television satirical/comedy short film series which ran for about 500 episodes. Some of the episodes were aimed at children, and were called Фитилёк, Fitilyok, Little Fuse. Each issue contained from the few short segments: documentary, fictional and animated ones. Directed by various artists, including Leonid Gaidai who presented his famous trio of Nikulin, Vitsin and Morgunov into the cast. It was called in USSR as \"the anecdotes from the Soviet government\".",
+        "popularity": 478.979,
+        "poster_path": "/dBgJKqZnmfARnN8bkaA7elWjhz9.jpg",
+        "first_air_date": "1962-06-04",
+        "name": "Fuse",
+        "vote_average": 6.6,
+        "vote_count": 5,
+        "character": "",
+        "credit_id": "5abfd9da0e0a264a5d035782",
+        "episode_count": 2201,
+        "media_type": "tv"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/yAeef7IjYKE3vms9m4mlFEgTe1V.jpg",
+        "genre_ids": [18],
+        "id": 105528,
+        "origin_country": ["SU"],
+        "original_language": "ru",
+        "original_name": "И это всё о нём",
+        "overview": "",
+        "popularity": 17.172,
+        "poster_path": "/3mZVMm9HdWAmpHEWqnz2JTG4cIC.jpg",
+        "first_air_date": "1978-03-24",
+        "name": "И это всё о нём",
+        "vote_average": 6,
+        "vote_count": 1,
+        "character": "Прохоров",
+        "credit_id": "5efcee3ca284eb003898c66a",
+        "episode_count": 6,
+        "media_type": "tv"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/ll2TkYdcRlhSdk0UwUdMGYLhZlC.jpg",
+        "genre_ids": [16, 10762],
+        "id": 131392,
+        "origin_country": [],
+        "original_language": "ru",
+        "original_name": "Винни-Пух",
+        "overview": "",
+        "popularity": 9.043,
+        "poster_path": "/6MZhvxHPzakdwjUvnwjmEwT7R6S.jpg",
+        "first_air_date": "1969-10-26",
+        "name": "Winnie-the-Pooh",
+        "vote_average": 7,
+        "vote_count": 1,
+        "character": "Винни-Пух",
+        "credit_id": "611cae4bd1a893002dd768a0",
+        "episode_count": 3,
+        "media_type": "tv"
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [99],
+        "id": 134685,
+        "origin_country": ["RU"],
+        "original_language": "ru",
+        "original_name": "Легенды кино",
+        "overview": "",
+        "popularity": 12.974,
+        "poster_path": "/zyVSHctJ0WfMGAkddyp4M3NDzC7.jpg",
+        "first_air_date": "2016-09-16",
+        "name": "Легенды кино",
+        "vote_average": 0,
+        "vote_count": 0,
+        "character": "Self (archive footage)",
+        "credit_id": "614daf54c8a5ac008c6cebcc",
+        "episode_count": 1,
+        "media_type": "tv"
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/1iATZUyJUPmrJnDW9Cl8auFMqdh.jpg",
+        "genre_ids": [35, 10751],
+        "id": 85252,
+        "origin_country": ["SU"],
+        "original_language": "ru",
+        "original_name": "Большая перемена",
+        "overview": "",
+        "popularity": 6.17,
+        "poster_path": "/mH1h5sHegsOcMHJn0dg4e3g7HUl.jpg",
+        "first_air_date": "1973-04-29",
+        "name": "Большая перемена",
+        "vote_average": 7,
+        "vote_count": 1,
+        "character": "Леднёв Степан Семёнович",
+        "credit_id": "61d15ec01684f700422abc25",
+        "episode_count": 4,
+        "media_type": "tv"
     }
 ]

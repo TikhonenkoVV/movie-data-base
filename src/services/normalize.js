@@ -48,24 +48,49 @@ export const normalizeMoviesData = (data, mediaTypes) => {
 };
 
 export const normalizeMovieData = (data, mediaTypes) => {
+    const {
+        id,
+        media_type,
+        name,
+        original_name,
+        title,
+        original_title,
+        overview,
+        genres,
+        release_date,
+        first_air_date,
+        vote_average,
+        created_by,
+        poster_path,
+        backdrop_path,
+    } = data;
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300/';
     let newReleaseDate;
     let newAirDate;
-    if (data.release_date) {
-        newReleaseDate = formatDate(data.release_date);
+    if (release_date) {
+        newReleaseDate = formatDate(release_date);
     } else newReleaseDate = false;
-    if (data.first_air_date) {
-        newAirDate = formatDate(data.first_air_date);
+    if (first_air_date) {
+        newAirDate = formatDate(first_air_date);
     } else newAirDate = false;
+    const rating = vote_average > 0 ? Math.round(vote_average * 10) : 'NR';
+    const personName = name
+        ? name
+        : original_name
+        ? original_name
+        : title
+        ? title
+        : original_title;
+    const poster = poster_path ? IMAGES_BASE_URL + poster_path : noPoster;
+    const backdrop = backdrop_path ? IMAGES_BASE_URL + backdrop_path : noPoster;
+    const creators = [];
+    created_by?.map(el =>
+        creators.push({ credit_id: el.credit_id, name: el.name })
+    );
     return {
-        id: data.id,
-        vote_average:
-            data.vote_average > 0 ? Math.round(data.vote_average * 10) : 'NR',
-        name:
-            data.name ??
-            data.original_name ??
-            data.title ??
-            data.original_title,
+        id,
+        vote_average: rating,
+        name: personName,
         release: {
             release_date: newReleaseDate,
             title: 'Release date: ',
@@ -75,20 +100,17 @@ export const normalizeMovieData = (data, mediaTypes) => {
             title: 'First air date: ',
         },
         overview:
-            data.overview !== ''
-                ? data.overview
+            overview !== ''
+                ? overview
                 : 'Sorry, but there is no overview for this movie.',
         genres:
-            data.genres.length > 0
-                ? data.genres
+            genres.length > 0
+                ? genres
                 : [{ id: '', name: 'No information available' }],
-        poster_path: data.poster_path
-            ? IMAGES_BASE_URL + data.poster_path
-            : noPoster,
-        backdrop_path: data.backdrop_path
-            ? IMAGES_BASE_URL + data.backdrop_path
-            : noPoster,
-        media_type: data.media_type ?? mediaTypes,
+        poster_path: poster,
+        backdrop_path: backdrop,
+        media_type: media_type ? media_type : mediaTypes,
+        created_by: creators.length > 0 ? creators : null,
     };
 };
 

@@ -42,7 +42,7 @@ const MovieDetails = () => {
         setIsLoading(true);
         getDetails(type, id, '')
             .then(data => {
-                setMovie(data);
+                setMovie(normalizeMovieData(data));
             })
             .catch(err => {
                 setError(err.message);
@@ -90,7 +90,8 @@ const MovieDetails = () => {
                     {movie && (
                         <>
                             <MovieInfo
-                                {...normalizeMovieData(movie)}
+                                movie={movie}
+                                directing={crew?.director}
                                 onClose={toggleModal}
                             />
                             <h2>Directing</h2>

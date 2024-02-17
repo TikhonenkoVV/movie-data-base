@@ -10,18 +10,23 @@ import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'pages/MovieDetails';
 
-export const MovieInfo = ({
-    vote_average,
-    name,
-    overview,
-    genres,
-    poster_path,
-    release,
-    first_air,
-    backdrop_path,
-    onClose,
-}) => {
+export const MovieInfo = ({ movie, onClose, directing }) => {
+    const {
+        vote_average,
+        name,
+        overview,
+        genres,
+        poster_path,
+        release,
+        first_air,
+        backdrop_path,
+        created_by,
+    } = movie;
     const { isModalOpen } = useModal();
+    const creators = [];
+    const directors = [];
+    created_by?.map(el => creators.push(el.name));
+    directing?.map(el => directors.push(el.personName));
 
     return (
         <MovieWrapper bgr={backdrop_path}>
@@ -50,6 +55,18 @@ export const MovieInfo = ({
                 <p>{overview}</p>
                 <h2>Genres</h2>
                 <p>{genres?.map(({ name }) => name).join(', ')}</p>
+                {created_by && (
+                    <>
+                        <h2>Creators</h2>
+                        <p>{creators.join(', ')}</p>
+                    </>
+                )}
+                {directing && (
+                    <>
+                        <h2>Director</h2>
+                        <p>{directors.join(', ')}</p>
+                    </>
+                )}
             </MovieInfoWrapper>
             {isModalOpen && <Modal onClose={onClose} />}
         </MovieWrapper>

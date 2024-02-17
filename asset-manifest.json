@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.b4fb94b5.js",
+    "main.js": "/MovieDB/static/js/main.581a0ef0.js",
     "static/js/313.fc8542d8.chunk.js": "/MovieDB/static/js/313.fc8542d8.chunk.js",
     "static/js/486.1c1fb0fa.chunk.js": "/MovieDB/static/js/486.1c1fb0fa.chunk.js",
     "static/js/994.3f213641.chunk.js": "/MovieDB/static/js/994.3f213641.chunk.js",
-    "static/js/392.b2ed5e13.chunk.js": "/MovieDB/static/js/392.b2ed5e13.chunk.js",
+    "static/js/392.be28c691.chunk.js": "/MovieDB/static/js/392.be28c691.chunk.js",
     "static/js/387.fafa8ba1.chunk.js": "/MovieDB/static/js/387.fafa8ba1.chunk.js",
     "static/js/422.c11c2160.chunk.js": "/MovieDB/static/js/422.c11c2160.chunk.js",
     "static/js/811.6fa34469.chunk.js": "/MovieDB/static/js/811.6fa34469.chunk.js",
@@ -20,11 +20,11 @@
     "static/media/sprite.svg": "/MovieDB/static/media/sprite.27b392ebfaf8568dc28be100f3ee004d.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.b4fb94b5.js.map": "/MovieDB/static/js/main.b4fb94b5.js.map",
+    "main.581a0ef0.js.map": "/MovieDB/static/js/main.581a0ef0.js.map",
     "313.fc8542d8.chunk.js.map": "/MovieDB/static/js/313.fc8542d8.chunk.js.map",
     "486.1c1fb0fa.chunk.js.map": "/MovieDB/static/js/486.1c1fb0fa.chunk.js.map",
     "994.3f213641.chunk.js.map": "/MovieDB/static/js/994.3f213641.chunk.js.map",
-    "392.b2ed5e13.chunk.js.map": "/MovieDB/static/js/392.b2ed5e13.chunk.js.map",
+    "392.be28c691.chunk.js.map": "/MovieDB/static/js/392.be28c691.chunk.js.map",
     "387.fafa8ba1.chunk.js.map": "/MovieDB/static/js/387.fafa8ba1.chunk.js.map",
     "422.c11c2160.chunk.js.map": "/MovieDB/static/js/422.c11c2160.chunk.js.map",
     "811.6fa34469.chunk.js.map": "/MovieDB/static/js/811.6fa34469.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.b4fb94b5.js"
+    "static/js/main.581a0ef0.js"
   ]
 }

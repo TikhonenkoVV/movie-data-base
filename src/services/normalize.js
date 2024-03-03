@@ -1,4 +1,5 @@
 import noPoster from '../images/no-poster.jpg';
+import noPoster66 from '../images/no-poster_66.jpg';
 import { calcAge, formatDate } from './dateOperations';
 
 const nA = 'N/a';
@@ -116,6 +117,8 @@ export const normalizeMovieData = (data, mediaTypes) => {
 
 export const normalizeCast = data => {
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
+    const SMALL_IMAGES_BASE_URL =
+        'https://image.tmdb.org/t/p/w66_and_h66_face/';
     const res = data.map(
         ({
             id,
@@ -136,10 +139,14 @@ export const normalizeCast = data => {
             const poster = profile_path
                 ? IMAGES_BASE_URL + profile_path
                 : noPoster;
+            const smallPoster = profile_path
+                ? SMALL_IMAGES_BASE_URL + profile_path
+                : noPoster66;
             return {
                 id,
                 castId,
                 poster,
+                smallPoster,
                 personName,
                 role,
             };
@@ -354,7 +361,7 @@ export const normalizePersonInCrew = crew => {
 };
 
 export const normalizeCrew = crew => {
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w66_and_h66_face/';
     const director = [];
     const normalList = crew.map(
         ({
@@ -371,7 +378,7 @@ export const normalizeCrew = crew => {
             const personName = name ? name : original_name;
             const poster = profile_path
                 ? IMAGES_BASE_URL + profile_path
-                : noPoster;
+                : noPoster66;
             const person_job = job ? job : jobs[0].job;
             if (
                 department.toLowerCase() === 'directing' &&

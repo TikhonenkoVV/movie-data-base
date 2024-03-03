@@ -26,7 +26,7 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
     const [initialContentScrollTop, setInitialContentScrollTop] = useState();
     const [initialContentScrollLeft, setInitialContentScrollLeft] = useState();
 
-    const handleResize = () => {
+    const handleResize = useCallback(() => {
         if (
             scrollTrackRef.current &&
             contentWrapperRef.current &&
@@ -58,9 +58,9 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
                 );
             }
         }
-    };
+    }, [orientation]);
 
-    const handleThumbPosition = () => {
+    const handleThumbPosition = useCallback(() => {
         if (
             !contentWrapperRef.current ||
             !scrollTrackRef.current ||
@@ -91,7 +91,7 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
                 thumb.style.left = `${newLeft}px`;
             });
         }
-    };
+    }, [orientation]);
 
     useEffect(() => {
         if (contentWrapperRef.current && contentRef.current) {
@@ -112,7 +112,7 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
                 content.removeEventListener('scroll', handleThumbPosition);
             };
         }
-    }, []);
+    }, [handleResize, handleThumbPosition]);
 
     const handleThumbMousedown = e => {
         e.preventDefault();

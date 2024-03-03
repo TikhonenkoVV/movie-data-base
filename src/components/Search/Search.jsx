@@ -3,17 +3,18 @@ import { Loader } from 'components/Loader/Loader';
 import { MediaList } from 'components/MediaList/MediaList';
 import { Page404 } from 'components/Page404/Page404';
 import { Pagination } from 'components/Pagination/Pagination';
+import { PersonsList } from 'components/PersonsList/PersonsList';
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { getMoviesByName } from 'services/api';
+import { getMediaByName } from 'services/api';
 
 export const Search = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [searchParams] = useSearchParams();
     const [first, setFirst] = useState(true);
     const [total, setTotal] = useState(0);
-    const [movies, setMovies] = useState([]);
+    const [medias, setMedias] = useState([]);
     const [error, setError] = useState(null);
     const { pathname } = useLocation();
     const path = pathname.split('/')[1];
@@ -23,9 +24,13 @@ export const Search = () => {
         const page = searchParams.get('page');
         if (!query) return;
         setIsLoading(true);
-        getMoviesByName(path === 'movies' ? 'movie' : 'tv', query, page)
+        getMediaByName(
+            path === 'movies' ? 'movie' : path === 'tv-shows' ? 'tv' : 'person',
+            query,
+            page
+        )
             .then(data => {
-                setMovies(data.results);
+                setMedias(data.results);
                 setTotal(data.total_pages);
             })
             .catch(err => {
@@ -43,13 +48,16 @@ export const Search = () => {
             <Container>
                 {isLoading && <Loader />}
                 {total > 0 && <Pagination totalPages={total} />}
-                {movies && (
+                {medias && path !== 'person' && (
                     <MediaList
-                        media={movies}
+                        media={medias}
                         mediaTypes={path === 'movies' ? 'movie' : 'tv'}
                     />
                 )}
-                {!first && movies.length < 1 && <Page404 />}
+                {medias && path === 'person' && (
+                    <PersonsList persons={medias} />
+                )}
+                {!first && medias.length < 1 && <Page404 />}
                 {total > 0 && <Pagination totalPages={total} />}
                 {error && <ToastContainer />}
             </Container>

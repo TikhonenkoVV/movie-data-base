@@ -5,7 +5,6 @@ export const StyledTogler = styled.div`
     justify-content: center;
     align-items: stretch;
     gap: 10px;
-    margin-bottom: 20px;
 `;
 
 export const TogglerTitle = styled.h1`

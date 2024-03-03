@@ -5,7 +5,6 @@ export const SearchFormStyled = styled.form`
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 24px;
 `;
 
 export const Input = styled.input`

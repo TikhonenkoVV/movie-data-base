@@ -1,11 +1,12 @@
+import { Scrollbar } from 'components/ScrollBar/ScrollBar';
 import {
-    CastWrapper,
     CastCard,
     CastLink,
     CastPoster,
     CastInfo,
     StyledCastList,
     ActorName,
+    CastWrapper,
 } from './CastList.styled';
 
 export const CastList = ({ cast }) => {
@@ -16,19 +17,21 @@ export const CastList = ({ cast }) => {
     });
     return (
         <CastWrapper>
-            <StyledCastList>
-                {array?.map(({ id, castId, personName, poster, role }) => (
-                    <CastCard key={castId}>
-                        <CastLink to={`/person/${id}`}>
-                            <CastPoster src={poster} alt={personName} />
-                            <CastInfo>
-                                <ActorName>{personName}</ActorName>
-                                <p>{role}</p>
-                            </CastInfo>
-                        </CastLink>
-                    </CastCard>
-                ))}
-            </StyledCastList>
+            <Scrollbar orientation="x">
+                <StyledCastList>
+                    {array?.map(({ id, castId, personName, poster, role }) => (
+                        <CastCard key={castId}>
+                            <CastLink to={`/person/${id}`}>
+                                <CastPoster src={poster} alt={personName} />
+                                <CastInfo>
+                                    <ActorName>{personName}</ActorName>
+                                    <p>{role}</p>
+                                </CastInfo>
+                            </CastLink>
+                        </CastCard>
+                    ))}
+                </StyledCastList>
+            </Scrollbar>
         </CastWrapper>
     );
 };

@@ -16,6 +16,21 @@ export const GlobalStyles = css`
         font-style: normal;
     }
 
+    #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow: auto;
+        height: 100vh;
+    }
+
+    section {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 24px;
+        padding-bottom: 0;
+    }
+
     h1,
     h2,
     h3,

@@ -8,6 +8,8 @@ export const lightTheme = Object.freeze({
         mainBackground: '#fff',
         personBackground: '#dcdcdc',
         shadow: '#464545',
+        scrollBar: '#404040',
+        scrollBarControl: '#000',
     },
     lg: {
         whiteSpace: '#086BA078, #086BA0bc, #086BA0',

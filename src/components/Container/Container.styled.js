@@ -9,13 +9,13 @@ export const StyledContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.s}) {
         width: ${({ theme }) => theme.breakpoints.s};
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.m}) {
         width: ${({ theme }) => theme.breakpoints.m};
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.l}) {
         width: ${({ theme }) => theme.breakpoints.l};
     }
 `;

@@ -13,7 +13,7 @@ export const getMovies = async (mediaType, trands) => {
     return data;
 };
 
-export const getMoviesByName = async (mediaTypes, q, page) => {
+export const getMediaByName = async (mediaTypes, q, page) => {
     const { data } = await axios.get(
         `search/${mediaTypes}?api_key=${API_KEY + lang}&page=${page}&query=${q}`
     );

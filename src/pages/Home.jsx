@@ -42,17 +42,25 @@ const Home = () => {
     };
 
     return (
-        <Container>
-            {isLoading && <Loader />}
-            <TrendsToggler
-                trands={trands}
-                onBtnDayClick={onBtnDayClick}
-                onBtnWeekClick={onBtnWeekClick}
-                hendleSelectChange={hendleSelectChange}
-            />
-            <MediaList media={movies} />
+        <>
+            <section>
+                <Container>
+                    {isLoading && <Loader />}
+                    <TrendsToggler
+                        trands={trands}
+                        onBtnDayClick={onBtnDayClick}
+                        onBtnWeekClick={onBtnWeekClick}
+                        hendleSelectChange={hendleSelectChange}
+                    />
+                </Container>
+            </section>
+            <section style={{ paddingBottom: '24px' }}>
+                <Container>
+                    <MediaList media={movies} />
+                </Container>
+            </section>
             {error && <ToastContainer />}
-        </Container>
+        </>
     );
 };
 

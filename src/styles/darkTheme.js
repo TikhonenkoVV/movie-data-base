@@ -8,6 +8,8 @@ export const darkTheme = Object.freeze({
         mainBackground: '#404040',
         personBackground: '#303030',
         shadow: '#fff',
+        scrollBar: '#fff',
+        scrollBarControl: '#808080',
     },
     lg: {
         whiteSpace: '#19171d78, #19171dbc, #19171d',

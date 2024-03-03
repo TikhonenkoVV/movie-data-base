@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const CastWrapper = styled.div`
     margin-bottom: 24px;
-    padding-bottom: 16px;
     overflow-x: auto;
 `;
 
 export const StyledCastList = styled.ul`
     display: flex;
     gap: 16px;
-    width: max-content;
 `;
 
 export const CastCard = styled.li`

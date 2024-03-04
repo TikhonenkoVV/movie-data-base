@@ -65,13 +65,31 @@ export const Layout = ({ onChangeTheme }) => {
                             <FooterTitle>Development</FooterTitle>
                             <ul>
                                 <LinksItem>
-                                    <a href="/">Front-End Repository</a>
+                                    <a
+                                        href="https://github.com/TikhonenkoVV/MovieDB"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Front-End Repository
+                                    </a>
                                 </LinksItem>
                                 <LinksItem>
-                                    <a href="/">Back-End Repository</a>
+                                    <a
+                                        href="https://github.com/TikhonenkoVV/MovieDB=rest-api"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Back-End Repository
+                                    </a>
                                 </LinksItem>
                                 <LinksItem>
-                                    <a href="/">Portfolio</a>
+                                    <a
+                                        href="https://github.com/TikhonenkoVV"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Portfolio
+                                    </a>
                                 </LinksItem>
                             </ul>
                         </RightLinks>

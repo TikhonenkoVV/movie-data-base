@@ -91,6 +91,7 @@ export const MovieDetails = () => {
                                 movie={movie}
                                 directing={crew?.director}
                                 onClose={toggleModal}
+                                trailer={isTrailer}
                             />
                         </>
                     )}

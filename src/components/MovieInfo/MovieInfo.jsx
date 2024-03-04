@@ -5,12 +5,13 @@ import {
     Poster,
     PosterWrapper,
     ScoreBox,
+    TrailerBtn,
 } from './MovieInfo.styled';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'components/MovieDetails/MovieDetails';
 
-export const MovieInfo = ({ movie, onClose, directing }) => {
+export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
     const {
         vote_average,
         name,
@@ -50,6 +51,9 @@ export const MovieInfo = ({ movie, onClose, directing }) => {
                 <ScoreBox>
                     <ScoreBar rating={vote_average} />
                     <h3>User Score</h3>
+                    {trailer && (
+                        <TrailerBtn onClick={onClose}>Play trailer</TrailerBtn>
+                    )}
                 </ScoreBox>
                 <h2>Owerview</h2>
                 <p>{overview}</p>

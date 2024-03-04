@@ -13,25 +13,10 @@ const MovieDetails = lazy(() =>
         return { ...module, default: module.MovieDetails };
     })
 );
+
 const Search = lazy(() =>
     import('../components/Search/Search').then(module => {
         return { ...module, default: module.Search };
-    })
-);
-const Cast = lazy(() =>
-    import('../components/Cast/Cast').then(module => {
-        return {
-            ...module,
-            default: module.Cast,
-        };
-    })
-);
-const Review = lazy(() =>
-    import('../components/Rewiew/Review').then(module => {
-        return {
-            ...module,
-            default: module.Review,
-        };
     })
 );
 
@@ -78,17 +63,11 @@ export const App = () => {
                     <Route index element={<Home />} />
                     <Route path="movies" element={<Media />}>
                         <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MovieDetails />}>
-                            <Route path="cast" element={<Cast />} />
-                            <Route path="review" element={<Review />} />
-                        </Route>
+                        <Route path=":mediaId" element={<MovieDetails />} />
                     </Route>
                     <Route path="tv-shows" element={<Media />}>
                         <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MovieDetails />}>
-                            <Route path="cast" element={<Cast />} />
-                            <Route path="review" element={<Review />} />
-                        </Route>
+                        <Route path=":mediaId" element={<MovieDetails />} />
                     </Route>
                     <Route path="person" element={<Media />}>
                         <Route path="search" element={<Search />} />

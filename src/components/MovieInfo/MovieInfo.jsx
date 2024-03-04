@@ -10,6 +10,7 @@ import {
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'components/MovieDetails/MovieDetails';
+import { Container } from 'components/Container/Container';
 
 export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
     const {
@@ -30,49 +31,55 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
     directing?.map(el => directors.push(el.personName));
 
     return (
-        <MovieWrapper bgr={backdrop_path}>
-            <PosterWrapper bgr={backdrop_path}>
-                <Poster src={poster_path} alt={name} />
-            </PosterWrapper>
-            <MovieInfoWrapper>
-                <MovieInfoTitle>{name}</MovieInfoTitle>
-                {release.release_date && (
-                    <p>
-                        {release.title}
-                        {release.release_date}
-                    </p>
-                )}
-                {first_air.first_air_date && (
-                    <p>
-                        {first_air.title}
-                        {first_air.first_air_date}
-                    </p>
-                )}
-                <ScoreBox>
-                    <ScoreBar rating={vote_average} />
-                    <h3>User Score</h3>
-                    {trailer && (
-                        <TrailerBtn onClick={onClose}>Play trailer</TrailerBtn>
-                    )}
-                </ScoreBox>
-                <h2>Owerview</h2>
-                <p>{overview}</p>
-                <h2>Genres</h2>
-                <p>{genres?.map(({ name }) => name).join(', ')}</p>
-                {created_by && (
-                    <>
-                        <h2>Creators</h2>
-                        <p>{creators.join(', ')}</p>
-                    </>
-                )}
-                {directing && !created_by && (
-                    <>
-                        <h2>Director</h2>
-                        <p>{directors.join(', ')}</p>
-                    </>
-                )}
-            </MovieInfoWrapper>
-            {isModalOpen && <Modal onClose={onClose} />}
-        </MovieWrapper>
+        <section>
+            <Container>
+                <MovieWrapper bgr={backdrop_path}>
+                    <PosterWrapper bgr={backdrop_path}>
+                        <Poster src={poster_path} alt={name} />
+                    </PosterWrapper>
+                    <MovieInfoWrapper>
+                        <MovieInfoTitle>{name}</MovieInfoTitle>
+                        {release.release_date && (
+                            <p>
+                                {release.title}
+                                {release.release_date}
+                            </p>
+                        )}
+                        {first_air.first_air_date && (
+                            <p>
+                                {first_air.title}
+                                {first_air.first_air_date}
+                            </p>
+                        )}
+                        <ScoreBox>
+                            <ScoreBar rating={vote_average} />
+                            <h3>User Score</h3>
+                            {trailer && (
+                                <TrailerBtn onClick={onClose}>
+                                    Play trailer
+                                </TrailerBtn>
+                            )}
+                        </ScoreBox>
+                        <h2>Owerview</h2>
+                        <p>{overview}</p>
+                        <h2>Genres</h2>
+                        <p>{genres?.map(({ name }) => name).join(', ')}</p>
+                        {created_by && (
+                            <>
+                                <h2>Creators</h2>
+                                <p>{creators.join(', ')}</p>
+                            </>
+                        )}
+                        {directing?.length > 0 && !created_by && (
+                            <>
+                                <h2>Director</h2>
+                                <p>{directors.join(', ')}</p>
+                            </>
+                        )}
+                    </MovieInfoWrapper>
+                    {isModalOpen && <Modal onClose={onClose} />}
+                </MovieWrapper>
+            </Container>
+        </section>
     );
 };

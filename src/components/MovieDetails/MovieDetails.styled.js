@@ -11,10 +11,13 @@ export const DetailsTitle = styled.h2`
     color: ${({ theme }) => theme.colors.themeText};
 `;
 
+export const LinksWrapper = styled.div`
+    display: flex;
+    gap: 24px;
+`;
+
 export const StyledLink = styled(Link)`
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
     padding: 10px 20px;
     text-transform: uppercase;
     text-align: center;

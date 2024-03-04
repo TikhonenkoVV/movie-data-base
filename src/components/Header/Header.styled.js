@@ -4,34 +4,63 @@ import iconSun from '../../images/icon-sun.svg';
 import iconMoon from '../../images/icon-moon.svg';
 
 export const HeaderStyled = styled.header`
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 `;
 
 export const Wrapper = styled.div`
+    position: relative;
     display: flex;
     gap: 20px;
     align-items: center;
-    height: 70px;
+    height: 40px;
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        position: static;
+        height: 70px;
+    }
+`;
+
+export const Menu = styled.div`
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: ${({ theme }) => theme.colors.accent};
+    z-index: 1;
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 export const Nav = styled.nav`
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: auto;
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-right: auto;
+    }
 `;
 
 export const NavLinkStyled = styled(NavLink)`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 100px;
     height: 100%;
     color: ${({ theme }) => theme.colors.light};
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color ${({ theme }) => theme.baseTransition},
@@ -45,10 +74,6 @@ export const NavLinkStyled = styled(NavLink)`
         color: ${({ theme }) => theme.colors.white};
         background-color: ${({ theme }) => theme.colors.hover};
         pointer-events: none;
-    }
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-        width: 100px;
-        font-size: ${({ theme }) => theme.fontSizes.medium};
     }
 `;
 

@@ -5,8 +5,14 @@ import { Container } from 'components/Container/Container';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { Page404 } from 'components/Page404/Page404';
-import { createContext, useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import {
+    Suspense,
+    createContext,
+    useContext,
+    useEffect,
+    useState,
+} from 'react';
+import { Outlet, useParams } from 'react-router-dom';
 import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
 import {
@@ -14,8 +20,12 @@ import {
     normalizeCrew,
     normalizeMovieData,
 } from 'services/normalize';
-import { CastSection, DetailsTitle, StyledLink } from './MovieDetails.styled';
-import { FullCast } from 'components/FullCast/FullCast';
+import {
+    CastSection,
+    DetailsTitle,
+    LinksWrapper,
+    StyledLink,
+} from './MovieDetails.styled';
 
 const ModalContext = createContext(false);
 
@@ -32,8 +42,6 @@ export const MovieDetails = () => {
 
     const [cast, setCast] = useState();
     const [crew, setCrew] = useState();
-
-    if (error) console.log(error);
 
     useEffect(() => {
         if (!first) return;
@@ -82,33 +90,37 @@ export const MovieDetails = () => {
 
     return (
         <ModalContext.Provider value={{ isModalOpen, isTrailer }}>
-            <section>
-                {isLoading && <Loader />}
-                <Container>
-                    {movie && (
-                        <>
-                            <MovieInfo
-                                movie={movie}
-                                directing={crew?.director}
-                                onClose={toggleModal}
-                                trailer={isTrailer}
-                            />
-                        </>
-                    )}
-                    {error && <Page404 />}
-                </Container>
-            </section>
+            {isLoading && <Loader />}
+            {movie && (
+                <MovieInfo
+                    movie={movie}
+                    directing={crew?.director}
+                    onClose={toggleModal}
+                    trailer={isTrailer}
+                />
+            )}
             <CastSection>
                 <Container>
-                    <DetailsTitle>Top Billed Cast</DetailsTitle>
-                    <CastList cast={cast} />
-                    <div style={{ display: 'flex', gap: '24px' }}>
-                        <StyledLink>Full Cast & Crew</StyledLink>
+                    {cast?.length > 0 && (
+                        <>
+                            <DetailsTitle>Top Billed Cast</DetailsTitle>
+                            <CastList cast={cast} />
+                        </>
+                    )}
+                    <LinksWrapper>
+                        {(cast?.length > 0 || crew?.length > 0) && (
+                            <StyledLink to={'cast-and-crew'}>
+                                Full Cast & Crew
+                            </StyledLink>
+                        )}
                         <StyledLink>Review</StyledLink>
-                    </div>
+                    </LinksWrapper>
                 </Container>
             </CastSection>
-            <FullCast cast={cast} crew={crew} />
+            <Suspense>
+                <Outlet />
+            </Suspense>
+            {error && <Page404 />}
         </ModalContext.Provider>
     );
 };

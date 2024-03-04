@@ -1,7 +1,7 @@
 import { Container } from 'components/Container/Container';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { Suspense } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const Media = () => {
     let page = 1;
@@ -11,13 +11,19 @@ const Media = () => {
         navigate(`search?query=${query}&page=${page}`);
     };
 
+    const location = useLocation();
+    const fullPath = location.pathname.split('/');
+    const currPath = fullPath[fullPath.length - 1];
+
     return (
         <>
-            <section>
-                <Container>
-                    <SearchForm onSubmit={onSubmit} />
-                </Container>
-            </section>
+            {currPath !== 'cast-and-crew' && (
+                <section>
+                    <Container>
+                        <SearchForm onSubmit={onSubmit} />
+                    </Container>
+                </section>
+            )}{' '}
             <Suspense>
                 <Outlet />
             </Suspense>

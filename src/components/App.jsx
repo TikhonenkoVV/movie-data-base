@@ -20,6 +20,12 @@ const Search = lazy(() =>
     })
 );
 
+const FullCast = lazy(() =>
+    import('../components/FullCast/FullCast').then(module => {
+        return { ...module, default: module.FullCast };
+    })
+);
+
 const dark = {
     ...theme,
     ...darkTheme,
@@ -64,10 +70,18 @@ export const App = () => {
                     <Route path="movies" element={<Media />}>
                         <Route path="search" element={<Search />} />
                         <Route path=":mediaId" element={<MovieDetails />} />
+                        <Route
+                            path=":mediaId/cast-and-crew"
+                            element={<FullCast />}
+                        />
                     </Route>
                     <Route path="tv-shows" element={<Media />}>
                         <Route path="search" element={<Search />} />
                         <Route path=":mediaId" element={<MovieDetails />} />
+                        <Route
+                            path=":mediaId/cast-and-crew"
+                            element={<FullCast />}
+                        />
                     </Route>
                     <Route path="person" element={<Media />}>
                         <Route path="search" element={<Search />} />

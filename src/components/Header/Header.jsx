@@ -1,6 +1,7 @@
 import { Container } from 'components/Container/Container';
 import {
     HeaderStyled,
+    Menu,
     Nav,
     NavLinkStyled,
     Toggler,
@@ -31,23 +32,25 @@ export const Header = ({ onChangeTheme }) => {
             <Container>
                 <Wrapper>
                     <Logo label="Home" dest={'/'} />
-                    <Nav>
-                        <NavLinkStyled to={'/'}>Home</NavLinkStyled>
-                        <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
-                        <NavLinkStyled to={'tv-shows'}>Tv</NavLinkStyled>
-                        <NavLinkStyled to={'person'}>People</NavLinkStyled>
-                    </Nav>
-                    <Toggler
-                        ref={themeBtn}
-                        className={
-                            storageLoad('movieDBTheme')
-                                ? storageLoad('movieDBTheme')
-                                : 'dark'
-                        }
-                        onClick={toggleTheme}
-                        aria-label="Theme"
-                        type="button"
-                    ></Toggler>
+                    <Menu>
+                        <Nav>
+                            <NavLinkStyled to={'/'}>Home</NavLinkStyled>
+                            <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
+                            <NavLinkStyled to={'tv-shows'}>Tv</NavLinkStyled>
+                            <NavLinkStyled to={'person'}>People</NavLinkStyled>
+                        </Nav>
+                        <Toggler
+                            ref={themeBtn}
+                            className={
+                                storageLoad('movieDBTheme')
+                                    ? storageLoad('movieDBTheme')
+                                    : 'dark'
+                            }
+                            onClick={toggleTheme}
+                            aria-label="Theme"
+                            type="button"
+                        ></Toggler>
+                    </Menu>
                 </Wrapper>
             </Container>
         </HeaderStyled>

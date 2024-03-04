@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Link, NavLink } from 'react-router-dom';
-import logo from '../../images/logo.svg';
-import logoM from '../../images/logo-m.svg';
+import { NavLink } from 'react-router-dom';
 import iconSun from '../../images/icon-sun.svg';
 import iconMoon from '../../images/icon-moon.svg';
 
@@ -17,22 +15,6 @@ export const Wrapper = styled.div`
     gap: 20px;
     align-items: center;
     height: 70px;
-`;
-
-export const Logotype = styled(Link)`
-    display: flex;
-    width: 60px;
-    height: 70px;
-    aspect-ratio: 2 / 1;
-    background-image: url(${logoM});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-        background-image: url(${logo});
-        width: 90px;
-        aspect-ratio: 1.2857 / 1;
-    }
 `;
 
 export const Nav = styled.nav`

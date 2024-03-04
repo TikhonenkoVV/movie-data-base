@@ -1,24 +1,27 @@
 import { Container } from 'components/Container/Container';
-import { Card, StyledLink } from './FullCast.styled';
+import {
+    Card,
+    CastCrewWrapper,
+    StyledLink,
+    StyledSection,
+    MinorTitle,
+    MajorTitle,
+    CardListItem,
+    Poster,
+} from './FullCast.styled';
 
 export const FullCast = ({ cast, crew }) => {
     return (
-        <section>
+        <StyledSection>
             <Container style={{ display: 'flex', gap: '24px' }}>
-                <div
-                    style={{
-                        flexBasis: 'calc((100% - 24px) / 2)',
-                        border: '1px solid #808080',
-                        padding: '16px',
-                    }}
-                >
-                    <h2>Cast</h2>
+                <CastCrewWrapper>
+                    <MinorTitle>Cast</MinorTitle>
                     <ul>
                         {cast?.map(
                             ({ id, castId, personName, smallPoster, role }) => (
                                 <Card key={castId}>
                                     <StyledLink to={`/person/${id}`}>
-                                        <img
+                                        <Poster
                                             src={smallPoster}
                                             alt={personName}
                                         />
@@ -31,21 +34,17 @@ export const FullCast = ({ cast, crew }) => {
                             )
                         )}
                     </ul>
-                </div>
-                <div
-                    style={{
-                        flexBasis: 'calc((100% - 24px) / 2)',
-                        border: '1px solid #808080',
-                        padding: '16px',
-                    }}
-                >
-                    <h2>Crew</h2>
+                </CastCrewWrapper>
+                <CastCrewWrapper>
+                    <MinorTitle>Crew</MinorTitle>
                     <ul>
                         {crew?.crew?.map(el => (
-                            <li key={Object.keys(el)[0]}>
-                                <h2 style={{ textTransform: 'capitalize' }}>
+                            <CardListItem key={Object.keys(el)[0]}>
+                                <MajorTitle
+                                    style={{ textTransform: 'capitalize' }}
+                                >
                                     {Object.keys(el)[0]}
-                                </h2>
+                                </MajorTitle>
                                 <ul>
                                     {el[Object.keys(el)[0]]?.map(
                                         ({
@@ -59,7 +58,7 @@ export const FullCast = ({ cast, crew }) => {
                                                 <StyledLink
                                                     to={`/person/${id}`}
                                                 >
-                                                    <img
+                                                    <Poster
                                                         src={poster}
                                                         alt={personName}
                                                     />
@@ -72,11 +71,11 @@ export const FullCast = ({ cast, crew }) => {
                                         )
                                     )}
                                 </ul>
-                            </li>
+                            </CardListItem>
                         ))}
                     </ul>
-                </div>
+                </CastCrewWrapper>
             </Container>
-        </section>
+        </StyledSection>
     );
 };

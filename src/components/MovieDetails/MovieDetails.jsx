@@ -14,7 +14,7 @@ import {
     normalizeCrew,
     normalizeMovieData,
 } from 'services/normalize';
-import { CastSection, DetailsTitle } from './MovieDetails.styled';
+import { CastSection, DetailsTitle, StyledLink } from './MovieDetails.styled';
 import { FullCast } from 'components/FullCast/FullCast';
 
 const ModalContext = createContext(false);
@@ -101,7 +101,10 @@ export const MovieDetails = () => {
                 <Container>
                     <DetailsTitle>Top Billed Cast</DetailsTitle>
                     <CastList cast={cast} />
-                    <button type="button">Full Cast & Crew</button>
+                    <div style={{ display: 'flex', gap: '24px' }}>
+                        <StyledLink>Full Cast & Crew</StyledLink>
+                        <StyledLink>Review</StyledLink>
+                    </div>
                 </Container>
             </CastSection>
             <FullCast cast={cast} crew={crew} />

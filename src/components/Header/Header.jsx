@@ -1,7 +1,6 @@
 import { Container } from 'components/Container/Container';
 import {
     HeaderStyled,
-    Logotype,
     Nav,
     NavLinkStyled,
     Toggler,
@@ -9,6 +8,7 @@ import {
 } from './Header.styled';
 import { useRef } from 'react';
 import { storageLoad } from 'services/storage';
+import { Logo } from 'components/Logo/Logo';
 
 export const Header = ({ onChangeTheme }) => {
     const themeBtn = useRef();
@@ -30,7 +30,7 @@ export const Header = ({ onChangeTheme }) => {
         <HeaderStyled>
             <Container>
                 <Wrapper>
-                    <Logotype aria-label="Home" to={'/'} />
+                    <Logo label="Home" dest={'/'} />
                     <Nav>
                         <NavLinkStyled to={'/'}>Home</NavLinkStyled>
                         <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>

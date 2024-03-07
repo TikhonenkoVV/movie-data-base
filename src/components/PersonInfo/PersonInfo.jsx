@@ -1,4 +1,4 @@
-import { Acting } from 'components/Acting/Acting';
+import { Credits } from 'components/Credits/Credits';
 import {
     Aside,
     AsideTitle,
@@ -10,12 +10,17 @@ import {
     PersonalInfoList,
     ProfileWrapper,
 } from './PersonInfo.styled';
+import noPoster from '../../images/no-poster.jpg';
 
 export const PersonInfo = ({ person, acting, crew, total }) => {
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
+    const IMAGES_BASE_URL_RETINA =
+        'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
+
     const {
         biography,
         known_for_department,
-        personName,
+        name,
         gender,
         birthday,
         deathday,
@@ -27,13 +32,28 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
     return (
         <PersonWrapper>
             <Aside>
-                <img
-                    src={profile_path}
-                    alt={personName}
-                    width={300}
-                    height={450}
-                    style={{ marginBottom: '24px' }}
-                />
+                <picture>
+                    <source
+                        srcSet={
+                            profile_path
+                                ? `${IMAGES_BASE_URL + profile_path} 1x, 
+                                   ${IMAGES_BASE_URL_RETINA + profile_path} 2x`
+                                : noPoster
+                        }
+                    />
+
+                    <img
+                        src={
+                            profile_path
+                                ? IMAGES_BASE_URL + profile_path
+                                : noPoster
+                        }
+                        alt={name}
+                        width={300}
+                        height={450}
+                        style={{ marginBottom: '24px' }}
+                    />
+                </picture>
                 <AsideTitle>Personal Info</AsideTitle>
                 <PersonalInfoList>
                     <PersonalInfoItem>
@@ -76,7 +96,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
             </Aside>
             <InfoWrapper>
                 <ProfileWrapper>
-                    <PersonTitle>{personName}</PersonTitle>
+                    <PersonTitle>{name}</PersonTitle>
                     <MinorTitle>Biography</MinorTitle>
                     {biography?.map((el, i) => (
                         <p key={i} style={{ marginBottom: '12px' }}>
@@ -84,10 +104,10 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                         </p>
                     ))}
                     {biography?.length === 0 && (
-                        <p>We don't have a biography for {personName}.</p>
+                        <p>We don't have a biography for {name}.</p>
                     )}
                 </ProfileWrapper>
-                <Acting acting={acting} crew={crew} />
+                <Credits acting={acting} crew={crew} />
             </InfoWrapper>
         </PersonWrapper>
     );

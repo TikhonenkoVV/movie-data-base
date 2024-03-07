@@ -8,32 +8,26 @@ import {
     MajorTitle,
     CardListItem,
     Poster,
-    MovieWrapper,
-    MoviePoster,
-    MovieInfoWrapper,
-    MovieInfoTitle,
 } from './FullCast.styled';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
 import { useParams } from 'react-router-dom';
-import {
-    normalizeCast,
-    normalizeCrew,
-    normalizeMovieData,
-} from 'services/normalize';
 import { Loader } from 'components/Loader/Loader';
-import { Page404 } from 'components/Page404/Page404';
+import { normalizeCast } from 'services/normalize/normalizeCast';
+import noPoster from '../../images/no-poster_66.jpg';
+import { normalizeCrew } from 'services/normalize/normalizeCrew';
 
 export const FullCast = () => {
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w66_and_h66_face';
+    const IMAGES_BASE_URL_RETINA =
+        'https://image.tmdb.org/t/p/w132_and_h132_face';
+
     const { mediaId } = useParams();
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [castArray, setCastArray] = useState();
     const [crewArray, setCrewArray] = useState();
-    const [movie, setMovie] = useState(null);
-
-    if (movie) console.log(movie.release);
 
     useEffect(() => {
         setIsLoading(true);
@@ -48,46 +42,15 @@ export const FullCast = () => {
                 setCastArray(normalizeCast(data.cast));
                 setCrewArray(normalizeCrew(data.crew));
             })
-            .catch(err => setError(err.message))
-            .finally(() => {
-                getDetails(type, id, '')
-                    .then(data => setMovie(normalizeMovieData(data)))
-                    .catch(err => {
-                        setError(err.message);
-                    })
-                    .finally(() => setIsLoading(false));
-            });
+            .catch(err => {
+                setError(err.message);
+                console.log('full cast', err);
+            })
+            .finally(() => setIsLoading(false));
     }, [mediaId]);
 
     return (
         <>
-            {movie && (
-                <StyledSection className="head-section">
-                    <Container>
-                        <MovieWrapper>
-                            <MoviePoster
-                                src={movie.poster_path}
-                                alt={movie.name}
-                            />
-                            <MovieInfoWrapper>
-                                <MovieInfoTitle>{movie.name}</MovieInfoTitle>
-                                {movie.release.release_date && (
-                                    <p>
-                                        {movie.release.title}
-                                        {movie.release.release_date}
-                                    </p>
-                                )}
-                                {movie.first_air.first_air_date && (
-                                    <p>
-                                        {movie.first_air.title}
-                                        {movie.first_air.first_air_date}
-                                    </p>
-                                )}
-                            </MovieInfoWrapper>
-                        </MovieWrapper>
-                    </Container>
-                </StyledSection>
-            )}
             <StyledSection>
                 {isLoading && <Loader />}
                 <Container style={{ display: 'flex', gap: '24px' }}>
@@ -99,15 +62,36 @@ export const FullCast = () => {
                                     id,
                                     castId,
                                     personName,
-                                    smallPoster,
+                                    profile_path,
                                     role,
                                 }) => (
                                     <Card key={castId}>
                                         <StyledLink to={`/person/${id}`}>
-                                            <Poster
-                                                src={smallPoster}
-                                                alt={personName}
-                                            />
+                                            <picture>
+                                                <source
+                                                    srcSet={
+                                                        profile_path
+                                                            ? `${
+                                                                  IMAGES_BASE_URL +
+                                                                  profile_path
+                                                              } 1x, ${
+                                                                  IMAGES_BASE_URL_RETINA +
+                                                                  profile_path
+                                                              } 2x`
+                                                            : noPoster
+                                                    }
+                                                />
+
+                                                <Poster
+                                                    src={
+                                                        profile_path
+                                                            ? IMAGES_BASE_URL +
+                                                              profile_path
+                                                            : noPoster
+                                                    }
+                                                    alt={personName}
+                                                />
+                                            </picture>
                                             <div>
                                                 <h3>{personName}</h3>
                                                 <p>{role}</p>
@@ -135,16 +119,37 @@ export const FullCast = () => {
                                                 credit_id,
                                                 job,
                                                 personName,
-                                                poster,
+                                                profile_path,
                                             }) => (
                                                 <Card key={credit_id}>
                                                     <StyledLink
                                                         to={`/person/${id}`}
                                                     >
-                                                        <Poster
-                                                            src={poster}
-                                                            alt={personName}
-                                                        />
+                                                        <picture>
+                                                            <source
+                                                                srcSet={
+                                                                    profile_path
+                                                                        ? `${
+                                                                              IMAGES_BASE_URL +
+                                                                              profile_path
+                                                                          } 1x, ${
+                                                                              IMAGES_BASE_URL_RETINA +
+                                                                              profile_path
+                                                                          } 2x`
+                                                                        : noPoster
+                                                                }
+                                                            />
+
+                                                            <Poster
+                                                                src={
+                                                                    profile_path
+                                                                        ? IMAGES_BASE_URL +
+                                                                          profile_path
+                                                                        : noPoster
+                                                                }
+                                                                alt={personName}
+                                                            />
+                                                        </picture>
                                                         <div>
                                                             <h3>
                                                                 {personName}
@@ -161,7 +166,9 @@ export const FullCast = () => {
                         </ul>
                     </CastCrewWrapper>
                 </Container>
-                {error && <Page404 />}
+
+                {/* ЗВЕРНИ УВАГУ!!! */}
+                {error && <></>}
             </StyledSection>
         </>
     );

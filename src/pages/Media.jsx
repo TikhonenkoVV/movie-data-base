@@ -17,13 +17,13 @@ const Media = () => {
 
     return (
         <>
-            {currPath !== 'cast-and-crew' && (
-                <section>
+            {currPath !== 'cast-and-crew' && currPath !== 'reviews' && (
+                <section style={{ paddingTop: '24px' }}>
                     <Container>
                         <SearchForm onSubmit={onSubmit} />
                     </Container>
                 </section>
-            )}{' '}
+            )}
             <Suspense>
                 <Outlet />
             </Suspense>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import noPoster from '../../images/no-poster.jpg';
 const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w1280/';
 
 export const MovieWrapper = styled.div`
@@ -7,7 +8,7 @@ export const MovieWrapper = styled.div`
         display: flex;
         gap: 20px;
         background-image: ${({ theme }) => theme.lg.movieInfo},
-            url(${({ bgr }) => bgr});
+            url(${({ bgr }) => (bgr ? IMAGES_BASE_URL + bgr : noPoster)});
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,14 +16,8 @@ export const MovieWrapper = styled.div`
 `;
 
 export const PosterWrapper = styled.div`
-    background-image: linear-gradient(
-            90deg,
-            #404040 3%,
-            #404040de 23%,
-            #404040de 77%,
-            #404040 100%
-        ),
-        url(${({ bgr }) => IMAGES_BASE_URL + bgr});
+    background-image: ${({ theme }) => theme.lg.movieInfo},
+        url(${({ bgr }) => (bgr ? IMAGES_BASE_URL + bgr : noPoster)});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,8 +70,12 @@ export const ScoreBox = styled.div`
 `;
 
 export const TrailerBtn = styled.button`
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 44px;
+    padding: 0 30px;
+    border-radius: 22px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
@@ -87,5 +86,8 @@ export const TrailerBtn = styled.button`
     &:hover,
     &:focus {
         color: ${({ theme }) => theme.colors.white};
+    }
+    & svg {
+        fill: currentColor;
     }
 `;

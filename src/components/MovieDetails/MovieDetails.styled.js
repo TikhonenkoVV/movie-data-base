@@ -1,11 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const CastSection = styled.section`
-    padding-top: 24px;
-    padding-bottom: 24px;
-`;
-
 export const DetailsTitle = styled.h2`
     margin-bottom: 24px;
     color: ${({ theme }) => theme.colors.themeText};

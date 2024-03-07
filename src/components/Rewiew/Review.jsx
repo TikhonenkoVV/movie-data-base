@@ -1,15 +1,16 @@
 import { Loader } from 'components/Loader/Loader';
-import { ReviewTitle } from './Review.styled';
+import { ReviewTitle, StyledSection } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
-import { ToastContainer, toast } from 'react-toastify';
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
+import { Container } from 'components/Container/Container';
+import { Page404 } from 'components/Page404/Page404';
 
 export const Review = () => {
     const { mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState([]);
+    const [error, setError] = useState(null);
     const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
@@ -23,7 +24,6 @@ export const Review = () => {
             })
             .catch(err => {
                 setError(err.message);
-                toast(err.message);
             })
             .finally(() => {
                 setIsLoading(false);
@@ -31,26 +31,28 @@ export const Review = () => {
     }, [mediaId]);
 
     return (
-        <>
-            {isLoading && <Loader />}
-            {reviews?.length > 0 && (
-                <>
-                    <ReviewTitle>Reviews</ReviewTitle>
-                    <ul>
-                        {reviews?.map(review => (
-                            <ReviewItem
-                                key={review.id}
-                                author={review.author}
-                                content={review.content}
-                            />
-                        ))}
-                    </ul>
-                </>
-            )}
-            {reviews?.length < 1 && (
-                <ReviewTitle>Sorry, this movie has no reviews.</ReviewTitle>
-            )}
-            {error && <ToastContainer />}
-        </>
+        <StyledSection>
+            <Container>
+                {isLoading && <Loader />}
+                {reviews?.length > 0 && (
+                    <>
+                        <ReviewTitle>Reviews</ReviewTitle>
+                        <ul>
+                            {reviews?.map(review => (
+                                <ReviewItem
+                                    key={review.id}
+                                    author={review.author}
+                                    content={review.content}
+                                />
+                            ))}
+                        </ul>
+                    </>
+                )}
+                {reviews?.length < 1 && (
+                    <ReviewTitle>Sorry, this movie has no reviews.</ReviewTitle>
+                )}
+                {error && <Page404 />}
+            </Container>
+        </StyledSection>
     );
 };

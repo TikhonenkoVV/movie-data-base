@@ -11,8 +11,15 @@ import { ScoreBar } from 'components/ScoreBar/ScoreBar';
 import { Modal } from 'components/Modal/Modal';
 import { useModal } from 'components/MovieDetails/MovieDetails';
 import { Container } from 'components/Container/Container';
+import { Svg } from 'components/Svg/Svg';
+import noPoster from '../../images/no-poster.jpg';
+import sprite from '../../images/sprite.svg';
 
 export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
+    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
+    const IMAGES_BASE_URL_RETINA =
+        'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
+
     const {
         vote_average,
         name,
@@ -35,7 +42,29 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
             <Container>
                 <MovieWrapper bgr={backdrop_path}>
                     <PosterWrapper bgr={backdrop_path}>
-                        <Poster src={poster_path} alt={name} />
+                        <picture>
+                            <source
+                                srcSet={
+                                    poster_path
+                                        ? `${
+                                              IMAGES_BASE_URL + poster_path
+                                          } 1x, ${
+                                              IMAGES_BASE_URL_RETINA +
+                                              poster_path
+                                          } 2x`
+                                        : noPoster
+                                }
+                            />
+
+                            <Poster
+                                src={
+                                    poster_path
+                                        ? IMAGES_BASE_URL + poster_path
+                                        : noPoster
+                                }
+                                alt={name}
+                            />
+                        </picture>
                     </PosterWrapper>
                     <MovieInfoWrapper>
                         <MovieInfoTitle>{name}</MovieInfoTitle>
@@ -56,6 +85,11 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
                             <h3>User Score</h3>
                             {trailer && (
                                 <TrailerBtn onClick={onClose}>
+                                    <Svg
+                                        w="24"
+                                        h="24"
+                                        use={`${sprite}#icon-play`}
+                                    />
                                     Play trailer
                                 </TrailerBtn>
                             )}

@@ -4,8 +4,8 @@ import { getDetails, getPersonById } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import { Loader } from 'components/Loader/Loader';
 import { PersonInfo } from 'components/PersonInfo/PersonInfo';
-import { normalizePersonData } from 'services/normalize';
 import { Container } from 'components/Container/Container';
+import { normalizePersonData } from 'services/normalize/normalizePersonData';
 
 const PersonDetails = () => {
     const { personId } = useParams();
@@ -20,7 +20,7 @@ const PersonDetails = () => {
         setIsLoading(true);
         getPersonById(personId)
             .then(data => {
-                setPersonInfo(data);
+                setPersonInfo(normalizePersonData(data));
             })
             .catch(err => {
                 setError(err.message);
@@ -49,7 +49,7 @@ const PersonDetails = () => {
                 {error && <ToastContainer />}
                 {!isLoading && (
                     <PersonInfo
-                        person={normalizePersonData(personInfo)}
+                        person={personInfo}
                         acting={personCredits}
                         crew={crew}
                         total={totalCredits}

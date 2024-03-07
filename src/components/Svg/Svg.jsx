@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { Icon } from './Icon.styled';
+import { Icon } from './Svg.styled';
 
-export const Svg = ({ use, className }) => {
+export const Svg = ({ use, className, w, h }) => {
     return (
-        <Icon className={className} width={20} height={20}>
+        <Icon className={className} width={w} height={h}>
             <use href={use} />
         </Icon>
     );

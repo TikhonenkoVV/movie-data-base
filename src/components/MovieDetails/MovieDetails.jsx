@@ -1,31 +1,16 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { CastList } from 'components/CastList/CastList';
 import { Container } from 'components/Container/Container';
-// import { CrewList } from 'components/CrewList/CrewList';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
-import { Page404 } from 'components/Page404/Page404';
-import {
-    Suspense,
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-} from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getDetails, getTrailer } from 'services/api';
 import { findTrailer } from 'services/findTrailer';
-import {
-    normalizeCast,
-    normalizeCrew,
-    normalizeMovieData,
-} from 'services/normalize';
-import {
-    CastSection,
-    DetailsTitle,
-    LinksWrapper,
-    StyledLink,
-} from './MovieDetails.styled';
+import { DetailsTitle, LinksWrapper, StyledLink } from './MovieDetails.styled';
+import { normalizeMovieData } from 'services/normalize/normalizeMovieData';
+import { normalizeCast } from 'services/normalize/normalizeCast';
+import { normalizeCrew } from 'services/normalize/normalizeCrew';
 
 const ModalContext = createContext(false);
 
@@ -40,8 +25,9 @@ export const MovieDetails = () => {
     const [error, setError] = useState(null);
     const { mediaId } = useParams();
 
-    const [cast, setCast] = useState();
-    const [crew, setCrew] = useState();
+    const [cast, setCast] = useState(null);
+    const [crew, setCrew] = useState(null);
+    const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
         if (!first) return;
@@ -77,7 +63,18 @@ export const MovieDetails = () => {
                             .catch(err => {
                                 setError(err.message);
                             })
-                            .finally(() => setIsLoading(false));
+                            .finally(() => {
+                                getDetails(type, id, '/reviews')
+                                    .then(data => {
+                                        setReviews(data.results);
+                                    })
+                                    .catch(err => {
+                                        setError(err.message);
+                                    })
+                                    .finally(() => {
+                                        setIsLoading(false);
+                                    });
+                            });
                     });
             });
     }, [first, mediaId]);
@@ -99,28 +96,32 @@ export const MovieDetails = () => {
                     trailer={isTrailer}
                 />
             )}
-            <CastSection>
-                <Container>
-                    {cast?.length > 0 && (
-                        <>
-                            <DetailsTitle>Top Billed Cast</DetailsTitle>
-                            <CastList cast={cast} />
-                        </>
-                    )}
-                    <LinksWrapper>
-                        {(cast?.length > 0 || crew?.length > 0) && (
-                            <StyledLink to={'cast-and-crew'}>
-                                Full Cast & Crew
-                            </StyledLink>
+            {(cast?.length > 0 || crew || reviews?.length > 0) && (
+                <section>
+                    <Container>
+                        {cast?.length > 0 && (
+                            <>
+                                <DetailsTitle>Top Billed Cast</DetailsTitle>
+                                <CastList cast={cast} />
+                            </>
                         )}
-                        <StyledLink>Review</StyledLink>
-                    </LinksWrapper>
-                </Container>
-            </CastSection>
-            <Suspense>
-                <Outlet />
-            </Suspense>
-            {error && <Page404 />}
+                        <LinksWrapper>
+                            {(cast?.length > 0 || crew) && (
+                                <StyledLink to={'details/cast-and-crew'}>
+                                    Full Cast & Crew
+                                </StyledLink>
+                            )}
+                            {reviews?.length > 0 && (
+                                <StyledLink to={'details/reviews'}>
+                                    Review
+                                </StyledLink>
+                            )}
+                        </LinksWrapper>
+                    </Container>
+                </section>
+            )}{' '}
+            {/* ЗВЕРНИ УВАГУ!!! */}
+            {error && <></>}
         </ModalContext.Provider>
     );
 };

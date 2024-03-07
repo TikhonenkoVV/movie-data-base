@@ -4,9 +4,14 @@ export const PaginationBox = styled.div`
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    &.top {
+        padding-bottom: 20px;
+    }
+    &.bottom {
+        padding-top: 20px;
+    }
 `;
+
 export const DotButton = styled.button`
     display: flex;
     justify-content: center;

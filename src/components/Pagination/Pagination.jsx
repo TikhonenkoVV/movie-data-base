@@ -7,11 +7,11 @@ import {
     PaginationBox,
 } from './Pagination.styled';
 import sprite from '../../images/sprite.svg';
-import { Svg } from 'components/Icon/Icon';
+import { Svg } from 'components/Svg/Svg';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-export const Pagination = ({ totalPages }) => {
+export const Pagination = ({ totalPages, serviceClass }) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [page, setPage] = useState(1);
     const query = searchParams.get('query');
@@ -30,7 +30,7 @@ export const Pagination = ({ totalPages }) => {
     };
 
     return (
-        <PaginationBox>
+        <PaginationBox className={serviceClass}>
             {totalPages > 3 && (
                 <DotStart datatype={1} onClick={hendleClick}>
                     <Svg use={`${sprite}#arrow-start`} />

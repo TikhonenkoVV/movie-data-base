@@ -25,10 +25,7 @@ export const GlobalStyles = css`
     }
 
     section {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 24px;
-        padding-bottom: 0;
+        padding-bottom: 24px;
     }
 
     h1,

@@ -47,7 +47,9 @@ export const Search = () => {
         <section>
             <Container>
                 {isLoading && <Loader />}
-                {total > 0 && <Pagination totalPages={total} />}
+                {total > 0 && (
+                    <Pagination totalPages={total} serviceClass="top" />
+                )}
                 {medias && path !== 'person' && (
                     <MediaList
                         media={medias}
@@ -58,7 +60,9 @@ export const Search = () => {
                     <PersonsList persons={medias} />
                 )}
                 {!first && medias.length < 1 && <Page404 />}
-                {total > 0 && <Pagination totalPages={total} />}
+                {total > 0 && (
+                    <Pagination totalPages={total} serviceClass="bottom" />
+                )}
                 {error && <ToastContainer />}
             </Container>
         </section>

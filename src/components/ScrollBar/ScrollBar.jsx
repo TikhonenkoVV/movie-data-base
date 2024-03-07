@@ -44,7 +44,8 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
                         20
                     )
                 );
-            } else {
+            }
+            if (orientation === 'x') {
                 const { clientWidth: trackWidth } = scrollTrackRef.current;
                 const {
                     clientWidth: contentVisibleX,

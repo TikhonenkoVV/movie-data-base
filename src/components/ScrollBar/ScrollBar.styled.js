@@ -29,13 +29,13 @@ export const SBContent = styled.div`
 `;
 
 export const SBScrollBar = styled.div`
-    display: grid;
+    display: ${({ displayStyle }) => displayStyle};
     gap: 1rem;
 
     grid-template: ${({ noButton }) =>
         noButton ? '1fr' : 'auto 1fr auto / 1fr'};
     place-items: center;
-    opacity: 0.2;
+    opacity: 0.5;
     transition: ${({ theme }) => theme.baseTransition};
     &.sb-y {
         position: absolute;
@@ -50,14 +50,11 @@ export const SBScrollBar = styled.div`
         /* bottom: 0; */
         width: 100%;
     }
-    &:hover {
-        opacity: 0.5;
-    }
 `;
 
 export const SBButton = styled.button`
-    width: 16px;
-    height: 16px;
+    width: 8px;
+    height: 8px;
     border: none;
     border-radius: 50%;
     color: #cecdc3;
@@ -73,10 +70,10 @@ export const SBBarWrapper = styled.div`
     position: relative;
     &.sb-y {
         height: 100%;
-        width: 16px;
+        width: 8px;
     }
     &.sb-x {
-        height: 16px;
+        height: 8px;
         width: 100%;
     }
 `;
@@ -86,27 +83,27 @@ export const SBBar = styled.div`
     cursor: pointer;
     position: absolute;
     background: ${({ theme }) => theme.colors.scrollBar};
-    border-radius: 8px;
+    border-radius: 4px;
     &.sb-y {
         top: 0;
-        width: 16px;
+        width: 8px;
     }
     &.sb-x {
         bottom: 0;
         width: 100%;
-        height: 16px;
+        height: 8px;
     }
 `;
 
 export const SBControl = styled.div`
     position: absolute;
-    border-radius: 12px;
+    border-radius: 4px;
     background-color: ${({ theme }) => theme.colors.scrollBarControl};
     &.sb-y {
-        width: 16px;
+        width: 8px;
     }
     &.sb-x {
-        height: 16px;
+        height: 8px;
         width: 40px;
     }
 `;

@@ -43,9 +43,9 @@ const Home = () => {
 
     return (
         <>
-            <section>
+            {isLoading && <Loader />}
+            <section style={{ paddingTop: '24px' }}>
                 <Container>
-                    {isLoading && <Loader />}
                     <TrendsToggler
                         trands={trands}
                         onBtnDayClick={onBtnDayClick}
@@ -54,7 +54,7 @@ const Home = () => {
                     />
                 </Container>
             </section>
-            <section style={{ paddingBottom: '24px' }}>
+            <section>
                 <Container>
                     <MediaList media={movies} />
                 </Container>

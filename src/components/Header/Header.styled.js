@@ -33,6 +33,7 @@ export const Menu = styled.div`
     right: 0;
     width: 300px;
     background-color: ${({ theme }) => theme.colors.accent};
+    transition: background-color ${({ theme }) => theme.baseTransition};
     z-index: 1;
     @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
         position: static;

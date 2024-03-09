@@ -12,6 +12,7 @@ export const MovieWrapper = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: background ${({ theme }) => theme.baseTransition};
     }
 `;
 
@@ -24,6 +25,7 @@ export const PosterWrapper = styled.div`
     height: 250px;
     margin: 0 -20px 20px;
     padding: 20px;
+    transition: background ${({ theme }) => theme.baseTransition};
     @media (min-width: 533px) {
         flex-shrink: 0;
         margin: 0;
@@ -82,7 +84,8 @@ export const TrailerBtn = styled.button`
 
     color: ${({ theme }) => theme.colors.light};
     background-color: ${({ theme }) => theme.colors.accent};
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color ${({ theme }) => theme.baseTransition},
+        color ${({ theme }) => theme.baseTransition};
     &:hover,
     &:focus {
         color: ${({ theme }) => theme.colors.white};

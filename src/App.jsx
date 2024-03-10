@@ -4,6 +4,9 @@ import { lazy, useEffect, useState } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
 import { GlobalStyles, darkTheme, lightTheme, theme } from 'styles';
 import { storageLoad, storageSave } from './services/storage';
+import { useDispatch } from 'react-redux';
+import { setDevice } from 'store/device/deviceSlice';
+import { getDeviceType } from 'services/geDeviceType';
 
 const Home = lazy(() => import('./pages/Home'));
 const Media = lazy(() => import('./pages/Media'));
@@ -49,6 +52,8 @@ const light = {
 };
 
 export const App = () => {
+    const dispatch = useDispatch();
+
     const [currentTheme, setCurrentTheme] = useState(dark);
 
     const [currentColor, setCurrentColor] = useState(
@@ -58,6 +63,10 @@ export const App = () => {
     const onChangeTheme = colors => {
         setCurrentColor(colors);
     };
+
+    useEffect(() => {
+        dispatch(setDevice(getDeviceType()));
+    }, [dispatch]);
 
     useEffect(() => {
         if (currentColor === 'dark') {

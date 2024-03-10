@@ -1,7 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { CastList } from 'components/CastList/CastList';
 import { Container } from 'components/Container/Container';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';

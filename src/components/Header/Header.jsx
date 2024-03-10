@@ -1,18 +1,27 @@
 import { Container } from 'components/Container/Container';
 import {
+    CloseMenuBtn,
     HeaderStyled,
     Menu,
     Nav,
     NavLinkStyled,
+    OpenMenuBtn,
     Toggler,
     Wrapper,
 } from './Header.styled';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { storageLoad } from 'services/storage';
 import { Logo } from 'components/Logo/Logo';
+import { Svg } from 'components/Svg/Svg';
+import sprite from '../../images/sprite.svg';
+import { BackDrop } from 'components/BackDrop/BackDrop';
 
 export const Header = ({ onChangeTheme }) => {
-    const themeBtn = useRef();
+    const [isOpen, setIsopen] = useState(false);
+
+    const themeBtn = useRef(null);
+    const observer = useRef(null);
+    const containerRef = useRef(null);
 
     const toggleTheme = () => {
         if (themeBtn.current.classList.contains('dark')) {
@@ -27,17 +36,60 @@ export const Header = ({ onChangeTheme }) => {
         }
     };
 
+    const hendleOpenMenu = () => {
+        setIsopen(true);
+    };
+
+    const hendleCloseMenu = () => {
+        setIsopen(false);
+    };
+
+    useEffect(() => {
+        if (containerRef) {
+            const content = containerRef.current;
+            observer.current = new ResizeObserver(() => {
+                setIsopen(false);
+            });
+            observer.current.observe(content);
+        }
+    }, []);
+
     return (
         <HeaderStyled>
-            <Container>
+            <Container reference={containerRef}>
                 <Wrapper>
                     <Logo label="Home" dest={'/'} />
-                    <Menu>
+                    {isOpen && <BackDrop onClick={hendleCloseMenu} />}
+                    <Menu isOpen={isOpen}>
+                        <CloseMenuBtn
+                            onClick={hendleCloseMenu}
+                            type="button"
+                            aria-label="close"
+                        >
+                            <Svg w={32} h={32} use={`${sprite}#icon-close`} />
+                        </CloseMenuBtn>
                         <Nav>
-                            <NavLinkStyled to={'/'}>Home</NavLinkStyled>
-                            <NavLinkStyled to={'movies'}>Movies</NavLinkStyled>
-                            <NavLinkStyled to={'tv-shows'}>Tv</NavLinkStyled>
-                            <NavLinkStyled to={'person'}>People</NavLinkStyled>
+                            <NavLinkStyled onClick={hendleCloseMenu} to={'/'}>
+                                Home
+                            </NavLinkStyled>
+                            <NavLinkStyled
+                                onClick={hendleCloseMenu}
+                                to={'movies'}
+                            >
+                                Movies
+                            </NavLinkStyled>
+                            <NavLinkStyled
+                                onClick={hendleCloseMenu}
+                                to={'tv-shows'}
+                            >
+                                Tv
+                            </NavLinkStyled>
+                            <NavLinkStyled
+                                onClick={hendleCloseMenu}
+                                to={'person'}
+                            >
+                                People
+                            </NavLinkStyled>
                         </Nav>
                         <Toggler
                             ref={themeBtn}
@@ -51,6 +103,9 @@ export const Header = ({ onChangeTheme }) => {
                             type="button"
                         ></Toggler>
                     </Menu>
+                    <OpenMenuBtn onClick={hendleOpenMenu}>
+                        <Svg w={32} h={32} use={`${sprite}#icon-burger`} />
+                    </OpenMenuBtn>
                 </Wrapper>
             </Container>
         </HeaderStyled>

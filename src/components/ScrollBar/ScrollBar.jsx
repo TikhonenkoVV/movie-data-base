@@ -10,7 +10,13 @@ import {
     SBScrollBar,
 } from './ScrollBar.styled';
 
-export const Scrollbar = ({ children, styles, buttons, orientation }) => {
+export const Scrollbar = ({
+    children,
+    styles,
+    buttons,
+    device,
+    orientation,
+}) => {
     const contentWrapperRef = useRef(null);
     const contentRef = useRef(null);
     const scrollTrackRef = useRef(null);
@@ -256,7 +262,7 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
 
     return (
         <SBContainer style={styles}>
-            <SBContentWrapper ref={contentWrapperRef}>
+            <SBContentWrapper device={device} ref={contentWrapperRef}>
                 <SBContent
                     ref={contentRef}
                     className={orientation === 'x' && 'content'}
@@ -273,26 +279,29 @@ export const Scrollbar = ({ children, styles, buttons, orientation }) => {
                         ↑
                     </SBButton>
                 )}
-                <SBBarWrapper className={`sb-${orientation}`}>
-                    <SBBar
-                        ref={scrollTrackRef}
-                        onClick={handleTrackClick}
-                        style={{
-                            cursor: isDragging ? 'grabbing' : undefined,
-                        }}
-                        className={`sb-${orientation}`}
-                    />
-                    <SBControl
-                        ref={scrollThumbRef}
-                        onMouseDown={handleThumbMousedown}
-                        style={{
-                            height: orientation === 'y' && `${thumbHeight}px`,
-                            width: orientation === 'x' && `${thumbWidth}px`,
-                            cursor: isDragging ? 'grabbing' : 'grab',
-                        }}
-                        className={`sb-${orientation}`}
-                    />
-                </SBBarWrapper>
+                {device === 'desktop' && (
+                    <SBBarWrapper className={`sb-${orientation}`}>
+                        <SBBar
+                            ref={scrollTrackRef}
+                            onClick={handleTrackClick}
+                            style={{
+                                cursor: isDragging ? 'grabbing' : undefined,
+                            }}
+                            className={`sb-${orientation}`}
+                        />
+                        <SBControl
+                            ref={scrollThumbRef}
+                            onMouseDown={handleThumbMousedown}
+                            style={{
+                                height:
+                                    orientation === 'y' && `${thumbHeight}px`,
+                                width: orientation === 'x' && `${thumbWidth}px`,
+                                cursor: isDragging ? 'grabbing' : 'grab',
+                            }}
+                            className={`sb-${orientation}`}
+                        />
+                    </SBBarWrapper>
+                )}
                 {buttonsAvaible && (
                     <SBButton id="down" onClick={handleScrollButton}>
                         ↓

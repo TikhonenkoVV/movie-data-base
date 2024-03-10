@@ -7,19 +7,29 @@ export const MainStyled = styled.main`
 `;
 
 export const LinksWrapper = styled.div`
-    display: flex;
-    gap: 24px;
     color: #fff;
+    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+        display: flex;
+        gap: 24px;
+    }
 `;
 
 export const LeftLinks = styled.div`
-    flex-basis: calc((100% - 24px) / 2);
-    text-align: right;
+    text-align: center;
+    margin-bottom: 24px;
+    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+        flex-basis: calc((100% - 24px) / 2);
+        text-align: right;
+        margin-bottom: 0;
+    }
 `;
 
 export const RightLinks = styled.div`
-    flex-basis: calc((100% - 24px) / 2);
-    text-align: left;
+    text-align: center;
+    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+        flex-basis: calc((100% - 24px) / 2);
+        text-align: left;
+    }
 `;
 
 export const FooterTitle = styled.h2`

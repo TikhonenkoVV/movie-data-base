@@ -13,10 +13,14 @@ import { Footer } from 'components/Footer/Footer';
 import { Scrollbar } from 'components/ScrollBar/ScrollBar';
 import { Logo } from 'components/Logo/Logo';
 import { Container } from 'components/Container/Container';
+import { useSelector } from 'react-redux';
+import { selectDevice } from 'store/selector';
 
 export const Layout = ({ onChangeTheme }) => {
+    const device = useSelector(selectDevice);
+
     return (
-        <Scrollbar orientation="y">
+        <Scrollbar orientation="y" device={device}>
             <Header onChangeTheme={onChangeTheme} />
             <MainStyled>
                 <Suspense>

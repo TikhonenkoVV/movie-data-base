@@ -1,5 +1,5 @@
 import { Container } from 'components/Container/Container';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { MediaList } from 'components/MediaList/MediaList';
 import { Page404 } from 'components/Page404/Page404';
 import { Pagination } from 'components/Pagination/Pagination';

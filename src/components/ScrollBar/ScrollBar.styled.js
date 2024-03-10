@@ -11,11 +11,13 @@ export const SBContainer = styled.div`
 export const SBContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    -ms-overflow-style: none;
+    -ms-overflow-style: ${({ device }) =>
+        device === 'desktop' ? 'none' : 'auto'};
     overflow: auto;
-    scrollbar-width: none;
+    scrollbar-width: ${({ device }) =>
+        device === 'desktop' ? 'none' : 'auto'};
     &::-webkit-scrollbar {
-        display: none;
+        display: ${({ device }) => (device === 'desktop' ? 'none' : 'auto')};
     }
 `;
 

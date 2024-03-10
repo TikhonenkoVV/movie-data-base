@@ -68,6 +68,7 @@ export const MovieInfoTitle = styled.h1`
 export const ScoreBox = styled.div`
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 `;
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDetails, getPersonById } from 'services/api';
 import { ToastContainer, toast } from 'react-toastify';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { PersonInfo } from 'components/PersonInfo/PersonInfo';
 import { Container } from 'components/Container/Container';
 import { normalizePersonData } from 'services/normalize/normalizePersonData';

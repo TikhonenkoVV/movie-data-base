@@ -1,30 +1,31 @@
 import styled from '@emotion/styled';
 
-export const ModalBackdrop = styled.div`
-    box-sizing: content-box;
-    position: fixed;
-    top: 0;
-    left: 0;
+export const IframeWrapper = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 95%;
+    max-height: 95%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 3;
+    padding-top: 24px;
+    background-color: #000;
+    transform: translate(-50%, -50%);
 `;
 
-export const IframeWrapper = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 90%;
+export const ButtonClose = styled.button`
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    color: ${({ theme }) => theme.colors.white};
+    & svg {
+        fill: currentColor;
+    }
 `;
 
 export const IFrame = styled.iframe`
     border: none;
-    width: 100%;
     aspect-ratio: 16 / 9;
 `;

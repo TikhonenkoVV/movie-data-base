@@ -1,4 +1,4 @@
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { MediaList } from 'components/MediaList/MediaList';
 import { useEffect, useState } from 'react';
 import { getMovies } from 'services/api';

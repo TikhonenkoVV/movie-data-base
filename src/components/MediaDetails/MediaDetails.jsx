@@ -10,7 +10,7 @@ import {
     StyledSection,
 } from './MediaDetails.styled';
 import { Container } from 'components/Container/Container';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { normalizeMovieData } from 'services/normalize/normalizeMovieData';
 import noPoster from '../../images/no-poster.jpg';
 

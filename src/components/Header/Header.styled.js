@@ -28,13 +28,20 @@ export const Wrapper = styled.div`
 
 export const Menu = styled.div`
     position: fixed;
-    height: 100vh;
     top: 0;
     right: 0;
     width: 300px;
+    height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: ${({ isOpen }) =>
+        isOpen ? 'translateX(0)' : 'translateX(300px)'};
     background-color: ${({ theme }) => theme.colors.accent};
-    transition: background-color ${({ theme }) => theme.baseTransition};
-    z-index: 1;
+    transition: background-color ${({ theme }) => theme.baseTransition},
+        transform ${({ theme }) => theme.baseTransition};
+    z-index: 4;
     @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
         position: static;
         display: flex;
@@ -42,6 +49,42 @@ export const Menu = styled.div`
         align-items: center;
         width: 100%;
         height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        transform: translateX(0);
+        z-index: auto;
+    }
+`;
+
+export const OpenMenuBtn = styled.button`
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    padding: 4px;
+    color: ${({ theme }) => theme.colors.white};
+    & svg {
+        fill: currentColor;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        display: none;
+    }
+`;
+
+export const CloseMenuBtn = styled.button`
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    margin-left: auto;
+    color: ${({ theme }) => theme.colors.white};
+    & svg {
+        fill: currentColor;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        display: none;
     }
 `;
 
@@ -58,28 +101,38 @@ export const NavLinkStyled = styled(NavLink)`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 100%;
     height: 100%;
-    color: ${({ theme }) => theme.colors.light};
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color ${({ theme }) => theme.baseTransition},
         color ${({ theme }) => theme.baseTransition};
-    &:hover,
-    &:focus {
-        color: ${({ theme }) => theme.colors.white};
-    }
 
     &.active {
         color: ${({ theme }) => theme.colors.white};
         background-color: ${({ theme }) => theme.colors.hover};
         pointer-events: none;
     }
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        color: ${({ theme }) => theme.colors.light};
+        &:hover,
+        &:focus {
+            color: ${({ theme }) => theme.colors.white};
+        }
+        width: 100px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 `;
 
 export const Toggler = styled.button`
-    position: relative;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,14 +153,22 @@ export const Toggler = styled.button`
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: ${({ theme }) => theme.colors.light};
+        background-color: ${({ theme }) => theme.colors.white};
         transition: background-color ${({ theme }) => theme.baseTransition},
             transform ${({ theme }) => theme.baseTransition};
     }
-    &:hover::before {
-        background-color: ${({ theme }) => theme.colors.white};
-    }
     &.light::before {
         transform: translateX(40px);
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        &::before {
+            background-color: ${({ theme }) => theme.colors.light};
+        }
+        &:hover::before {
+            background-color: ${({ theme }) => theme.colors.white};
+        }
     }
 `;

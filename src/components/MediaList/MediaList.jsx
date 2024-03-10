@@ -70,7 +70,7 @@ export const MediaList = ({ media, mediaTypes }) => {
                                         position: 'absolute',
                                         top: 10,
                                         left: 10,
-                                        zIndex: 2,
+                                        zIndex: 1,
                                     }}
                                 />
                                 <MovieTitle>{movie_title}</MovieTitle>

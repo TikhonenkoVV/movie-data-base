@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Backdrop = styled.div`
+export const StyledDiv = styled.div`
     position: fixed;
     top: 0;
     left: 0;
@@ -9,5 +9,5 @@ export const Backdrop = styled.div`
     opacity: 1;
     background-color: #00000080;
     transition: opacity 250ms, visibility 250ms;
-    z-index: 100;
+    z-index: 3;
 `;

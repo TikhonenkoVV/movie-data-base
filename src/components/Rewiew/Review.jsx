@@ -1,4 +1,4 @@
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { ReviewTitle, StyledSection } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';

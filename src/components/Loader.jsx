@@ -1,9 +1,9 @@
 import { ThreeCircles } from 'react-loader-spinner';
-import { Backdrop } from './Loader.styled';
+import { BackDrop } from './BackDrop/BackDrop';
 
 export const Loader = () => {
     return (
-        <Backdrop>
+        <BackDrop>
             <ThreeCircles
                 height="100"
                 width="100"
@@ -21,6 +21,6 @@ export const Loader = () => {
                 innerCircleColor=""
                 middleCircleColor=""
             />
-        </Backdrop>
+        </BackDrop>
     );
 };

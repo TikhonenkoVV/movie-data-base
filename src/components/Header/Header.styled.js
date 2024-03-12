@@ -8,7 +8,7 @@ export const HeaderStyled = styled.header`
     padding-bottom: 10px;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     gap: 20px;
     align-items: center;
     height: 40px;
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         position: static;
         height: 70px;
     }
@@ -42,7 +42,7 @@ export const Menu = styled.div`
     transition: background-color ${({ theme }) => theme.baseTransition},
         transform ${({ theme }) => theme.baseTransition};
     z-index: 4;
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         position: static;
         display: flex;
         justify-content: space-between;
@@ -68,7 +68,7 @@ export const OpenMenuBtn = styled.button`
     & svg {
         fill: currentColor;
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         display: none;
     }
 `;
@@ -83,13 +83,13 @@ export const CloseMenuBtn = styled.button`
     & svg {
         fill: currentColor;
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         display: none;
     }
 `;
 
 export const Nav = styled.nav`
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         display: flex;
         align-items: center;
         height: 100%;
@@ -117,7 +117,7 @@ export const NavLinkStyled = styled(NavLink)`
         background-color: ${({ theme }) => theme.colors.hover};
         pointer-events: none;
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         color: ${({ theme }) => theme.colors.light};
         &:hover,
         &:focus {
@@ -160,7 +160,7 @@ export const Toggler = styled.button`
     &.light::before {
         transform: translateX(40px);
     }
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         position: relative;
         bottom: auto;
         right: auto;

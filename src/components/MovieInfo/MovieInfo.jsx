@@ -1,10 +1,12 @@
 import {
-    MovieInfoTitle,
+    Description,
     MovieInfoWrapper,
     MovieWrapper,
     Poster,
     PosterWrapper,
     ScoreBox,
+    TitleMajor,
+    TitleMinor,
     TrailerBtn,
 } from './MovieInfo.styled';
 import { ScoreBar } from 'components/ScoreBar/ScoreBar';
@@ -14,6 +16,7 @@ import { Container } from 'components/Container/Container';
 import { Svg } from 'components/Svg/Svg';
 import noPoster from '../../images/no-poster.jpg';
 import sprite from '../../images/sprite.svg';
+import { useEffect, useRef, useState } from 'react';
 
 export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
@@ -32,15 +35,29 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
         created_by,
     } = movie;
     const { isModalOpen } = useModal();
+    const observer = useRef(null);
+    const gridItem = useRef(null);
+    const [itemHeight, setItemHeight] = useState(0);
     const creators = [];
     const directors = [];
     created_by?.map(el => creators.push(el.name));
     directing?.map(el => directors.push(el.personName));
 
+    useEffect(() => {
+        const item = gridItem.current;
+        observer.current = new ResizeObserver(() => {
+            if (gridItem.current) {
+                const { clientHeight } = item;
+                setItemHeight(clientHeight);
+            }
+        });
+        observer.current.observe(item);
+    }, []);
+
     return (
         <section>
             <Container>
-                <MovieWrapper bgr={backdrop_path}>
+                <MovieWrapper itemHeight={itemHeight} bgr={backdrop_path}>
                     <PosterWrapper bgr={backdrop_path}>
                         <picture>
                             <source
@@ -66,22 +83,22 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
                             />
                         </picture>
                     </PosterWrapper>
-                    <MovieInfoWrapper>
-                        <MovieInfoTitle>{name}</MovieInfoTitle>
+                    <MovieInfoWrapper ref={gridItem}>
+                        <TitleMinor>{name}</TitleMinor>
                         {release.release_date && (
-                            <p>
+                            <Description>
                                 {release.title}
                                 {release.release_date}
-                            </p>
+                            </Description>
                         )}
                         {first_air.first_air_date && (
-                            <p>
+                            <Description>
                                 {first_air.title}
                                 {first_air.first_air_date}
-                            </p>
+                            </Description>
                         )}
                         <ScoreBox>
-                            <ScoreBar rating={vote_average} />
+                            <ScoreBar size={1} rating={vote_average} />
                             <h3>User Score</h3>
                             {trailer && (
                                 <TrailerBtn onClick={onClose}>
@@ -94,20 +111,34 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
                                 </TrailerBtn>
                             )}
                         </ScoreBox>
-                        <h2>Owerview</h2>
-                        <p>{overview}</p>
-                        <h2>Genres</h2>
-                        <p>{genres?.map(({ name }) => name).join(', ')}</p>
+                    </MovieInfoWrapper>
+                    <MovieInfoWrapper className="end">
+                        <TitleMajor>Owerview</TitleMajor>
+                        <Description>{overview}</Description>
+                        <TitleMajor>Genres</TitleMajor>
+                        <Description>
+                            {genres?.map(({ name }) => name).join(', ')}
+                        </Description>
                         {created_by && (
                             <>
-                                <h2>Creators</h2>
-                                <p>{creators.join(', ')}</p>
+                                <TitleMajor>
+                                    {creators.length === 1
+                                        ? 'Creator'
+                                        : 'Creators'}
+                                </TitleMajor>
+                                <Description>{creators.join(', ')}</Description>
                             </>
                         )}
                         {directing?.length > 0 && !created_by && (
                             <>
-                                <h2>Director</h2>
-                                <p>{directors.join(', ')}</p>
+                                <TitleMajor>
+                                    {directors.length === 1
+                                        ? 'Director'
+                                        : 'Directors'}
+                                </TitleMajor>
+                                <Description>
+                                    {directors.join(', ')}
+                                </Description>
                             </>
                         )}
                     </MovieInfoWrapper>

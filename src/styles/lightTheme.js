@@ -15,5 +15,7 @@ export const lightTheme = Object.freeze({
         whiteSpace: '#086BA078, #086BA0bc, #086BA0',
         movieInfo:
             'linear-gradient(90deg, #fff 3%, #ffffffde 23%, #ffffffde 77%, #ffffff 100%)',
+        movieInfoOnlyS:
+            'linear-gradient(90deg, #fff 3%, #ffffff90 23%, #ffffff20 77%, #ffffff 100%)',
     },
 });

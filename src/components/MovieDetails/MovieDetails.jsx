@@ -119,7 +119,7 @@ export const MovieDetails = () => {
                         </LinksWrapper>
                     </Container>
                 </section>
-            )}{' '}
+            )}
             {/* ЗВЕРНИ УВАГУ!!! */}
             {error && <></>}
         </ModalContext.Provider>

@@ -1,6 +1,7 @@
 export const theme = Object.freeze({
     fontSizes: {
         small: '14px',
+        preMedium: '16px',
         medium: '18px',
         large: '22px',
         xl: '30px',
@@ -8,15 +9,31 @@ export const theme = Object.freeze({
         xxxl: '42px',
     },
     breakpoints: {
+        xxs: 'screen and (min-width: 320px)',
+        onlyXs: 'screen and (max-width: 479px)',
+        xs: 'screen and (min-width: 480px)',
+        fromStillL: 'screen and (min-width: 480px) and (max-width: 1023px)',
+        s: 'screen and (min-width: 568px)',
+        onlyM: 'screen and (min-width: 568px) and (max-width: 767px)',
+        m: 'screen and (min-width: 768px)',
+        l: 'screen and (min-width: 1024px)',
+        xl: 'screen and (min-width: 1280px)',
+        xxl: 'screen and (min-width: 1440px)',
+    },
+    sizes: {
         xxs: '320px',
         xs: '480px',
-        s: '768px',
-        m: '1024px',
-        l: '1280px',
-        xl: '1440px',
+        s: '568px',
+        m: '768px',
+        l: '1024px',
+        xl: '1280px',
+        xxl: '1440px',
     },
     spacing: {
         step: 4,
+        retreatS: '16px',
+        retreatM: '20px',
+        retreatL: '24px',
     },
     baseTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
 });

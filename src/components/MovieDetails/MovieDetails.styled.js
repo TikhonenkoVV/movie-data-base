@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const DetailsTitle = styled.h2`
-    margin-bottom: 24px;
+    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     color: ${({ theme }) => theme.colors.themeText};
 `;
 
@@ -16,6 +16,7 @@ export const StyledLink = styled(Link)`
     padding: 10px 20px;
     text-transform: uppercase;
     text-align: center;
+    font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 700;
 
     color: ${({ theme }) => theme.colors.light};
@@ -24,5 +25,8 @@ export const StyledLink = styled(Link)`
     &:hover,
     &:focus {
         color: ${({ theme }) => theme.colors.white};
+    }
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        font-size: ${({ theme }) => theme.fontSizes.preMedium};
     }
 `;

@@ -11,7 +11,7 @@ export const Logotype = styled(Link)`
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         background-image: url(${logo});
         width: 90px;
         aspect-ratio: 1.2857 / 1;

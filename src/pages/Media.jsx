@@ -18,7 +18,7 @@ const Media = () => {
     return (
         <>
             {currPath !== 'cast-and-crew' && currPath !== 'reviews' && (
-                <section style={{ paddingTop: '24px' }}>
+                <section className="padding-top">
                     <Container>
                         <SearchForm onSubmit={onSubmit} />
                     </Container>

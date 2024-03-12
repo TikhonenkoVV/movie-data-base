@@ -2,13 +2,14 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const CastWrapper = styled.div`
-    margin-bottom: 24px;
+    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     overflow-x: auto;
 `;
 
 export const StyledCastList = styled.ul`
     display: flex;
     gap: 16px;
+    padding-bottom: ${({ theme }) => theme.spacing.retreatS};
 `;
 
 export const CastCard = styled.li`

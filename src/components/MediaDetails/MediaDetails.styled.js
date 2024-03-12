@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 export const StyledSection = styled.section`
-    padding-top: 24px;
+    padding-top: ${({ theme }) => theme.spacing.retreatS};
     color: ${({ theme }) => theme.colors.themeText};
     background-color: ${({ theme }) => theme.colors.personBackground};
 `;
 
 export const MovieWrapper = styled.div`
-    @media (min-width: 533px) {
+    @media screen and (${({ theme }) => theme.breakpoints.s}) {
         display: flex;
         gap: 20px;
     }
@@ -26,7 +26,7 @@ export const MovieInfoWrapper = styled.div`
     gap: 10px;
     color: ${({ theme }) => theme.colors.themeText};
     transition: color ${({ theme }) => theme.baseTransition};
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         gap: 20px;
     }
 `;

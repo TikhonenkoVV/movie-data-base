@@ -12,14 +12,13 @@ export const DivStyled = styled.div`
 `;
 
 export const BtnSelectStyled = styled.button`
-    border: none;
     padding-left: 5px;
     padding-right: 20px;
+    border: none;
     background-color: transparent;
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 500;
     line-height: 1.5;
-    /* color: ${props => props.theme.colors.wrapperSelectorColor}; */
     cursor: pointer;
 
     &:before {
@@ -35,12 +34,15 @@ export const BtnSelectStyled = styled.button`
         transition: transform 250ms;
         cursor: pointer;
     }
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        font-size: ${({ theme }) => theme.fontSizes.medium};
+    }
 `;
 
 export const DivListStyled = styled.div`
     position: absolute;
     top: 100%;
-    /* width: 82px; */
+    right: 0;
     border-radius: 8px;
     padding: 18px;
     margin: 0;

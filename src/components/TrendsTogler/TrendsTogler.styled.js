@@ -10,9 +10,9 @@ export const StyledTogler = styled.div`
 export const TogglerTitle = styled.h1`
     text-align: center;
     color: ${({ theme }) => theme.colors.themeText};
-    font-size: ${({ theme }) => theme.fontSizes.large};
+    font-size: ${({ theme }) => theme.fontSizes.small};
     transition: color ${({ theme }) => theme.baseTransition};
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+    @media ${({ theme }) => theme.breakpoints.xs} {
         font-size: ${({ theme }) => theme.fontSizes.xl};
     }
 `;
@@ -33,7 +33,7 @@ export const TrendsBtn = styled.button`
     font-size: ${({ theme }) => theme.fontSizes.small};
     transition: background-color ${({ theme }) => theme.baseTransition},
         color ${({ theme }) => theme.baseTransition};
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+    @media ${({ theme }) => theme.breakpoints.xs} {
         font-size: ${({ theme }) => theme.fontSizes.medium};
     }
     &:hover,

@@ -36,6 +36,16 @@ export const MediaList = ({ media, mediaTypes }) => {
                             }
                         >
                             <ImgWrapper>
+                                <ScoreBar
+                                    size={0.7}
+                                    rating={vote_average}
+                                    style={{
+                                        position: 'absolute',
+                                        top: 10,
+                                        right: 10,
+                                        zIndex: 1,
+                                    }}
+                                />
                                 <picture>
                                     <source
                                         srcSet={
@@ -64,15 +74,6 @@ export const MediaList = ({ media, mediaTypes }) => {
                                 </picture>
                             </ImgWrapper>
                             <CardInfo>
-                                <ScoreBar
-                                    rating={vote_average}
-                                    style={{
-                                        position: 'absolute',
-                                        top: 10,
-                                        left: 10,
-                                        zIndex: 1,
-                                    }}
-                                />
                                 <MovieTitle>{movie_title}</MovieTitle>
                                 <p>{release}</p>
                             </CardInfo>

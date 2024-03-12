@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { theme } from './theme';
 
 export const GlobalStyles = css`
     html {
@@ -25,7 +26,22 @@ export const GlobalStyles = css`
     }
 
     section {
-        padding-bottom: 24px;
+        padding-bottom: ${theme.spacing.retreatS};
+        @media screen and (${theme.breakpoints.s}) {
+            padding-bottom: ${theme.spacing.retreatM};
+        }
+        @media screen and (${theme.breakpoints.xl}) {
+            padding-bottom: ${theme.spacing.retreatL};
+        }
+        &.padding-top {
+            padding-top: ${theme.spacing.retreatS};
+            @media screen and (${theme.breakpoints.s}) {
+                padding-top: ${theme.spacing.retreatM};
+            }
+            @media screen and (${theme.breakpoints.xl}) {
+                padding-top: ${theme.spacing.retreatL};
+            }
+        }
     }
 
     h1,

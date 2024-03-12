@@ -44,7 +44,7 @@ const Home = () => {
     return (
         <>
             {isLoading && <Loader />}
-            <section style={{ paddingTop: '24px' }}>
+            <section className="padding-top">
                 <Container>
                     <TrendsToggler
                         trands={trands}

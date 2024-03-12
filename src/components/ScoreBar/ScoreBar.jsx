@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import {
+    BgrCircle,
     Score,
     ScoreCircle,
     ScoreProgressBar,
     ScoreSpan,
-    SpanStyled,
 } from './ScoreBar.styled';
 import { setColor } from 'services/set-color';
 
-export const ScoreBar = ({ rating, style }) => {
+export const ScoreBar = ({ rating, style, size }) => {
     const AnimCircle = useRef();
     const [currentLength, setCurrentLength] = useState(0);
     const [currenColor, setCurrentColor] = useState(0);
@@ -23,21 +23,31 @@ export const ScoreBar = ({ rating, style }) => {
     }, [rating, currentLength]);
 
     return (
-        <Score style={{ ...style }}>
-            <SpanStyled>
-                <ScoreProgressBar width={50} height={50}>
-                    <ScoreCircle
-                        color={currenColor}
-                        length={currentLength}
-                        ref={AnimCircle}
-                        cx={22}
-                        cy={22}
-                        r={22}
-                    ></ScoreCircle>
-                </ScoreProgressBar>
-                <ScoreSpan>{rating}</ScoreSpan>
-                {!isNaN(rating) && ' %'}
-            </SpanStyled>
+        <Score size={size} style={{ ...style }}>
+            <ScoreProgressBar
+                width={50 * size}
+                height={50 * size}
+                viewBox={`0 0 ${size * 50} ${size * 50}`}
+            >
+                <BgrCircle
+                    size={size}
+                    cx={25 * size}
+                    cy={25 * size}
+                    r={23 * size}
+                ></BgrCircle>
+                <ScoreCircle
+                    size={size}
+                    color={currenColor}
+                    length={currentLength}
+                    ref={AnimCircle}
+                    cx={25 * size}
+                    cy={25 * size}
+                    r={23 * size}
+                ></ScoreCircle>
+            </ScoreProgressBar>
+            <ScoreSpan size={size}>
+                {!isNaN(rating) ? rating + '%' : rating}
+            </ScoreSpan>
         </Score>
     );
 };

@@ -4,7 +4,7 @@ export const StyledPersonList = styled.ul`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     grid-gap: ${({ theme }) => theme.spacing.step * 5}px;
-    @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    @media ${({ theme }) => theme.breakpoints.m} {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 `;

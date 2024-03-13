@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/MovieDB/static/css/main.c3d5249d.css",
-    "main.js": "/MovieDB/static/js/main.531f3371.js",
+    "main.js": "/MovieDB/static/js/main.12507486.js",
     "static/js/313.25338ddc.chunk.js": "/MovieDB/static/js/313.25338ddc.chunk.js",
     "static/js/829.2386a6df.chunk.js": "/MovieDB/static/js/829.2386a6df.chunk.js",
     "static/js/961.e5ea49b1.chunk.js": "/MovieDB/static/js/961.e5ea49b1.chunk.js",
     "static/js/548.6730cc3f.chunk.js": "/MovieDB/static/js/548.6730cc3f.chunk.js",
-    "static/js/319.f5ff03ab.chunk.js": "/MovieDB/static/js/319.f5ff03ab.chunk.js",
+    "static/js/319.5ec11ad8.chunk.js": "/MovieDB/static/js/319.5ec11ad8.chunk.js",
     "static/js/301.37b5761b.chunk.js": "/MovieDB/static/js/301.37b5761b.chunk.js",
     "static/js/232.26e7d309.chunk.js": "/MovieDB/static/js/232.26e7d309.chunk.js",
     "static/js/584.1d14d8e9.chunk.js": "/MovieDB/static/js/584.1d14d8e9.chunk.js",
@@ -23,12 +23,12 @@
     "static/media/icon-sun.svg": "/MovieDB/static/media/icon-sun.ac0fbb35f41924664a1f9aa3c41993d4.svg",
     "index.html": "/MovieDB/index.html",
     "main.c3d5249d.css.map": "/MovieDB/static/css/main.c3d5249d.css.map",
-    "main.531f3371.js.map": "/MovieDB/static/js/main.531f3371.js.map",
+    "main.12507486.js.map": "/MovieDB/static/js/main.12507486.js.map",
     "313.25338ddc.chunk.js.map": "/MovieDB/static/js/313.25338ddc.chunk.js.map",
     "829.2386a6df.chunk.js.map": "/MovieDB/static/js/829.2386a6df.chunk.js.map",
     "961.e5ea49b1.chunk.js.map": "/MovieDB/static/js/961.e5ea49b1.chunk.js.map",
     "548.6730cc3f.chunk.js.map": "/MovieDB/static/js/548.6730cc3f.chunk.js.map",
-    "319.f5ff03ab.chunk.js.map": "/MovieDB/static/js/319.f5ff03ab.chunk.js.map",
+    "319.5ec11ad8.chunk.js.map": "/MovieDB/static/js/319.5ec11ad8.chunk.js.map",
     "301.37b5761b.chunk.js.map": "/MovieDB/static/js/301.37b5761b.chunk.js.map",
     "232.26e7d309.chunk.js.map": "/MovieDB/static/js/232.26e7d309.chunk.js.map",
     "584.1d14d8e9.chunk.js.map": "/MovieDB/static/js/584.1d14d8e9.chunk.js.map",
@@ -38,6 +38,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.531f3371.js"
+    "static/js/main.12507486.js"
   ]
 }

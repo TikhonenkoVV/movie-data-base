@@ -18,15 +18,17 @@ export const Pagination = ({ totalPages, serviceClass }) => {
     const currentPage = Number(searchParams.get('page'));
 
     useEffect(() => {
-        let res = currentPage;
-        if (currentPage === 1) res = currentPage + 1;
-        if (currentPage === totalPages) res = currentPage - 1;
-        setPage(res);
+        if (totalPages > 2) {
+            let res = currentPage;
+            if (currentPage === 1) res += 1;
+            if (currentPage === totalPages) res -= 1;
+            setPage(res);
+        }
     }, [currentPage, totalPages]);
 
     const hendleClick = e => {
         const toPage = e.target.getAttribute('datatype');
-        setSearchParams({ query, page: toPage });
+        if (toPage !== currentPage) setSearchParams({ query, page: toPage });
     };
 
     return (
@@ -51,20 +53,32 @@ export const Pagination = ({ totalPages, serviceClass }) => {
             )}
             {totalPages > 1 && (
                 <Dot
-                    aria-current={currentPage === Number(page) - 1}
+                    aria-current={
+                        totalPages === 2
+                            ? currentPage === Number(page)
+                            : currentPage === Number(page) - 1
+                    }
                     onClick={hendleClick}
-                    datatype={Number(page) - 1}
+                    datatype={
+                        totalPages === 2 ? Number(page) : Number(page) - 1
+                    }
                 >
-                    {Number(page) - 1}
+                    {totalPages === 2 ? Number(page) : Number(page) - 1}
                 </Dot>
             )}
             {totalPages > 1 && (
                 <Dot
-                    aria-current={currentPage === Number(page)}
+                    aria-current={
+                        totalPages === 2
+                            ? currentPage === Number(page) + 1
+                            : currentPage === Number(page)
+                    }
                     onClick={hendleClick}
-                    datatype={Number(page)}
+                    datatype={
+                        totalPages === 2 ? Number(page) + 1 : Number(page)
+                    }
                 >
-                    {Number(page)}
+                    {totalPages === 2 ? Number(page) + 1 : Number(page)}
                 </Dot>
             )}
             {totalPages > 2 && (

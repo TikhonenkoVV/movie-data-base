@@ -27,18 +27,18 @@ export const GlobalStyles = css`
 
     section {
         padding-bottom: ${theme.spacing.retreatS};
-        @media screen and (${theme.breakpoints.s}) {
+        @media ${theme.breakpoints.s} {
             padding-bottom: ${theme.spacing.retreatM};
         }
-        @media screen and (${theme.breakpoints.xl}) {
+        @media ${theme.breakpoints.xl} {
             padding-bottom: ${theme.spacing.retreatL};
         }
         &.padding-top {
             padding-top: ${theme.spacing.retreatS};
-            @media screen and (${theme.breakpoints.s}) {
+            @media ${theme.breakpoints.s} {
                 padding-top: ${theme.spacing.retreatM};
             }
-            @media screen and (${theme.breakpoints.xl}) {
+            @media ${theme.breakpoints.xl} {
                 padding-top: ${theme.spacing.retreatL};
             }
         }

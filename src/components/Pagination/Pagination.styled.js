@@ -5,10 +5,22 @@ export const PaginationBox = styled.div`
     justify-content: center;
     gap: 10px;
     &.top {
-        padding-bottom: 20px;
+        padding-bottom: ${({ theme }) => theme.spacing.retreatS};
+        @media ${({ theme }) => theme.breakpoints.s} {
+            padding-bottom: ${({ theme }) => theme.spacing.retreatM};
+        }
+        @media ${({ theme }) => theme.breakpoints.xl} {
+            padding-bottom: ${({ theme }) => theme.spacing.retreatL};
+        }
     }
     &.bottom {
-        padding-top: 20px;
+        padding-top: ${({ theme }) => theme.spacing.retreatS};
+        @media ${({ theme }) => theme.breakpoints.s} {
+            padding-top: ${({ theme }) => theme.spacing.retreatM};
+        }
+        @media ${({ theme }) => theme.breakpoints.xl} {
+            padding-top: ${({ theme }) => theme.spacing.retreatL};
+        }
     }
 `;
 

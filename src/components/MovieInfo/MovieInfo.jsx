@@ -103,8 +103,8 @@ export const MovieInfo = ({ movie, onClose, directing, trailer }) => {
                             {trailer && (
                                 <TrailerBtn onClick={onClose}>
                                     <Svg
-                                        w="24"
-                                        h="24"
+                                        w={20}
+                                        h={20}
                                         use={`${sprite}#icon-play`}
                                     />
                                     Play trailer

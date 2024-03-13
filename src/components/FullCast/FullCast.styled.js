@@ -1,14 +1,9 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const StyledSection = styled.section`
-    padding-top: 24px;
-    padding-bottom: 24px;
-    color: ${({ theme }) => theme.colors.themeText};
-`;
-
 export const CastCrewWrapper = styled.div`
     flex-basis: calc((100% - 24px) / 2);
+    color: ${({ theme }) => theme.colors.themeText};
     border: 1px solid #808080;
     padding: 16px;
 `;

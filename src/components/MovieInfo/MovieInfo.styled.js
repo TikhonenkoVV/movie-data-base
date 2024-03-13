@@ -109,18 +109,17 @@ export const TrailerBtn = styled.button`
     align-items: center;
     height: 44px;
     padding: 0 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.white};
     border-radius: 22px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-
-    color: ${({ theme }) => theme.colors.light};
-    background-color: ${({ theme }) => theme.colors.accent};
-    transition: background-color ${({ theme }) => theme.baseTransition},
-        color ${({ theme }) => theme.baseTransition};
-    &:hover,
-    &:focus {
-        color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
+    transition: background-color ${({ theme }) => theme.baseTransition};
+    &:hover {
+        background-color: ${({ theme }) => theme.colors.accent};
     }
     & svg {
         fill: currentColor;

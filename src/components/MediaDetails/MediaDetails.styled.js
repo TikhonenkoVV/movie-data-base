@@ -1,15 +1,30 @@
 import styled from '@emotion/styled';
 
 export const StyledSection = styled.section`
-    padding-top: ${({ theme }) => theme.spacing.retreatS};
     color: ${({ theme }) => theme.colors.themeText};
     background-color: ${({ theme }) => theme.colors.personBackground};
 `;
 
 export const MovieWrapper = styled.div`
-    @media screen and (${({ theme }) => theme.breakpoints.s}) {
+    text-align: center;
+    @media ${({ theme }) => theme.breakpoints.xs} {
         display: flex;
         gap: 20px;
+        text-align: left;
+    }
+`;
+
+export const PosterWrapper = styled.picture`
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        width: auto;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 `;
 

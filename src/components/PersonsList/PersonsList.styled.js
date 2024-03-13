@@ -2,10 +2,16 @@ import styled from '@emotion/styled';
 
 export const StyledPersonList = styled.ul`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    grid-gap: ${({ theme }) => theme.spacing.step * 5}px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-gap: ${({ theme }) => theme.spacing.retreatS};
+    @media ${({ theme }) => theme.breakpoints.s} {
+        grid-gap: ${({ theme }) => theme.spacing.retreatM};
+    }
     @media ${({ theme }) => theme.breakpoints.m} {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @media ${({ theme }) => theme.breakpoints.xl} {
+        grid-gap: ${({ theme }) => theme.spacing.retreatL};
     }
 `;
 

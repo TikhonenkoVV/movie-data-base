@@ -12,7 +12,7 @@ export const theme = Object.freeze({
         xxs: 'screen and (min-width: 320px)',
         onlyXs: 'screen and (max-width: 479px)',
         xs: 'screen and (min-width: 480px)',
-        fromStillL: 'screen and (min-width: 480px) and (max-width: 1023px)',
+        fromXsTillL: 'screen and (min-width: 480px) and (max-width: 1023px)',
         s: 'screen and (min-width: 568px)',
         onlyM: 'screen and (min-width: 568px) and (max-width: 767px)',
         m: 'screen and (min-width: 768px)',

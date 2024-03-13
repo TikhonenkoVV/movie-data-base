@@ -7,6 +7,7 @@ import {
     MovieInfoWrapper,
     MoviePoster,
     MovieWrapper,
+    PosterWrapper,
     StyledSection,
 } from './MediaDetails.styled';
 import { Container } from 'components/Container/Container';
@@ -38,10 +39,10 @@ export const MediaDetails = () => {
         <>
             {isLoading && <Loader />}
             {movie && (
-                <StyledSection>
+                <StyledSection className="padding-top">
                     <Container>
                         <MovieWrapper>
-                            <picture>
+                            <PosterWrapper>
                                 <source
                                     srcSet={
                                         movie.poster_path
@@ -65,7 +66,7 @@ export const MediaDetails = () => {
                                     }
                                     alt={movie.name}
                                 />
-                            </picture>
+                            </PosterWrapper>
                             <MovieInfoWrapper>
                                 <MovieInfoTitle>{movie.name}</MovieInfoTitle>
                                 {movie.release.release_date && (

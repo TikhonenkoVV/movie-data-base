@@ -11,12 +11,12 @@ export const PersonWrapper = styled.div`
 
 export const Aside = styled.aside`
     flex-shrink: 0;
-    /* max-width: 332px; */
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     padding: ${({ theme }) => theme.spacing.retreatS};
     background-color: ${({ theme }) => theme.colors.personBackground};
-    @media ${({ theme }) => theme.breakpoints.fromStillL} {
+    @media ${({ theme }) => theme.breakpoints.fromXsTillL} {
         display: flex;
+        justify-content: start;
         gap: ${({ theme }) => theme.spacing.retreatS};
     }
 `;
@@ -24,15 +24,22 @@ export const Aside = styled.aside`
 export const Picture = styled.picture`
     display: block;
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
-    @media ${({ theme }) => theme.breakpoints.onlyS} {
-        flex-basis: calc((100% - ${({ theme }) => theme.spacing.retreatS}) / 2);
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        flex-shrink: 0;
+    }
+    @media ${({ theme }) => theme.breakpoints.fromXsTillL} {
         margin-bottom: 0;
     }
 `;
 
 export const PersonPhoto = styled.img`
+    width: 200px;
+    aspect-ratio: 2 / 3;
     margin-left: auto;
     margin-right: auto;
+    @media ${({ theme }) => theme.breakpoints.m} {
+        width: auto;
+    }
 `;
 
 export const AsideTitle = styled.h2`

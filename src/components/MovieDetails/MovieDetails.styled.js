@@ -18,13 +18,13 @@ export const StyledLink = styled(Link)`
     text-align: center;
     font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 700;
-
-    color: ${({ theme }) => theme.colors.light};
-    background-color: ${({ theme }) => theme.colors.accent};
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
+    border: 1px solid ${({ theme }) => theme.colors.white};
+    border-radius: 20px;
+    color: ${({ theme }) => theme.colors.white};
+    transition: background-color ${({ theme }) => theme.baseTransition};
+    &:hover {
         color: ${({ theme }) => theme.colors.white};
+        background-color: ${({ theme }) => theme.colors.accent};
     }
     @media ${({ theme }) => theme.breakpoints.xs} {
         font-size: ${({ theme }) => theme.fontSizes.preMedium};

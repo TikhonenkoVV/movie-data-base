@@ -1,5 +1,5 @@
 import { Loader } from 'components/Loader';
-import { ReviewTitle, StyledSection } from './Review.styled';
+import { ReviewTitle } from './Review.styled';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getDetails } from 'services/api';
@@ -31,7 +31,7 @@ export const Review = () => {
     }, [mediaId]);
 
     return (
-        <StyledSection>
+        <section className="padding-top">
             <Container>
                 {isLoading && <Loader />}
                 {reviews?.length > 0 && (
@@ -53,6 +53,6 @@ export const Review = () => {
                 )}
                 {error && <Page404 />}
             </Container>
-        </StyledSection>
+        </section>
     );
 };

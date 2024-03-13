@@ -44,7 +44,7 @@ export const DivListStyled = styled.div`
     top: 100%;
     right: 0;
     border-radius: 8px;
-    padding: 18px;
+    padding: 10px;
     margin: 0;
     margin-top: 10px;
     background-color: ${({ theme }) => theme.colors.mainBackground};
@@ -56,21 +56,18 @@ export const DivListStyled = styled.div`
     border: 1px solid ${props => props.theme.colors.borderSelectorColor};
 `;
 
-export const UlListStyled = styled.ul`
-    padding: 0;
-    margin: 0;
-`;
-
 export const LiStyled = styled.li`
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
+    width: 80px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
     color: ${props => props.theme.colors.textSelectorColor};
-
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    transition: background-color ${({ theme }) => theme.baseTransition};
     &:hover {
-        color: ${props => props.theme.colors.hoverSelectorColor};
+        background-color: ${({ theme }) => theme.colors.hover};
     }
 `;

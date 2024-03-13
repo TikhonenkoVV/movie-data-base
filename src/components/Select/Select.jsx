@@ -3,7 +3,6 @@ import {
     DivStyled,
     BtnSelectStyled,
     DivListStyled,
-    UlListStyled,
     LiStyled,
 } from './Select.styled';
 
@@ -30,6 +29,13 @@ export const Select = ({ initial, onChange }) => {
     };
 
     useEffect(() => {
+        window.addEventListener('click', () => setIsOpen(false));
+        return () => {
+            window.removeEventListener('click', () => setIsOpen(false));
+        };
+    }, []);
+
+    useEffect(() => {
         if (initial?.options) setOptions(initial.options);
     }, [initial]);
 
@@ -40,7 +46,7 @@ export const Select = ({ initial, onChange }) => {
             </BtnSelectStyled>
 
             <DivListStyled isOpen={isOpen} onClick={e => e.stopPropagation()}>
-                <UlListStyled>
+                <ul>
                     {options?.map(el => (
                         <LiStyled
                             data-id={Object.keys(el)}
@@ -50,7 +56,7 @@ export const Select = ({ initial, onChange }) => {
                             {Object.values(el)}
                         </LiStyled>
                     ))}
-                </UlListStyled>
+                </ul>
             </DivListStyled>
         </DivStyled>
     );

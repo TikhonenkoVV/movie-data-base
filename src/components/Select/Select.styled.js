@@ -66,8 +66,10 @@ export const LiStyled = styled.li`
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
-    transition: background-color ${({ theme }) => theme.baseTransition};
+    transition: background-color ${({ theme }) => theme.baseTransition},
+        color ${({ theme }) => theme.baseTransition};
     &:hover {
         background-color: ${({ theme }) => theme.colors.hover};
+        color: ${({ theme }) => theme.colors.white};
     }
 `;

@@ -39,15 +39,6 @@ export const Scrollbar = ({
 
     const setRetreat = useRef(debounce(setContentPosition, 50));
 
-    useEffect(() => {
-        if (curtain)
-            if (contentPosition > 0) {
-                curtain(true);
-            } else {
-                curtain(false);
-            }
-    }, [contentPosition, curtain]);
-
     const handleResize = useCallback(() => {
         if (
             scrollTrackRef.current &&
@@ -230,7 +221,7 @@ export const Scrollbar = ({
     }, [handleThumbMousemove, handleThumbMouseup]);
 
     useEffect(() => {
-        if (scrollTrackRef.current && scrollThumbRef.current) {
+        if (scrollTrackRef.current && scrollThumbRef.current && curtain) {
             if (orientation === 'y') {
                 const { clientHeight: trackHeight } = scrollTrackRef.current;
                 if (thumbHeight === trackHeight) setIsScrollHidden(true);
@@ -238,11 +229,20 @@ export const Scrollbar = ({
             }
             if (orientation === 'x') {
                 const { clientWidth: trackWidth } = scrollTrackRef.current;
-                if (thumbWidth === trackWidth) setIsScrollHidden(true);
-                else setIsScrollHidden(false);
+                if (thumbWidth === trackWidth) {
+                    setIsScrollHidden(true);
+                    curtain(true);
+                } else {
+                    setIsScrollHidden(false);
+                    if (contentPosition > 0) {
+                        curtain(true);
+                    } else {
+                        curtain(false);
+                    }
+                }
             }
         }
-    }, [orientation, thumbHeight, thumbWidth]);
+    }, [orientation, thumbHeight, thumbWidth, contentPosition, curtain]);
 
     const handleTrackClick = e => {
         e.preventDefault();

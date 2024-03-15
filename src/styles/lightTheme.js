@@ -3,6 +3,7 @@ export const lightTheme = Object.freeze({
         accent: '#086BA0',
         hover: '#134D80',
         white: '#ffffff',
+        btnColor: '#19171d',
         themeText: '#19171d',
         light: '#B5B5B5',
         mainBackground: '#fff',

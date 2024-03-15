@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { theme } from 'styles';
 
 export const SBContainer = styled.div`
     display: grid;
@@ -25,31 +26,34 @@ export const SBContent = styled.div`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    &.content {
+    &.content-x {
         width: max-content;
+        margin-bottom: ${({ isHidden }) =>
+            !isHidden ? theme.spacing.retreatS : 0};
     }
 `;
 
 export const SBScrollBar = styled.div`
-    display: ${({ displayStyle }) => displayStyle};
+    position: absolute;
     gap: 1rem;
-
     grid-template: ${({ noButton }) =>
         noButton ? '1fr' : 'auto 1fr auto / 1fr'};
     place-items: center;
-    opacity: 0.5;
     transition: ${({ theme }) => theme.baseTransition};
+    opacity: ${({ isHidden }) => (!isHidden ? 0.5 : 0)};
+    pointer-events: ${({ isHidden }) => (!isHidden ? 'all' : 'none')};
     &.sb-y {
-        position: absolute;
         padding: 10px 5px;
         grid-auto-flow: row;
         right: 0;
+        bottom: auto;
         height: 100%;
     }
     &.sb-x {
         padding: 5px 10px;
         grid-auto-flow: column;
-        /* bottom: 0; */
+        right: auto;
+        bottom: 0;
         width: 100%;
     }
 `;

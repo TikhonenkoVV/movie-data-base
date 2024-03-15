@@ -7,6 +7,7 @@ export const Score = styled.span`
     align-items: center;
     width: ${({ size }) => size * 60}px;
     height: ${({ size }) => size * 60}px;
+    color: #fff;
     border: 1px dashed white;
     border-radius: 50%;
     & > span {

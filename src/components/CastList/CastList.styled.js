@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 export const CastWrapper = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     overflow-x: auto;
+    @media ${({ theme }) => theme.breakpoints.s} {
+        margin-bottom: ${({ theme }) => theme.spacing.retreatM};
+    }
+    @media ${({ theme }) => theme.breakpoints.xl} {
+        margin-bottom: ${({ theme }) => theme.spacing.retreatL};
+    }
 `;
 
 export const StyledCastList = styled.ul`
     display: flex;
     gap: 16px;
-    padding-bottom: ${({ theme }) => theme.spacing.retreatS};
+    /* padding-bottom: ${({ theme }) => theme.spacing.retreatS}; */
 `;
 
 export const CastCard = styled.li`

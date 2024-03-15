@@ -3,6 +3,7 @@ export const darkTheme = Object.freeze({
         accent: '#19171d',
         hover: '#1c2124',
         white: '#fff',
+        btnColor: '#fff',
         themeText: '#fff',
         light: '#B5B5B5',
         mainBackground: '#404040',

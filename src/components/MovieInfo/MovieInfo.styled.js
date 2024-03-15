@@ -13,7 +13,8 @@ export const MovieWrapper = styled.div`
             url(${({ bgr }) => (bgr ? IMAGES_BASE_URL + bgr : noPoster)});
         background-position: top;
         background-repeat: no-repeat;
-        background-size: auto 250px;
+        background-size: auto
+            calc(100% - ${({ itemHeight }) => itemHeight}px - 20px);
         transition: background ${({ theme }) => theme.baseTransition};
     }
     @media ${({ theme }) => theme.breakpoints.s} {
@@ -24,6 +25,7 @@ export const MovieWrapper = styled.div`
         background-size: auto 385px;
     }
     @media ${({ theme }) => theme.breakpoints.m} {
+        background-position: center;
         background-size: cover;
     }
     @media ${({ theme }) => theme.breakpoints.l} {
@@ -111,14 +113,16 @@ export const TrailerBtn = styled.button`
     padding: 0 30px;
     border-width: 2px;
     border-style: solid;
-    border-color: ${({ theme }) => theme.colors.white};
+    border-color: ${({ theme }) => theme.colors.btnColor};
     border-radius: 22px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    color: ${({ theme }) => theme.colors.white};
-    transition: background-color ${({ theme }) => theme.baseTransition};
+    color: ${({ theme }) => theme.colors.btnColor};
+    transition: background-color ${({ theme }) => theme.baseTransition},
+        color ${({ theme }) => theme.baseTransition};
     &:hover {
+        color: ${({ theme }) => theme.colors.white};
         background-color: ${({ theme }) => theme.colors.accent};
     }
     & svg {

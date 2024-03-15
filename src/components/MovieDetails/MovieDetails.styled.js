@@ -18,9 +18,9 @@ export const StyledLink = styled(Link)`
     text-align: center;
     font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 700;
-    border: 1px solid ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.btnColor};
     border-radius: 20px;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.btnColor};
     transition: background-color ${({ theme }) => theme.baseTransition};
     &:hover {
         color: ${({ theme }) => theme.colors.white};

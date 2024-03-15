@@ -27,8 +27,10 @@ export const Scrollbar = ({
     const [thumbHeight, setThumbHeight] = useState(20);
     const [thumbWidth, setThumbWidth] = useState(20);
     const [isDragging, setIsDragging] = useState(false);
+    const [isHidden, setIsHidden] = useState(false);
     const [buttonsAvaible] = useState(false);
-    const [scrollStartPosition, setScrollStartPosition] = useState();
+    const [scrollYStartPosition, setScrollYStartPosition] = useState();
+    const [scrollXStartPosition, setScrollXStartPosition] = useState();
     const [initialContentScrollTop, setInitialContentScrollTop] = useState();
     const [initialContentScrollLeft, setInitialContentScrollLeft] = useState();
 
@@ -46,8 +48,7 @@ export const Scrollbar = ({
                 } = contentWrapperRef.current;
                 setThumbHeight(
                     Math.max(
-                        (contentVisibleY / contentTotalHeightY) * trackHeight,
-                        20
+                        (contentVisibleY / contentTotalHeightY) * trackHeight
                     )
                 );
             }
@@ -55,12 +56,11 @@ export const Scrollbar = ({
                 const { clientWidth: trackWidth } = scrollTrackRef.current;
                 const {
                     clientWidth: contentVisibleX,
-                    scrollWidth: contentTotalHeightX,
+                    scrollWidth: contentTotalWidthtX,
                 } = contentWrapperRef.current;
                 setThumbWidth(
                     Math.max(
-                        (contentVisibleX / contentTotalHeightX) * trackWidth,
-                        20
+                        (contentVisibleX / contentTotalWidthtX) * trackWidth
                     )
                 );
             }
@@ -126,11 +126,11 @@ export const Scrollbar = ({
         e.stopPropagation();
         if (contentWrapperRef.current) {
             if (orientation === 'y') {
-                setScrollStartPosition(e.clientY);
+                setScrollYStartPosition(e.clientY);
                 setInitialContentScrollTop(contentWrapperRef.current.scrollTop);
             }
             if (orientation === 'x') {
-                setScrollStartPosition(e.clientX);
+                setScrollXStartPosition(e.clientX);
                 setInitialContentScrollLeft(
                     contentWrapperRef.current.scrollLeft
                 );
@@ -163,7 +163,7 @@ export const Scrollbar = ({
                         } = contentWrapperRef.current;
 
                         const deltaY =
-                            (e.clientY - scrollStartPosition) *
+                            (e.clientY - scrollYStartPosition) *
                             (contentClientHeight / thumbHeight);
 
                         const newScrollTop = Math.min(
@@ -180,7 +180,7 @@ export const Scrollbar = ({
                         } = contentWrapperRef.current;
 
                         const deltaX =
-                            (e.clientX - scrollStartPosition) *
+                            (e.clientX - scrollXStartPosition) *
                             (contentClientWidth / thumbWidth);
 
                         const newScrollLeft = Math.min(
@@ -197,7 +197,8 @@ export const Scrollbar = ({
             initialContentScrollTop,
             initialContentScrollLeft,
             isDragging,
-            scrollStartPosition,
+            scrollYStartPosition,
+            scrollXStartPosition,
             thumbHeight,
             thumbWidth,
             orientation,
@@ -212,6 +213,21 @@ export const Scrollbar = ({
             document.removeEventListener('mouseup', handleThumbMouseup);
         };
     }, [handleThumbMousemove, handleThumbMouseup]);
+
+    useEffect(() => {
+        if (scrollTrackRef.current && scrollThumbRef.current) {
+            if (orientation === 'y') {
+                const { clientHeight: trackHeight } = scrollTrackRef.current;
+                if (thumbHeight === trackHeight) setIsHidden(true);
+                else setIsHidden(false);
+            }
+            if (orientation === 'x') {
+                const { clientWidth: trackWidth } = scrollTrackRef.current;
+                if (thumbWidth === trackWidth) setIsHidden(true);
+                else setIsHidden(false);
+            }
+        }
+    }, [orientation, thumbHeight, thumbWidth]);
 
     const handleTrackClick = e => {
         e.preventDefault();
@@ -241,7 +257,7 @@ export const Scrollbar = ({
                 const clickRatio =
                     (clientX - trackLeft + thumbOffset) / track.clientWidth;
                 const scrollAmount = Math.floor(
-                    clickRatio * content.clientWidth
+                    clickRatio * content.scrollWidth
                 );
                 content.scrollTo({
                     left: scrollAmount,
@@ -265,12 +281,14 @@ export const Scrollbar = ({
             <SBContentWrapper device={device} ref={contentWrapperRef}>
                 <SBContent
                     ref={contentRef}
-                    className={orientation === 'x' && 'content'}
+                    isHidden={isHidden}
+                    className={orientation === 'x' ? 'content-x' : 'content-y'}
                 >
                     {children}
                 </SBContent>
             </SBContentWrapper>
             <SBScrollBar
+                isHidden={isHidden}
                 noButton={!buttonsAvaible}
                 className={`sb-${orientation}`}
             >

@@ -8,6 +8,16 @@ export const CastCrewWrapper = styled.div`
     padding: 16px;
 `;
 
+export const CreditsWrapper = styled.div`
+    @media ${({ theme }) => theme.breakpoints.m} {
+        display: flex;
+        gap: ${({ theme }) => theme.spacing.retreatM};
+    }
+    @media ${({ theme }) => theme.breakpoints.xl} {
+        gap: ${({ theme }) => theme.spacing.retreatL};
+    }
+`;
+
 export const MinorTitle = styled.h2`
     margin-bottom: 16px;
 `;

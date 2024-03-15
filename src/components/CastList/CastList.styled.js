@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const CastWrapper = styled.div`
+    position: relative;
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     overflow-x: auto;
     @media ${({ theme }) => theme.breakpoints.s} {
@@ -9,6 +10,19 @@ export const CastWrapper = styled.div`
     }
     @media ${({ theme }) => theme.breakpoints.xl} {
         margin-bottom: ${({ theme }) => theme.spacing.retreatL};
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: calc(100% - 16px);
+        width: 80px;
+        background-image: linear-gradient(${({ theme }) => theme.lg.curtain});
+        opacity: ${({ curtain }) => (!curtain ? 1 : 0)};
+        pointer-events: none;
+        transition: opacity ${({ theme }) => theme.baseTransition};
+        z-index: 1;
     }
 `;
 

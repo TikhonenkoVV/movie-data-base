@@ -11,9 +11,15 @@ import {
 import noPoster from '../../images/no-poster.jpg';
 import { useSelector } from 'react-redux';
 import { selectDevice } from 'store/selector';
+import { useState } from 'react';
 
 export const CastList = ({ cast }) => {
     const device = useSelector(selectDevice);
+    const [isCurtainHidden, setIsCurtainHidden] = useState(false);
+
+    const toggleCurtain = value => {
+        setIsCurtainHidden(value);
+    };
 
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
     const IMAGES_BASE_URL_RETINA =
@@ -27,8 +33,8 @@ export const CastList = ({ cast }) => {
     });
 
     return (
-        <CastWrapper>
-            <Scrollbar orientation="x" device={device}>
+        <CastWrapper curtain={isCurtainHidden}>
+            <Scrollbar orientation="x" device={device} curtain={toggleCurtain}>
                 <StyledCastList>
                     {array?.map(
                         ({ id, castId, personName, profile_path, role }) => (

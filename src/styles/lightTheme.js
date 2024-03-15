@@ -14,6 +14,7 @@ export const lightTheme = Object.freeze({
     },
     lg: {
         whiteSpace: '#086BA078, #086BA0bc, #086BA0',
+        curtain: 'to right, #ffffff00 0, #fff 80%',
         movieInfo:
             'linear-gradient(90deg, #fff 3%, #ffffffde 23%, #ffffffde 77%, #ffffff 100%)',
         movieInfoOnlyS:

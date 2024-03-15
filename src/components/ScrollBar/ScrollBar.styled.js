@@ -2,11 +2,9 @@ import styled from '@emotion/styled';
 import { theme } from 'styles';
 
 export const SBContainer = styled.div`
+    position: relative;
     display: grid;
     height: 100%;
-    /* grid-template: auto / 1fr 50px; */
-    /* overflow: hidden; */
-    position: relative;
 `;
 
 export const SBContentWrapper = styled.div`

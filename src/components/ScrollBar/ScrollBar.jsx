@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import debounce from 'lodash.debounce';
 import {
     SBBar,
     SBBarWrapper,
@@ -16,6 +17,7 @@ export const Scrollbar = ({
     buttons,
     device,
     orientation,
+    curtain,
 }) => {
     const contentWrapperRef = useRef(null);
     const contentRef = useRef(null);
@@ -27,12 +29,24 @@ export const Scrollbar = ({
     const [thumbHeight, setThumbHeight] = useState(20);
     const [thumbWidth, setThumbWidth] = useState(20);
     const [isDragging, setIsDragging] = useState(false);
-    const [isHidden, setIsHidden] = useState(false);
+    const [isScrollHidden, setIsScrollHidden] = useState(false);
     const [buttonsAvaible] = useState(false);
+    const [contentPosition, setContentPosition] = useState(null);
     const [scrollYStartPosition, setScrollYStartPosition] = useState();
     const [scrollXStartPosition, setScrollXStartPosition] = useState();
     const [initialContentScrollTop, setInitialContentScrollTop] = useState();
     const [initialContentScrollLeft, setInitialContentScrollLeft] = useState();
+
+    const setRetreat = useRef(debounce(setContentPosition, 50));
+
+    useEffect(() => {
+        if (curtain)
+            if (contentPosition > 0) {
+                curtain(true);
+            } else {
+                curtain(false);
+            }
+    }, [contentPosition, curtain]);
 
     const handleResize = useCallback(() => {
         if (
@@ -97,6 +111,7 @@ export const Scrollbar = ({
             requestAnimationFrame(() => {
                 thumb.style.left = `${newLeft}px`;
             });
+            setRetreat.current(contentWrapperRef.current.scrollLeft);
         }
     }, [orientation]);
 
@@ -218,13 +233,13 @@ export const Scrollbar = ({
         if (scrollTrackRef.current && scrollThumbRef.current) {
             if (orientation === 'y') {
                 const { clientHeight: trackHeight } = scrollTrackRef.current;
-                if (thumbHeight === trackHeight) setIsHidden(true);
-                else setIsHidden(false);
+                if (thumbHeight === trackHeight) setIsScrollHidden(true);
+                else setIsScrollHidden(false);
             }
             if (orientation === 'x') {
                 const { clientWidth: trackWidth } = scrollTrackRef.current;
-                if (thumbWidth === trackWidth) setIsHidden(true);
-                else setIsHidden(false);
+                if (thumbWidth === trackWidth) setIsScrollHidden(true);
+                else setIsScrollHidden(false);
             }
         }
     }, [orientation, thumbHeight, thumbWidth]);
@@ -281,14 +296,14 @@ export const Scrollbar = ({
             <SBContentWrapper device={device} ref={contentWrapperRef}>
                 <SBContent
                     ref={contentRef}
-                    isHidden={isHidden}
+                    isHidden={isScrollHidden}
                     className={orientation === 'x' ? 'content-x' : 'content-y'}
                 >
                     {children}
                 </SBContent>
             </SBContentWrapper>
             <SBScrollBar
-                isHidden={isHidden}
+                isHidden={isScrollHidden}
                 noButton={!buttonsAvaible}
                 className={`sb-${orientation}`}
             >

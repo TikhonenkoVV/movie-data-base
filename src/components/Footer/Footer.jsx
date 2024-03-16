@@ -7,7 +7,10 @@ import {
     LinksWrapper,
     RightLinks,
     StyledFooter,
+    StyledLink,
 } from './Footer.styled';
+import { Svg } from 'components/Svg/Svg';
+import sprite from '../../images/sprite.svg';
 
 export const Footer = () => {
     return (
@@ -80,6 +83,14 @@ export const Footer = () => {
                         </ul>
                     </RightLinks>
                 </LinksWrapper>
+                <StyledLink
+                    href="https://github.com/TikhonenkoVV"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    <Svg w={20} h={20} use={`${sprite}#icon-github`} />
+                    Vitaliy Tikhonenko 2024
+                </StyledLink>
             </Container>
         </StyledFooter>
     );

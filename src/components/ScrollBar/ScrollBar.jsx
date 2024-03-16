@@ -18,6 +18,7 @@ export const Scrollbar = ({
     device,
     orientation,
     curtain,
+    toTop,
 }) => {
     const contentWrapperRef = useRef(null);
     const contentRef = useRef(null);
@@ -30,14 +31,35 @@ export const Scrollbar = ({
     const [thumbWidth, setThumbWidth] = useState(20);
     const [isDragging, setIsDragging] = useState(false);
     const [isScrollHidden, setIsScrollHidden] = useState(false);
-    const [buttonsAvaible] = useState(false);
+    const [buttonsAvaible, setButtonsAvaible] = useState(false);
     const [contentPosition, setContentPosition] = useState(null);
+    const [scrollToTop, setScrollToTop] = useState(toTop);
     const [scrollYStartPosition, setScrollYStartPosition] = useState();
     const [scrollXStartPosition, setScrollXStartPosition] = useState();
     const [initialContentScrollTop, setInitialContentScrollTop] = useState();
     const [initialContentScrollLeft, setInitialContentScrollLeft] = useState();
 
     const setRetreat = useRef(debounce(setContentPosition, 50));
+
+    useEffect(() => {
+        if (toTop) {
+            setScrollToTop(true);
+        }
+        if (buttons) {
+            setButtonsAvaible(true);
+        }
+    }, [toTop, buttons]);
+
+    useEffect(() => {
+        if (scrollToTop) {
+            const { current: content } = contentWrapperRef;
+            content.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }
+        setScrollToTop(false);
+    }, [scrollToTop]);
 
     const handleResize = useCallback(() => {
         if (

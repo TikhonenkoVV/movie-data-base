@@ -6,9 +6,13 @@ export const StyledFooter = styled.footer`
 `;
 
 export const LinksWrapper = styled.div`
+    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     color: #fff;
     @media ${({ theme }) => theme.breakpoints.xs} {
         display: flex;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
         gap: 24px;
     }
 `;
@@ -38,5 +42,19 @@ export const FooterTitle = styled.h2`
 export const LinksItem = styled.li`
     &:not(:last-child) {
         margin-bottom: 8px;
+    }
+`;
+
+export const StyledLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: ${({ theme }) => theme.colors.white};
+    & svg {
+        fill: currentColor;
     }
 `;

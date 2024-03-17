@@ -98,36 +98,36 @@ export const Scrollbar = ({
     }, [orientation]);
 
     const handleThumbPosition = useCallback(() => {
-        if (
-            !contentWrapperRef.current ||
-            !scrollTrackRef.current ||
-            !scrollThumbRef.current
-        ) {
+        if (!contentWrapperRef.current) {
             return;
         }
         const thumb = scrollThumbRef.current;
         if (orientation === 'y') {
-            const { scrollTop: contentTop, scrollHeight: contentHeight } =
-                contentWrapperRef.current;
-            const { clientHeight: trackHeight } = scrollTrackRef.current;
+            if (scrollTrackRef.current && !scrollThumbRef.current) {
+                const { scrollTop: contentTop, scrollHeight: contentHeight } =
+                    contentWrapperRef.current;
+                const { clientHeight: trackHeight } = scrollTrackRef.current;
 
-            const newTop = (contentTop / contentHeight) * trackHeight;
+                const newTop = (contentTop / contentHeight) * trackHeight;
 
-            requestAnimationFrame(() => {
-                thumb.style.top = `${newTop}px`;
-            });
+                requestAnimationFrame(() => {
+                    thumb.style.top = `${newTop}px`;
+                });
+            }
             setRetreatY.current(contentWrapperRef.current.scrollTop);
         }
         if (orientation === 'x') {
-            const { scrollLeft: contentLeft, scrollWidth: contentWidth } =
-                contentWrapperRef.current;
-            const { clientWidth: trackWidth } = scrollTrackRef.current;
+            if (scrollTrackRef.current && !scrollThumbRef.current) {
+                const { scrollLeft: contentLeft, scrollWidth: contentWidth } =
+                    contentWrapperRef.current;
+                const { clientWidth: trackWidth } = scrollTrackRef.current;
 
-            const newLeft = (contentLeft / contentWidth) * trackWidth;
+                const newLeft = (contentLeft / contentWidth) * trackWidth;
 
-            requestAnimationFrame(() => {
-                thumb.style.left = `${newLeft}px`;
-            });
+                requestAnimationFrame(() => {
+                    thumb.style.left = `${newLeft}px`;
+                });
+            }
             setRetreatX.current(contentWrapperRef.current.scrollLeft);
         }
     }, [orientation]);
@@ -247,9 +247,11 @@ export const Scrollbar = ({
     }, [handleThumbMousemove, handleThumbMouseup]);
 
     useEffect(() => {
-        if (scrollTrackRef.current && scrollThumbRef.current) {
+        if (contentWrapperRef.current) {
             if (getRetreatY) getRetreatY(contentPositionY);
             if (getRetreatX) getRetreatX(contentPositionX);
+        }
+        if (scrollTrackRef.current && scrollThumbRef.current) {
             if (orientation === 'y') {
                 const { clientHeight: trackHeight } = scrollTrackRef.current;
                 if (thumbHeight === trackHeight) setIsScrollHidden(true);

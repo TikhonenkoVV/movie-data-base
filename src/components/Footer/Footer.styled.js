@@ -46,6 +46,7 @@ export const LinksItem = styled.li`
 `;
 
 export const StyledLink = styled.a`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +54,18 @@ export const StyledLink = styled.a`
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 18px;
     color: ${({ theme }) => theme.colors.white};
     & svg {
         fill: currentColor;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 2px;
+        background-color: ${({ theme }) => theme.colors.white};
     }
 `;

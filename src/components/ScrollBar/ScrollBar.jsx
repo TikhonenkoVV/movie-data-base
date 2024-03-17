@@ -17,7 +17,8 @@ export const Scrollbar = ({
     buttons,
     device,
     orientation,
-    curtain,
+    getRetreatY,
+    getRetreatX,
     toTop,
 }) => {
     const contentWrapperRef = useRef(null);
@@ -32,14 +33,16 @@ export const Scrollbar = ({
     const [isDragging, setIsDragging] = useState(false);
     const [isScrollHidden, setIsScrollHidden] = useState(false);
     const [buttonsAvaible, setButtonsAvaible] = useState(false);
-    const [contentPosition, setContentPosition] = useState(null);
+    const [contentPositionY, setContentPositionY] = useState(null);
+    const [contentPositionX, setContentPositionX] = useState(null);
     const [scrollToTop, setScrollToTop] = useState(toTop);
     const [scrollYStartPosition, setScrollYStartPosition] = useState();
     const [scrollXStartPosition, setScrollXStartPosition] = useState();
     const [initialContentScrollTop, setInitialContentScrollTop] = useState();
     const [initialContentScrollLeft, setInitialContentScrollLeft] = useState();
 
-    const setRetreat = useRef(debounce(setContentPosition, 50));
+    const setRetreatY = useRef(debounce(setContentPositionY, 50));
+    const setRetreatX = useRef(debounce(setContentPositionX, 50));
 
     useEffect(() => {
         if (toTop) {
@@ -113,6 +116,7 @@ export const Scrollbar = ({
             requestAnimationFrame(() => {
                 thumb.style.top = `${newTop}px`;
             });
+            setRetreatY.current(contentWrapperRef.current.scrollTop);
         }
         if (orientation === 'x') {
             const { scrollLeft: contentLeft, scrollWidth: contentWidth } =
@@ -124,7 +128,7 @@ export const Scrollbar = ({
             requestAnimationFrame(() => {
                 thumb.style.left = `${newLeft}px`;
             });
-            setRetreat.current(contentWrapperRef.current.scrollLeft);
+            setRetreatX.current(contentWrapperRef.current.scrollLeft);
         }
     }, [orientation]);
 
@@ -243,7 +247,9 @@ export const Scrollbar = ({
     }, [handleThumbMousemove, handleThumbMouseup]);
 
     useEffect(() => {
-        if (scrollTrackRef.current && scrollThumbRef.current && curtain) {
+        if (scrollTrackRef.current && scrollThumbRef.current) {
+            if (getRetreatY) getRetreatY(contentPositionY);
+            if (getRetreatX) getRetreatX(contentPositionX);
             if (orientation === 'y') {
                 const { clientHeight: trackHeight } = scrollTrackRef.current;
                 if (thumbHeight === trackHeight) setIsScrollHidden(true);
@@ -253,18 +259,20 @@ export const Scrollbar = ({
                 const { clientWidth: trackWidth } = scrollTrackRef.current;
                 if (thumbWidth === trackWidth) {
                     setIsScrollHidden(true);
-                    curtain(true);
                 } else {
                     setIsScrollHidden(false);
-                    if (contentPosition > 0) {
-                        curtain(true);
-                    } else {
-                        curtain(false);
-                    }
                 }
             }
         }
-    }, [orientation, thumbHeight, thumbWidth, contentPosition, curtain]);
+    }, [
+        orientation,
+        thumbHeight,
+        thumbWidth,
+        contentPositionY,
+        contentPositionX,
+        getRetreatY,
+        getRetreatX,
+    ]);
 
     const handleTrackClick = e => {
         e.preventDefault();

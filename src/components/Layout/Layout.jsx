@@ -12,17 +12,27 @@ import sprite from '../../images/sprite.svg';
 export const Layout = ({ onChangeTheme }) => {
     const device = useSelector(selectDevice);
     const [toTop, setToTop] = useState(false);
+    const [retreatY, setRetreatY] = useState(false);
 
     const scrollToTop = () => {
         setToTop(true);
     };
 
+    const getRetreatY = value => {
+        setRetreatY(value);
+    };
+
     useEffect(() => {
-        setToTop(false);
+        if (toTop) setToTop(false);
     }, [toTop]);
 
     return (
-        <Scrollbar orientation="y" device={device} toTop={toTop}>
+        <Scrollbar
+            orientation="y"
+            device={device}
+            toTop={toTop}
+            getRetreatY={getRetreatY}
+        >
             <Header onChangeTheme={onChangeTheme} />
             <MainStyled>
                 <Suspense>
@@ -30,7 +40,7 @@ export const Layout = ({ onChangeTheme }) => {
                 </Suspense>
             </MainStyled>
             <Footer />
-            <ButtonUp onClick={scrollToTop} device={device}>
+            <ButtonUp onClick={scrollToTop} isHidden={retreatY < 400}>
                 <Svg w={50} h={50} use={`${sprite}#icon-arrow`} />
             </ButtonUp>
         </Scrollbar>

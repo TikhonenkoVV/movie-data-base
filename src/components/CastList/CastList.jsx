@@ -15,10 +15,10 @@ import { useState } from 'react';
 
 export const CastList = ({ cast }) => {
     const device = useSelector(selectDevice);
-    const [isCurtainHidden, setIsCurtainHidden] = useState(false);
+    const [retreatX, setRetreatX] = useState(false);
 
-    const toggleCurtain = value => {
-        setIsCurtainHidden(value);
+    const getRetreatX = value => {
+        setRetreatX(value);
     };
 
     const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
@@ -33,8 +33,12 @@ export const CastList = ({ cast }) => {
     });
 
     return (
-        <CastWrapper curtain={isCurtainHidden}>
-            <Scrollbar orientation="x" device={device} curtain={toggleCurtain}>
+        <CastWrapper curtain={retreatX > 0 ? true : false}>
+            <Scrollbar
+                orientation="x"
+                device={device}
+                getRetreatX={getRetreatX}
+            >
                 <StyledCastList>
                     {array?.map(
                         ({ id, castId, personName, profile_path, role }) => (

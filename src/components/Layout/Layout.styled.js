@@ -12,7 +12,8 @@ export const ButtonUp = styled.button`
     right: 32px;
     width: 40px;
     height: 40px;
-    opacity: ${({ device }) => (device === 'mobile' ? '1' : '0.5')};
+    pointer-events: ${({ isHidden }) => (isHidden ? 'none' : 'all')};
+    opacity: ${({ isHidden }) => (isHidden ? '0' : '0.6')};
     border: 2px solid ${({ theme }) => theme.colors.white};
     border-radius: 10px;
     color: ${({ theme }) => theme.colors.white};
@@ -50,8 +51,5 @@ export const ButtonUp = styled.button`
     }
     @media ${({ theme }) => theme.breakpoints.xxl} {
         transform: translateX(674px);
-    }
-    &:hover {
-        opacity: 1;
     }
 `;

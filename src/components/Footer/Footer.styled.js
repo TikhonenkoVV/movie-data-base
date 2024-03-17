@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 export const StyledFooter = styled.footer`
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
 `;

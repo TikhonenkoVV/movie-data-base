@@ -54,117 +54,125 @@ export const FullCast = () => {
             {isLoading && <Loader />}
             <Container>
                 <CreditsWrapper>
-                    <CastCrewWrapper>
-                        <MinorTitle>Cast</MinorTitle>
-                        <ul>
-                            {castArray?.map(
-                                ({
-                                    id,
-                                    castId,
-                                    personName,
-                                    profile_path,
-                                    role,
-                                }) => (
-                                    <Card key={castId}>
-                                        <StyledLink to={`/person/${id}`}>
-                                            <picture>
-                                                <source
-                                                    srcSet={
-                                                        profile_path
-                                                            ? `${
-                                                                  IMAGES_BASE_URL +
-                                                                  profile_path
-                                                              } 1x, ${
-                                                                  IMAGES_BASE_URL_RETINA +
-                                                                  profile_path
-                                                              } 2x`
-                                                            : noPoster
-                                                    }
-                                                />
+                    {castArray?.length > 0 && (
+                        <CastCrewWrapper>
+                            <MinorTitle>Cast</MinorTitle>
+                            <ul>
+                                {castArray?.map(
+                                    ({
+                                        id,
+                                        castId,
+                                        personName,
+                                        profile_path,
+                                        role,
+                                    }) => (
+                                        <Card key={castId}>
+                                            <StyledLink to={`/person/${id}`}>
+                                                <picture>
+                                                    <source
+                                                        srcSet={
+                                                            profile_path
+                                                                ? `${
+                                                                      IMAGES_BASE_URL +
+                                                                      profile_path
+                                                                  } 1x, ${
+                                                                      IMAGES_BASE_URL_RETINA +
+                                                                      profile_path
+                                                                  } 2x`
+                                                                : noPoster
+                                                        }
+                                                    />
 
-                                                <Poster
-                                                    src={
-                                                        profile_path
-                                                            ? IMAGES_BASE_URL +
-                                                              profile_path
-                                                            : noPoster
-                                                    }
-                                                    alt={personName}
-                                                />
-                                            </picture>
-                                            <div>
-                                                <h3>{personName}</h3>
-                                                <p>{role}</p>
-                                            </div>
-                                        </StyledLink>
-                                    </Card>
-                                )
-                            )}
-                        </ul>
-                    </CastCrewWrapper>
-                    <CastCrewWrapper>
-                        <MinorTitle>Crew</MinorTitle>
-                        <ul>
-                            {crewArray?.crew?.map(el => (
-                                <CardListItem key={Object.keys(el)[0]}>
-                                    <MajorTitle
-                                        style={{ textTransform: 'capitalize' }}
-                                    >
-                                        {Object.keys(el)[0]}
-                                    </MajorTitle>
-                                    <ul>
-                                        {el[Object.keys(el)[0]]?.map(
-                                            ({
-                                                id,
-                                                credit_id,
-                                                job,
-                                                personName,
-                                                profile_path,
-                                            }) => (
-                                                <Card key={credit_id}>
-                                                    <StyledLink
-                                                        to={`/person/${id}`}
-                                                    >
-                                                        <picture>
-                                                            <source
-                                                                srcSet={
-                                                                    profile_path
-                                                                        ? `${
-                                                                              IMAGES_BASE_URL +
-                                                                              profile_path
-                                                                          } 1x, ${
-                                                                              IMAGES_BASE_URL_RETINA +
-                                                                              profile_path
-                                                                          } 2x`
-                                                                        : noPoster
-                                                                }
-                                                            />
+                                                    <Poster
+                                                        src={
+                                                            profile_path
+                                                                ? IMAGES_BASE_URL +
+                                                                  profile_path
+                                                                : noPoster
+                                                        }
+                                                        alt={personName}
+                                                    />
+                                                </picture>
+                                                <div>
+                                                    <h3>{personName}</h3>
+                                                    <p>{role}</p>
+                                                </div>
+                                            </StyledLink>
+                                        </Card>
+                                    )
+                                )}
+                            </ul>
+                        </CastCrewWrapper>
+                    )}
+                    {crewArray?.crew?.length > 0 && (
+                        <CastCrewWrapper>
+                            <MinorTitle>Crew</MinorTitle>
+                            <ul>
+                                {crewArray?.crew?.map(el => (
+                                    <CardListItem key={Object.keys(el)[0]}>
+                                        <MajorTitle
+                                            style={{
+                                                textTransform: 'capitalize',
+                                            }}
+                                        >
+                                            {Object.keys(el)[0]}
+                                        </MajorTitle>
+                                        <ul>
+                                            {el[Object.keys(el)[0]]?.map(
+                                                ({
+                                                    id,
+                                                    credit_id,
+                                                    job,
+                                                    personName,
+                                                    profile_path,
+                                                }) => (
+                                                    <Card key={credit_id}>
+                                                        <StyledLink
+                                                            to={`/person/${id}`}
+                                                        >
+                                                            <picture>
+                                                                <source
+                                                                    srcSet={
+                                                                        profile_path
+                                                                            ? `${
+                                                                                  IMAGES_BASE_URL +
+                                                                                  profile_path
+                                                                              } 1x, ${
+                                                                                  IMAGES_BASE_URL_RETINA +
+                                                                                  profile_path
+                                                                              } 2x`
+                                                                            : noPoster
+                                                                    }
+                                                                />
 
-                                                            <Poster
-                                                                src={
-                                                                    profile_path
-                                                                        ? IMAGES_BASE_URL +
-                                                                          profile_path
-                                                                        : noPoster
-                                                                }
-                                                                alt={personName}
-                                                            />
-                                                        </picture>
-                                                        <div>
-                                                            <h3>
-                                                                {personName}
-                                                            </h3>
-                                                            <p>{job}</p>
-                                                        </div>
-                                                    </StyledLink>
-                                                </Card>
-                                            )
-                                        )}
-                                    </ul>
-                                </CardListItem>
-                            ))}
-                        </ul>
-                    </CastCrewWrapper>
+                                                                <Poster
+                                                                    src={
+                                                                        profile_path
+                                                                            ? IMAGES_BASE_URL +
+                                                                              profile_path
+                                                                            : noPoster
+                                                                    }
+                                                                    alt={
+                                                                        personName
+                                                                    }
+                                                                />
+                                                            </picture>
+                                                            <div>
+                                                                <h3>
+                                                                    {personName}
+                                                                </h3>
+                                                                <p>{job}</p>
+                                                            </div>
+                                                        </StyledLink>
+                                                    </Card>
+                                                )
+                                            )}
+                                        </ul>
+                                    </CardListItem>
+                                ))}
+                            </ul>
+                        </CastCrewWrapper>
+                    )}
                 </CreditsWrapper>
             </Container>
 

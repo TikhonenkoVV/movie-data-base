@@ -1,13 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const CastCrewWrapper = styled.div`
-    flex-basis: calc((100% - 24px) / 2);
-    color: ${({ theme }) => theme.colors.themeText};
-    border: 1px solid #808080;
-    padding: 16px;
-`;
-
 export const CreditsWrapper = styled.div`
     @media ${({ theme }) => theme.breakpoints.m} {
         display: flex;
@@ -15,6 +8,22 @@ export const CreditsWrapper = styled.div`
     }
     @media ${({ theme }) => theme.breakpoints.xl} {
         gap: ${({ theme }) => theme.spacing.retreatL};
+    }
+`;
+
+export const CastCrewWrapper = styled.div`
+    flex-basis: calc((100% - 24px) / 2);
+    color: ${({ theme }) => theme.colors.themeText};
+    border: 1px solid #808080;
+    padding: 16px;
+    &:not(:last-child) {
+        margin-bottom: ${({ theme }) => theme.spacing.retreatS};
+        @media ${({ theme }) => theme.breakpoints.s} {
+            margin-bottom: ${({ theme }) => theme.spacing.retreatM};
+        }
+        @media ${({ theme }) => theme.breakpoints.m} {
+            margin-bottom: 0;
+        }
     }
 `;
 

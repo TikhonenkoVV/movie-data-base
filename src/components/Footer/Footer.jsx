@@ -15,7 +15,7 @@ import sprite from '../../images/sprite.svg';
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Container style={{ paddingTop: '24px', paddingBottom: '24px' }}>
+            <Container>
                 <Logo newClass="footer-logo" label="Home" dest={'/'} />
                 <LinksWrapper>
                     <LeftLinks>

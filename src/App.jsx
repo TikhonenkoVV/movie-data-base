@@ -1,43 +1,53 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
+import { Layout } from './ui/Layout/Layout';
 import { lazy, useEffect, useState } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
 import { GlobalStyles, darkTheme, lightTheme, theme } from 'styles';
-import { storageLoad, storageSave } from './services/storage';
+import { storageLoad, storageSave } from 'common/services/storage';
 import { useDispatch } from 'react-redux';
-import { setDevice } from 'store/device/deviceSlice';
-import { getDeviceType } from 'services/geDeviceType';
+import { setDevice } from 'common/store/device/deviceSlice';
+import { getDeviceType } from 'common/services/geDeviceType';
 
-const Home = lazy(() => import('./pages/Home'));
-const Media = lazy(() => import('./pages/Media'));
-const PersonDetails = lazy(() => import('./pages/PersonDetails'));
-const MovieDetails = lazy(() =>
-    import('./components/MovieDetails/MovieDetails').then(module => {
-        return { ...module, default: module.MovieDetails };
-    })
+const Home = lazy(() => import('./ui/Layout/pages/Home/Home'));
+const Media = lazy(() => import('./ui/Layout/pages/Media/Media'));
+const PersonDetails = lazy(() =>
+    import('./ui/Layout/pages/PersonDetails/PersonDetails')
 );
-
-const Search = lazy(() =>
-    import('./components/Search/Search').then(module => {
-        return { ...module, default: module.Search };
-    })
-);
-
 const MediaDetails = lazy(() =>
-    import('./components/MediaDetails/MediaDetails').then(module => {
+    import('./ui/Layout/pages/Media/MediaDetails/MediaDetails').then(module => {
         return { ...module, default: module.MediaDetails };
     })
 );
 
-const FullCast = lazy(() =>
-    import('./components/FullCast/FullCast').then(module => {
-        return { ...module, default: module.FullCast };
+const Search = lazy(() =>
+    import('./ui/Layout/pages/globalLayouts/Search/Search').then(module => {
+        return { ...module, default: module.Search };
     })
 );
 
+const MediaLayout = lazy(() =>
+    import('./ui/Layout/pages/Media/MediaLayout/MediaLayout').then(module => {
+        return { ...module, default: module.MediaLayout };
+    })
+);
+
+const FullCast = lazy(() =>
+    import('./ui/Layout/pages/Media/MediaLayout/FullCast/FullCast').then(
+        module => {
+            return { ...module, default: module.FullCast };
+        }
+    )
+);
+
 const Review = lazy(() =>
-    import('./components/Rewiew/Review').then(module => {
+    import('./ui/Layout/pages/Media/MediaLayout/Rewiew/Review').then(module => {
         return { ...module, default: module.Review };
+    })
+);
+
+const Collections = lazy(() =>
+    import('./ui/Layout/pages/Media/Collections/Collections').then(module => {
+        return { ...module, default: module.Collections };
     })
 );
 
@@ -90,10 +100,10 @@ export const App = () => {
                     <Route index element={<Home />} />
                     <Route path="movies" element={<Media />}>
                         <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MovieDetails />} />
+                        <Route path=":mediaId" element={<MediaDetails />} />
                         <Route
                             path=":mediaId/details"
-                            element={<MediaDetails />}
+                            element={<MediaLayout />}
                         >
                             <Route
                                 path="cast-and-crew"
@@ -101,13 +111,17 @@ export const App = () => {
                             />
                             <Route path="reviews" element={<Review />} />
                         </Route>
+                        <Route
+                            path="collections/:collectionId"
+                            element={<Collections />}
+                        />
                     </Route>
                     <Route path="tv-shows" element={<Media />}>
                         <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MovieDetails />} />
+                        <Route path=":mediaId" element={<MediaDetails />} />
                         <Route
                             path=":mediaId/details"
-                            element={<MediaDetails />}
+                            element={<MediaLayout />}
                         >
                             <Route
                                 path="cast-and-crew"

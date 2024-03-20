@@ -7,10 +7,11 @@ export const darkTheme = Object.freeze({
         themeText: '#fff',
         light: '#B5B5B5',
         mainBackground: '#404040',
-        personBackground: '#303030',
+        mediumBackground: '#303030',
         shadow: '#fff',
         scrollBar: '#fff',
         scrollBarControl: '#808080',
+        duoTone: '19171d,404040',
     },
     lg: {
         whiteSpace: '#19171d78, #19171dbc, #19171d',

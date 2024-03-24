@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkMovieDB=self.webpackChunkMovieDB||[]).push([[398],{398:function(e,n,s){s.r(n),s.d(n,{Collections:function(){return r}});var u=s(2791),c=s(7689),i=s(184),r=function(){return(0,i.jsx)(u.Suspense,{children:(0,i.jsx)(c.j3,{})})}}}]);
+//# sourceMappingURL=398.f2a1c899.chunk.js.map

@@ -5,20 +5,17 @@ import {
     MovieInfoWrapper,
     MoviePoster,
     MovieWrapper,
-    PosterWrapper,
     StyledSection,
 } from './MediaLayout.styled';
-import noPoster from '../../../../../images/no-poster.jpg';
+import noPoster from '../../../../images/no-poster.jpg';
 import { normalizeMovieData } from 'common/services/normalize/normalizeMovieData';
 import { Loader } from 'ui/Layout/globalComponents/components/Loader';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
 import { getDetails } from 'common/services/api';
 import { Page404 } from '../../globalLayouts/Search/Page404/Page404';
+import { POSTER_W185 } from 'common/constants';
 
 export const MediaLayout = () => {
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200';
-    const IMAGES_BASE_URL_RETINA = 'https://image.tmdb.org/t/p/w400';
-
     const { mediaId } = useParams();
 
     const [isLoading, setIsLoading] = useState(false);
@@ -42,31 +39,14 @@ export const MediaLayout = () => {
                 <StyledSection className="padding-top">
                     <Container>
                         <MovieWrapper>
-                            <PosterWrapper>
-                                <source
-                                    srcSet={
-                                        movie.poster_path
-                                            ? `${
-                                                  IMAGES_BASE_URL +
-                                                  movie.poster_path
-                                              } 1x, ${
-                                                  IMAGES_BASE_URL_RETINA +
-                                                  movie.poster_path
-                                              } 2x`
-                                            : noPoster
-                                    }
-                                />
-
-                                <MoviePoster
-                                    src={
-                                        movie.poster_path
-                                            ? IMAGES_BASE_URL +
-                                              movie.poster_path
-                                            : noPoster
-                                    }
-                                    alt={movie.name}
-                                />
-                            </PosterWrapper>
+                            <MoviePoster
+                                src={
+                                    movie.poster_path
+                                        ? POSTER_W185 + movie.poster_path
+                                        : noPoster
+                                }
+                                alt={movie.name}
+                            />
                             <MovieInfoWrapper>
                                 <MovieInfoTitle>{movie.name}</MovieInfoTitle>
                                 {movie.release.release_date && (

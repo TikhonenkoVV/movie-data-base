@@ -1,7 +1,4 @@
 export const normalizeCast = data => {
-    // const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
-    // const SMALL_IMAGES_BASE_URL =
-    //     'https://image.tmdb.org/t/p/w66_and_h66_face/';
     const res = data.map(
         ({
             id,

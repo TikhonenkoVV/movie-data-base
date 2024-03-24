@@ -18,6 +18,7 @@ export const StyledLi = styled.li`
     border-radius: 16px;
     border: 1px solid #808080;
     overflow: hidden;
+    box-shadow: 0px 0px 15px 2px #00000050;
 `;
 
 export const StyledLink = styled(Link)`
@@ -29,24 +30,20 @@ export const StyledLink = styled(Link)`
     }
 `;
 
-export const PosterWrapper = styled.picture`
-    display: block;
-    width: 100px;
+export const MoviePoster = styled.img`
+    flex-shrink: 0;
+    width: 150px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 16px;
+    object-fit: cover;
+    aspect-ratio: 2 / 3;
     @media ${({ theme }) => theme.breakpoints.xs} {
         width: auto;
         margin-bottom: 0;
         margin-left: 0;
         margin-right: 0;
     }
-`;
-
-export const MoviePoster = styled.img`
-    width: 150px;
-    object-fit: cover;
-    aspect-ratio: 2 / 3;
 `;
 
 export const MovieInfoWrapper = styled.div`
@@ -62,7 +59,7 @@ export const MovieInfoWrapper = styled.div`
 `;
 
 export const MovieInfoTitle = styled.h1`
-    font-size: ${({ theme }) => theme.fontSizes.xxl};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
 `;
 
 export const ScoreBox = styled.div`

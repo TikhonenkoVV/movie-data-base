@@ -5,7 +5,7 @@ import { getBackgrounds } from 'common/services/getBackgraunds';
 import { Hero } from './Hero/Hero';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
 import { TrendsToggler } from './TrendsTogler/TrendsTogler';
-import { MediaList } from './MediaList/MediaList';
+import { MediaList } from '../../globalComponents/components/MediaList/MediaList';
 import { Loader } from 'ui/Layout/globalComponents/components/Loader';
 
 const Home = () => {

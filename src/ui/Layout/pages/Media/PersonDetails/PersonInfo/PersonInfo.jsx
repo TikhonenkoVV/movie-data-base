@@ -8,11 +8,10 @@ import {
     PersonWrapper,
     PersonalInfoItem,
     PersonalInfoList,
-    Picture,
     ProfileWrapper,
 } from './PersonInfo.styled';
 import noPoster from '../../../../../images/no-poster.jpg';
-import { IMAGES_BASE_URL_W300, IMAGES_BASE_URL_W600 } from 'common/constants';
+import { PROFILE_H632 } from 'common/constants';
 import { Credits } from './Credits/Credits';
 
 export const PersonInfo = ({ person, acting, crew, total }) => {
@@ -31,27 +30,12 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
     return (
         <PersonWrapper>
             <Aside>
-                <Picture>
-                    <source
-                        srcSet={
-                            profile_path
-                                ? `${IMAGES_BASE_URL_W300 + profile_path} 1x, 
-                                   ${IMAGES_BASE_URL_W600 + profile_path} 2x`
-                                : noPoster
-                        }
-                    />
-
-                    <PersonPhoto
-                        src={
-                            profile_path
-                                ? IMAGES_BASE_URL_W300 + profile_path
-                                : noPoster
-                        }
-                        alt={name}
-                        width={300}
-                        height={450}
-                    />
-                </Picture>
+                <PersonPhoto
+                    src={profile_path ? PROFILE_H632 + profile_path : noPoster}
+                    alt={name}
+                    width={300}
+                    height={450}
+                />
                 <div>
                     <AsideTitle>Personal Info</AsideTitle>
                     <PersonalInfoList>

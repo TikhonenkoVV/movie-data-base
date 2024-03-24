@@ -6,8 +6,8 @@ import {
     StyledMediaCard,
     StyledMedialist,
 } from './MediaList.styled';
-import noPoster from '../../../../../images/no-poster.jpg';
-import { IMAGES_BASE_URL_W300, IMAGES_BASE_URL_W600 } from 'common/constants';
+import noPoster from '../../../../images/no-poster.jpg';
+import { POSTER_W342 } from 'common/constants';
 import { ScoreBar } from 'ui/Layout/globalComponents/components/ScoreBar/ScoreBar';
 import { normalizeMoviesData } from 'common/services/normalize/normalizeMoviesData';
 
@@ -44,32 +44,14 @@ export const MediaList = ({ media, mediaTypes }) => {
                                         zIndex: 1,
                                     }}
                                 />
-                                <picture>
-                                    <source
-                                        srcSet={
-                                            poster_path
-                                                ? `${
-                                                      IMAGES_BASE_URL_W300 +
-                                                      poster_path
-                                                  } 1x, ${
-                                                      IMAGES_BASE_URL_W600 +
-                                                      poster_path
-                                                  } 2x`
-                                                : noPoster
-                                        }
-                                    />
-                                    <img
-                                        src={
-                                            poster_path
-                                                ? `${
-                                                      IMAGES_BASE_URL_W300 +
-                                                      poster_path
-                                                  }`
-                                                : noPoster
-                                        }
-                                        alt={movie_title}
-                                    />
-                                </picture>
+                                <img
+                                    src={
+                                        poster_path
+                                            ? `${POSTER_W342 + poster_path}`
+                                            : noPoster
+                                    }
+                                    alt={movie_title}
+                                />
                             </ImgWrapper>
                             <CardInfo>
                                 <MovieTitle>{movie_title}</MovieTitle>

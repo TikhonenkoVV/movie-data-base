@@ -10,20 +10,17 @@ import {
     TitleMinor,
     TrailerBtn,
 } from './MediaInfo.styled';
-import noPoster from '../../../../../../images/no-poster.jpg';
-import sprite from '../../../../../../images/sprite.svg';
+import noPoster from '../../../../../images/no-poster.jpg';
+import sprite from '../../../../../images/sprite.svg';
 import { useEffect, useRef, useState } from 'react';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
 import { ScoreBar } from 'ui/Layout/globalComponents/components/ScoreBar/ScoreBar';
 import { Svg } from 'ui/Layout/globalComponents/components/Svg/Svg';
 import { useModal } from '../MediaDetails';
 import { Modal } from './Modal/Modal';
+import { POSTER_W342 } from 'common/constants';
 
 export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
-    const IMAGES_BASE_URL_RETINA =
-        'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
-
     const {
         vote_average,
         belongs_to_collection,
@@ -61,29 +58,14 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
             <Container>
                 <MovieWrapper itemHeight={itemHeight} bgr={backdrop_path}>
                     <PosterWrapper bgr={backdrop_path}>
-                        <picture>
-                            <source
-                                srcSet={
-                                    poster_path
-                                        ? `${
-                                              IMAGES_BASE_URL + poster_path
-                                          } 1x, ${
-                                              IMAGES_BASE_URL_RETINA +
-                                              poster_path
-                                          } 2x`
-                                        : noPoster
-                                }
-                            />
-
-                            <Poster
-                                src={
-                                    poster_path
-                                        ? IMAGES_BASE_URL + poster_path
-                                        : noPoster
-                                }
-                                alt={name}
-                            />
-                        </picture>
+                        <Poster
+                            src={
+                                poster_path
+                                    ? POSTER_W342 + poster_path
+                                    : noPoster
+                            }
+                            alt={name}
+                        />
                     </PosterWrapper>
                     <MovieInfoWrapper ref={gridItem}>
                         <TitleMinor>{name}</TitleMinor>

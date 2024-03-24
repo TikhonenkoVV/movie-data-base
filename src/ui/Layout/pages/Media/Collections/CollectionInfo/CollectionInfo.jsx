@@ -9,9 +9,10 @@ import {
     TitleMinor,
 } from './CollectionInfo.styled';
 import { useEffect, useRef, useState } from 'react';
-import noPoster from '../../../../../../images/no-poster.jpg';
+import noPoster from '../../../../../images/no-poster.jpg';
 import { ScoreBar } from 'ui/Layout/globalComponents/components/ScoreBar/ScoreBar';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
+import { POSTER_W342 } from 'common/constants';
 
 export const CollectionInfo = ({ collection }) => {
     const {
@@ -22,10 +23,6 @@ export const CollectionInfo = ({ collection }) => {
         vote_average,
         genre_ids,
     } = collection;
-
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2';
-    const IMAGES_BASE_URL_RETINA =
-        'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
 
     const observer = useRef(null);
     const gridItem = useRef(null);
@@ -53,12 +50,7 @@ export const CollectionInfo = ({ collection }) => {
                             <source
                                 srcSet={
                                     poster_path
-                                        ? `${
-                                              IMAGES_BASE_URL + poster_path
-                                          } 1x, ${
-                                              IMAGES_BASE_URL_RETINA +
-                                              poster_path
-                                          } 2x`
+                                        ? `${POSTER_W342 + poster_path} 1x`
                                         : noPoster
                                 }
                             />
@@ -66,7 +58,7 @@ export const CollectionInfo = ({ collection }) => {
                             <Poster
                                 src={
                                     poster_path
-                                        ? IMAGES_BASE_URL + poster_path
+                                        ? POSTER_W342 + poster_path
                                         : noPoster
                                 }
                                 alt={name}

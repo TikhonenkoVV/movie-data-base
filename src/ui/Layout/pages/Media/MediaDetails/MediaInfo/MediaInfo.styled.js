@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import noPoster from '../../../../../../images/no-poster.jpg';
+import noPoster from '../../../../../images/no-poster.jpg';
 import { Link } from 'react-router-dom';
-import { IMAGES_BASE_URL_W1280 } from 'common/constants';
+import { BACKDROP_W1280 } from 'common/constants';
 
 export const MovieWrapper = styled.div`
     @media ${({ theme }) => theme.breakpoints.xs} {
@@ -11,7 +11,7 @@ export const MovieWrapper = styled.div`
         gap: 20px;
         padding: ${({ theme }) => theme.spacing.retreatM} 0;
         background-image: ${({ theme }) => theme.lg.movieInfo},
-            url(${({ bgr }) => (bgr ? IMAGES_BASE_URL_W1280 + bgr : noPoster)});
+            url(${({ bgr }) => (bgr ? BACKDROP_W1280 + bgr : noPoster)});
         background-position: top;
         background-repeat: no-repeat;
         background-size: ${({ itemHeight, theme }) =>
@@ -44,7 +44,7 @@ export const MovieWrapper = styled.div`
 export const PosterWrapper = styled.div`
     @media ${({ theme }) => theme.breakpoints.onlyXs} {
         background-image: ${({ theme }) => theme.lg.movieInfoOnlyS},
-            url(${({ bgr }) => (bgr ? IMAGES_BASE_URL_W1280 + bgr : noPoster)});
+            url(${({ bgr }) => (bgr ? BACKDROP_W1280 + bgr : noPoster)});
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

@@ -120,8 +120,7 @@ export const MediaDetails = () => {
                     </Container>
                 </section>
             )}
-            {/* ЗВЕРНИ УВАГУ!!! */}
-            {error && <></>}
+            {error && <p>{error}</p>}
         </ModalContext.Provider>
     );
 };

@@ -31,20 +31,16 @@ export const Aside = styled.aside`
     }
 `;
 
-export const Picture = styled.picture`
-    display: block;
-    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
-    @media ${({ theme }) => theme.breakpoints.fromXsTillL} {
-        flex-shrink: 0;
-        margin-bottom: 0;
-    }
-`;
-
 export const PersonPhoto = styled.img`
     width: 200px;
     aspect-ratio: 2 / 3;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
+    @media ${({ theme }) => theme.breakpoints.fromXsTillL} {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
     @media ${({ theme }) => theme.breakpoints.s} {
         width: 250px;
     }

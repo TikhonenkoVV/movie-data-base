@@ -10,18 +10,15 @@ import {
 } from './FullCast.styled';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import noPoster from '../../../../../../images/no-poster_66.jpg';
+import noPoster from '../../../../../images/no-poster_66.jpg';
 import { getDetails } from 'common/services/api';
 import { normalizeCast } from 'common/services/normalize/normalizeCast';
 import { normalizeCrew } from 'common/services/normalize/normalizeCrew';
 import { Loader } from 'ui/Layout/globalComponents/components/Loader';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
+import { PROFILE_W185 } from 'common/constants';
 
 export const FullCast = () => {
-    const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w66_and_h66_face';
-    const IMAGES_BASE_URL_RETINA =
-        'https://image.tmdb.org/t/p/w132_and_h132_face';
-
     const { mediaId } = useParams();
 
     const [isLoading, setIsLoading] = useState(false);
@@ -67,32 +64,17 @@ export const FullCast = () => {
                                         role,
                                     }) => (
                                         <Card key={castId}>
-                                            <StyledLink to={`/person/${id}`}>
-                                                <picture>
-                                                    <source
-                                                        srcSet={
-                                                            profile_path
-                                                                ? `${
-                                                                      IMAGES_BASE_URL +
-                                                                      profile_path
-                                                                  } 1x, ${
-                                                                      IMAGES_BASE_URL_RETINA +
-                                                                      profile_path
-                                                                  } 2x`
-                                                                : noPoster
-                                                        }
-                                                    />
-
-                                                    <Poster
-                                                        src={
-                                                            profile_path
-                                                                ? IMAGES_BASE_URL +
-                                                                  profile_path
-                                                                : noPoster
-                                                        }
-                                                        alt={personName}
-                                                    />
-                                                </picture>
+                                            <StyledLink to={`/persons/${id}`}>
+                                                <Poster
+                                                    width={66}
+                                                    src={
+                                                        profile_path
+                                                            ? PROFILE_W185 +
+                                                              profile_path
+                                                            : noPoster
+                                                    }
+                                                    alt={personName}
+                                                />
                                                 <div>
                                                     <h3>{personName}</h3>
                                                     <p>{role}</p>
@@ -130,33 +112,16 @@ export const FullCast = () => {
                                                         <StyledLink
                                                             to={`/person/${id}`}
                                                         >
-                                                            <picture>
-                                                                <source
-                                                                    srcSet={
-                                                                        profile_path
-                                                                            ? `${
-                                                                                  IMAGES_BASE_URL +
-                                                                                  profile_path
-                                                                              } 1x, ${
-                                                                                  IMAGES_BASE_URL_RETINA +
-                                                                                  profile_path
-                                                                              } 2x`
-                                                                            : noPoster
-                                                                    }
-                                                                />
-
-                                                                <Poster
-                                                                    src={
-                                                                        profile_path
-                                                                            ? IMAGES_BASE_URL +
-                                                                              profile_path
-                                                                            : noPoster
-                                                                    }
-                                                                    alt={
-                                                                        personName
-                                                                    }
-                                                                />
-                                                            </picture>
+                                                            <Poster
+                                                                width={66}
+                                                                src={
+                                                                    profile_path
+                                                                        ? PROFILE_W185 +
+                                                                          profile_path
+                                                                        : noPoster
+                                                                }
+                                                                alt={personName}
+                                                            />
                                                             <div>
                                                                 <h3>
                                                                     {personName}
@@ -175,9 +140,7 @@ export const FullCast = () => {
                     )}
                 </CreditsWrapper>
             </Container>
-
-            {/* ЗВЕРНИ УВАГУ!!! */}
-            {error && <></>}
+            {error && <p>{error}</p>}
         </section>
     );
 };

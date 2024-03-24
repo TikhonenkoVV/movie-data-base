@@ -1,5 +1,5 @@
 import { InfoTextStyled, Page404Styled, TitleStyled } from './Page404.styled';
-import page_404 from '../../../../../../images/no-found.png';
+import page_404 from '../../../../../images/no-found.png';
 
 export const Page404 = () => {
     return (

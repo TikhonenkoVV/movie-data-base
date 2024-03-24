@@ -14,24 +14,18 @@ export const MovieWrapper = styled.div`
     }
 `;
 
-export const PosterWrapper = styled.picture`
-    display: block;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
-    @media ${({ theme }) => theme.breakpoints.xs} {
-        width: auto;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-`;
-
 export const MoviePoster = styled.img`
     width: 100px;
     object-fit: cover;
     aspect-ratio: 2 / 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
 `;
 
 export const MovieInfoWrapper = styled.div`

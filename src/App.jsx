@@ -7,15 +7,34 @@ import { storageLoad, storageSave } from 'common/services/storage';
 import { useDispatch } from 'react-redux';
 import { setDevice } from 'common/store/device/deviceSlice';
 import { getDeviceType } from 'common/services/geDeviceType';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
 const Home = lazy(() => import('./ui/Layout/pages/Home/Home'));
 const Media = lazy(() => import('./ui/Layout/pages/Media/Media'));
+
 const PersonDetails = lazy(() =>
-    import('./ui/Layout/pages/PersonDetails/PersonDetails')
+    import('./ui/Layout/pages/Media/PersonDetails/PersonDetails')
 );
+
+const PopularPersons = lazy(() =>
+    import('./ui/Layout/pages/Media/PopularPersons/PopularPersons').then(
+        module => {
+            return { ...module, default: module.PopularPersons };
+        }
+    )
+);
+
 const MediaDetails = lazy(() =>
     import('./ui/Layout/pages/Media/MediaDetails/MediaDetails').then(module => {
         return { ...module, default: module.MediaDetails };
+    })
+);
+
+const PopularMedia = lazy(() =>
+    import('./ui/Layout/pages/Media/PopularMedia/PopularMedia').then(module => {
+        return { ...module, default: module.PopularMedia };
     })
 );
 
@@ -48,6 +67,14 @@ const Review = lazy(() =>
 const Collections = lazy(() =>
     import('./ui/Layout/pages/Media/Collections/Collections').then(module => {
         return { ...module, default: module.Collections };
+    })
+);
+
+const CollectionDetails = lazy(() =>
+    import(
+        './ui/Layout/pages/Media/Collections/CollectionDetails/CollectionDetails'
+    ).then(module => {
+        return { ...module, default: module.CollectionDetails };
     })
 );
 
@@ -99,6 +126,7 @@ export const App = () => {
                 >
                     <Route index element={<Home />} />
                     <Route path="movies" element={<Media />}>
+                        <Route path="popular" element={<PopularMedia />} />
                         <Route path="search" element={<Search />} />
                         <Route path=":mediaId" element={<MediaDetails />} />
                         <Route
@@ -111,12 +139,16 @@ export const App = () => {
                             />
                             <Route path="reviews" element={<Review />} />
                         </Route>
-                        <Route
-                            path="collections/:collectionId"
-                            element={<Collections />}
-                        />
+                        <Route path="collections" element={<Collections />}>
+                            <Route
+                                path=":collectionId"
+                                element={<CollectionDetails />}
+                            />
+                            <Route path="search" element={<Search />} />
+                        </Route>
                     </Route>
                     <Route path="tv-shows" element={<Media />}>
+                        <Route path="popular" element={<PopularMedia />} />
                         <Route path="search" element={<Search />} />
                         <Route path=":mediaId" element={<MediaDetails />} />
                         <Route
@@ -130,7 +162,8 @@ export const App = () => {
                             <Route path="reviews" element={<Review />} />
                         </Route>
                     </Route>
-                    <Route path="person" element={<Media />}>
+                    <Route path="persons" element={<Media />}>
+                        <Route path="popular" element={<PopularPersons />} />
                         <Route path="search" element={<Search />} />
                         <Route path=":personId" element={<PersonDetails />} />
                     </Route>

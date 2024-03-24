@@ -6,7 +6,7 @@ import {
     DotStart,
     PaginationBox,
 } from './Pagination.styled';
-import sprite from '../../../../../../images/sprite.svg';
+import sprite from '../../../../../images/sprite.svg';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Svg } from 'ui/Layout/globalComponents/components/Svg/Svg';

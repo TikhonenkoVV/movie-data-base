@@ -1,6 +1,5 @@
 export const formatDate = date => {
     const options = {
-        // weekday: 'long',
         year: 'numeric',
         month: 'short',
         day: '2-digit',

@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const SearchForm = ({ onSubmit, style }) => {
+export const SearchFormOld = ({ onSubmit, style }) => {
     const [query, setQuery] = useState('');
 
     const hendleChange = e => {

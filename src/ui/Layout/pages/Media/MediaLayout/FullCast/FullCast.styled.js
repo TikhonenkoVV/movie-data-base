@@ -53,5 +53,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Poster = styled.img`
+    width: 66px;
+    aspect-ratio: 2/3;
     border-radius: 5px;
 `;

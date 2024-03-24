@@ -40,6 +40,7 @@ export const SBScrollBar = styled.div`
     transition: ${({ theme }) => theme.baseTransition};
     opacity: ${({ isHidden }) => (!isHidden ? 0.5 : 0)};
     pointer-events: ${({ isHidden }) => (!isHidden ? 'all' : 'none')};
+    z-index: 2;
     &.sb-y {
         padding: 10px 5px;
         grid-auto-flow: row;

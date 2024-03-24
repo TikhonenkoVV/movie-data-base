@@ -1,4 +1,5 @@
 import {
+    BtnSearch,
     CloseMenuBtn,
     HeaderStyled,
     Menu,
@@ -9,19 +10,26 @@ import {
     Wrapper,
 } from './Header.styled';
 import { useEffect, useRef, useState } from 'react';
-import sprite from '../../../images/sprite.svg';
+import sprite from '../../images/sprite.svg';
 import { Svg } from '../globalComponents/components/Svg/Svg';
 import { BackDrop } from '../globalComponents/layouts/BackDrop/BackDrop';
 import { Logo } from '../globalComponents/components/Logo/Logo';
 import { storageLoad } from 'common/services/storage';
 import { Container } from '../globalComponents/layouts/Container/Container';
+import { SearchForm } from '../SearchForm/SearchForm';
 
 export const Header = ({ onChangeTheme }) => {
-    const [isOpen, setIsopen] = useState(false);
-
+    const searchPanelRef = useRef(null);
+    const searchButton = useRef(null);
     const themeBtn = useRef(null);
     const observer = useRef(null);
     const containerRef = useRef(null);
+    const inputRef = useRef(null);
+    const submitRef = useRef(null);
+    const clearRef = useRef(null);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [isHidden, setIsHidden] = useState('true');
 
     const toggleTheme = () => {
         if (themeBtn.current.classList.contains('dark')) {
@@ -36,26 +44,56 @@ export const Header = ({ onChangeTheme }) => {
         }
     };
 
+    const toggleSearchPanel = () => {
+        setIsHidden(isHidden === 'false' ? 'true' : 'false');
+    };
+
     const hendleOpenMenu = () => {
-        setIsopen(true);
+        setIsOpen(true);
     };
 
     const hendleCloseMenu = () => {
-        setIsopen(false);
+        setIsOpen(false);
     };
 
     useEffect(() => {
         if (containerRef) {
             const content = containerRef.current;
             observer.current = new ResizeObserver(() => {
-                setIsopen(false);
+                setIsOpen(false);
             });
             observer.current.observe(content);
         }
     }, []);
 
+    useEffect(() => {
+        window.addEventListener('click', handleClick);
+        return () => window.removeEventListener('click', handleClick);
+    }, []);
+
+    const handleClick = e => {
+        if (
+            e.target === searchPanelRef.current ||
+            e.target === inputRef.current ||
+            e.target === searchButton.current ||
+            e.target === submitRef.current ||
+            e.target === clearRef.current
+        ) {
+            return;
+        }
+        setIsHidden('true');
+    };
     return (
         <HeaderStyled>
+            <SearchForm
+                formRef={{
+                    searchPanelRef,
+                    inputRef,
+                    submitRef,
+                    clearRef,
+                }}
+                ariaHidden={isHidden}
+            />
             <Container reference={containerRef}>
                 <Wrapper>
                     <Logo label="Home" dest={'/'} />
@@ -86,7 +124,7 @@ export const Header = ({ onChangeTheme }) => {
                             </NavLinkStyled>
                             <NavLinkStyled
                                 onClick={hendleCloseMenu}
-                                to={'person'}
+                                to={'persons'}
                             >
                                 People
                             </NavLinkStyled>
@@ -103,6 +141,9 @@ export const Header = ({ onChangeTheme }) => {
                             type="button"
                         ></Toggler>
                     </Menu>
+                    <BtnSearch ref={searchButton} onClick={toggleSearchPanel}>
+                        <Svg w={20} h={20} use={`${sprite}#icon-search`} />
+                    </BtnSearch>
                     <OpenMenuBtn onClick={hendleOpenMenu}>
                         <Svg w={32} h={32} use={`${sprite}#icon-burger`} />
                     </OpenMenuBtn>

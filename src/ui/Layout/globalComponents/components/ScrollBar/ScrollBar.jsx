@@ -180,8 +180,8 @@ export const Scrollbar = ({
     const handleThumbMousemove = useCallback(
         e => {
             if (contentWrapperRef.current) {
-                e.preventDefault();
-                e.stopPropagation();
+                // e.preventDefault();
+                // e.stopPropagation();
                 if (isDragging) {
                     if (orientation === 'y') {
                         const {

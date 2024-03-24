@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { getMediaByName } from 'common/services/api';
+import { getMediaOnRequest } from 'common/services/api';
 import { Pagination } from './Pagination/Pagination';
-import { PersonsList } from '../../PersonDetails/PersonsList/PersonsList';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
 import { Loader } from 'ui/Layout/globalComponents/components/Loader';
-import { MediaList } from '../../Home/MediaList/MediaList';
+import { MediaList } from '../../../globalComponents/components/MediaList/MediaList';
 import { Page404 } from './Page404/Page404';
+import { PersonsList } from '../../Media/PersonDetails/PersonsList/PersonsList';
 
 export const Search = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -18,14 +18,21 @@ export const Search = () => {
     const [error, setError] = useState(null);
     const { pathname } = useLocation();
     const path = pathname.split('/')[1];
+    const isCollections = pathname.split('/')[2];
 
     useEffect(() => {
         const query = searchParams.get('query');
         const page = searchParams.get('page');
         if (!query) return;
         setIsLoading(true);
-        getMediaByName(
-            path === 'movies' ? 'movie' : path === 'tv-shows' ? 'tv' : 'person',
+        getMediaOnRequest(
+            isCollections === 'collections'
+                ? 'collection'
+                : path === 'movies'
+                ? 'movie'
+                : path === 'tv-shows'
+                ? 'tv'
+                : 'person',
             query,
             page
         )
@@ -41,22 +48,22 @@ export const Search = () => {
                 setIsLoading(false);
                 setFirst(false);
             });
-    }, [searchParams, path]);
+    }, [searchParams, path, isCollections]);
 
     return (
-        <section>
+        <section className="padding-top">
             <Container>
                 {isLoading && <Loader />}
                 {total > 0 && (
                     <Pagination totalPages={total} serviceClass="top" />
                 )}
-                {medias && path !== 'person' && (
+                {medias && path !== 'persons' && (
                     <MediaList
                         media={medias}
                         mediaTypes={path === 'movies' ? 'movie' : 'tv'}
                     />
                 )}
-                {medias && path === 'person' && (
+                {medias && path === 'persons' && (
                     <PersonsList persons={medias} />
                 )}
                 {!first && medias.length < 1 && <Page404 />}

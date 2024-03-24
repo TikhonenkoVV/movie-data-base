@@ -1,17 +1,56 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import iconSun from '../../../images/icon-sun.svg';
-import iconMoon from '../../../images/icon-moon.svg';
+import iconSun from '../../images/icon-sun.svg';
+import iconMoon from '../../images/icon-moon.svg';
 
 export const HeaderStyled = styled.header`
+    position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
-    @media ${({ theme }) => theme.breakpoints.m} {
-        padding-top: 20px;
-        padding-bottom: 20px;
+`;
+
+export const SearchPanel = styled.div`
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+    box-shadow: 0px 6px 20px 0px #00000075;
+    z-index: 1;
+    &[aria-hidden='true'] {
+        display: none;
     }
+`;
+
+export const SearcForm = styled.form`
+    display: flex;
+    gap: 16px;
+`;
+
+export const SubmitButton = styled.button`
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: ${({ theme }) => theme.colors.hover};
+    color: ${({ theme }) => theme.colors.white};
+`;
+
+export const Input = styled.input`
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 50px;
+    background-color: transparent;
+    outline: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.light};
+    transition: color ${({ theme }) => theme.baseTransition};
 `;
 
 export const Wrapper = styled.div`
@@ -22,7 +61,6 @@ export const Wrapper = styled.div`
     height: 40px;
     @media ${({ theme }) => theme.breakpoints.m} {
         position: static;
-        height: 70px;
     }
 `;
 
@@ -62,7 +100,6 @@ export const OpenMenuBtn = styled.button`
     display: block;
     width: 40px;
     height: 40px;
-    margin-left: auto;
     padding: 4px;
     color: ${({ theme }) => theme.colors.white};
     & svg {
@@ -170,5 +207,29 @@ export const Toggler = styled.button`
         &:hover::before {
             background-color: ${({ theme }) => theme.colors.white};
         }
+    }
+`;
+
+export const BtnSearch = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    color: ${({ theme }) => theme.colors.light};
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.colors.hover};
+    transition: color ${({ theme }) => theme.baseTransition};
+    & svg {
+        fill: currentColor;
+        pointer-events: none;
+    }
+    &:hover {
+        color: ${({ theme }) => theme.colors.white};
+    }
+    @media ${({ theme }) => theme.breakpoints.m} {
+        margin-left: 0;
     }
 `;

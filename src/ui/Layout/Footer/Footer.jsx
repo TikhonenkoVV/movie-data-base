@@ -7,7 +7,7 @@ import {
     StyledFooter,
     StyledLink,
 } from './Footer.styled';
-import sprite from '../../../images/sprite.svg';
+import sprite from '../../images/sprite.svg';
 import { Svg } from '../globalComponents/components/Svg/Svg';
 import { Container } from '../globalComponents/layouts/Container/Container';
 import { Logo } from '../globalComponents/components/Logo/Logo';

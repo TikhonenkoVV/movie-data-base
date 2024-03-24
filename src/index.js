@@ -7,6 +7,10 @@ import 'modern-normalize';
 import { App } from 'App';
 import { persistor, store } from 'common/store/store';
 
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <Provider store={store}>

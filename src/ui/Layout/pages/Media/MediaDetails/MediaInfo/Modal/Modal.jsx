@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { ButtonClose, IFrame, IframeWrapper } from './Modal.styled';
 import { createPortal } from 'react-dom';
-import sprite from '../../../../../../../images/sprite.svg';
+import sprite from '../../../../../../images/sprite.svg';
 import { BackDrop } from 'ui/Layout/globalComponents/layouts/BackDrop/BackDrop';
 import { Svg } from 'ui/Layout/globalComponents/components/Svg/Svg';
 import { useModal } from '../../MediaDetails';

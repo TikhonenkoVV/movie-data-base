@@ -43,7 +43,7 @@ const PersonDetails = () => {
     }, [personId]);
 
     return (
-        <section>
+        <section className="padding-top">
             {isLoading && <Loader />}
             <Container>
                 {error && <ToastContainer />}

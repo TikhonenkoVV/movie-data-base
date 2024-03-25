@@ -2,9 +2,12 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const StyledMedialist = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    grid-gap: ${({ theme }) => theme.spacing.retreatS};
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        grid-gap: ${({ theme }) => theme.spacing.retreatS};
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        display: grid;
+        grid-gap: ${({ theme }) => theme.spacing.retreatM};
+    }
     @media ${({ theme }) => theme.breakpoints.s} {
         grid-gap: ${({ theme }) => theme.spacing.retreatM};
     }
@@ -20,8 +23,6 @@ export const StyledMedialist = styled.ul`
 `;
 
 export const StyledMediaCard = styled.li`
-    display: flex;
-    flex-direction: column;
     border: 2px solid ${({ theme }) => theme.colors.accent};
     border-radius: 20px;
     background-color: ${({ theme }) => theme.colors.accent};
@@ -31,51 +32,111 @@ export const StyledMediaCard = styled.li`
 
     overflow: hidden;
     cursor: zoom-in;
+    &:not(:last-child) {
+        margin-bottom: ${({ theme }) => theme.spacing.retreatS};
+        @media ${({ theme }) => theme.breakpoints.xs} {
+            margin-bottom: 0;
+        }
+    }
 
-    &:hover,
-    &:focus {
+    &:hover {
         box-shadow: 0px 2px 10px 2px ${({ theme }) => theme.colors.shadow};
     }
-    &:hover img,
-    &:focus img {
+    &:hover img {
         transform: scale(1.05);
     }
 `;
 
 export const MovieLink = styled(Link)`
-    position: relative;
     display: flex;
-    flex-direction: column;
+    gap: 24px;
+    position: relative;
     flex-grow: 1;
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        display: block;
+    }
 `;
 
 export const ImgWrapper = styled.div`
-    width: 100%;
-    overflow: hidden;
-    aspect-ratio: 2/3;
-    color: ${({ theme }) => theme.colors.white};
+    flex-shrink: 0;
+    width: 120px;
     & img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 2/3;
+        color: ${({ theme }) => theme.colors.white};
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+`;
+
+export const ScoreBarBox = styled.div`
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+
+        white-space: normal;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        clip: auto;
+        clip-path: none;
+        margin: 0;
     }
 `;
 
 export const CardInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-grow: 1;
     width: 100%;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    text-align: center;
+    /* text-align: left; */
     background-color: ${({ theme }) => theme.colors.accent};
     color: ${({ theme }) => theme.colors.white};
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        text-align: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
 `;
 
 export const MovieTitle = styled.h2`
     margin-bottom: 6px;
     font-size: ${({ theme }) => theme.fontSizes.small};
     line-height: 1.5;
+`;
+
+export const Release = styled.p`
+    margin-bottom: 24px;
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        margin-bottom: 0;
+    }
+`;
+
+export const Score = styled.p`
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        display: none;
+    }
 `;

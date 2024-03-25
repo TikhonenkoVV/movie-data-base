@@ -3,6 +3,9 @@ import {
     ImgWrapper,
     MovieLink,
     MovieTitle,
+    Release,
+    Score,
+    ScoreBarBox,
     StyledMediaCard,
     StyledMedialist,
 } from './MediaList.styled';
@@ -35,18 +38,12 @@ export const MediaList = ({ media, mediaTypes }) => {
                                     : `/movies/collections/collection-${id}`
                             }
                         >
+                            <ScoreBarBox>
+                                <ScoreBar size={0.7} rating={vote_average} />
+                            </ScoreBarBox>
                             <ImgWrapper>
-                                <ScoreBar
-                                    size={0.7}
-                                    rating={vote_average}
-                                    style={{
-                                        position: 'absolute',
-                                        top: 10,
-                                        right: 10,
-                                        zIndex: 1,
-                                    }}
-                                />
                                 <img
+                                    width={80}
                                     src={
                                         poster_path
                                             ? `${POSTER_W342 + poster_path}`
@@ -57,7 +54,13 @@ export const MediaList = ({ media, mediaTypes }) => {
                             </ImgWrapper>
                             <CardInfo>
                                 <MovieTitle>{movie_title}</MovieTitle>
-                                <p>{release}</p>
+                                <Release>{release}</Release>
+                                <Score>
+                                    User score:{' '}
+                                    {vote_average === 'NR'
+                                        ? vote_average
+                                        : `${vote_average} %`}
+                                </Score>
                             </CardInfo>
                         </MovieLink>
                     </StyledMediaCard>

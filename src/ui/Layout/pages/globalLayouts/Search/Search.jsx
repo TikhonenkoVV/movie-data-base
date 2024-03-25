@@ -8,6 +8,7 @@ import { Loader } from 'ui/Layout/globalComponents/components/Loader';
 import { MediaList } from '../../../globalComponents/components/MediaList/MediaList';
 import { Page404 } from './Page404/Page404';
 import { PersonsList } from '../../Media/PersonDetails/PersonsList/PersonsList';
+import { Description } from './Search.styled';
 
 export const Search = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -19,9 +20,9 @@ export const Search = () => {
     const { pathname } = useLocation();
     const path = pathname.split('/')[1];
     const isCollections = pathname.split('/')[2] === 'collections';
+    const query = searchParams.get('query');
 
     useEffect(() => {
-        const query = searchParams.get('query');
         const page = searchParams.get('page');
         if (!query) return;
         setIsLoading(true);
@@ -48,12 +49,13 @@ export const Search = () => {
                 setIsLoading(false);
                 setFirst(false);
             });
-    }, [searchParams, path, isCollections]);
+    }, [query, searchParams, path, isCollections]);
 
     return (
         <section className="padding-top">
             <Container>
                 {isLoading && <Loader />}
+                <Description>Search results for: "{query}"</Description>
                 {total > 0 && (
                     <Pagination totalPages={total} serviceClass="top" />
                 )}

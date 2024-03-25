@@ -14,7 +14,7 @@ export const TrendsToggler = ({
 }) => {
     return (
         <StyledTogler>
-            <TogglerTitle>Trending</TogglerTitle>
+            <TogglerTitle>Top 20 Trending</TogglerTitle>
             <TrendsBtnWrapper>
                 <TrendsBtn
                     datatype="day"

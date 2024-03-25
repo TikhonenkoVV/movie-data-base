@@ -34,7 +34,7 @@ export const CollectionList = ({ parts }) => {
                                     )}
                                     <ScoreBox>
                                         <ScoreBar
-                                            size={0.8}
+                                            size={0.6}
                                             rating={vote_average}
                                         />
                                         <h3>User Score</h3>

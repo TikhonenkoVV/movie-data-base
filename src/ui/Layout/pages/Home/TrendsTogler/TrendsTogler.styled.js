@@ -20,7 +20,7 @@ export const TogglerTitle = styled.h1`
 export const TrendsBtnWrapper = styled.div`
     position: relative;
     display: flex;
-    border: 1px solid ${({ theme }) => theme.colors.hover};
+    border: 1px solid ${({ theme }) => theme.colors.accent};
     border-radius: 17px;
     overflow: hidden;
 `;
@@ -42,6 +42,6 @@ export const TrendsBtn = styled.button`
     }
     &.active {
         color: ${({ theme }) => theme.colors.white};
-        background-color: ${({ theme }) => theme.colors.hover};
+        background-color: ${({ theme }) => theme.colors.accent};
     }
 `;

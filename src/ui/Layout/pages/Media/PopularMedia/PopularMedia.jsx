@@ -17,8 +17,6 @@ export const PopularMedia = () => {
     const isTv = path === 'tv-shows';
 
     useEffect(() => {
-        console.log(isMovies);
-        console.log(isTv);
         if (isMovies) {
             setIsLoading(true);
             getPopular('movie', 1)

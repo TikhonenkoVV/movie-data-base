@@ -35,19 +35,26 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
     } = movie;
     const { isModalOpen } = useModal();
     const observer = useRef(null);
-    const gridItem = useRef(null);
+    const gridItemRef = useRef(null);
+    const posterRef = useRef(null);
     const [itemHeight, setItemHeight] = useState(0);
+    const [bgrHeight, setBgrHeight] = useState(0);
     const creators = [];
     const directors = [];
     created_by?.map(el => creators.push(el.name));
     directing?.map(el => directors.push(el.personName));
 
     useEffect(() => {
-        const item = gridItem.current;
+        const item = gridItemRef.current;
+        const poster = posterRef.current;
         observer.current = new ResizeObserver(() => {
-            if (gridItem.current) {
-                const { clientHeight } = item;
-                setItemHeight(clientHeight);
+            if (gridItemRef.current) {
+                const { clientHeight: itemHeight } = item;
+                const { clientHeight: posterHeight } = poster;
+                if (itemHeight > posterHeight) {
+                    setItemHeight(itemHeight);
+                } else setItemHeight(posterHeight);
+                setBgrHeight(itemHeight);
             }
         });
         observer.current.observe(item);
@@ -56,9 +63,14 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
     return (
         <section>
             <Container>
-                <MovieWrapper itemHeight={itemHeight} bgr={backdrop_path}>
+                <MovieWrapper
+                    itemHeight={itemHeight}
+                    bgrHeight={bgrHeight}
+                    bgr={backdrop_path}
+                >
                     <PosterWrapper bgr={backdrop_path}>
                         <Poster
+                            ref={posterRef}
                             src={
                                 poster_path
                                     ? POSTER_W342 + poster_path
@@ -67,7 +79,7 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                             alt={name}
                         />
                     </PosterWrapper>
-                    <MovieInfoWrapper ref={gridItem}>
+                    <MovieInfoWrapper ref={gridItemRef}>
                         <TitleMinor>{name}</TitleMinor>
                         {release.release_date && (
                             <Description>

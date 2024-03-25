@@ -30,7 +30,9 @@ export const MediaList = ({ media, mediaTypes }) => {
                             to={
                                 media_type === 'movie'
                                     ? `/movies/movie-${id}`
-                                    : `/tv-shows/tv-${id}`
+                                    : media_type === 'tv'
+                                    ? `/tv-shows/tv-${id}`
+                                    : `/movies/collections/collection-${id}`
                             }
                         >
                             <ImgWrapper>

@@ -14,7 +14,7 @@ export const PersonsList = ({ persons }) => {
         <StyledPersonList>
             {persons.map(({ id, name, profile_path }) => (
                 <StyledPersonCard key={id}>
-                    <Link to={`/person/${id}`}>
+                    <Link to={`/persons/${id}`}>
                         <ImgWrapper>
                             <img
                                 src={

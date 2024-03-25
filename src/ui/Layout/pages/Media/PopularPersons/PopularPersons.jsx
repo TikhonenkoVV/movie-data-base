@@ -40,7 +40,7 @@ export const PopularPersons = () => {
                             profile_path,
                         }) => (
                             <Item key={id}>
-                                <StyledLink>
+                                <StyledLink to={`/persons/${id}`}>
                                     <PersonPhoto
                                         width={80}
                                         src={

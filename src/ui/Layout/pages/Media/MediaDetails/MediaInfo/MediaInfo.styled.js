@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import noPoster from '../../../../../images/no-poster.jpg';
+import noPoster from '../../../../../images/no-poster-backdrop.jpg';
 import { Link } from 'react-router-dom';
 import { BACKDROP_W1280 } from 'common/constants';
 
@@ -16,18 +16,18 @@ export const MovieWrapper = styled.div`
         background-repeat: no-repeat;
         background-size: ${({ itemHeight, theme }) =>
             `auto calc(${itemHeight}px + ${theme.spacing.retreatM} + ${theme.spacing.retreatM})`};
-        transition: background ${({ theme }) => theme.baseTransition};
+        transition: background-color ${({ theme }) => theme.baseTransition};
     }
     @media ${({ theme }) => theme.breakpoints.s} {
         grid-template-columns: 230px auto;
         grid-template-rows: auto calc(
-                100% - ${({ itemHeight }) => itemHeight}px - 20px
+                100% - ${({ bgrHeight }) => bgrHeight}px - 20px
             );
         background-size: ${({ itemHeight, theme }) =>
             itemHeight < 385
                 ? 'auto 385px'
                 : `auto calc(${itemHeight}px + ${theme.spacing.retreatM} + ${theme.spacing.retreatM})`};
-        transition: background ${({ theme }) => theme.baseTransition};
+        transition: background-color ${({ theme }) => theme.baseTransition};
     }
     @media ${({ theme }) => theme.breakpoints.m} {
         background-position: center;

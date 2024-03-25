@@ -110,7 +110,7 @@ export const FullCast = () => {
                                                 }) => (
                                                     <Card key={credit_id}>
                                                         <StyledLink
-                                                            to={`/person/${id}`}
+                                                            to={`/persons/${id}`}
                                                         >
                                                             <Poster
                                                                 width={66}

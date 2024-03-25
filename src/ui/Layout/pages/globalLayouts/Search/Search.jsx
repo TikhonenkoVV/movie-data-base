@@ -18,7 +18,7 @@ export const Search = () => {
     const [error, setError] = useState(null);
     const { pathname } = useLocation();
     const path = pathname.split('/')[1];
-    const isCollections = pathname.split('/')[2];
+    const isCollections = pathname.split('/')[2] === 'collections';
 
     useEffect(() => {
         const query = searchParams.get('query');
@@ -26,7 +26,7 @@ export const Search = () => {
         if (!query) return;
         setIsLoading(true);
         getMediaOnRequest(
-            isCollections === 'collections'
+            isCollections
                 ? 'collection'
                 : path === 'movies'
                 ? 'movie'
@@ -60,7 +60,13 @@ export const Search = () => {
                 {medias && path !== 'persons' && (
                     <MediaList
                         media={medias}
-                        mediaTypes={path === 'movies' ? 'movie' : 'tv'}
+                        mediaTypes={
+                            isCollections
+                                ? 'collections'
+                                : path === 'movies'
+                                ? 'movie'
+                                : 'tv'
+                        }
                     />
                 )}
                 {medias && path === 'persons' && (

@@ -41,6 +41,10 @@ export const PersonPhoto = styled.img`
         flex-shrink: 0;
         margin-bottom: 0;
     }
+    @media ${({ theme }) => theme.breakpoints.xs} {
+        margin-left: 0;
+        margin-right: 0;
+    }
     @media ${({ theme }) => theme.breakpoints.s} {
         width: 250px;
     }

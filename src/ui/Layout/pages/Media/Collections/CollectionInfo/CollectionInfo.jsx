@@ -25,26 +25,35 @@ export const CollectionInfo = ({ collection }) => {
     } = collection;
 
     const observer = useRef(null);
-    const gridItem = useRef(null);
+    const gridItemRef = useRef(null);
+    const posterRef = useRef(null);
     const [itemHeight, setItemHeight] = useState(0);
+    const [bgrHeight, setBgrHeight] = useState(0);
 
     useEffect(() => {
-        if (gridItem.current) {
-            const item = gridItem.current;
-            observer.current = new ResizeObserver(() => {
-                if (gridItem.current) {
-                    const { clientHeight } = item;
-                    setItemHeight(clientHeight);
-                }
-            });
-            observer.current.observe(item);
-        }
+        const item = gridItemRef.current;
+        const poster = posterRef.current;
+        observer.current = new ResizeObserver(() => {
+            if (gridItemRef.current) {
+                const { clientHeight: itemHeight } = item;
+                const { clientHeight: posterHeight } = poster;
+                if (itemHeight > posterHeight) {
+                    setItemHeight(itemHeight);
+                } else setItemHeight(posterHeight);
+                setBgrHeight(itemHeight);
+            }
+        });
+        observer.current.observe(item);
     }, []);
 
     return (
         <section>
             <Container>
-                <CollectionWrapper itemHeight={itemHeight} bgr={backdrop_path}>
+                <CollectionWrapper
+                    itemHeight={itemHeight}
+                    bgrHeight={bgrHeight}
+                    bgr={backdrop_path}
+                >
                     <PosterWrapper bgr={backdrop_path}>
                         <picture>
                             <source
@@ -56,6 +65,7 @@ export const CollectionInfo = ({ collection }) => {
                             />
 
                             <Poster
+                                ref={posterRef}
                                 src={
                                     poster_path
                                         ? POSTER_W342 + poster_path
@@ -65,7 +75,7 @@ export const CollectionInfo = ({ collection }) => {
                             />
                         </picture>
                     </PosterWrapper>
-                    <CollectionInfoWrapper ref={gridItem}>
+                    <CollectionInfoWrapper ref={gridItemRef}>
                         <TitleMinor>{name}</TitleMinor>
                         <ScoreBox>
                             <ScoreBar size={1} rating={vote_average} />

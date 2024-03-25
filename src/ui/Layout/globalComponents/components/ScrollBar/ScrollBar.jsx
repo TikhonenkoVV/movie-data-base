@@ -102,6 +102,9 @@ export const Scrollbar = ({
             setRetreatY.current(contentWrapperRef.current.scrollTop);
             setRetreatX.current(contentWrapperRef.current.scrollLeft);
             const thumb = scrollThumbRef.current;
+            if (device === 'mobile') {
+                return;
+            }
             if (orientation === 'y') {
                 const { scrollTop: contentTop, scrollHeight: contentHeight } =
                     contentWrapperRef.current;
@@ -125,7 +128,7 @@ export const Scrollbar = ({
                 });
             }
         }
-    }, [orientation]);
+    }, [orientation, device]);
 
     useEffect(() => {
         if (contentWrapperRef.current && contentRef.current) {

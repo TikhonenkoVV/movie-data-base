@@ -1,7 +1,7 @@
 export const darkTheme = Object.freeze({
     colors: {
         accent: '#19171d',
-        hover: '#1c2124',
+        hover: '#313131',
         white: '#fff',
         btnColor: '#fff',
         themeText: '#fff',

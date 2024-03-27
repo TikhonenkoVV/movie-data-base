@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
 import { getMediaOnRequest } from 'common/services/api';
 import { Pagination } from './Pagination/Pagination';
 import { Container } from 'ui/Layout/globalComponents/layouts/Container/Container';
@@ -43,7 +42,6 @@ export const Search = () => {
             })
             .catch(err => {
                 setError(err.message);
-                toast(err.message);
             })
             .finally(() => {
                 setIsLoading(false);
@@ -52,10 +50,11 @@ export const Search = () => {
     }, [query, searchParams, path, isCollections]);
 
     return (
-        <section className="padding-top">
+        <section>
             <Container>
+                {error && <p>{error}</p>}
                 {isLoading && <Loader />}
-                <Description>Search results for: "{query}"</Description>
+                <Description>Search results for "{query}"</Description>
                 {total > 0 && (
                     <Pagination totalPages={total} serviceClass="top" />
                 )}
@@ -78,7 +77,6 @@ export const Search = () => {
                 {total > 0 && (
                     <Pagination totalPages={total} serviceClass="bottom" />
                 )}
-                {error && <ToastContainer />}
             </Container>
         </section>
     );

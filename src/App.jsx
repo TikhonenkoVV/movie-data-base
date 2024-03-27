@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Layout } from './ui/Layout/Layout';
 import { lazy, useEffect, useState } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setDevice } from 'common/store/device/deviceSlice';
 import { getDeviceType } from 'common/services/geDeviceType';
 import axios from 'axios';
+import { Page404 } from 'ui/Layout/pages/globalLayouts/Search/Page404/Page404';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
@@ -167,8 +168,9 @@ export const App = () => {
                         <Route path="search" element={<Search />} />
                         <Route path=":personId" element={<PersonDetails />} />
                     </Route>
+                    <Route path="*" element={<Page404 />} />
                 </Route>
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="*" element={<Page404 />} />
             </Routes>
         </ThemeProvider>
     );

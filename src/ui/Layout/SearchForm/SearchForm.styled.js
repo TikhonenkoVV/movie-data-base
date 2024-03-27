@@ -38,7 +38,34 @@ export const Input = styled.input`
     border-left-style: none;
     border-right-style: none;
     border-bottom: 1px solid ${({ theme }) => theme.colors.light};
+    border-radius: 5px;
     transition: color ${({ theme }) => theme.baseTransition};
+    &.warning {
+        animation-name: warning;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
+        @keyframes warning {
+            0% {
+                box-shadow: 0 0 0 0 #ff0000;
+            }
+            20% {
+                box-shadow: 0 0 10px 3px #ff0000;
+            }
+            40% {
+                box-shadow: 0 0 0 0 #ff0000;
+            }
+            60% {
+                box-shadow: 0 0 10px 3px #ff0000;
+            }
+            80% {
+                box-shadow: 0 0 0 0 #ff0000;
+            }
+            100% {
+                box-shadow: 0 0 10px 3px #ff0000;
+            }
+        }
+    }
 `;
 
 export const ClearButton = styled.button`

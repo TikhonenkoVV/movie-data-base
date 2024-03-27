@@ -15,9 +15,11 @@ import { Loader } from '../globalComponents/components/Loader';
 import { getMediaOnRequest } from 'common/services/api';
 import { Svg } from '../globalComponents/components/Svg/Svg';
 import sprite from '../../images/sprite.svg';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const SearchForm = ({ formRef, ariaHidden }) => {
     const [isLoading, setIsLoading] = useState(false);
+    const [warning, setWarning] = useState(false);
     const [query, setQuery] = useState('');
     const [error, setError] = useState();
     const [moviesCount, setMoviesCount] = useState(false);
@@ -53,8 +55,12 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (error) console.log(error);
-        if (!query) return;
+        if (!query) {
+            setWarning(true);
+            return;
+        }
         setIsLoading(true);
+        setWarning(false);
         getMediaOnRequest('movie', query, 1)
             .then(data => {
                 setMoviesCount(data.total_results);
@@ -92,6 +98,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                     <StyledForm onSubmit={handleSubmit}>
                         <Label>
                             <Input
+                                className={warning && 'warning'}
                                 value={query}
                                 ref={formRef.inputRef}
                                 placeholder="Please enter your query"

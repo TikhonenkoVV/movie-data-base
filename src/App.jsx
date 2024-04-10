@@ -1,14 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { lazy, useEffect, useState } from 'react';
-import { Global, ThemeProvider } from '@emotion/react';
+import { lazy, useEffect } from 'react';
 import axios from 'axios';
 
-import { GlobalStyles, darkTheme, lightTheme, theme } from 'ui/assets/styles';
 import { GlobalLayout } from 'ui/shared/layouts/GlobalLayout/GlobalLayout';
 import { MediaLayout } from 'ui/shared/layouts/MediaLayout';
 
-import { storageLoad, storageSave } from 'common/services/storage';
 import { setDevice } from 'common/store/device/deviceSlice';
 import { getDeviceType } from 'common/services/geDeviceType';
 import { DetailsLayout } from 'ui/shared/layouts/DetailsLayout/DetailsLayout';
@@ -46,102 +43,50 @@ const CollectionDetails = lazy(() =>
 
 const Page404 = lazy(() => import('./ui/pages/Page404/Page404'));
 
-const dark = {
-    ...theme,
-    ...darkTheme,
-};
-
-const light = {
-    ...theme,
-    ...lightTheme,
-};
-
 export const App = () => {
     const dispatch = useDispatch();
-
-    const [currentTheme, setCurrentTheme] = useState(dark);
-
-    const [currentColor, setCurrentColor] = useState(
-        storageLoad('movieDBTheme') ? storageLoad('movieDBTheme') : 'dark'
-    );
-
-    const onChangeTheme = colors => {
-        setCurrentColor(colors);
-    };
 
     useEffect(() => {
         dispatch(setDevice(getDeviceType()));
     }, [dispatch]);
 
-    useEffect(() => {
-        if (currentColor === 'dark') {
-            setCurrentTheme(dark);
-            storageSave('movieDBTheme', 'dark');
-        }
-        if (currentColor === 'light') {
-            setCurrentTheme(light);
-            storageSave('movieDBTheme', 'light');
-        }
-    }, [currentColor]);
-
     return (
-        <ThemeProvider theme={currentTheme}>
-            <Global styles={GlobalStyles} />
-            <Routes>
-                <Route
-                    path="/"
-                    element={<GlobalLayout onChangeTheme={onChangeTheme} />}
-                >
-                    <Route index element={<Home />} />
-                    <Route path="movies" element={<MediaLayout />}>
-                        <Route index element={<PopularMedia />} />
-                        <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MediaDetails />} />
-                        <Route
-                            path=":mediaId/details"
-                            element={<DetailsLayout />}
-                        >
-                            <Route
-                                path="cast-and-crew"
-                                element={<FullCast />}
-                            />
-                            <Route path="reviews" element={<Review />} />
-                        </Route>
-                        <Route
-                            path="collections"
-                            element={<CollectionLayout />}
-                        >
-                            <Route
-                                path=":collectionId"
-                                element={<CollectionDetails />}
-                            />
-                            <Route path="search" element={<Search />} />
-                        </Route>
+        <Routes>
+            <Route path="/" element={<GlobalLayout />}>
+                <Route index element={<Home />} />
+                <Route path="movies" element={<MediaLayout />}>
+                    <Route index element={<PopularMedia />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path=":mediaId" element={<MediaDetails />} />
+                    <Route path=":mediaId/details" element={<DetailsLayout />}>
+                        <Route path="cast-and-crew" element={<FullCast />} />
+                        <Route path="reviews" element={<Review />} />
                     </Route>
-                    <Route path="tv-shows" element={<MediaLayout />}>
-                        <Route index element={<PopularMedia />} />
-                        <Route path="search" element={<Search />} />
-                        <Route path=":mediaId" element={<MediaDetails />} />
+                    <Route path="collections" element={<CollectionLayout />}>
                         <Route
-                            path=":mediaId/details"
-                            element={<DetailsLayout />}
-                        >
-                            <Route
-                                path="cast-and-crew"
-                                element={<FullCast />}
-                            />
-                            <Route path="reviews" element={<Review />} />
-                        </Route>
-                    </Route>
-                    <Route path="persons" element={<MediaLayout />}>
-                        <Route index element={<PopularPersons />} />
+                            path=":collectionId"
+                            element={<CollectionDetails />}
+                        />
                         <Route path="search" element={<Search />} />
-                        <Route path=":personId" element={<PersonDetails />} />
                     </Route>
-                    <Route path="*" element={<Page404 />} />
+                </Route>
+                <Route path="tv-shows" element={<MediaLayout />}>
+                    <Route index element={<PopularMedia />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path=":mediaId" element={<MediaDetails />} />
+                    <Route path=":mediaId/details" element={<DetailsLayout />}>
+                        <Route path="cast-and-crew" element={<FullCast />} />
+                        <Route path="reviews" element={<Review />} />
+                    </Route>
+                </Route>
+                <Route path="persons" element={<MediaLayout />}>
+                    <Route index element={<PopularPersons />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path=":personId" element={<PersonDetails />} />
                 </Route>
                 <Route path="*" element={<Page404 />} />
-            </Routes>
-        </ThemeProvider>
+            </Route>
+            <Route path="*" element={<Page404 />} />
+        </Routes>
     );
 };

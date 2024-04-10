@@ -34,6 +34,7 @@ export const Aside = styled.aside`
 export const PersonPhoto = styled.img`
     width: 200px;
     aspect-ratio: 2 / 3;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};

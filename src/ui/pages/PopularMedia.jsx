@@ -1,10 +1,10 @@
 import { useLocation } from 'react-router-dom';
-import { SectionTitle } from './PopularMedia.styled';
 import { useEffect, useState } from 'react';
 import { getPopular } from 'common/services/api';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { MediaList } from 'ui/shared/components/MediaList/MediaList';
 import { Loader } from 'ui/shared/components/Loader';
+import { SectionTitle } from 'ui/shared/components/SectionTitle/SectionTitle';
 
 export const PopularMedia = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,7 @@ export const PopularMedia = () => {
         }
     }, [isMovies, isTv]);
     return (
-        <section className="padding-top">
+        <section>
             {isLoading && <Loader />}
             <Container>
                 <SectionTitle>

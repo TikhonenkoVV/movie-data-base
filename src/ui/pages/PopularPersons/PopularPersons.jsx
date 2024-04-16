@@ -11,10 +11,10 @@ import {
     List,
     PersonName,
     PersonPhoto,
-    SectionTitle,
     StyledLink,
 } from './PopularPersons.styled';
 import { Container } from 'ui/shared/layouts/Container/Container';
+import { SectionTitle } from 'ui/shared/components/SectionTitle/SectionTitle';
 
 const PopularPersons = () => {
     const [persons, setPersons] = useState();
@@ -26,7 +26,7 @@ const PopularPersons = () => {
     }, []);
 
     return (
-        <section className="padding-top">
+        <section>
             {error && <p>{error}</p>}
             <Container>
                 <SectionTitle>Top 20 Popular Persons</SectionTitle>

@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Select } from 'ui/shared/components/Select/Select';
 import {
     StyledTogler,
@@ -5,6 +6,7 @@ import {
     TrendsBtn,
     TrendsBtnWrapper,
 } from './TrendsTogler.styled';
+import { selectDictionary } from 'common/store/selector';
 
 export const TrendsToggler = ({
     trands,
@@ -12,9 +14,10 @@ export const TrendsToggler = ({
     onBtnWeekClick,
     hendleSelectChange,
 }) => {
+    const { trending, today, week } = useSelector(selectDictionary);
     return (
         <StyledTogler>
-            <TogglerTitle>Top 20 Trending</TogglerTitle>
+            <TogglerTitle>{trending}</TogglerTitle>
             <TrendsBtnWrapper>
                 <TrendsBtn
                     datatype="day"
@@ -22,14 +25,14 @@ export const TrendsToggler = ({
                     type="button"
                     onClick={onBtnDayClick}
                 >
-                    today
+                    {today}
                 </TrendsBtn>
                 <TrendsBtn
                     className={trands === 'week' ? 'active' : ''}
                     type="button"
                     onClick={onBtnWeekClick}
                 >
-                    this week
+                    {week}
                 </TrendsBtn>
             </TrendsBtnWrapper>
             <Select onChange={hendleSelectChange} />

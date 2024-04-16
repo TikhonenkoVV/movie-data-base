@@ -15,9 +15,9 @@ import { favoritesReducer } from './favorites/favoritesSlice';
 import { deviceReducer } from './device/deviceSlice';
 
 const authPersistConfig = {
-    key: 'auth',
+    key: 'mdb_auth',
     storage,
-    whitelist: ['accessToken', 'refreshToken'],
+    whitelist: ['accessToken', 'refreshToken', 'lang', 'theme'],
 };
 
 export const store = configureStore({

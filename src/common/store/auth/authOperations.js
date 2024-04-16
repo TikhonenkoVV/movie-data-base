@@ -52,8 +52,8 @@ export const hendleRefreshUser = createAsyncThunk(
             return rejectWithValue();
         }
 
-        setAuthHeader(persistToken);
         try {
+            setAuthHeader(persistToken);
             const { data } = await axios.get('/users/current');
             return data;
         } catch (err) {
@@ -77,6 +77,21 @@ export const hendleRefreshToken = createAsyncThunk(
             return data;
         } catch (err) {
             return rejectWithValue(err.response.statusText);
+        }
+    }
+);
+
+export const updateUser = createAsyncThunk(
+    'auth/updateUser',
+    async (userData, thunkAPI) => {
+        try {
+            const { data } = await axios.patch('/auth', userData);
+            return data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue({
+                message: error.response.data.message,
+                status: error.response.status,
+            });
         }
     }
 );

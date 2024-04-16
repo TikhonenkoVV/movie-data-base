@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 export const DetailsTitle = styled.h2`
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
     color: ${({ theme }) => theme.colors.themeText};
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const LinksWrapper = styled.div`

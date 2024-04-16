@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import {
     ClearButton,
     Input,
@@ -16,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { Svg } from 'ui/shared/components/Svg/Svg';
+import { selectDictionary } from 'common/store/selector';
 
 export const SearchForm = ({ formRef, ariaHidden }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +30,18 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
     const [tvShowsCount, setTvShowsCount] = useState(false);
     const [personsCount, setPersonsCount] = useState(false);
     const [collectionsCount, setCollectionsCount] = useState(false);
+
     const [total, setTotal] = useState(0);
+
+    const {
+        placeholderText,
+        search,
+        result,
+        movies,
+        persons,
+        tvShows,
+        collections,
+    } = useSelector(selectDictionary);
 
     useEffect(() => {
         if (ariaHidden === 'true' || !query) {
@@ -40,8 +54,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
         }
         if (query) {
             setPlaceholder('');
-        } else setPlaceholder('Please enter your query');
-    }, [ariaHidden, query]);
+        } else setPlaceholder(placeholderText);
+    }, [ariaHidden, query, placeholderText]);
 
     useEffect(() => {
         if (moviesCount) setTotal(prev => (prev += moviesCount));
@@ -123,7 +137,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                             </ClearButton>
                         </Label>
                         <SubmitButton ref={formRef.submitRef} type="submit">
-                            Search
+                            {search}
                         </SubmitButton>
                     </StyledForm>
                     {total > 0 ? (
@@ -133,8 +147,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/movies/search?query=${query}&page=1`}
                                     >
-                                        Show search result in Movies:{' '}
-                                        {moviesCount}
+                                        {result}
+                                        <span>{movies}</span>: {moviesCount}
                                     </StyledLink>
                                 </Item>
                             )}
@@ -143,8 +157,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/tv-shows/search?query=${query}&page=1`}
                                     >
-                                        Show search result in Tv-Shows:{' '}
-                                        {tvShowsCount}
+                                        {result}
+                                        <span>{tvShows}</span>: {tvShowsCount}
                                     </StyledLink>
                                 </Item>
                             )}
@@ -153,7 +167,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/movies/collections/search?query=${query}&page=1`}
                                     >
-                                        Show search result in Collections:{' '}
+                                        {result}
+                                        <span>{collections}</span>:{' '}
                                         {collectionsCount}
                                     </StyledLink>
                                 </Item>
@@ -163,8 +178,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/persons/search?query=${query}&page=1`}
                                     >
-                                        Show search result in Persons:{' '}
-                                        {personsCount}
+                                        {result}
+                                        <span>{persons}</span>: {personsCount}
                                     </StyledLink>
                                 </Item>
                             )}

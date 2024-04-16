@@ -1,17 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const SectionTitle = styled.h1`
-    margin-bottom: ${({ theme }) => theme.spacing.retreatS};
-    color: ${({ theme }) => theme.colors.themeText};
-    @media ${({ theme }) => theme.breakpoints.s} {
-        margin-bottom: ${({ theme }) => theme.spacing.retreatM};
-    }
-    @media ${({ theme }) => theme.breakpoints.xl} {
-        margin-bottom: ${({ theme }) => theme.spacing.retreatL};
-    }
-`;
-
 export const List = styled.ul`
     @media ${({ theme }) => theme.breakpoints.l} {
         display: flex;

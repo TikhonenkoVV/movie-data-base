@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+import flagUkUa from 'ui/assets/images/flag-uk-ua.png';
+import flagEnUs from 'ui/assets/images/flag-en-us.png';
 
 export const HeaderStyled = styled.header`
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
+    box-shadow: 0 0 10px 0 #464545;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
 `;
@@ -164,7 +167,55 @@ export const NavLinkStyled = styled(NavLink)`
     }
 `;
 
-export const Toggler = styled.button`
+export const LangToggler = styled.div`
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 20px;
+    color: ${({ theme }) => theme.colors.light};
+    background-color: ${({ theme }) => theme.colors.hover};
+    transition: background-color ${({ theme }) => theme.baseTransition},
+        color ${({ theme }) => theme.baseTransition};
+    @media ${({ theme }) => theme.breakpoints.m} {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        &:hover {
+            color: ${({ theme }) => theme.colors.white};
+        }
+    }
+`;
+
+export const LangButton = styled.button`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: ${({ lang }) =>
+        lang === 'uk-UA' ? `url('${flagUkUa}')` : `url('${flagEnUs}')`};
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    filter: grayscale(1);
+    transition: filter ${({ theme }) => theme.baseTransition},
+        opacity ${({ theme }) => theme.baseTransition};
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+    &.active {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+`;
+
+export const ThemeToggler = styled.button`
     position: absolute;
     bottom: 10px;
     right: 20px;

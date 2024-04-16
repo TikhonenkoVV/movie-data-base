@@ -91,6 +91,7 @@ export const ClearButton = styled.button`
 
 export const SubmitButton = styled.button`
     padding: 0 16px;
+    text-transform: capitalize;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.colors.hover};
     color: ${({ theme }) => theme.colors.white};
@@ -111,4 +112,7 @@ export const Item = styled.li`
 
 export const StyledLink = styled(Link)`
     padding-left: 10px;
+    & span {
+        text-transform: capitalize;
+    }
 `;

@@ -6,8 +6,11 @@ import { PersonInfo } from './PersonInfo/PersonInfo';
 import { getDetails, getPersonById } from 'common/services/api';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
 
 const PersonDetails = () => {
+    const lang = useSelector(selectLang);
     const { personId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -18,7 +21,7 @@ const PersonDetails = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        getPersonById(personId)
+        getPersonById(personId, lang)
             .then(data => {
                 setPersonInfo(normalizePersonData(data));
             })
@@ -27,7 +30,7 @@ const PersonDetails = () => {
                 toast(err.message);
             })
             .finally(() => {
-                getDetails('person', personId, '/combined_credits')
+                getDetails('person', personId, lang, '/combined_credits')
                     .then(data => {
                         setPersonCredits(data.cast);
                         setCrew(data.crew);
@@ -40,7 +43,7 @@ const PersonDetails = () => {
                     });
                 setIsLoading(false);
             });
-    }, [personId]);
+    }, [personId, lang]);
 
     return (
         <section className="padding-top">

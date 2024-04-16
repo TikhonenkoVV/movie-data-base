@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import { getMovies } from 'common/services/api';
 import { getBackgrounds } from 'common/services/getBackgraunds';
@@ -7,8 +8,11 @@ import { TrendsToggler } from './TrendsTogler/TrendsTogler';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { MediaList } from 'ui/shared/components/MediaList/MediaList';
+import { selectLang } from 'common/store/selector';
 
 const Home = () => {
+    const language = useSelector(selectLang);
+
     const [isLoading, setIsLoading] = useState(false);
     const [trands, setTrends] = useState('day');
     const [mediaTypes, setMediaTypes] = useState('all');
@@ -18,7 +22,7 @@ const Home = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        getMovies(mediaTypes, trands)
+        getMovies(mediaTypes, trands, language)
             .then(data => {
                 setMovies(data.results);
                 setBackgrounds(getBackgrounds(data.results));
@@ -31,7 +35,7 @@ const Home = () => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [mediaTypes, trands]);
+    }, [mediaTypes, trands, language]);
 
     const onBtnWeekClick = () => {
         setTrends('week');

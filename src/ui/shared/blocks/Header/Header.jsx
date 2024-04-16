@@ -1,24 +1,39 @@
+import { useEffect, useRef, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+    selectDictionary,
+    selectLang,
+    selectTheme,
+    selectVerifiedUser,
+} from 'common/store/selector';
 import {
     BtnSearch,
     CloseMenuBtn,
     HeaderStyled,
+    LangButton,
+    LangToggler,
     Menu,
     Nav,
     NavLinkStyled,
     OpenMenuBtn,
-    Toggler,
+    ThemeToggler,
     Wrapper,
 } from './Header.styled';
-import { useEffect, useRef, useState } from 'react';
-import sprite from '../../../assets/images/sprite.svg';
-import { storageLoad } from 'common/services/storage';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { SearchForm } from './SearchForm/SearchForm';
 import { Logo } from 'ui/shared/components/Logo/Logo';
 import { Svg } from 'ui/shared/components/Svg/Svg';
 import { BackDrop } from 'ui/shared/layouts/BackDrop/BackDrop';
+import sprite from '../../../assets/images/sprite.svg';
+import { setDictionary, setLang } from 'common/store/auth/authSlice';
+import { dictionaryEn, dictionaryUk } from 'ui/assets/languages/dictionary';
 
 export const Header = ({ onChangeTheme }) => {
+    const dispatch = useDispatch();
+    const verifiedUser = useSelector(selectVerifiedUser);
+    const currentColor = useSelector(selectTheme);
+    const lang = useSelector(selectLang);
+
     const searchPanelRef = useRef(null);
     const searchButton = useRef(null);
     const themeBtn = useRef(null);
@@ -31,6 +46,8 @@ export const Header = ({ onChangeTheme }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isHidden, setIsHidden] = useState('true');
 
+    const { home, movies, tv, persons } = useSelector(selectDictionary);
+
     const toggleTheme = () => {
         if (themeBtn.current.classList.contains('dark')) {
             themeBtn.current.classList.replace('dark', 'light');
@@ -41,6 +58,15 @@ export const Header = ({ onChangeTheme }) => {
             themeBtn.current.classList.replace('light', 'dark');
             onChangeTheme('dark');
             return;
+        }
+    };
+
+    const toggleLang = e => {
+        const lang = e.target.getAttribute('id');
+        if (!verifiedUser) {
+            dispatch(setLang(lang));
+            if (lang === 'en-US') dispatch(setDictionary(dictionaryEn));
+            if (lang === 'uk-UA') dispatch(setDictionary(dictionaryUk));
         }
     };
 
@@ -83,6 +109,7 @@ export const Header = ({ onChangeTheme }) => {
         }
         setIsHidden('true');
     };
+
     return (
         <HeaderStyled>
             <SearchForm
@@ -108,41 +135,50 @@ export const Header = ({ onChangeTheme }) => {
                         </CloseMenuBtn>
                         <Nav>
                             <NavLinkStyled onClick={hendleCloseMenu} to={'/'}>
-                                Home
+                                {home}
                             </NavLinkStyled>
                             <NavLinkStyled
                                 onClick={hendleCloseMenu}
                                 to={'movies'}
                             >
-                                Movies
+                                {movies}
                             </NavLinkStyled>
                             <NavLinkStyled
                                 onClick={hendleCloseMenu}
                                 to={'tv-shows'}
                             >
-                                Tv
+                                {tv}
                             </NavLinkStyled>
                             <NavLinkStyled
                                 onClick={hendleCloseMenu}
                                 to={'persons'}
                             >
-                                People
+                                {persons}
                             </NavLinkStyled>
                         </Nav>
-                        <Toggler
+                        <LangToggler>
+                            <LangButton
+                                id="uk-UA"
+                                onClick={toggleLang}
+                                className={lang === 'uk-UA' && 'active'}
+                                lang="uk-UA"
+                            />
+                            <LangButton
+                                id="en-US"
+                                onClick={toggleLang}
+                                className={lang === 'en-US' && 'active'}
+                            />
+                        </LangToggler>
+                        <ThemeToggler
                             ref={themeBtn}
-                            className={
-                                storageLoad('movieDBTheme')
-                                    ? storageLoad('movieDBTheme')
-                                    : 'dark'
-                            }
+                            className={currentColor}
                             onClick={toggleTheme}
                             aria-label="Theme"
                             type="button"
                         >
                             <Svg w={22} h={22} use={`${sprite}#icon-sun`} />
                             <Svg w={22} h={22} use={`${sprite}#icon-moon`} />
-                        </Toggler>
+                        </ThemeToggler>
                     </Menu>
                     <BtnSearch ref={searchButton} onClick={toggleSearchPanel}>
                         <Svg w={20} h={20} use={`${sprite}#icon-search`} />

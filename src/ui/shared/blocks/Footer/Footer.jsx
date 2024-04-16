@@ -89,7 +89,7 @@ export const Footer = () => {
                     rel="noreferrer noopener"
                 >
                     <Svg w={20} h={20} use={`${sprite}#icon-github`} />
-                    Vitaliy Tikhonenko 2024
+                    Vitalii Tykhonenko 2024
                 </StyledLink>
             </Container>
         </StyledFooter>

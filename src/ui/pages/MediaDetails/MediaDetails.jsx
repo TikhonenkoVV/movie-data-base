@@ -1,6 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { DetailsTitle, LinksWrapper, StyledLink } from './MediaDetails.styled';
 import { getDetails, getTrailer } from 'common/services/api';
 import { normalizeMovieData } from 'common/services/normalize/normalizeMovieData';
@@ -11,12 +12,16 @@ import { MediaInfo } from './MediaInfo/MediaInfo';
 import { CastList } from './CastList/CastList';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
+import { selectDictionary, selectLang } from 'common/store/selector';
 
 const ModalContext = createContext(false);
 
 export const useModal = () => useContext(ModalContext);
 
 const MediaDetails = () => {
+    const language = useSelector(selectLang);
+    const { topCast, fullCast, review } = useSelector(selectDictionary);
+
     const [isTrailer, setTrailer] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [movie, setMovie] = useState(null);
@@ -35,7 +40,7 @@ const MediaDetails = () => {
         const id = mediaId.split('-')[1];
         setFirst(false);
         setIsLoading(true);
-        getDetails(type, id, '')
+        getDetails(type, id, language, '')
             .then(data => {
                 setMovie(normalizeMovieData(data));
             })
@@ -54,6 +59,7 @@ const MediaDetails = () => {
                         getDetails(
                             type,
                             id,
+                            language,
                             type === 'movie' ? '/credits' : '/aggregate_credits'
                         )
                             .then(data => {
@@ -64,7 +70,7 @@ const MediaDetails = () => {
                                 setError(err.message);
                             })
                             .finally(() => {
-                                getDetails(type, id, '/reviews')
+                                getDetails(type, id, language, '/reviews')
                                     .then(data => {
                                         setReviews(data.results);
                                     })
@@ -77,7 +83,7 @@ const MediaDetails = () => {
                             });
                     });
             });
-    }, [first, mediaId]);
+    }, [first, mediaId, language]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -101,19 +107,19 @@ const MediaDetails = () => {
                     <Container>
                         {cast?.length > 0 && (
                             <>
-                                <DetailsTitle>Top Billed Cast</DetailsTitle>
+                                <DetailsTitle>{topCast}</DetailsTitle>
                                 <CastList cast={cast} />
                             </>
                         )}
                         <LinksWrapper>
                             {(cast?.length > 0 || crew) && (
                                 <StyledLink to={'details/cast-and-crew'}>
-                                    Full Cast & Crew
+                                    {fullCast}
                                 </StyledLink>
                             )}
                             {reviews?.length > 0 && (
                                 <StyledLink to={'details/reviews'}>
-                                    Review
+                                    {review}
                                 </StyledLink>
                             )}
                         </LinksWrapper>

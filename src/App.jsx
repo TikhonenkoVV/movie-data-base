@@ -16,7 +16,7 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 const Home = lazy(() => import('./ui/pages/Home/Home'));
 
 const PopularMedia = lazy(() =>
-    import('./ui/pages/PopularMedia/PopularMedia').then(module => {
+    import('./ui/pages/PopularMedia').then(module => {
         return { ...module, default: module.PopularMedia };
     })
 );

@@ -6,4 +6,8 @@
 // export const selectIsSignedIn = state => state.auth.isSignedIn;
 // export const selectIsLoading = state => state.favorites.isLoading;
 
+export const selectVerifiedUser = state => state.auth.isSignedIn;
+export const selectTheme = state => state.auth.theme;
+export const selectLang = state => state.auth.lang;
+export const selectDictionary = state => state.auth.dictionary;
 export const selectDevice = state => state.device.device;

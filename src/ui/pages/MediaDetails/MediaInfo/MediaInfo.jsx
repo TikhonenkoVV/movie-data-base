@@ -6,6 +6,7 @@ import {
     Poster,
     PosterWrapper,
     ScoreBox,
+    ScoreBoxTitle,
     TitleMajor,
     TitleMinor,
     TrailerBtn,
@@ -19,8 +20,22 @@ import { POSTER_W342 } from 'common/constants';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { ScoreBar } from 'ui/shared/components/ScoreBar/ScoreBar';
 import { Svg } from 'ui/shared/components/Svg/Svg';
+import { useSelector } from 'react-redux';
+import { selectDictionary } from 'common/store/selector';
 
 export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
+    const {
+        score,
+        playTrailer,
+        owerview,
+        txt_genres,
+        director,
+        directors,
+        creator,
+        creators,
+        viewCollection,
+    } = useSelector(selectDictionary);
+
     const {
         vote_average,
         belongs_to_collection,
@@ -39,10 +54,10 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
     const posterRef = useRef(null);
     const [itemHeight, setItemHeight] = useState(0);
     const [bgrHeight, setBgrHeight] = useState(0);
-    const creators = [];
-    const directors = [];
-    created_by?.map(el => creators.push(el.name));
-    directing?.map(el => directors.push(el.personName));
+    const creatorsArr = [];
+    const directorsArr = [];
+    created_by?.map(el => creatorsArr.push(el.name));
+    directing?.map(el => directorsArr.push(el.personName));
 
     useEffect(() => {
         const item = gridItemRef.current;
@@ -95,7 +110,7 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                         )}
                         <ScoreBox>
                             <ScoreBar size={1} rating={vote_average} />
-                            <h3>User Score</h3>
+                            <ScoreBoxTitle>{score}</ScoreBoxTitle>
                             {trailer && (
                                 <TrailerBtn onClick={onClose}>
                                     <Svg
@@ -103,37 +118,39 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                                         h={20}
                                         use={`${sprite}#icon-play`}
                                     />
-                                    Play trailer
+                                    {playTrailer}
                                 </TrailerBtn>
                             )}
                         </ScoreBox>
                     </MovieInfoWrapper>
                     <MovieInfoWrapper className="end">
-                        <TitleMajor>Owerview</TitleMajor>
+                        <TitleMajor>{owerview}</TitleMajor>
                         <Description>{overview}</Description>
-                        <TitleMajor>Genres</TitleMajor>
+                        <TitleMajor>{txt_genres}</TitleMajor>
                         <Description>
                             {genres?.map(({ name }) => name).join(', ')}
                         </Description>
                         {created_by && (
                             <>
                                 <TitleMajor>
-                                    {creators.length === 1
-                                        ? 'Creator'
-                                        : 'Creators'}
+                                    {creatorsArr.length === 1
+                                        ? creator
+                                        : creators}
                                 </TitleMajor>
-                                <Description>{creators.join(', ')}</Description>
+                                <Description>
+                                    {creatorsArr.join(', ')}
+                                </Description>
                             </>
                         )}
                         {directing?.length > 0 && !created_by && (
                             <>
                                 <TitleMajor>
-                                    {directors.length === 1
-                                        ? 'Director'
-                                        : 'Directors'}
+                                    {directorsArr.length === 1
+                                        ? director
+                                        : directors}
                                 </TitleMajor>
                                 <Description>
-                                    {directors.join(', ')}
+                                    {directorsArr.join(', ')}
                                 </Description>
                             </>
                         )}
@@ -141,7 +158,7 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                             <CollectionBtn
                                 to={`/movies/collections/collection-${belongs_to_collection}`}
                             >
-                                View the collection
+                                {viewCollection}
                             </CollectionBtn>
                         )}
                     </MovieInfoWrapper>

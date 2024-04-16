@@ -135,12 +135,16 @@ export const ScoreBox = styled.div`
     gap: 20px;
 `;
 
+export const ScoreBoxTitle = styled.h3`
+    text-transform: capitalize;
+`;
+
 export const TrailerBtn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    width: 180px;
+    width: 230px;
     height: 44px;
     border-width: 2px;
     border-style: solid;
@@ -163,6 +167,9 @@ export const TrailerBtn = styled.button`
 
 export const TitleMajor = styled.h2`
     margin-bottom: 8px;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const Description = styled.p`

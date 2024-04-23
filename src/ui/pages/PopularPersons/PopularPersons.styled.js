@@ -88,6 +88,9 @@ export const ItemTitle = styled.h3`
     &:not(:last-child) {
         margin-bottom: 8px;
     }
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const Description = styled.p`

@@ -19,6 +19,7 @@ export const BtnSelectStyled = styled.button`
     font-size: ${({ theme }) => theme.fontSizes.small};
     font-weight: 500;
     line-height: 1.5;
+    text-transform: capitalize;
     cursor: pointer;
 
     &:before {
@@ -63,6 +64,7 @@ export const LiStyled = styled.li`
     border-radius: 4px;
     color: ${props => props.theme.colors.textSelectorColor};
     text-align: center;
+    text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
     line-height: 1;

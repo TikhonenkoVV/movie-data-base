@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { Select } from 'ui/shared/components/Select/Select';
 import {
     StyledTogler,
@@ -6,7 +5,7 @@ import {
     TrendsBtn,
     TrendsBtnWrapper,
 } from './TrendsTogler.styled';
-import { selectDictionary } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const TrendsToggler = ({
     trands,
@@ -14,10 +13,10 @@ export const TrendsToggler = ({
     onBtnWeekClick,
     hendleSelectChange,
 }) => {
-    const { trending, today, week } = useSelector(selectDictionary);
+    const { t } = useTranslate();
     return (
         <StyledTogler>
-            <TogglerTitle>{trending}</TogglerTitle>
+            <TogglerTitle>{t('trending')}</TogglerTitle>
             <TrendsBtnWrapper>
                 <TrendsBtn
                     datatype="day"
@@ -25,14 +24,14 @@ export const TrendsToggler = ({
                     type="button"
                     onClick={onBtnDayClick}
                 >
-                    {today}
+                    {t('today')}
                 </TrendsBtn>
                 <TrendsBtn
                     className={trands === 'week' ? 'active' : ''}
                     type="button"
                     onClick={onBtnWeekClick}
                 >
-                    {week}
+                    {t('week')}
                 </TrendsBtn>
             </TrendsBtnWrapper>
             <Select onChange={hendleSelectChange} />

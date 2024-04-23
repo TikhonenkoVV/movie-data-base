@@ -13,9 +13,15 @@ import noPoster from '../../../assets/images/no-poster.jpg';
 import { POSTER_W342 } from 'common/constants';
 import { normalizeMoviesData } from 'common/services/normalize/normalizeMoviesData';
 import { ScoreBar } from '../ScoreBar/ScoreBar';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const MediaList = ({ media, mediaTypes }) => {
-    const data = normalizeMoviesData(media, mediaTypes);
+    const language = useSelector(selectLang);
+    const { t } = useTranslate();
+
+    const data = normalizeMoviesData(media, language, mediaTypes);
 
     return (
         <StyledMedialist>
@@ -56,10 +62,11 @@ export const MediaList = ({ media, mediaTypes }) => {
                                 <MovieTitle>{movie_title}</MovieTitle>
                                 <Release>{release}</Release>
                                 <Score>
-                                    User score:{' '}
-                                    {vote_average === 'NR'
-                                        ? vote_average
-                                        : `${vote_average} %`}
+                                    {`${t('score')}: ${
+                                        vote_average === 'NR'
+                                            ? vote_average
+                                            : vote_average + '%'
+                                    }`}
                                 </Score>
                             </CardInfo>
                         </MovieLink>

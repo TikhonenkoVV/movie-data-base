@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
 import flagUkUa from 'ui/assets/images/flag-uk-ua.png';
 import flagEnUs from 'ui/assets/images/flag-en-us.png';
 
@@ -7,7 +6,7 @@ export const HeaderStyled = styled.header`
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
-    box-shadow: 0 0 10px 0 #464545;
+    border-bottom: 1px solid #000000;
     background-color: ${({ theme }) => theme.colors.accent};
     transition: background-color ${({ theme }) => theme.baseTransition};
 `;
@@ -57,7 +56,7 @@ export const Input = styled.input`
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     height: 40px;
     @media ${({ theme }) => theme.breakpoints.m} {
@@ -126,56 +125,15 @@ export const CloseMenuBtn = styled.button`
     }
 `;
 
-export const Nav = styled.nav`
-    @media ${({ theme }) => theme.breakpoints.m} {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        margin-right: auto;
-    }
-`;
-
-export const NavLinkStyled = styled(NavLink)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: background-color ${({ theme }) => theme.baseTransition},
-        color ${({ theme }) => theme.baseTransition};
-
-    &.active {
-        color: ${({ theme }) => theme.colors.white};
-        background-color: ${({ theme }) => theme.colors.hover};
-        pointer-events: none;
-    }
-    @media ${({ theme }) => theme.breakpoints.m} {
-        color: ${({ theme }) => theme.colors.light};
-        &:hover,
-        &:focus {
-            color: ${({ theme }) => theme.colors.white};
-        }
-        width: 100px;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-`;
-
 export const LangToggler = styled.div`
     position: absolute;
     bottom: 10px;
     right: 20px;
-    width: 80px;
-    height: 40px;
+    width: 55px;
+    height: 30px;
     padding: 5px;
     border-radius: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     color: ${({ theme }) => theme.colors.light};
     background-color: ${({ theme }) => theme.colors.hover};
     transition: background-color ${({ theme }) => theme.baseTransition},
@@ -191,8 +149,8 @@ export const LangToggler = styled.div`
 `;
 
 export const LangButton = styled.button`
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-image: ${({ lang }) =>
         lang === 'uk-UA' ? `url('${flagUkUa}')` : `url('${flagEnUs}')`};
@@ -203,7 +161,7 @@ export const LangButton = styled.button`
     transition: filter ${({ theme }) => theme.baseTransition},
         opacity ${({ theme }) => theme.baseTransition};
     &:not(:last-child) {
-        margin-right: 10px;
+        margin-right: 5px;
     }
     &.active {
         filter: grayscale(0);
@@ -222,9 +180,9 @@ export const ThemeToggler = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
-    width: 80px;
-    height: 40px;
+    gap: 5px;
+    width: 55px;
+    height: 30px;
     border-radius: 20px;
     color: ${({ theme }) => theme.colors.light};
     background-color: ${({ theme }) => theme.colors.hover};
@@ -235,15 +193,15 @@ export const ThemeToggler = styled.button`
         position: absolute;
         top: 5px;
         left: 5px;
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         background-color: ${({ theme }) => theme.colors.white};
         transition: background-color ${({ theme }) => theme.baseTransition},
             transform ${({ theme }) => theme.baseTransition};
     }
     &.light::before {
-        transform: translateX(40px);
+        transform: translateX(25px);
     }
     & svg {
         fill: currentColor;
@@ -270,8 +228,8 @@ export const BtnSearch = styled.button`
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-left: auto;
     color: ${({ theme }) => theme.colors.light};
     border-radius: 50%;

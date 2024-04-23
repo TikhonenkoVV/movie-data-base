@@ -111,10 +111,19 @@ export const ScoreBox = styled.div`
 
 export const TitleMajor = styled.h2`
     margin-bottom: 8px;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const Description = styled.p`
     &:not(:last-child) {
         margin-bottom: 16px;
+    }
+`;
+
+export const ScoreBoxTitle = styled.h3`
+    &::first-letter {
+        text-transform: uppercase;
     }
 `;

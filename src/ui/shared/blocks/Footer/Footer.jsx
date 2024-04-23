@@ -11,15 +11,17 @@ import sprite from '../../../assets/images/sprite.svg';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { Logo } from 'ui/shared/components/Logo/Logo';
 import { Svg } from 'ui/shared/components/Svg/Svg';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const Footer = () => {
+    const { t } = useTranslate();
     return (
         <StyledFooter>
             <Container>
                 <Logo newClass="footer-logo" label="Home" dest={'/'} />
                 <LinksWrapper>
                     <LeftLinks>
-                        <FooterTitle>Original resource</FooterTitle>
+                        <FooterTitle>{t('resource')}</FooterTitle>
                         <ul>
                             <LinksItem>
                                 <a
@@ -27,7 +29,7 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    About TMDB
+                                    {t('about')}
                                 </a>
                             </LinksItem>
                             <LinksItem>
@@ -36,7 +38,7 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Original website
+                                    {t('website')}
                                 </a>
                             </LinksItem>
                             <LinksItem>
@@ -45,13 +47,13 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    API
+                                    {t('api')}
                                 </a>
                             </LinksItem>
                         </ul>
                     </LeftLinks>
                     <RightLinks>
-                        <FooterTitle>Development</FooterTitle>
+                        <FooterTitle>{t('development')}</FooterTitle>
                         <ul>
                             <LinksItem>
                                 <a
@@ -59,7 +61,7 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Front-End Repository
+                                    {t('front')}
                                 </a>
                             </LinksItem>
                             <LinksItem>
@@ -68,7 +70,7 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Back-End Repository
+                                    {t('back')}
                                 </a>
                             </LinksItem>
                             <LinksItem>
@@ -77,7 +79,7 @@ export const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Portfolio
+                                    {t('portfolio')}
                                 </a>
                             </LinksItem>
                         </ul>
@@ -89,7 +91,7 @@ export const Footer = () => {
                     rel="noreferrer noopener"
                 >
                     <Svg w={20} h={20} use={`${sprite}#icon-github`} />
-                    Vitalii Tykhonenko 2024
+                    {t('developer')} 2024
                 </StyledLink>
             </Container>
         </StyledFooter>

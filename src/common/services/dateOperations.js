@@ -1,11 +1,11 @@
-export const formatDate = date => {
+export const formatDate = (date, language) => {
     const options = {
         year: 'numeric',
-        month: 'short',
+        month: language === 'en-US' ? 'short' : 'numeric',
         day: '2-digit',
     };
     const newDate = new Date(date);
-    return newDate.toLocaleDateString('en-US', options);
+    return newDate.toLocaleDateString(language, options);
 };
 
 export const calcAge = (startDate, endDate) => {

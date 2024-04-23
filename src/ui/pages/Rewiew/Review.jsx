@@ -5,8 +5,10 @@ import { ReviewItem } from './ReviewItem/ReviewItem';
 import { getDetails } from 'common/services/api';
 import { Loader } from 'ui/shared/components/Loader';
 import { Page404 } from '../Page404/Page404';
+import { useTranslate } from 'hooks/useTranslate';
 
 const Review = () => {
+    const { t } = useTranslate();
     const { mediaId } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -17,7 +19,7 @@ const Review = () => {
         const type = mediaId.split('-')[0];
         const id = mediaId.split('-')[1];
         setIsLoading(true);
-        getDetails(type, id, '/reviews')
+        getDetails(type, id, '', '/reviews')
             .then(data => {
                 setReviews(data.results);
             })
@@ -34,7 +36,7 @@ const Review = () => {
             {isLoading && <Loader />}
             {reviews?.length > 0 && (
                 <>
-                    <ReviewTitle>Reviews</ReviewTitle>
+                    <ReviewTitle>{t('review')}</ReviewTitle>
                     <ul>
                         {reviews?.map(review => (
                             <ReviewItem

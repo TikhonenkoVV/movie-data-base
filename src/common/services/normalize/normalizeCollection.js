@@ -1,6 +1,6 @@
 import { getGenresDescription } from '../getGenresDescription';
 
-export const normalizeCollection = collection => {
+export const normalizeCollection = (collection, language) => {
     let rating = [];
     let genres = [];
     let genre_ids = [];
@@ -15,7 +15,7 @@ export const normalizeCollection = collection => {
         return '';
     });
     genres = [];
-    genre_ids = getGenresDescription(genre_ids);
+    genre_ids = getGenresDescription(genre_ids, language);
     let ratingValue = 0;
     rating.map(el => {
         return (ratingValue += el);

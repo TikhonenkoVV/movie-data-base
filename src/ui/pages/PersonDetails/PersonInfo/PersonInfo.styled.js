@@ -56,6 +56,9 @@ export const PersonPhoto = styled.img`
 
 export const AsideTitle = styled.h2`
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const PersonalInfoList = styled.ul``;
@@ -68,8 +71,16 @@ export const PersonalInfoItem = styled.li`
 
 export const MinorTitle = styled.h3`
     margin-bottom: 8px;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
+export const Description = styled.p`
+    &::first-letter {
+        text-transform: uppercase;
+    }
+`;
 export const InfoWrapper = styled.div`
     @media ${({ theme }) => theme.breakpoints.s} {
         flex-grow: 1;

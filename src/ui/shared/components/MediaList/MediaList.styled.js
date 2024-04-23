@@ -110,7 +110,6 @@ export const CardInfo = styled.div`
     justify-content: center;
     flex-grow: 1;
     width: 100%;
-    /* text-align: left; */
     background-color: ${({ theme }) => theme.colors.accent};
     color: ${({ theme }) => theme.colors.white};
     @media ${({ theme }) => theme.breakpoints.xs} {
@@ -136,6 +135,9 @@ export const Release = styled.p`
 `;
 
 export const Score = styled.p`
+    &::first-letter {
+        text-transform: uppercase;
+    }
     @media ${({ theme }) => theme.breakpoints.xs} {
         display: none;
     }

@@ -5,7 +5,6 @@ import {
     hendleSignOut,
     hendleSignUp,
 } from './authOperations';
-import { dictionaryEn } from 'ui/assets/languages/dictionary';
 
 const initialState = {
     user: { name: '', email: '', subscription: null },
@@ -15,7 +14,6 @@ const initialState = {
     isLoading: false,
     theme: null,
     lang: null,
-    dictionary: dictionaryEn,
     error: null,
 };
 
@@ -28,9 +26,6 @@ const authSlice = createSlice({
         },
         setTheme: (state, { payload }) => {
             state.theme = payload;
-        },
-        setDictionary: (state, { payload }) => {
-            state.dictionary = payload;
         },
     },
     extraReducers: builder => {
@@ -96,6 +91,6 @@ const authSlice = createSlice({
     },
 });
 
-export const { setTheme, setLang, setDictionary } = authSlice.actions;
+export const { setTheme, setLang } = authSlice.actions;
 
 export const authReducer = authSlice.reducer;

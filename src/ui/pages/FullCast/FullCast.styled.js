@@ -29,6 +29,9 @@ export const CastCrewWrapper = styled.div`
 
 export const MinorTitle = styled.h2`
     margin-bottom: 16px;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const CardListItem = styled.li`
@@ -39,6 +42,9 @@ export const CardListItem = styled.li`
 
 export const MajorTitle = styled.h3`
     margin-bottom: 16px;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 `;
 
 export const Card = styled.li`

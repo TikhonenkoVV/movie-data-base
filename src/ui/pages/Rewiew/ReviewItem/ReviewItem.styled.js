@@ -11,6 +11,7 @@ export const RevievItemStyled = styled.li`
 
 export const ReviewAutor = styled.h3`
     margin-bottom: 20px;
+    text-transform: capitalize;
 `;
 
 export const ReviewWrapper = styled.div`
@@ -42,8 +43,10 @@ export const Expander = styled.button`
     height: 40px;
     color: ${({ theme }) => theme.colors.light};
     transition: color 250ms;
-    &:hover,
-    &:focus {
+    &:hover {
         color: ${({ theme }) => theme.colors.white};
+    }
+    &::first-letter {
+        text-transform: uppercase;
     }
 `;

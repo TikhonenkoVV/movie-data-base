@@ -18,9 +18,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { Svg } from 'ui/shared/components/Svg/Svg';
-import { selectDictionary } from 'common/store/selector';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const SearchForm = ({ formRef, ariaHidden }) => {
+    const language = useSelector(selectLang);
+    const { t } = useTranslate();
+
     const [isLoading, setIsLoading] = useState(false);
     const [placeholder, setPlaceholder] = useState('Please enter your query');
     const [warning, setWarning] = useState(false);
@@ -33,16 +37,6 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
 
     const [total, setTotal] = useState(0);
 
-    const {
-        placeholderText,
-        search,
-        result,
-        movies,
-        persons,
-        tvShows,
-        collections,
-    } = useSelector(selectDictionary);
-
     useEffect(() => {
         if (ariaHidden === 'true' || !query) {
             setQuery('');
@@ -54,8 +48,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
         }
         if (query) {
             setPlaceholder('');
-        } else setPlaceholder(placeholderText);
-    }, [ariaHidden, query, placeholderText]);
+        } else setPlaceholder(t.placeholder);
+    }, [ariaHidden, query, t]);
 
     useEffect(() => {
         if (moviesCount) setTotal(prev => (prev += moviesCount));
@@ -79,25 +73,30 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
         }
         setIsLoading(true);
         setWarning(false);
-        getMediaOnRequest('movie', query, 1)
+        getMediaOnRequest('movie', query, 1, language)
             .then(data => {
                 setMoviesCount(data.total_results);
             })
             .catch(err => setError(err.message))
             .finally(() => {
-                getMediaOnRequest('tv', query, 1)
+                getMediaOnRequest('tv', query, 1, language)
                     .then(data => {
                         setTvShowsCount(data.total_results.toString());
                     })
                     .catch(err => setError(err.message))
                     .finally(() => {
-                        getMediaOnRequest('person', query, 1)
+                        getMediaOnRequest('person', query, 1, language)
                             .then(data => {
                                 setPersonsCount(data.total_results);
                             })
                             .catch(err => setError(err.message))
                             .finally(() => {
-                                getMediaOnRequest('collection', query, 1)
+                                getMediaOnRequest(
+                                    'collection',
+                                    query,
+                                    1,
+                                    language
+                                )
                                     .then(data => {
                                         setCollectionsCount(data.total_results);
                                     })
@@ -137,7 +136,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                             </ClearButton>
                         </Label>
                         <SubmitButton ref={formRef.submitRef} type="submit">
-                            {search}
+                            {t('search')}
                         </SubmitButton>
                     </StyledForm>
                     {total > 0 ? (
@@ -147,8 +146,9 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/movies/search?query=${query}&page=1`}
                                     >
-                                        {result}
-                                        <span>{movies}</span>: {moviesCount}
+                                        {t('searchResultIn')}
+                                        <span>{t('movies')}</span>:{' '}
+                                        {moviesCount}
                                     </StyledLink>
                                 </Item>
                             )}
@@ -157,8 +157,9 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/tv-shows/search?query=${query}&page=1`}
                                     >
-                                        {result}
-                                        <span>{tvShows}</span>: {tvShowsCount}
+                                        {t('searchResultIn')}
+                                        <span>{t('tvShows')}</span>:{' '}
+                                        {tvShowsCount}
                                     </StyledLink>
                                 </Item>
                             )}
@@ -167,8 +168,8 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/movies/collections/search?query=${query}&page=1`}
                                     >
-                                        {result}
-                                        <span>{collections}</span>:{' '}
+                                        {t('searchResultIn')}
+                                        <span>{t('collections')}</span>:{' '}
                                         {collectionsCount}
                                     </StyledLink>
                                 </Item>
@@ -178,16 +179,15 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     <StyledLink
                                         to={`/persons/search?query=${query}&page=1`}
                                     >
-                                        {result}
-                                        <span>{persons}</span>: {personsCount}
+                                        {t('searchResultIn')}
+                                        <span>{t('persons')}</span>:{' '}
+                                        {personsCount}
                                     </StyledLink>
                                 </Item>
                             )}
                         </List>
                     ) : (
-                        moviesCount === 0 && (
-                            <p>Nothing found at your request</p>
-                        )
+                        moviesCount === 0 && <p>{t('nothingFound')}</p>
                     )}
                 </Container>
             </SearchPanel>

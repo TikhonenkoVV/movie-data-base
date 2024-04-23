@@ -22,3 +22,9 @@ export const ImageWrapper = styled.div`
 export const Title = styled.h3`
     margin-bottom: 12px;
 `;
+
+export const Description = styled.p`
+    &::first-letter {
+        text-transform: uppercase;
+    }
+`;

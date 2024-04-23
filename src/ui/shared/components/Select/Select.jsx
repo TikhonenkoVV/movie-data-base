@@ -5,15 +5,18 @@ import {
     DivListStyled,
     LiStyled,
 } from './Select.styled';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const Select = ({ initial, onChange }) => {
-    const [currVal, setCurrVal] = useState('All');
+    const { t } = useTranslate();
+
+    const [currVal, setCurrVal] = useState(t.all);
     const [isOpen, setIsOpen] = useState(false);
 
     const [options, setOptions] = useState([
-        { all: 'All' },
-        { movie: 'Movie' },
-        { tv: 'Tv' },
+        { all: t('all') },
+        { movie: t('movies') },
+        { tv: t('tv') },
     ]);
 
     const handleChange = event => {
@@ -42,7 +45,7 @@ export const Select = ({ initial, onChange }) => {
     return (
         <DivStyled>
             <BtnSelectStyled isOpen={isOpen} onClick={handleClick}>
-                {currVal ? currVal : 'Theme'}
+                {currVal ? currVal : t('all')}
             </BtnSelectStyled>
 
             <DivListStyled isOpen={isOpen} onClick={e => e.stopPropagation()}>

@@ -1,6 +1,6 @@
 import { formatDate } from '../dateOperations';
 
-export const normalizeMoviesData = (data, mediaTypes) => {
+export const normalizeMoviesData = (data, language, mediaTypes) => {
     return data.map(
         ({
             id,
@@ -16,9 +16,9 @@ export const normalizeMoviesData = (data, mediaTypes) => {
         }) => {
             let release;
             if (release_date) {
-                release = formatDate(release_date);
+                release = formatDate(release_date, language);
             } else if (first_air_date) {
-                release = formatDate(first_air_date);
+                release = formatDate(first_air_date, language);
             } else release = 'N/a';
             const movie_title = name
                 ? name

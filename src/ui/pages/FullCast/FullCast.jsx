@@ -16,8 +16,14 @@ import { normalizeCast } from 'common/services/normalize/normalizeCast';
 import { normalizeCrew } from 'common/services/normalize/normalizeCrew';
 import { PROFILE_W185 } from 'common/constants';
 import { Loader } from 'ui/shared/components/Loader';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 const FullCast = () => {
+    const language = useSelector(selectLang);
+    const { t } = useTranslate();
+
     const { mediaId } = useParams();
 
     const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +38,7 @@ const FullCast = () => {
         getDetails(
             type,
             id,
+            language,
             type === 'movie' ? '/credits' : '/aggregate_credits'
         )
             .then(data => {
@@ -43,7 +50,7 @@ const FullCast = () => {
                 console.log('full cast', err);
             })
             .finally(() => setIsLoading(false));
-    }, [mediaId]);
+    }, [mediaId, language]);
 
     return (
         <>
@@ -51,7 +58,7 @@ const FullCast = () => {
             <CreditsWrapper>
                 {castArray?.length > 0 && (
                     <CastCrewWrapper>
-                        <MinorTitle>Cast</MinorTitle>
+                        <MinorTitle>{t('cast')}</MinorTitle>
                         <ul>
                             {castArray?.map(
                                 ({
@@ -86,16 +93,12 @@ const FullCast = () => {
                 )}
                 {crewArray?.crew?.length > 0 && (
                     <CastCrewWrapper>
-                        <MinorTitle>Crew</MinorTitle>
+                        <MinorTitle>{t('crew_a')}</MinorTitle>
                         <ul>
                             {crewArray?.crew?.map(el => (
                                 <CardListItem key={Object.keys(el)[0]}>
-                                    <MajorTitle
-                                        style={{
-                                            textTransform: 'capitalize',
-                                        }}
-                                    >
-                                        {Object.keys(el)[0]}
+                                    <MajorTitle>
+                                        {t(Object.keys(el)[0].toLowerCase())}
                                     </MajorTitle>
                                     <ul>
                                         {el[Object.keys(el)[0]]?.map(

@@ -74,3 +74,9 @@ export const ScoreBox = styled.div`
     flex-wrap: wrap;
     gap: 16px;
 `;
+
+export const ScoreBoxTitle = styled.h3`
+    &::first-letter {
+        text-transform: uppercase;
+    }
+`;

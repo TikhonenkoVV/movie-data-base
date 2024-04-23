@@ -1,6 +1,6 @@
 import { formatDate } from '../dateOperations';
 
-export const normalizeParts = parts => {
+export const normalizeParts = (parts, language) => {
     const res = parts.map(
         ({
             id,
@@ -10,12 +10,14 @@ export const normalizeParts = parts => {
             release_date,
             vote_average,
         }) => {
-            const newReleaseDate = formatDate(release_date);
+            let newReleaseDate;
+            if (release_date)
+                newReleaseDate = formatDate(release_date, language);
             return {
                 id,
                 title: title ? title : original_title,
                 poster_path,
-                release_date: newReleaseDate,
+                release_date: newReleaseDate || 'N/a',
                 vote_average: Math.round(vote_average * 10) || 'NR',
             };
         }

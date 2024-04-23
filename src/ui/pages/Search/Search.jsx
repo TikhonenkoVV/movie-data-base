@@ -8,8 +8,14 @@ import { Loader } from 'ui/shared/components/Loader';
 import { MediaList } from 'ui/shared/components/MediaList/MediaList';
 import { PersonsList } from '../PersonDetails/PersonsList/PersonsList';
 import { Page404 } from '../Page404/Page404';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 const Search = () => {
+    const language = useSelector(selectLang);
+    const { t } = useTranslate();
+
     const [isLoading, setIsLoading] = useState(false);
     const [searchParams] = useSearchParams();
     const [first, setFirst] = useState(true);
@@ -34,7 +40,8 @@ const Search = () => {
                 ? 'tv'
                 : 'person',
             query,
-            page
+            page,
+            language
         )
             .then(data => {
                 setMedias(data.results);
@@ -47,14 +54,16 @@ const Search = () => {
                 setIsLoading(false);
                 setFirst(false);
             });
-    }, [query, searchParams, path, isCollections]);
+    }, [query, searchParams, path, isCollections, language]);
 
     return (
         <section>
             <Container>
                 {error && <p>{error}</p>}
                 {isLoading && <Loader />}
-                <Description>Search results for "{query}"</Description>
+                <Description>
+                    {t('searchResultFor')}"{query}"
+                </Description>
                 {total > 0 && (
                     <Pagination totalPages={total} serviceClass="top" />
                 )}

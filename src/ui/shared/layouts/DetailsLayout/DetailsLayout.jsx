@@ -14,8 +14,14 @@ import { POSTER_W185 } from 'common/constants';
 import { Page404 } from 'ui/pages/Page404/Page404';
 import { Container } from '../Container/Container';
 import { Loader } from 'ui/shared/components/Loader';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const DetailsLayout = () => {
+    const language = useSelector(selectLang);
+    const { t } = useTranslate();
+
     const { mediaId } = useParams();
 
     const [isLoading, setIsLoading] = useState(false);
@@ -26,11 +32,11 @@ export const DetailsLayout = () => {
         setIsLoading(true);
         const type = mediaId.split('-')[0];
         const id = mediaId.split('-')[1];
-        getDetails(type, id, '')
-            .then(data => setMovie(normalizeMovieData(data)))
+        getDetails(type, id, language, '')
+            .then(data => setMovie(normalizeMovieData(data, language)))
             .catch(err => setError(err.message))
             .finally(() => setIsLoading(false));
-    }, [mediaId]);
+    }, [mediaId, language]);
 
     return (
         <>
@@ -49,16 +55,16 @@ export const DetailsLayout = () => {
                             />
                             <MovieInfoWrapper>
                                 <MovieInfoTitle>{movie.name}</MovieInfoTitle>
-                                {movie.release.release_date && (
+                                {movie.release_date && (
                                     <p>
-                                        {movie.release.title}
-                                        {movie.release.release_date}
+                                        {t('releaseDate')}
+                                        {movie.release_date}
                                     </p>
                                 )}
-                                {movie.first_air.first_air_date && (
+                                {movie.first_air_date && (
                                     <p>
-                                        {movie.first_air.title}
-                                        {movie.first_air.first_air_date}
+                                        {t('firstAirDate')}
+                                        {movie.first_air_date}
                                     </p>
                                 )}
                             </MovieInfoWrapper>

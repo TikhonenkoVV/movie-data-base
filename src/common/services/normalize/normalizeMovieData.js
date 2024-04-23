@@ -1,6 +1,6 @@
 import { formatDate } from '../dateOperations';
 
-export const normalizeMovieData = (data, mediaTypes) => {
+export const normalizeMovieData = (data, language) => {
     const {
         id,
         belongs_to_collection,
@@ -20,10 +20,10 @@ export const normalizeMovieData = (data, mediaTypes) => {
     let newReleaseDate;
     let newAirDate;
     if (release_date) {
-        newReleaseDate = formatDate(release_date);
+        newReleaseDate = formatDate(release_date, language);
     } else newReleaseDate = false;
     if (first_air_date) {
-        newAirDate = formatDate(first_air_date);
+        newAirDate = formatDate(first_air_date, language);
     } else newAirDate = false;
     const rating = vote_average > 0 ? Math.round(vote_average * 10) : 'NR';
     const personName = name
@@ -44,18 +44,9 @@ export const normalizeMovieData = (data, mediaTypes) => {
             : null,
         vote_average: rating,
         name: personName,
-        release: {
-            release_date: newReleaseDate,
-            title: 'Release date: ',
-        },
-        first_air: {
-            first_air_date: newAirDate,
-            title: 'First air date: ',
-        },
-        overview:
-            overview !== ''
-                ? overview
-                : 'Sorry, but there is no overview for this movie.',
+        release_date: newReleaseDate,
+        first_air_date: newAirDate,
+        overview,
         genres:
             genres.length > 0
                 ? genres

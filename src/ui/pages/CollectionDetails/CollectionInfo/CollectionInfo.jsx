@@ -5,6 +5,7 @@ import {
     Poster,
     PosterWrapper,
     ScoreBox,
+    ScoreBoxTitle,
     TitleMajor,
     TitleMinor,
 } from './CollectionInfo.styled';
@@ -12,8 +13,11 @@ import { useEffect, useRef, useState } from 'react';
 import noPoster from '../../../assets/images/no-poster.jpg';
 import { POSTER_W342 } from 'common/constants';
 import { ScoreBar } from 'ui/shared/components/ScoreBar/ScoreBar';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const CollectionInfo = ({ collection }) => {
+    const { t } = useTranslate();
+
     const {
         name,
         overview,
@@ -72,13 +76,13 @@ export const CollectionInfo = ({ collection }) => {
                 <TitleMinor>{name}</TitleMinor>
                 <ScoreBox>
                     <ScoreBar size={1} rating={vote_average} />
-                    <h3>User Score</h3>
+                    <ScoreBoxTitle>{t('score')}</ScoreBoxTitle>
                 </ScoreBox>
             </CollectionInfoWrapper>
             <CollectionInfoWrapper className="end">
-                <TitleMajor>Owerview</TitleMajor>
-                <Description>{overview}</Description>
-                <TitleMajor>Genres</TitleMajor>
+                <TitleMajor>{t('owerview')}</TitleMajor>
+                <Description>{overview || t('noReview')}</Description>
+                <TitleMajor>{t('genres')}</TitleMajor>
                 <Description>{genre_ids?.map(el => el).join(', ')}</Description>
             </CollectionInfoWrapper>
         </CollectionWrapper>

@@ -3,6 +3,7 @@ import {
     MovieInfoWrapper,
     MoviePoster,
     ScoreBox,
+    ScoreBoxTitle,
     StyledLi,
     StyledLink,
     StyledList,
@@ -10,8 +11,11 @@ import {
 import noPoster from '../../../assets/images/no-poster.jpg';
 import { POSTER_W185 } from 'common/constants';
 import { ScoreBar } from 'ui/shared/components/ScoreBar/ScoreBar';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const CollectionList = ({ parts }) => {
+    const { t } = useTranslate();
+
     return (
         <StyledList>
             {parts?.map(
@@ -30,14 +34,19 @@ export const CollectionList = ({ parts }) => {
                                 <MovieInfoWrapper>
                                     <MovieInfoTitle>{title}</MovieInfoTitle>
                                     {release_date && (
-                                        <p>Release date: {release_date}</p>
+                                        <p>
+                                            {t('releaseDate')}
+                                            {release_date}
+                                        </p>
                                     )}
                                     <ScoreBox>
                                         <ScoreBar
                                             size={0.6}
                                             rating={vote_average}
                                         />
-                                        <h3>User Score</h3>
+                                        <ScoreBoxTitle>
+                                            {t('score')}
+                                        </ScoreBoxTitle>
                                     </ScoreBox>
                                 </MovieInfoWrapper>
                             </StyledLink>

@@ -1,8 +1,17 @@
-import { ImageWrapper, Item, StyledLink, Title } from './CreditsItem.styled';
+import {
+    Description,
+    ImageWrapper,
+    Item,
+    StyledLink,
+    Title,
+} from './CreditsItem.styled';
 import noPoster from '../../../../../assets/images/no-poster.jpg';
 import { POSTER_W185 } from 'common/constants';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const CreditsItem = ({ credits }) => {
+    const { t } = useTranslate();
+
     return credits?.map(
         ({
             id,
@@ -41,9 +50,17 @@ export const CreditsItem = ({ credits }) => {
                     </ImageWrapper>
                     <div>
                         <Title>{movieTitle}</Title>
-                        {personCharacter && <p>Character: {personCharacter}</p>}
-                        <p>Year: {releaseDate}</p>
-                        <p>User score: {vote_average}</p>
+                        {personCharacter && (
+                            <Description>
+                                {t('character')}: {personCharacter}
+                            </Description>
+                        )}
+                        <Description>
+                            {t('year')}: {releaseDate}
+                        </Description>
+                        <Description>
+                            {t('score')}: {vote_average}
+                        </Description>
                     </div>
                 </StyledLink>
             </Item>

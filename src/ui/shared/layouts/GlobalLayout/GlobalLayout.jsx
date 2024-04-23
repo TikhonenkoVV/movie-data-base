@@ -1,12 +1,6 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import { Outlet } from 'react-router-dom';
-import {
-    Suspense,
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-} from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GlobalStyles, darkTheme, lightTheme, theme } from 'ui/assets/styles';
 import sprite from '../../../assets/images/sprite.svg';
@@ -22,12 +16,7 @@ import { ButtonUp, MainStyled } from './GlobalLayout.styled';
 import { Footer } from 'ui/shared/blocks/Footer/Footer';
 import { Svg } from 'ui/shared/components/Svg/Svg';
 import { hendleRefreshUser } from 'common/store/auth/authOperations';
-import { setDictionary, setLang, setTheme } from 'common/store/auth/authSlice';
-import { dictionaryEn, dictionaryUk } from 'ui/assets/languages/dictionary';
-
-const LangContext = createContext(false);
-
-export const useLang = () => useContext(LangContext);
+import { setLang, setTheme } from 'common/store/auth/authSlice';
 
 export const GlobalLayout = () => {
     const device = useSelector(selectDevice);
@@ -82,35 +71,30 @@ export const GlobalLayout = () => {
             }
             if (!lang) {
                 dispatch(setLang('en-US'));
-                dispatch(setDictionary(dictionaryEn));
             }
-            if (lang === 'en-US') dispatch(setDictionary(dictionaryEn));
-            if (lang === 'uk-UA') dispatch(setDictionary(dictionaryUk));
         }
     }, [verifiedUser, dispatch, currentColor, lang]);
 
     return (
         <ThemeProvider theme={currentTheme}>
-            <LangContext.Provider value={lang}>
-                <Global styles={GlobalStyles} />
-                <Scrollbar
-                    orientation="y"
-                    device={device}
-                    toTop={toTop}
-                    getRetreatY={getRetreatY}
-                >
-                    <Header onChangeTheme={onChangeTheme} />
-                    <MainStyled>
-                        <Suspense>
-                            <Outlet />
-                        </Suspense>
-                    </MainStyled>
-                    <Footer />
-                    <ButtonUp onClick={scrollToTop} isHidden={retreatY < 400}>
-                        <Svg w={50} h={50} use={`${sprite}#icon-arrow`} />
-                    </ButtonUp>
-                </Scrollbar>
-            </LangContext.Provider>
+            <Global styles={GlobalStyles} />
+            <Scrollbar
+                orientation="y"
+                device={device}
+                toTop={toTop}
+                getRetreatY={getRetreatY}
+            >
+                <Header onChangeTheme={onChangeTheme} />
+                <MainStyled>
+                    <Suspense>
+                        <Outlet />
+                    </Suspense>
+                </MainStyled>
+                <Footer />
+                <ButtonUp onClick={scrollToTop} isHidden={retreatY < 400}>
+                    <Svg w={50} h={50} use={`${sprite}#icon-arrow`} />
+                </ButtonUp>
+            </Scrollbar>
         </ThemeProvider>
     );
 };

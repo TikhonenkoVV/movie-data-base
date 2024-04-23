@@ -12,7 +12,8 @@ import { MediaInfo } from './MediaInfo/MediaInfo';
 import { CastList } from './CastList/CastList';
 import { Loader } from 'ui/shared/components/Loader';
 import { Container } from 'ui/shared/layouts/Container/Container';
-import { selectDictionary, selectLang } from 'common/store/selector';
+import { selectLang } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 const ModalContext = createContext(false);
 
@@ -20,12 +21,11 @@ export const useModal = () => useContext(ModalContext);
 
 const MediaDetails = () => {
     const language = useSelector(selectLang);
-    const { topCast, fullCast, review } = useSelector(selectDictionary);
+    const { t } = useTranslate();
 
     const [isTrailer, setTrailer] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [movie, setMovie] = useState(null);
-    const [first, setFirst] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const { mediaId } = useParams();
@@ -35,20 +35,18 @@ const MediaDetails = () => {
     const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
-        if (!first) return;
         const type = mediaId.split('-')[0];
         const id = mediaId.split('-')[1];
-        setFirst(false);
         setIsLoading(true);
         getDetails(type, id, language, '')
             .then(data => {
-                setMovie(normalizeMovieData(data));
+                setMovie(normalizeMovieData(data, language));
             })
             .catch(err => {
                 setError(err.message);
             })
             .finally(() => {
-                getTrailer(type, id)
+                getTrailer(type, id, language)
                     .then(data => {
                         setTrailer(findTrailer(data.results));
                     })
@@ -70,7 +68,7 @@ const MediaDetails = () => {
                                 setError(err.message);
                             })
                             .finally(() => {
-                                getDetails(type, id, language, '/reviews')
+                                getDetails(type, id, 'en-US', '/reviews')
                                     .then(data => {
                                         setReviews(data.results);
                                     })
@@ -83,7 +81,7 @@ const MediaDetails = () => {
                             });
                     });
             });
-    }, [first, mediaId, language]);
+    }, [mediaId, language]);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -107,19 +105,19 @@ const MediaDetails = () => {
                     <Container>
                         {cast?.length > 0 && (
                             <>
-                                <DetailsTitle>{topCast}</DetailsTitle>
+                                <DetailsTitle>{t('topCast')}</DetailsTitle>
                                 <CastList cast={cast} />
                             </>
                         )}
                         <LinksWrapper>
                             {(cast?.length > 0 || crew) && (
                                 <StyledLink to={'details/cast-and-crew'}>
-                                    {fullCast}
+                                    {t('fullCast')}
                                 </StyledLink>
                             )}
                             {reviews?.length > 0 && (
                                 <StyledLink to={'details/reviews'}>
-                                    {review}
+                                    {t('review')}
                                 </StyledLink>
                             )}
                         </LinksWrapper>

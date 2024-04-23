@@ -20,21 +20,10 @@ import { POSTER_W342 } from 'common/constants';
 import { Container } from 'ui/shared/layouts/Container/Container';
 import { ScoreBar } from 'ui/shared/components/ScoreBar/ScoreBar';
 import { Svg } from 'ui/shared/components/Svg/Svg';
-import { useSelector } from 'react-redux';
-import { selectDictionary } from 'common/store/selector';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
-    const {
-        score,
-        playTrailer,
-        owerview,
-        txt_genres,
-        director,
-        directors,
-        creator,
-        creators,
-        viewCollection,
-    } = useSelector(selectDictionary);
+    const { t } = useTranslate();
 
     const {
         vote_average,
@@ -43,8 +32,8 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
         overview,
         genres,
         poster_path,
-        release,
-        first_air,
+        release_date,
+        first_air_date,
         backdrop_path,
         created_by,
     } = movie;
@@ -96,21 +85,21 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                     </PosterWrapper>
                     <MovieInfoWrapper ref={gridItemRef}>
                         <TitleMinor>{name}</TitleMinor>
-                        {release.release_date && (
+                        {release_date && (
                             <Description>
-                                {release.title}
-                                {release.release_date}
+                                {t('releaseDate')}
+                                {release_date}
                             </Description>
                         )}
-                        {first_air.first_air_date && (
+                        {first_air_date && (
                             <Description>
-                                {first_air.title}
-                                {first_air.first_air_date}
+                                {t('firstAirDate')}
+                                {first_air_date}
                             </Description>
                         )}
                         <ScoreBox>
+                            <ScoreBoxTitle>{t('score')}</ScoreBoxTitle>
                             <ScoreBar size={1} rating={vote_average} />
-                            <ScoreBoxTitle>{score}</ScoreBoxTitle>
                             {trailer && (
                                 <TrailerBtn onClick={onClose}>
                                     <Svg
@@ -118,15 +107,15 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                                         h={20}
                                         use={`${sprite}#icon-play`}
                                     />
-                                    {playTrailer}
+                                    {t('playTrailer')}
                                 </TrailerBtn>
                             )}
                         </ScoreBox>
                     </MovieInfoWrapper>
                     <MovieInfoWrapper className="end">
-                        <TitleMajor>{owerview}</TitleMajor>
-                        <Description>{overview}</Description>
-                        <TitleMajor>{txt_genres}</TitleMajor>
+                        <TitleMajor>{t('owerview')}</TitleMajor>
+                        <Description>{overview || t('noReview')}</Description>
+                        <TitleMajor>{t('genres')}</TitleMajor>
                         <Description>
                             {genres?.map(({ name }) => name).join(', ')}
                         </Description>
@@ -134,8 +123,8 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                             <>
                                 <TitleMajor>
                                     {creatorsArr.length === 1
-                                        ? creator
-                                        : creators}
+                                        ? t('creator')
+                                        : t('creators')}
                                 </TitleMajor>
                                 <Description>
                                     {creatorsArr.join(', ')}
@@ -146,8 +135,8 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                             <>
                                 <TitleMajor>
                                     {directorsArr.length === 1
-                                        ? director
-                                        : directors}
+                                        ? t('director')
+                                        : t('directors')}
                                 </TitleMajor>
                                 <Description>
                                     {directorsArr.join(', ')}
@@ -158,7 +147,7 @@ export const MediaInfo = ({ movie, onClose, directing, trailer }) => {
                             <CollectionBtn
                                 to={`/movies/collections/collection-${belongs_to_collection}`}
                             >
-                                {viewCollection}
+                                {t('viewCollection')}
                             </CollectionBtn>
                         )}
                     </MovieInfoWrapper>

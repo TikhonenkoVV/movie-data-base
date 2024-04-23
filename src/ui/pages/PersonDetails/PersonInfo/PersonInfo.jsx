@@ -1,6 +1,7 @@
 import {
     Aside,
     AsideTitle,
+    Description,
     InfoWrapper,
     MinorTitle,
     PersonPhoto,
@@ -13,6 +14,7 @@ import {
 import noPoster from '../../../assets/images/no-poster.jpg';
 import { PROFILE_H632 } from 'common/constants';
 import { Credits } from './Credits/Credits';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const PersonInfo = ({ person, acting, crew, total }) => {
     const {
@@ -27,6 +29,8 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
         profile_path,
     } = person;
 
+    const { t } = useTranslate();
+
     return (
         <PersonWrapper>
             <Aside>
@@ -37,34 +41,38 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                     height={450}
                 />
                 <div>
-                    <AsideTitle>Personal Info</AsideTitle>
+                    <AsideTitle>{t('personalInfo')}</AsideTitle>
                     <PersonalInfoList>
                         <PersonalInfoItem>
-                            <MinorTitle>Known for</MinorTitle>
-                            <p>{known_for_department}</p>
+                            <MinorTitle>{t('department')}</MinorTitle>
+                            <Description>
+                                {t(known_for_department.toLowerCase())}
+                            </Description>
                         </PersonalInfoItem>
                         <PersonalInfoItem>
-                            <MinorTitle>Known credits</MinorTitle>
-                            <p>{total ?? 'N/a'}</p>
+                            <MinorTitle>{t('knownCredits')}</MinorTitle>
+                            <p>{total}</p>
                         </PersonalInfoItem>
                         {gender !== 0 && (
                             <PersonalInfoItem>
-                                <MinorTitle>Gender</MinorTitle>
-                                <p>{gender === 2 ? 'Male' : 'Female'}</p>
+                                <MinorTitle>{t('gender')}</MinorTitle>
+                                <Description>
+                                    {gender === 2 ? t('male') : t('female')}
+                                </Description>
                             </PersonalInfoItem>
                         )}
                         {birthday && (
                             <PersonalInfoItem>
-                                <MinorTitle>Birthday</MinorTitle>
+                                <MinorTitle>{t('birthday')}</MinorTitle>
                                 <p>
                                     {birthday}{' '}
-                                    {!deathday && `(${age} years old)`}
+                                    {!deathday && `(${age} ${t('yearsOld')})`}
                                 </p>
                             </PersonalInfoItem>
                         )}
                         {deathday && (
                             <PersonalInfoItem>
-                                <MinorTitle>Deahday</MinorTitle>
+                                <MinorTitle>{t('dayOfDeath')}</MinorTitle>
                                 <p>
                                     {deathday} ({age} years old)
                                 </p>
@@ -72,7 +80,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                         )}
                         {place_of_birth && (
                             <PersonalInfoItem>
-                                <MinorTitle>Place of birth</MinorTitle>
+                                <MinorTitle>{t('placeOfBirth')}</MinorTitle>
                                 <p>{place_of_birth}</p>
                             </PersonalInfoItem>
                         )}
@@ -82,14 +90,14 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
             <InfoWrapper>
                 <ProfileWrapper>
                     <PersonTitle>{name}</PersonTitle>
-                    <MinorTitle>Biography</MinorTitle>
+                    <MinorTitle>{t('biography')}</MinorTitle>
                     {biography?.map((el, i) => (
                         <p key={i} style={{ marginBottom: '12px' }}>
                             {el}
                         </p>
                     ))}
                     {biography?.length === 0 && (
-                        <p>We don't have a biography for {name}.</p>
+                        <p>{t('noBiography', [name, 'test'])}</p>
                     )}
                 </ProfileWrapper>
                 <Credits acting={acting} crew={crew} />

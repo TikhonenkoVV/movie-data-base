@@ -1,4 +1,4 @@
-import { calcAge, formatDate } from '../dateOperations';
+import { calcAge, formatDate, numberForm } from '../dateOperations';
 
 export const normalizePersonData = (data, language) => {
     const {
@@ -17,20 +17,47 @@ export const normalizePersonData = (data, language) => {
         biographyArr = biography.split('\n\n');
     }
 
-    let calculateAge = calcAge(birthday, new Date());
+    let calculateAge;
+    if (birthday && !deathday) {
+        calculateAge = calcAge(birthday, new Date());
+    }
     if (deathday) {
         calculateAge = calcAge(birthday, deathday);
     }
 
-    let isDeathDay;
     let isBirthDay;
-    if (deathday) {
-        isDeathDay = formatDate(deathday, language);
-    } else isDeathDay = null;
+    let isDeathDay;
 
     if (birthday) {
-        isBirthDay = formatDate(birthday, language);
+        if (!deathday) {
+            if (language === 'en-US') {
+                isBirthDay = `${formatDate(
+                    birthday,
+                    language
+                )} (${calculateAge} years old)`;
+            }
+            if (language === 'uk-UA') {
+                isBirthDay = `${formatDate(
+                    birthday,
+                    language
+                )} (${calculateAge} ${numberForm(calculateAge)})`;
+            }
+        } else isBirthDay = formatDate(birthday, language);
     } else isBirthDay = null;
+
+    if (deathday) {
+        if (language === 'en-US') {
+            isDeathDay = `${formatDate(
+                deathday,
+                language
+            )} (${calculateAge} years old)`;
+        } else if (language === 'uk-UA') {
+            isDeathDay = `${formatDate(
+                deathday,
+                language
+            )} (${calculateAge} ${numberForm(calculateAge)})`;
+        }
+    } else isDeathDay = null;
 
     return {
         id,
@@ -40,7 +67,6 @@ export const normalizePersonData = (data, language) => {
         gender,
         birthday: isBirthDay,
         deathday: isDeathDay,
-        age: calculateAge,
         place_of_birth,
         profile_path,
     };

@@ -23,7 +23,7 @@ const PersonDetails = () => {
         setIsLoading(true);
         getPersonById(personId, lang)
             .then(data => {
-                setPersonInfo(normalizePersonData(data));
+                setPersonInfo(normalizePersonData(data, lang));
             })
             .catch(err => {
                 setError(err.message);

@@ -15,6 +15,9 @@ import noPoster from '../../../assets/images/no-poster.jpg';
 import { PROFILE_H632 } from 'common/constants';
 import { Credits } from './Credits/Credits';
 import { useTranslate } from 'hooks/useTranslate';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'common/store/selector';
+import { numberForm } from 'common/services/dateOperations';
 
 export const PersonInfo = ({ person, acting, crew, total }) => {
     const {
@@ -30,6 +33,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
     } = person;
 
     const { t } = useTranslate();
+    const language = useSelector(selectLang);
 
     return (
         <PersonWrapper>
@@ -46,7 +50,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                         <PersonalInfoItem>
                             <MinorTitle>{t('department')}</MinorTitle>
                             <Description>
-                                {t(known_for_department.toLowerCase())}
+                                {t(known_for_department?.toLowerCase())}
                             </Description>
                         </PersonalInfoItem>
                         <PersonalInfoItem>
@@ -64,18 +68,36 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
                         {birthday && (
                             <PersonalInfoItem>
                                 <MinorTitle>{t('birthday')}</MinorTitle>
-                                <p>
-                                    {birthday}{' '}
-                                    {!deathday && `(${age} ${t('yearsOld')})`}
-                                </p>
+                                {language === 'en-US' && (
+                                    <p>
+                                        {birthday}{' '}
+                                        {!deathday &&
+                                            `(${age} ${t('yearsOld')})`}
+                                    </p>
+                                )}
+                                {language === 'uk-UA' && (
+                                    <p>
+                                        {birthday}{' '}
+                                        {!deathday &&
+                                            `(${age} ${numberForm(age)})`}
+                                    </p>
+                                )}
                             </PersonalInfoItem>
                         )}
                         {deathday && (
                             <PersonalInfoItem>
                                 <MinorTitle>{t('dayOfDeath')}</MinorTitle>
-                                <p>
-                                    {deathday} ({age} years old)
-                                </p>
+                                {language === 'en-US' && (
+                                    <p>
+                                        {deathday} {`(${age} ${t('yearsOld')})`}
+                                    </p>
+                                )}
+                                {language === 'uk-UA' && (
+                                    <p>
+                                        {deathday}{' '}
+                                        {`(${age} ${numberForm(age)})`}
+                                    </p>
+                                )}
                             </PersonalInfoItem>
                         )}
                         {place_of_birth && (

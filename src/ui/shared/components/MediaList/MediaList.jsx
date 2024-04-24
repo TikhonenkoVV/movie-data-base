@@ -44,9 +44,14 @@ export const MediaList = ({ media, mediaTypes }) => {
                                     : `/movies/collections/collection-${id}`
                             }
                         >
-                            <ScoreBarBox>
-                                <ScoreBar size={0.7} rating={vote_average} />
-                            </ScoreBarBox>
+                            {vote_average && (
+                                <ScoreBarBox>
+                                    <ScoreBar
+                                        size={0.7}
+                                        rating={vote_average}
+                                    />
+                                </ScoreBarBox>
+                            )}
                             <ImgWrapper>
                                 <img
                                     width={80}
@@ -61,13 +66,15 @@ export const MediaList = ({ media, mediaTypes }) => {
                             <CardInfo>
                                 <MovieTitle>{movie_title}</MovieTitle>
                                 <Release>{release}</Release>
-                                <Score>
-                                    {`${t('score')}: ${
-                                        vote_average === 'NR'
-                                            ? vote_average
-                                            : vote_average + '%'
-                                    }`}
-                                </Score>
+                                {vote_average && (
+                                    <Score>
+                                        {`${t('score')}: ${
+                                            vote_average === 'NR'
+                                                ? vote_average
+                                                : vote_average + '%'
+                                        }`}
+                                    </Score>
+                                )}
                             </CardInfo>
                         </MovieLink>
                     </StyledMediaCard>

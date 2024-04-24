@@ -32,9 +32,13 @@ export const normalizeMoviesData = (data, language, mediaTypes) => {
                 movie_title,
                 media_type: media_type ? media_type : mediaTypes,
 
-                release,
+                release: mediaTypes !== 'collections' ? release : null,
                 vote_average:
-                    vote_average > 0 ? Math.round(vote_average * 10) : 'NR',
+                    vote_average > 0
+                        ? Math.round(vote_average * 10)
+                        : mediaTypes === 'collections'
+                        ? null
+                        : 'NR',
                 poster_path,
             };
         }

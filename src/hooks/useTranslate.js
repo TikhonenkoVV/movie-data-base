@@ -5,20 +5,23 @@ import { dictionaryEn, dictionaryUk } from 'ui/assets/languages/dictionary';
 
 export const useTranslate = () => {
     const language = useSelector(selectLang);
-    const [res, setRes] = useState(dictionaryEn);
+    const [res, setRes] = useState();
     const label = '%&i%&';
 
     const t = (key, insert) => {
-        let string = res[key];
-        if (insert?.length > 0) {
-            insert.forEach(el => {
-                string = string.replace(label, el);
-            });
+        if (res) {
+            let string = res[key];
+            if (insert?.length > 0) {
+                insert.forEach(el => {
+                    string = string.replace(label, el);
+                });
+            }
+            return string;
         }
-        return string;
     };
 
     useEffect(() => {
+        if (!language) return;
         if (language === 'en-US') setRes(dictionaryEn);
         if (language === 'uk-UA') setRes(dictionaryUk);
     }, [language]);

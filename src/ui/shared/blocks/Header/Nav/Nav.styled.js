@@ -19,7 +19,7 @@ export const NavLinkStyled = styled(NavLink)`
     padding-top: 16px;
     padding-bottom: 16px;
     color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
+    font-size: ${({ theme }) => theme.fontSizes.preMedium};
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color ${({ theme }) => theme.baseTransition},
@@ -36,7 +36,7 @@ export const NavLinkStyled = styled(NavLink)`
         &:focus {
             color: ${({ theme }) => theme.colors.white};
         }
-        min-width: 100px;
+        min-width: 95px;
         padding-top: 0;
         padding-bottom: 0;
         padding-left: 10px;

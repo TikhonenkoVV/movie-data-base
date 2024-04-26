@@ -18,6 +18,8 @@ import { Svg } from 'ui/shared/components/Svg/Svg';
 import { hendleRefreshUser } from 'common/store/auth/authOperations';
 import { setLang, setTheme } from 'common/store/auth/authSlice';
 
+const isDarkMode = window?.matchMedia('(prefers-color-scheme: dark)').matches;
+
 export const GlobalLayout = () => {
     const device = useSelector(selectDevice);
     const verifiedUser = useSelector(selectVerifiedUser);
@@ -46,6 +48,7 @@ export const GlobalLayout = () => {
 
     useEffect(() => {
         dispatch(hendleRefreshUser());
+        console.log(isDarkMode);
     }, [dispatch]);
 
     useEffect(() => {
@@ -54,8 +57,9 @@ export const GlobalLayout = () => {
 
     useEffect(() => {
         if (!verifiedUser) {
+            const defaultBrouserLanguage = navigator.language;
             if (!currentColor) {
-                dispatch(setTheme('dark'));
+                dispatch(setTheme(isDarkMode ? 'dark' : 'light'));
             }
             if (currentColor === 'dark') {
                 setCurrentTheme({
@@ -70,7 +74,12 @@ export const GlobalLayout = () => {
                 });
             }
             if (!lang) {
-                dispatch(setLang('en-US'));
+                if (
+                    defaultBrouserLanguage === 'uk-UA' ||
+                    defaultBrouserLanguage === 'ru-UA'
+                ) {
+                    dispatch(setLang('uk-UA'));
+                } else dispatch(setLang('en-US'));
             }
         }
     }, [verifiedUser, dispatch, currentColor, lang]);

@@ -14,6 +14,12 @@ export const TrendsToggler = ({
     hendleSelectChange,
 }) => {
     const { t } = useTranslate();
+
+    const initial = {
+        default: 'all',
+        options: [{ all: 'all' }, { movie: 'movies' }, { tv: 'tv show' }],
+    };
+
     return (
         <StyledTogler>
             <TogglerTitle>{t('trending')}</TogglerTitle>
@@ -34,7 +40,7 @@ export const TrendsToggler = ({
                     {t('week')}
                 </TrendsBtn>
             </TrendsBtnWrapper>
-            <Select onChange={hendleSelectChange} />
+            <Select initial={initial} onChange={hendleSelectChange} />
         </StyledTogler>
     );
 };

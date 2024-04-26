@@ -13,7 +13,7 @@ export const Nav = ({ onClose }) => {
                 {t('movies')}
             </NavLinkStyled>
             <NavLinkStyled onClick={onClose} to={'tv-shows'}>
-                {t('tv')}
+                {t('tv show')}
             </NavLinkStyled>
             <NavLinkStyled onClick={onClose} to={'persons'}>
                 {t('persons')}

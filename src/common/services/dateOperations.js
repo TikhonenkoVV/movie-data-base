@@ -14,14 +14,3 @@ export const calcAge = (startDate, endDate) => {
             (24 * 3600 * 365.25 * 1000)
     );
 };
-
-export const numberForm = n => {
-    const titles = ['рік', 'роки', 'років'];
-    return titles[
-        n % 10 === 1 && n % 100 !== 11
-            ? 0
-            : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)
-            ? 1
-            : 2
-    ];
-};

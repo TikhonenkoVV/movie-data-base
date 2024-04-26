@@ -13,6 +13,9 @@ import { CollectionLayout } from 'ui/shared/layouts/CollectionLayout';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
+const brouserLanguage = navigator.language;
+console.log(brouserLanguage);
+
 const Home = lazy(() => import('./ui/pages/Home/Home'));
 
 const PopularMedia = lazy(() =>

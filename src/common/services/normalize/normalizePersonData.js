@@ -1,4 +1,5 @@
-import { calcAge, formatDate, numberForm } from '../dateOperations';
+import { calcAge, formatDate } from '../dateOperations';
+import { setNumberForm } from '../setNumberForm';
 
 export const normalizePersonData = (data, language) => {
     const {
@@ -30,33 +31,18 @@ export const normalizePersonData = (data, language) => {
 
     if (birthday) {
         if (!deathday) {
-            if (language === 'en-US') {
-                isBirthDay = `${formatDate(
-                    birthday,
-                    language
-                )} (${calculateAge} years old)`;
-            }
-            if (language === 'uk-UA') {
-                isBirthDay = `${formatDate(
-                    birthday,
-                    language
-                )} (${calculateAge} ${numberForm(calculateAge)})`;
-            }
+            isBirthDay = `${formatDate(
+                birthday,
+                language
+            )} (${calculateAge} ${setNumberForm(calculateAge, language)})`;
         } else isBirthDay = formatDate(birthday, language);
     } else isBirthDay = null;
 
     if (deathday) {
-        if (language === 'en-US') {
-            isDeathDay = `${formatDate(
-                deathday,
-                language
-            )} (${calculateAge} years old)`;
-        } else if (language === 'uk-UA') {
-            isDeathDay = `${formatDate(
-                deathday,
-                language
-            )} (${calculateAge} ${numberForm(calculateAge)})`;
-        }
+        isDeathDay = `${formatDate(
+            deathday,
+            language
+        )} (${calculateAge} ${setNumberForm(calculateAge, language)})`;
     } else isDeathDay = null;
 
     return {

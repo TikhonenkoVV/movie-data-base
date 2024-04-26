@@ -32,6 +32,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
 
     return (
         <PersonWrapper>
+            <PersonTitle className="minor">{name}</PersonTitle>
             <Aside>
                 <PersonPhoto
                     src={profile_path ? PROFILE_H632 + profile_path : noPoster}
@@ -83,7 +84,7 @@ export const PersonInfo = ({ person, acting, crew, total }) => {
             </Aside>
             <InfoWrapper>
                 <ProfileWrapper>
-                    <PersonTitle>{name}</PersonTitle>
+                    <PersonTitle className="major">{name}</PersonTitle>
                     <MinorTitle>{t('biography')}</MinorTitle>
                     {biography?.map((el, i) => (
                         <p key={i} style={{ marginBottom: '12px' }}>

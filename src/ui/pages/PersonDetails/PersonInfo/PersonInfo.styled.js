@@ -9,6 +9,23 @@ export const PersonWrapper = styled.div`
     }
 `;
 
+export const PersonTitle = styled.h1`
+    font-size: 36px;
+    &.minor {
+        margin-bottom: 16px;
+        @media ${({ theme }) => theme.breakpoints.l} {
+            display: none;
+        }
+    }
+    &.major {
+        display: none;
+        margin-bottom: 40px;
+        @media ${({ theme }) => theme.breakpoints.l} {
+            display: block;
+        }
+    }
+`;
+
 export const Aside = styled.aside`
     flex-shrink: 0;
     margin-bottom: ${({ theme }) => theme.spacing.retreatS};
@@ -17,6 +34,7 @@ export const Aside = styled.aside`
     @media ${({ theme }) => theme.breakpoints.fromXsTillL} {
         display: flex;
         justify-content: start;
+        align-items: start;
         gap: ${({ theme }) => theme.spacing.retreatS};
     }
     @media ${({ theme }) => theme.breakpoints.s} {
@@ -88,9 +106,5 @@ export const InfoWrapper = styled.div`
 `;
 
 export const ProfileWrapper = styled.div`
-    margin-bottom: 40px;
-`;
-export const PersonTitle = styled.h1`
-    font-size: 36px;
     margin-bottom: 40px;
 `;

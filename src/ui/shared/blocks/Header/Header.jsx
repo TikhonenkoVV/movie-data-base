@@ -14,6 +14,7 @@ import {
     Menu,
     OpenMenuBtn,
     ThemeToggler,
+    TogglerBox,
     Wrapper,
 } from './Header.styled';
 import { Container } from 'ui/shared/layouts/Container/Container';
@@ -143,33 +144,39 @@ export const Header = ({ onChangeTheme }) => {
                                 />
                             </CloseMenuBtn>
                             <Nav onClose={hendleCloseMenu} />
-                            <LangToggler>
-                                <LangButton
-                                    id="uk-UA"
-                                    onClick={toggleLang}
-                                    className={lang === 'uk-UA' && 'active'}
-                                    lang="uk-UA"
-                                />
-                                <LangButton
-                                    id="en-US"
-                                    onClick={toggleLang}
-                                    className={lang === 'en-US' && 'active'}
-                                />
-                            </LangToggler>
-                            <ThemeToggler
-                                ref={themeBtn}
-                                className={currentColor}
-                                onClick={toggleTheme}
-                                aria-label="Theme"
-                                type="button"
-                            >
-                                <Svg w={20} h={20} use={`${sprite}#icon-sun`} />
-                                <Svg
-                                    w={20}
-                                    h={20}
-                                    use={`${sprite}#icon-moon`}
-                                />
-                            </ThemeToggler>
+                            <TogglerBox>
+                                <LangToggler>
+                                    <LangButton
+                                        id="uk-UA"
+                                        onClick={toggleLang}
+                                        className={lang === 'uk-UA' && 'active'}
+                                        lang="uk-UA"
+                                    />
+                                    <LangButton
+                                        id="en-US"
+                                        onClick={toggleLang}
+                                        className={lang === 'en-US' && 'active'}
+                                    />
+                                </LangToggler>
+                                <ThemeToggler
+                                    ref={themeBtn}
+                                    className={currentColor}
+                                    onClick={toggleTheme}
+                                    aria-label="Theme"
+                                    type="button"
+                                >
+                                    <Svg
+                                        w={20}
+                                        h={20}
+                                        use={`${sprite}#icon-sun`}
+                                    />
+                                    <Svg
+                                        w={20}
+                                        h={20}
+                                        use={`${sprite}#icon-moon`}
+                                    />
+                                </ThemeToggler>
+                            </TogglerBox>
                         </Menu>
                         <BtnSearch
                             ref={searchButton}

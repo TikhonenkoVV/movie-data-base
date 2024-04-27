@@ -125,23 +125,29 @@ export const CloseMenuBtn = styled.button`
     }
 `;
 
-export const LangToggler = styled.div`
+export const TogglerBox = styled.div`
     position: absolute;
     bottom: 10px;
     right: 20px;
+    display: flex;
+    gap: 10px;
+    @media ${({ theme }) => theme.breakpoints.m} {
+        position: relative;
+        bottom: auto;
+        right: auto;
+    }
+`;
+
+export const LangToggler = styled.div`
     width: 55px;
     height: 30px;
     padding: 5px;
     border-radius: 20px;
-    margin-right: 10px;
     color: ${({ theme }) => theme.colors.light};
     background-color: ${({ theme }) => theme.colors.hover};
     transition: background-color ${({ theme }) => theme.baseTransition},
         color ${({ theme }) => theme.baseTransition};
     @media ${({ theme }) => theme.breakpoints.m} {
-        position: relative;
-        bottom: auto;
-        right: auto;
         &:hover {
             color: ${({ theme }) => theme.colors.white};
         }
@@ -174,9 +180,7 @@ export const LangButton = styled.button`
 `;
 
 export const ThemeToggler = styled.button`
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,9 +211,6 @@ export const ThemeToggler = styled.button`
         fill: currentColor;
     }
     @media ${({ theme }) => theme.breakpoints.m} {
-        position: relative;
-        bottom: auto;
-        right: auto;
         &::before {
             background-color: ${({ theme }) => theme.colors.light};
             color: ${({ theme }) => theme.colors.light};

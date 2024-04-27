@@ -1,12 +1,17 @@
+import { setLang } from 'common/store/auth/authSlice';
 import { selectLang } from 'common/store/selector';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { dictionaryEn, dictionaryUk } from 'ui/assets/languages/dictionary';
+
+const defaultBrouserLanguage = navigator.language;
 
 export const useTranslate = () => {
     const language = useSelector(selectLang);
     const [res, setRes] = useState();
     const label = '%&i%&';
+
+    const dispatch = useDispatch();
 
     const t = (key, insert) => {
         if (res) {
@@ -19,6 +24,17 @@ export const useTranslate = () => {
             return string;
         }
     };
+
+    useEffect(() => {
+        if (!language) {
+            if (
+                defaultBrouserLanguage === 'uk-UA' ||
+                defaultBrouserLanguage === 'ru-UA'
+            ) {
+                dispatch(setLang('uk-UA'));
+            } else dispatch(setLang('en-US'));
+        }
+    }, [dispatch, language]);
 
     useEffect(() => {
         if (!language) return;

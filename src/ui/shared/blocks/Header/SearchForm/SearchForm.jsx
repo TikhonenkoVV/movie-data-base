@@ -26,7 +26,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
     const { t } = useTranslate();
 
     const [isLoading, setIsLoading] = useState(false);
-    const [placeholder, setPlaceholder] = useState('Please enter your query');
+    const [placeholder, setPlaceholder] = useState(t('placeholder'));
     const [warning, setWarning] = useState(false);
     const [query, setQuery] = useState('');
     const [error, setError] = useState();
@@ -48,7 +48,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
         }
         if (query) {
             setPlaceholder('');
-        } else setPlaceholder(t.placeholder);
+        } else setPlaceholder(t('placeholder'));
     }, [ariaHidden, query, t]);
 
     useEffect(() => {

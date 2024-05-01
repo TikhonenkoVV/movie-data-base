@@ -19,9 +19,9 @@ export const NavLinkStyled = styled(NavLink)`
     padding-top: 16px;
     padding-bottom: 16px;
     color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fontSizes.preMedium};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     transition: background-color ${({ theme }) => theme.baseTransition},
         color ${({ theme }) => theme.baseTransition};
 
@@ -32,11 +32,11 @@ export const NavLinkStyled = styled(NavLink)`
     }
     @media ${({ theme }) => theme.breakpoints.m} {
         color: ${({ theme }) => theme.colors.light};
-        &:hover,
-        &:focus {
+        &:hover {
             color: ${({ theme }) => theme.colors.white};
         }
-        min-width: 95px;
+        /* min-width: 95px; */
+        width: auto;
         padding-top: 0;
         padding-bottom: 0;
         padding-left: 10px;

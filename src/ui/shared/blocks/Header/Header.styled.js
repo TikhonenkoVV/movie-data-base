@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import flagUkUa from 'ui/assets/images/flag-uk-ua.png';
 import flagEnUs from 'ui/assets/images/flag-en-us.png';
+import { Link } from 'react-router-dom';
 
 export const HeaderStyled = styled.header`
     position: relative;
@@ -93,20 +94,6 @@ export const Menu = styled.div`
         padding-right: 0;
         transform: translateX(0);
         z-index: auto;
-    }
-`;
-
-export const OpenMenuBtn = styled.button`
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 4px;
-    color: ${({ theme }) => theme.colors.white};
-    & svg {
-        fill: currentColor;
-    }
-    @media ${({ theme }) => theme.breakpoints.m} {
-        display: none;
     }
 `;
 
@@ -224,6 +211,20 @@ export const ThemeToggler = styled.button`
     }
 `;
 
+export const LoginButton = styled(Link)`
+    display: flex;
+    align-items: center;
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    color: ${({ theme }) => theme.colors.light};
+    transition: color ${({ theme }) => theme.baseTransition};
+    &:hover {
+        color: ${({ theme }) => theme.colors.white};
+    }
+    &::first-letter {
+        text-transform: uppercase;
+    }
+`;
+
 export const BtnSearch = styled.button`
     display: flex;
     justify-content: center;
@@ -245,5 +246,19 @@ export const BtnSearch = styled.button`
     }
     @media ${({ theme }) => theme.breakpoints.m} {
         margin-left: 0;
+    }
+`;
+
+export const OpenMenuBtn = styled.button`
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    color: ${({ theme }) => theme.colors.white};
+    & svg {
+        fill: currentColor;
+    }
+    @media ${({ theme }) => theme.breakpoints.m} {
+        display: none;
     }
 `;

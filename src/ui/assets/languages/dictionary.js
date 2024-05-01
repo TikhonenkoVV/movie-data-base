@@ -1,4 +1,13 @@
 export const dictionaryEn = {
+    login: 'login',
+    signUp: 'signup',
+    noAccaunt: "don't have an account?",
+    userName: 'name',
+    userEMail: 'e-mail',
+    userPass: 'password',
+    userPassConfirm: 'confirm password',
+    submit: 'submit',
+
     placeholder: 'Please enter your query',
     search: 'search',
     searchResultIn: 'Show search result in ',
@@ -86,6 +95,15 @@ export const dictionaryEn = {
 };
 
 export const dictionaryUk = {
+    login: 'вхід',
+    signUp: 'зареєструватись',
+    noAccaunt: 'немає аккаунту?',
+    userName: "ім'я",
+    userEMail: 'електронна пошта',
+    userPass: 'пароль',
+    userPassConfirm: 'падтвердіть пароль',
+    submit: 'відправити',
+
     placeholder: 'Введіть ваш запит будь ласка',
     search: 'пошук',
     searchResultIn: 'Знайдено в категорії ',
@@ -97,7 +115,7 @@ export const dictionaryUk = {
     home: 'головна',
     movies: 'фільми',
     movies_a: 'фільмів',
-    'tv show': 'тв-шоу',
+    'tv show': 'серіали',
     persons: 'персони',
     persons_a: 'персон',
     all: 'всі',

@@ -11,6 +11,7 @@ import {
     HeaderStyled,
     LangButton,
     LangToggler,
+    LoginButton,
     Menu,
     OpenMenuBtn,
     ThemeToggler,
@@ -25,8 +26,10 @@ import { BackDrop } from 'ui/shared/layouts/BackDrop/BackDrop';
 import sprite from '../../../assets/images/sprite.svg';
 import { setLang } from 'common/store/auth/authSlice';
 import { Nav } from './Nav/Nav';
+import { useTranslate } from 'hooks/useTranslate';
 
 export const Header = ({ onChangeTheme }) => {
+    const { t } = useTranslate();
     const dispatch = useDispatch();
     const verifiedUser = useSelector(selectVerifiedUser);
     const currentColor = useSelector(selectTheme);
@@ -106,17 +109,22 @@ export const Header = ({ onChangeTheme }) => {
 
     return (
         <>
-            {/* <div
-                style={{
-                    backgroundColor: '#ff0000',
-                    textAlign: 'center',
-                    paddingTop: '10px',
-                    paddingBottom: '10px',
-                    color: '#fff',
-                }}
-            >
-                <p>ЗВЕРНИ УВАГУ! </p>
-            </div> */}
+            {/* {lang === 'uk-UA' && (
+                <div
+                    style={{
+                        backgroundColor: '#ff0000',
+                        textAlign: 'center',
+                        paddingTop: '10px',
+                        paddingBottom: '10px',
+                        color: '#fff',
+                    }}
+                >
+                    <p>
+                        ЗВЕРНИ УВАГУ! В українській локалізації не
+                        перекладаються імена людей, персонажі та професії.
+                    </p>
+                </div>
+            )} */}
             <HeaderStyled>
                 <SearchForm
                     formRef={{
@@ -168,14 +176,17 @@ export const Header = ({ onChangeTheme }) => {
                                     <Svg
                                         w={20}
                                         h={20}
-                                        use={`${sprite}#icon-sun`}
+                                        use={`${sprite}#icon-moon`}
                                     />
                                     <Svg
                                         w={20}
                                         h={20}
-                                        use={`${sprite}#icon-moon`}
+                                        use={`${sprite}#icon-sun`}
                                     />
                                 </ThemeToggler>
+                                <LoginButton to={'auth/signin'}>
+                                    {t('login')}
+                                </LoginButton>
                             </TogglerBox>
                         </Menu>
                         <BtnSearch

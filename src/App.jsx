@@ -10,6 +10,7 @@ import { setDevice } from 'common/store/device/deviceSlice';
 import { getDeviceType } from 'common/services/geDeviceType';
 import { DetailsLayout } from 'ui/shared/layouts/DetailsLayout/DetailsLayout';
 import { CollectionLayout } from 'ui/shared/layouts/CollectionLayout';
+import { AuthLayout } from 'ui/shared/layouts/AuthLayout';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
@@ -20,6 +21,10 @@ const PopularMedia = lazy(() =>
         return { ...module, default: module.PopularMedia };
     })
 );
+
+const SignIn = lazy(() => import('./ui/pages/SignIn/SignIn'));
+
+const SignUp = lazy(() => import('./ui/pages/SignUp/SignUp'));
 
 const MediaDetails = lazy(() => import('./ui/pages/MediaDetails/MediaDetails'));
 
@@ -54,6 +59,10 @@ export const App = () => {
         <Routes>
             <Route path="/" element={<GlobalLayout />}>
                 <Route index element={<Home />} />
+                <Route path="auth" element={<AuthLayout />}>
+                    <Route path="signup" element={<SignUp />} />
+                    <Route path="signin" element={<SignIn />} />
+                </Route>
                 <Route path="movies" element={<MediaLayout />}>
                     <Route index element={<PopularMedia />} />
                     <Route path="search" element={<Search />} />

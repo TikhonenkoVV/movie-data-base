@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/movie-data-base/static/css/main.200e89ca.css",
-    "main.js": "/movie-data-base/static/js/main.84b8b3d4.js",
+    "main.js": "/movie-data-base/static/js/main.737899cf.js",
     "static/js/354.fffd611d.chunk.js": "/movie-data-base/static/js/354.fffd611d.chunk.js",
     "static/js/897.4d23ab27.chunk.js": "/movie-data-base/static/js/897.4d23ab27.chunk.js",
+    "static/js/909.77646fad.chunk.js": "/movie-data-base/static/js/909.77646fad.chunk.js",
+    "static/js/486.4581c0d7.chunk.js": "/movie-data-base/static/js/486.4581c0d7.chunk.js",
     "static/js/302.dd1bfc91.chunk.js": "/movie-data-base/static/js/302.dd1bfc91.chunk.js",
     "static/js/910.7ae8b1ac.chunk.js": "/movie-data-base/static/js/910.7ae8b1ac.chunk.js",
     "static/js/74.de5b470b.chunk.js": "/movie-data-base/static/js/74.de5b470b.chunk.js",
@@ -35,9 +37,11 @@
     "static/media/logo-m.svg": "/movie-data-base/static/media/logo-m.f6fff56478c2cc90d25d6415e4eea6fc.svg",
     "index.html": "/movie-data-base/index.html",
     "main.200e89ca.css.map": "/movie-data-base/static/css/main.200e89ca.css.map",
-    "main.84b8b3d4.js.map": "/movie-data-base/static/js/main.84b8b3d4.js.map",
+    "main.737899cf.js.map": "/movie-data-base/static/js/main.737899cf.js.map",
     "354.fffd611d.chunk.js.map": "/movie-data-base/static/js/354.fffd611d.chunk.js.map",
     "897.4d23ab27.chunk.js.map": "/movie-data-base/static/js/897.4d23ab27.chunk.js.map",
+    "909.77646fad.chunk.js.map": "/movie-data-base/static/js/909.77646fad.chunk.js.map",
+    "486.4581c0d7.chunk.js.map": "/movie-data-base/static/js/486.4581c0d7.chunk.js.map",
     "302.dd1bfc91.chunk.js.map": "/movie-data-base/static/js/302.dd1bfc91.chunk.js.map",
     "910.7ae8b1ac.chunk.js.map": "/movie-data-base/static/js/910.7ae8b1ac.chunk.js.map",
     "74.de5b470b.chunk.js.map": "/movie-data-base/static/js/74.de5b470b.chunk.js.map",
@@ -49,6 +53,6 @@
   },
   "entrypoints": [
     "static/css/main.200e89ca.css",
-    "static/js/main.84b8b3d4.js"
+    "static/js/main.737899cf.js"
   ]
 }

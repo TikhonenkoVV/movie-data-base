@@ -12,15 +12,23 @@ export const Toggler = styled.div`
 
 export const BtnWrapper = styled.div`
     position: absolute;
-    top: calc(100% + 5px);
+    top: auto;
+    bottom: calc(100% + 5px);
     left: 0;
     padding: 5px;
     border-radius: 15px;
     opacity: 0;
     background-color: ${({ theme }) => theme.colors.hover};
     transition: opacity ${({ theme }) => theme.baseTransition};
+    border-width: 1px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.accent};
     &.open {
         opacity: 1;
+    }
+    @media ${({ theme }) => theme.breakpoints.m} {
+        top: calc(100% + 5px);
+        bottom: auto;
     }
 `;
 

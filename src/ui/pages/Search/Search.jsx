@@ -11,6 +11,7 @@ import { Page404 } from '../Page404/Page404';
 import { useSelector } from 'react-redux';
 import { selectLang } from 'common/store/selector';
 import { useTranslate } from 'hooks/useTranslate';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Search = () => {
     const language = useSelector(selectLang);
@@ -49,6 +50,7 @@ const Search = () => {
             })
             .catch(err => {
                 setError(err.message);
+                toast(err.message);
             })
             .finally(() => {
                 setIsLoading(false);
@@ -87,6 +89,7 @@ const Search = () => {
                     <Pagination totalPages={total} serviceClass="bottom" />
                 )}
             </Container>
+            {error && <ToastContainer />}
         </section>
     );
 };

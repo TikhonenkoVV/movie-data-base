@@ -2,7 +2,11 @@ import { setLang } from 'common/store/auth/authSlice';
 import { selectLang } from 'common/store/selector';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { dictionaryEn, dictionaryUk } from 'ui/assets/languages/dictionary';
+import {
+    dictionaryDe,
+    dictionaryEn,
+    dictionaryUk,
+} from 'ui/assets/languages/dictionary';
 
 const defaultBrouserLanguage = navigator.language;
 
@@ -40,6 +44,7 @@ export const useTranslate = () => {
         if (!language) return;
         if (language === 'en-US') setRes(dictionaryEn);
         if (language === 'uk-UA') setRes(dictionaryUk);
+        if (language === 'de-DE') setRes(dictionaryDe);
     }, [language]);
 
     return { t };

@@ -1,6 +1,4 @@
 import styled from '@emotion/styled';
-import flagUkUa from 'ui/assets/images/flag-uk-ua.png';
-import flagEnUs from 'ui/assets/images/flag-en-us.png';
 import { Link } from 'react-router-dom';
 
 export const HeaderStyled = styled.header`
@@ -93,7 +91,6 @@ export const Menu = styled.div`
         padding-left: 0;
         padding-right: 0;
         transform: translateX(0);
-        z-index: auto;
     }
 `;
 
@@ -122,47 +119,7 @@ export const TogglerBox = styled.div`
         position: relative;
         bottom: auto;
         right: auto;
-    }
-`;
-
-export const LangToggler = styled.div`
-    width: 55px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 20px;
-    color: ${({ theme }) => theme.colors.light};
-    background-color: ${({ theme }) => theme.colors.hover};
-    transition: background-color ${({ theme }) => theme.baseTransition},
-        color ${({ theme }) => theme.baseTransition};
-    @media ${({ theme }) => theme.breakpoints.m} {
-        &:hover {
-            color: ${({ theme }) => theme.colors.white};
-        }
-    }
-`;
-
-export const LangButton = styled.button`
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-image: ${({ lang }) =>
-        lang === 'uk-UA' ? `url('${flagUkUa}')` : `url('${flagEnUs}')`};
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    filter: grayscale(1);
-    transition: filter ${({ theme }) => theme.baseTransition},
-        opacity ${({ theme }) => theme.baseTransition};
-    &:not(:last-child) {
-        margin-right: 5px;
-    }
-    &.active {
-        filter: grayscale(0);
-        opacity: 1;
-    }
-    &:hover {
-        filter: grayscale(0);
-        opacity: 1;
+        width: 155px;
     }
 `;
 

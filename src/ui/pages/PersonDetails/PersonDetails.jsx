@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
 import { normalizePersonData } from 'common/services/normalize/normalizePersonData';
 import { PersonInfo } from './PersonInfo/PersonInfo';
 import { getDetails, getPersonById } from 'common/services/api';
@@ -25,10 +24,7 @@ const PersonDetails = () => {
             .then(data => {
                 setPersonInfo(normalizePersonData(data, lang));
             })
-            .catch(err => {
-                setError(err.message);
-                toast(err.message);
-            })
+            .catch(err => setError(err.message))
             .finally(() => {
                 getDetails('person', personId, lang, '/combined_credits')
                     .then(data => {
@@ -37,10 +33,7 @@ const PersonDetails = () => {
                         const length = data?.cast?.length + data?.crew?.length;
                         setTotalCredits(length);
                     })
-                    .catch(err => {
-                        setError(err.message);
-                        toast(err.message);
-                    });
+                    .catch(err => setError(err.message));
                 setIsLoading(false);
             });
     }, [personId, lang]);
@@ -49,7 +42,6 @@ const PersonDetails = () => {
         <section className="padding-top">
             {isLoading && <Loader />}
             <Container>
-                {error && <ToastContainer />}
                 {!isLoading && (
                     <PersonInfo
                         person={personInfo}
@@ -59,6 +51,7 @@ const PersonDetails = () => {
                     />
                 )}
             </Container>
+            {error && <p>{error}</p>}
         </section>
     );
 };

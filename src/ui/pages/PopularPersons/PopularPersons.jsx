@@ -33,7 +33,6 @@ const PopularPersons = () => {
 
     return (
         <section>
-            {error && <p>{error}</p>}
             <Container>
                 <SectionTitle>{`${t('popular')} ${t(
                     'persons_a'
@@ -87,6 +86,7 @@ const PopularPersons = () => {
                     )}
                 </List>
             </Container>
+            {error && <p>{error}</p>}
         </section>
     );
 };

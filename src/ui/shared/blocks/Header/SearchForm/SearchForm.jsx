@@ -20,6 +20,7 @@ import { Container } from 'ui/shared/layouts/Container/Container';
 import { Svg } from 'ui/shared/components/Svg/Svg';
 import { selectLang } from 'common/store/selector';
 import { useTranslate } from 'hooks/useTranslate';
+import { toast, ToastContainer } from 'react-toastify';
 
 export const SearchForm = ({ formRef, ariaHidden }) => {
     const language = useSelector(selectLang);
@@ -77,19 +78,28 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
             .then(data => {
                 setMoviesCount(data.total_results);
             })
-            .catch(err => setError(err.message))
+            .catch(err => {
+                setError(err.message);
+                toast(err.message);
+            })
             .finally(() => {
                 getMediaOnRequest('tv', query, 1, language)
                     .then(data => {
                         setTvShowsCount(data.total_results.toString());
                     })
-                    .catch(err => setError(err.message))
+                    .catch(err => {
+                        setError(err.message);
+                        toast(err.message);
+                    })
                     .finally(() => {
                         getMediaOnRequest('person', query, 1, language)
                             .then(data => {
                                 setPersonsCount(data.total_results);
                             })
-                            .catch(err => setError(err.message))
+                            .catch(err => {
+                                setError(err.message);
+                                toast(err.message);
+                            })
                             .finally(() => {
                                 getMediaOnRequest(
                                     'collection',
@@ -100,7 +110,10 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                                     .then(data => {
                                         setCollectionsCount(data.total_results);
                                     })
-                                    .catch(err => setError(err.message))
+                                    .catch(err => {
+                                        setError(err.message);
+                                        toast(err.message);
+                                    })
                                     .finally(() => setIsLoading(false));
                             });
                     });
@@ -190,6 +203,7 @@ export const SearchForm = ({ formRef, ariaHidden }) => {
                         moviesCount === 0 && <p>{t('nothingFound')}</p>
                     )}
                 </Container>
+                {error && <ToastContainer />}
             </SearchPanel>
         </>
     );

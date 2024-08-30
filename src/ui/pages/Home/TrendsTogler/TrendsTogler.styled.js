@@ -45,6 +45,7 @@ export const TrendsBtn = styled.button`
     transition: background-color ${({ theme }) => theme.baseTransition},
         color ${({ theme }) => theme.baseTransition};
     @media ${({ theme }) => theme.breakpoints.xs} {
+        width: 110px;
         font-size: ${({ theme }) => theme.fontSizes.medium};
     }
     &:hover,

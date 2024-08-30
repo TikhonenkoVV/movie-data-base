@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
 import { getMovies } from 'common/services/api';
 import { getBackgrounds } from 'common/services/getBackgraunds';
 import { Hero } from './Hero/Hero';
@@ -27,10 +26,7 @@ const Home = () => {
                 setMovies(data.results);
                 setBackgrounds(getBackgrounds(data.results));
             })
-            .catch(err => {
-                setError(err.message);
-                toast(err.message);
-            })
+            .catch(err => setError(err.message))
 
             .finally(() => {
                 setIsLoading(false);
@@ -68,7 +64,7 @@ const Home = () => {
                     <MediaList media={movies} />
                 </Container>
             </section>
-            {error && <ToastContainer />}
+            {error && <p>{error}</p>}
         </>
     );
 };

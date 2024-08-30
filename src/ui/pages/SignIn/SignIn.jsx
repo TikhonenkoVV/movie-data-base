@@ -1,12 +1,12 @@
-import { Container } from 'ui/shared/layouts/Container/Container';
+import { FormContainer } from 'ui/shared/layouts/FormContainer/FormContainer';
 import { SignInForm } from './SignInForm/SignInForm';
 
 const SignIn = () => {
     return (
         <section>
-            <Container>
+            <FormContainer>
                 <SignInForm />
-            </Container>
+            </FormContainer>
         </section>
     );
 };

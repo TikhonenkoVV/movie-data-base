@@ -1,16 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-    selectLang,
-    selectTheme,
-    selectVerifiedUser,
-} from 'common/store/selector';
+import { useSelector } from 'react-redux';
+import { selectTheme } from 'common/store/selector';
 import {
     BtnSearch,
     CloseMenuBtn,
     HeaderStyled,
-    LangButton,
-    LangToggler,
     LoginButton,
     Menu,
     OpenMenuBtn,
@@ -24,16 +18,13 @@ import { Logo } from 'ui/shared/components/Logo/Logo';
 import { Svg } from 'ui/shared/components/Svg/Svg';
 import { BackDrop } from 'ui/shared/layouts/BackDrop/BackDrop';
 import sprite from '../../../assets/images/sprite.svg';
-import { setLang } from 'common/store/auth/authSlice';
 import { Nav } from './Nav/Nav';
 import { useTranslate } from 'hooks/useTranslate';
+import { LangToggler } from './components/LangToggler/LangToggler';
 
 export const Header = ({ onChangeTheme }) => {
     const { t } = useTranslate();
-    const dispatch = useDispatch();
-    const verifiedUser = useSelector(selectVerifiedUser);
     const currentColor = useSelector(selectTheme);
-    const lang = useSelector(selectLang);
 
     const searchPanelRef = useRef(null);
     const searchButton = useRef(null);
@@ -57,13 +48,6 @@ export const Header = ({ onChangeTheme }) => {
             themeBtn.current.classList.replace('light', 'dark');
             onChangeTheme('dark');
             return;
-        }
-    };
-
-    const toggleLang = e => {
-        const lang = e.target.getAttribute('id');
-        if (!verifiedUser) {
-            dispatch(setLang(lang));
         }
     };
 
@@ -108,99 +92,58 @@ export const Header = ({ onChangeTheme }) => {
     };
 
     return (
-        <>
-            {/* {lang === 'uk-UA' && (
-                <div
-                    style={{
-                        backgroundColor: '#ff0000',
-                        textAlign: 'center',
-                        paddingTop: '10px',
-                        paddingBottom: '10px',
-                        color: '#fff',
-                    }}
-                >
-                    <p>
-                        ЗВЕРНИ УВАГУ! В українській локалізації не
-                        перекладаються імена людей, персонажі та професії.
-                    </p>
-                </div>
-            )} */}
-            <HeaderStyled>
-                <SearchForm
-                    formRef={{
-                        searchPanelRef,
-                        inputRef,
-                        submitRef,
-                        clearRef,
-                    }}
-                    ariaHidden={isHidden}
-                />
-                <Container reference={containerRef}>
-                    <Wrapper>
-                        <Logo label="Home" dest={'/'} />
-                        {isOpen && <BackDrop onClick={hendleCloseMenu} />}
-                        <Menu isOpen={isOpen}>
-                            <CloseMenuBtn
-                                onClick={hendleCloseMenu}
+        <HeaderStyled>
+            <SearchForm
+                formRef={{
+                    searchPanelRef,
+                    inputRef,
+                    submitRef,
+                    clearRef,
+                }}
+                ariaHidden={isHidden}
+            />
+            <Container reference={containerRef}>
+                <Wrapper>
+                    <Logo label="Home" dest={'/'} />
+                    {isOpen && <BackDrop onClick={hendleCloseMenu} />}
+                    <Menu isOpen={isOpen}>
+                        <CloseMenuBtn
+                            onClick={hendleCloseMenu}
+                            type="button"
+                            aria-label="close"
+                        >
+                            <Svg w={32} h={32} use={`${sprite}#icon-close`} />
+                        </CloseMenuBtn>
+                        <Nav onClose={hendleCloseMenu} />
+                        <TogglerBox>
+                            <LangToggler />
+                            <ThemeToggler
+                                ref={themeBtn}
+                                className={currentColor}
+                                onClick={toggleTheme}
+                                aria-label="Theme"
                                 type="button"
-                                aria-label="close"
                             >
                                 <Svg
-                                    w={32}
-                                    h={32}
-                                    use={`${sprite}#icon-close`}
+                                    w={20}
+                                    h={20}
+                                    use={`${sprite}#icon-moon`}
                                 />
-                            </CloseMenuBtn>
-                            <Nav onClose={hendleCloseMenu} />
-                            <TogglerBox>
-                                <LangToggler>
-                                    <LangButton
-                                        id="uk-UA"
-                                        onClick={toggleLang}
-                                        className={lang === 'uk-UA' && 'active'}
-                                        lang="uk-UA"
-                                    />
-                                    <LangButton
-                                        id="en-US"
-                                        onClick={toggleLang}
-                                        className={lang === 'en-US' && 'active'}
-                                    />
-                                </LangToggler>
-                                <ThemeToggler
-                                    ref={themeBtn}
-                                    className={currentColor}
-                                    onClick={toggleTheme}
-                                    aria-label="Theme"
-                                    type="button"
-                                >
-                                    <Svg
-                                        w={20}
-                                        h={20}
-                                        use={`${sprite}#icon-moon`}
-                                    />
-                                    <Svg
-                                        w={20}
-                                        h={20}
-                                        use={`${sprite}#icon-sun`}
-                                    />
-                                </ThemeToggler>
-                                <LoginButton to={'auth/signin'}>
-                                    {t('login')}
-                                </LoginButton>
-                            </TogglerBox>
-                        </Menu>
-                        <BtnSearch
-                            ref={searchButton}
-                            onClick={toggleSearchPanel}
-                        >
-                            <Svg w={18} h={18} use={`${sprite}#icon-search`} />
-                        </BtnSearch>
-                        <OpenMenuBtn onClick={hendleOpenMenu}>
-                            <Svg w={32} h={32} use={`${sprite}#icon-burger`} />
-                        </OpenMenuBtn>
-                    </Wrapper>
-                </Container>
-            </HeaderStyled>
-        </>
+                                <Svg w={20} h={20} use={`${sprite}#icon-sun`} />
+                            </ThemeToggler>
+                            <LoginButton to={'auth/signin'}>
+                                {t('login')}
+                            </LoginButton>
+                        </TogglerBox>
+                    </Menu>
+                    <BtnSearch ref={searchButton} onClick={toggleSearchPanel}>
+                        <Svg w={18} h={18} use={`${sprite}#icon-search`} />
+                    </BtnSearch>
+                    <OpenMenuBtn onClick={hendleOpenMenu}>
+                        <Svg w={32} h={32} use={`${sprite}#icon-burger`} />
+                    </OpenMenuBtn>
+                </Wrapper>
+            </Container>
+        </HeaderStyled>
     );
 };

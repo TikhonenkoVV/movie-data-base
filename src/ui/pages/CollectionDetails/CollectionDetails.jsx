@@ -44,7 +44,7 @@ const CollectionDetails = () => {
                     <CollectionList parts={parts} />
                 </Container>
             </section>
-            {error && console.log(error)}
+            {error && <p>{error}</p>}
         </>
     );
 };
